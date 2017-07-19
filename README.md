@@ -7,9 +7,7 @@
 This library uses `Typescript` files that are transpiled  into `ECMAScript 5` using `commonjs` as a module system. 
 
 This library have **_zero dependencies_** at runtime and it can be used in any Javascript project. Those who are using Typescript will benefit even more.
- 
- >Visit our [live demonstration](https://goo.gl/c02JX2) for code snippets and common use cases.
- 
+  
  ## Technology stack and conventions
  This package use the following technologies:
  * [TypeScript](http://www.typescriptlang.org/) language (superset of Javascript).
