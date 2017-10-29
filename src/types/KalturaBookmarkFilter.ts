@@ -9,9 +9,7 @@ export interface KalturaBookmarkFilterArgs  extends KalturaFilterArgs {
 	assetTypeEqual? : KalturaAssetType;
 }
 
-/** 
-* Filtering Assets requests
-**/
+
 export class KalturaBookmarkFilter extends KalturaFilter {
 
     assetIdIn : string;

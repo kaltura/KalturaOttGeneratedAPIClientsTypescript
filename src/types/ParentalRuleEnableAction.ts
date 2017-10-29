@@ -10,9 +10,16 @@ export interface ParentalRuleEnableActionArgs  extends KalturaRequestArgs {
 	entityReference : KalturaEntityReferenceBy;
 }
 
-/** 
-* Enable a parental rules for a user
-**/
+/**
+ * Build request payload for service 'parentalRule' action 'enable'.
+ *
+ * Usage: Enable a parental rules for a user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ParentalRuleEnableAction extends KalturaRequest<boolean> {
 
     ruleId : number;

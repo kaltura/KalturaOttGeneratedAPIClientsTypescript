@@ -1,16 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaAssetFilter, KalturaAssetFilterArgs } from './KalturaAssetFilter';
+import { KalturaBaseSearchAssetFilter, KalturaBaseSearchAssetFilterArgs } from './KalturaBaseSearchAssetFilter';
 
-export interface KalturaRelatedFilterArgs  extends KalturaAssetFilterArgs {
+export interface KalturaRelatedFilterArgs  extends KalturaBaseSearchAssetFilterArgs {
     kSql? : string;
 	idEqual? : number;
 	typeIn? : string;
 }
 
 
-export class KalturaRelatedFilter extends KalturaAssetFilter {
+export class KalturaRelatedFilter extends KalturaBaseSearchAssetFilter {
 
     kSql : string;
 	idEqual : number;

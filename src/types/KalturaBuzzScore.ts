@@ -9,9 +9,7 @@ export interface KalturaBuzzScoreArgs  extends KalturaObjectBaseArgs {
 	avgScore? : number;
 }
 
-/** 
-* Buzz score
-**/
+
 export class KalturaBuzzScore extends KalturaObjectBase {
 
     normalizedAvgScore : number;

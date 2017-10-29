@@ -6,6 +6,7 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaSubscriptionFilterArgs  extends KalturaFilterArgs {
     subscriptionIdIn? : string;
 	mediaFileIdEqual? : number;
+	externalIdIn? : string;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 
     subscriptionIdIn : string;
 	mediaFileIdEqual : number;
+	externalIdIn : string;
 
     constructor(data? : KalturaSubscriptionFilterArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
             {
                 objectType : { type : 'c', default : 'KalturaSubscriptionFilter' },
 				subscriptionIdIn : { type : 's' },
-				mediaFileIdEqual : { type : 'n' }
+				mediaFileIdEqual : { type : 'n' },
+				externalIdIn : { type : 's' }
             }
         );
         return result;

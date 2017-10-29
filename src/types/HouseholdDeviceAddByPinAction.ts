@@ -9,9 +9,16 @@ export interface HouseholdDeviceAddByPinActionArgs  extends KalturaRequestArgs {
 	pin : string;
 }
 
-/** 
-* Registers a device to a household using pin code
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'addByPin'.
+ *
+ * Usage: Registers a device to a household using pin code
+ *
+ * Server response type:         KalturaHouseholdDevice
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceAddByPinAction extends KalturaRequest<KalturaHouseholdDevice> {
 
     deviceName : string;

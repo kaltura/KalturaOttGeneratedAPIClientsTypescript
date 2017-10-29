@@ -8,9 +8,7 @@ export interface KalturaOSSAdapterProfileListResponseArgs  extends KalturaListRe
     objects? : KalturaOSSAdapterProfile[];
 }
 
-/** 
-* OSS adapter-profiles list
-**/
+
 export class KalturaOSSAdapterProfileListResponse extends KalturaListResponse {
 
     objects : KalturaOSSAdapterProfile[];

@@ -10,9 +10,16 @@ export interface AssetGetActionArgs  extends KalturaRequestArgs {
 	assetReferenceType : KalturaAssetReferenceType;
 }
 
-/** 
-* Returns media or EPG asset by media / EPG internal or external identifier
-**/
+/**
+ * Build request payload for service 'asset' action 'get'.
+ *
+ * Usage: Returns media or EPG asset by media / EPG internal or external identifier
+ *
+ * Server response type:         KalturaAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetGetAction extends KalturaRequest<KalturaAsset> {
 
     id : string;

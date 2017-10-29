@@ -8,9 +8,16 @@ export interface OttUserGetActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Retrieving users&#39; data
-**/
+/**
+ * Build request payload for service 'ottUser' action 'get'.
+ *
+ * Usage: Retrieving users&#39; data
+ *
+ * Server response type:         KalturaOTTUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserGetAction extends KalturaRequest<KalturaOTTUser> {
 
     

@@ -8,9 +8,7 @@ export interface KalturaUserRoleListResponseArgs  extends KalturaListResponseArg
     objects? : KalturaUserRole[];
 }
 
-/** 
-* User-roles list
-**/
+
 export class KalturaUserRoleListResponse extends KalturaListResponse {
 
     objects : KalturaUserRole[];

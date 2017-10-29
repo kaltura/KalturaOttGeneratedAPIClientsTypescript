@@ -11,9 +11,7 @@ export interface KalturaAssetCommentArgs  extends KalturaSocialCommentArgs {
 	subHeader? : string;
 }
 
-/** 
-* Asset Comment
-**/
+
 export class KalturaAssetComment extends KalturaSocialComment {
 
     id : number;

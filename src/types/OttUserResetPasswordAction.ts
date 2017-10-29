@@ -9,9 +9,16 @@ export interface OttUserResetPasswordActionArgs  extends KalturaRequestArgs {
 	username : string;
 }
 
-/** 
-* Send an e-mail with URL to enable the user to set new password.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'resetPassword'.
+ *
+ * Usage: Send an e-mail with URL to enable the user to set new password
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserResetPasswordAction extends KalturaRequest<boolean> {
 
     partnerId : number;

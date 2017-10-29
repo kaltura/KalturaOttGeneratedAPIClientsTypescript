@@ -23,9 +23,7 @@ export interface KalturaPpvArgs  extends KalturaObjectBaseArgs {
 	usageModule? : KalturaUsageModule;
 }
 
-/** 
-* PPV details
-**/
+
 export class KalturaPpv extends KalturaObjectBase {
 
     id : string;

@@ -9,9 +9,7 @@ export interface KalturaAssetCountListResponseArgs  extends KalturaListResponseA
 	objects? : KalturaAssetsCount[];
 }
 
-/** 
-* Asset counts wrapper - represents a group
-**/
+
 export class KalturaAssetCountListResponse extends KalturaListResponse {
 
     assetsCount : number;

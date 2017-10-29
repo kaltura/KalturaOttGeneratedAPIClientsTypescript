@@ -8,9 +8,7 @@ export interface KalturaMultilingualStringArgs  extends KalturaObjectBaseArgs {
     values? : KalturaTranslationToken[];
 }
 
-/** 
-* Translated string
-**/
+
 export class KalturaMultilingualString extends KalturaObjectBase {
 
     values : KalturaTranslationToken[];

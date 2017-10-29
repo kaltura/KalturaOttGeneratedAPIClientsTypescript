@@ -7,9 +7,7 @@ export interface KalturaLanguageFilterArgs  extends KalturaFilterArgs {
     codeIn? : string;
 }
 
-/** 
-* Language filter
-**/
+
 export class KalturaLanguageFilter extends KalturaFilter {
 
     codeIn : string;

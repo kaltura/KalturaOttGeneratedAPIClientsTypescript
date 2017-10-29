@@ -8,9 +8,16 @@ export interface FavoriteDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Remove media from user&#39;s favorite list
-**/
+/**
+ * Build request payload for service 'favorite' action 'delete'.
+ *
+ * Usage: Remove media from user&#39;s favorite list
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FavoriteDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

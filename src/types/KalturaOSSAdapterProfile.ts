@@ -11,9 +11,7 @@ export interface KalturaOSSAdapterProfileArgs  extends KalturaOSSAdapterBaseProf
 	externalIdentifier? : string;
 }
 
-/** 
-* OSS Adapter
-**/
+
 export class KalturaOSSAdapterProfile extends KalturaOSSAdapterBaseProfile {
 
     isActive : boolean;

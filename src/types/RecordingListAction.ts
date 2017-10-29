@@ -11,10 +11,16 @@ export interface RecordingListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Return a list of recordings for the household with optional filter by status and
-* KSQL.
-**/
+/**
+ * Build request payload for service 'recording' action 'list'.
+ *
+ * Usage: Return a list of recordings for the household with optional filter by status and KSQL
+ *
+ * Server response type:         KalturaRecordingListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecordingListAction extends KalturaRequest<KalturaRecordingListResponse> {
 
     filter : KalturaRecordingFilter;

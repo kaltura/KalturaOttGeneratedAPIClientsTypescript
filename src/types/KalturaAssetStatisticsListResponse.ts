@@ -8,9 +8,7 @@ export interface KalturaAssetStatisticsListResponseArgs  extends KalturaListResp
     objects? : KalturaAssetStatistics[];
 }
 
-/** 
-* List of assets statistics
-**/
+
 export class KalturaAssetStatisticsListResponse extends KalturaListResponse {
 
     objects : KalturaAssetStatistics[];

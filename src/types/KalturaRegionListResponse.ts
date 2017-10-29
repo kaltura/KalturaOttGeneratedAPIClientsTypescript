@@ -8,9 +8,7 @@ export interface KalturaRegionListResponseArgs  extends KalturaListResponseArgs 
     objects? : KalturaRegion[];
 }
 
-/** 
-* Regions list
-**/
+
 export class KalturaRegionListResponse extends KalturaListResponse {
 
     objects : KalturaRegion[];

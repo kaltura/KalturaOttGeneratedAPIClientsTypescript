@@ -8,11 +8,16 @@ export interface HouseholdPaymentGatewayListActionArgs  extends KalturaRequestAr
     
 }
 
-/** 
-* Get a list of all configured Payment Gateways providers available for the
-* account. For each payment is provided with the household associated payment
-* methods.
-**/
+/**
+ * Build request payload for service 'householdPaymentGateway' action 'list'.
+ *
+ * Usage: Get a list of all configured Payment Gateways providers available for the account. For each payment is provided with the household associated payment methods
+ *
+ * Server response type:         KalturaHouseholdPaymentGatewayListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentGatewayListAction extends KalturaRequest<KalturaHouseholdPaymentGatewayListResponse> {
 
     

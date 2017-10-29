@@ -8,9 +8,16 @@ export interface HouseholdGetActionArgs  extends KalturaRequestArgs {
     id? : number;
 }
 
-/** 
-* Returns the household model
-**/
+/**
+ * Build request payload for service 'household' action 'get'.
+ *
+ * Usage: Returns the household model
+ *
+ * Server response type:         KalturaHousehold
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdGetAction extends KalturaRequest<KalturaHousehold> {
 
     id : number;

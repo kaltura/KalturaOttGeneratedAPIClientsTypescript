@@ -11,9 +11,7 @@ export interface KalturaEntitlementFilterArgs  extends KalturaFilterArgs {
 	isExpiredEqual? : boolean;
 }
 
-/** 
-* Entitlements filter
-**/
+
 export class KalturaEntitlementFilter extends KalturaFilter {
 
     entitlementTypeEqual : KalturaTransactionType;

@@ -9,9 +9,16 @@ export interface OttUserResendActivationTokenActionArgs  extends KalturaRequestA
 	username : string;
 }
 
-/** 
-* Resend the activation token to a user
-**/
+/**
+ * Build request payload for service 'ottUser' action 'resendActivationToken'.
+ *
+ * Usage: Resend the activation token to a user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserResendActivationTokenAction extends KalturaRequest<boolean> {
 
     partnerId : number;

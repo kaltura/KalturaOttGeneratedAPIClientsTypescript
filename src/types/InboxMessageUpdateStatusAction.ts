@@ -10,9 +10,16 @@ export interface InboxMessageUpdateStatusActionArgs  extends KalturaRequestArgs 
 	status : KalturaInboxMessageStatus;
 }
 
-/** 
-* Updates the message status.
-**/
+/**
+ * Build request payload for service 'inboxMessage' action 'updateStatus'.
+ *
+ * Usage: Updates the message status
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class InboxMessageUpdateStatusAction extends KalturaRequest<boolean> {
 
     id : string;

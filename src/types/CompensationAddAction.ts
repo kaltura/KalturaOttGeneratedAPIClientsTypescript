@@ -8,10 +8,16 @@ export interface CompensationAddActionArgs  extends KalturaRequestArgs {
     compensation : KalturaCompensation;
 }
 
-/** 
-* Adds a new compensation for a household for a given number of iterations of a
-* subscription renewal for a fixed amount / percentage of the renewal price.
-**/
+/**
+ * Build request payload for service 'compensation' action 'add'.
+ *
+ * Usage: Adds a new compensation for a household for a given number of iterations of a subscription renewal for a fixed amount / percentage of the renewal price
+ *
+ * Server response type:         KalturaCompensation
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CompensationAddAction extends KalturaRequest<KalturaCompensation> {
 
     compensation : KalturaCompensation;

@@ -8,9 +8,16 @@ export interface CompensationGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get a compensation by identifier
-**/
+/**
+ * Build request payload for service 'compensation' action 'get'.
+ *
+ * Usage: Get a compensation by identifier
+ *
+ * Server response type:         KalturaCompensation
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CompensationGetAction extends KalturaRequest<KalturaCompensation> {
 
     id : number;

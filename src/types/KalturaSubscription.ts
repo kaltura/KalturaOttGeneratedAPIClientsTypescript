@@ -6,12 +6,12 @@ import { KalturaIntegerValue } from './KalturaIntegerValue';
 import { KalturaPriceDetails } from './KalturaPriceDetails';
 import { KalturaDiscountModule } from './KalturaDiscountModule';
 import { KalturaMultilingualString } from './KalturaMultilingualString';
-import { KalturaPricePlan } from './KalturaPricePlan';
 import { KalturaPreviewModule } from './KalturaPreviewModule';
 import { KalturaPremiumService } from './KalturaPremiumService';
 import { KalturaOTTUserType } from './KalturaOTTUserType';
 import { KalturaCouponsGroup } from './KalturaCouponsGroup';
 import { KalturaProductCode } from './KalturaProductCode';
+import { KalturaSubscriptionDependencyType } from './KalturaSubscriptionDependencyType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSubscriptionArgs  extends KalturaObjectBaseArgs {
@@ -31,7 +31,7 @@ export interface KalturaSubscriptionArgs  extends KalturaObjectBaseArgs {
 	multilingualDescription? : KalturaMultilingualString;
 	mediaId? : number;
 	prorityInOrder? : number;
-	pricePlans? : KalturaPricePlan[];
+	pricePlanIds? : string;
 	previewModule? : KalturaPreviewModule;
 	householdLimitationsId? : number;
 	gracePeriodMinutes? : number;
@@ -43,11 +43,12 @@ export interface KalturaSubscriptionArgs  extends KalturaObjectBaseArgs {
 	userTypes? : KalturaOTTUserType[];
 	couponsGroups? : KalturaCouponsGroup[];
 	productCodes? : KalturaProductCode[];
+	dependencyType? : KalturaSubscriptionDependencyType;
+	externalId? : string;
+	isCancellationBlocked? : boolean;
 }
 
-/** 
-* Subscription details
-**/
+
 export class KalturaSubscription extends KalturaObjectBase {
 
     id : string;
@@ -66,7 +67,7 @@ export class KalturaSubscription extends KalturaObjectBase {
 	multilingualDescription : KalturaMultilingualString;
 	mediaId : number;
 	prorityInOrder : number;
-	pricePlans : KalturaPricePlan[];
+	pricePlanIds : string;
 	previewModule : KalturaPreviewModule;
 	householdLimitationsId : number;
 	gracePeriodMinutes : number;
@@ -78,13 +79,15 @@ export class KalturaSubscription extends KalturaObjectBase {
 	userTypes : KalturaOTTUserType[];
 	couponsGroups : KalturaCouponsGroup[];
 	productCodes : KalturaProductCode[];
+	dependencyType : KalturaSubscriptionDependencyType;
+	externalId : string;
+	isCancellationBlocked : boolean;
 
     constructor(data? : KalturaSubscriptionArgs)
     {
         super(data);
         if (typeof this.channels === 'undefined') this.channels = [];
 		if (typeof this.fileTypes === 'undefined') this.fileTypes = [];
-		if (typeof this.pricePlans === 'undefined') this.pricePlans = [];
 		if (typeof this.premiumServices === 'undefined') this.premiumServices = [];
 		if (typeof this.userTypes === 'undefined') this.userTypes = [];
 		if (typeof this.couponsGroups === 'undefined') this.couponsGroups = [];
@@ -114,7 +117,7 @@ export class KalturaSubscription extends KalturaObjectBase {
 				multilingualDescription : { type : 'o', subTypeConstructor : KalturaMultilingualString, subType : 'KalturaMultilingualString' },
 				mediaId : { type : 'n' },
 				prorityInOrder : { type : 'n' },
-				pricePlans : { type : 'a', subTypeConstructor : KalturaPricePlan, subType : 'KalturaPricePlan' },
+				pricePlanIds : { type : 's' },
 				previewModule : { type : 'o', subTypeConstructor : KalturaPreviewModule, subType : 'KalturaPreviewModule' },
 				householdLimitationsId : { type : 'n' },
 				gracePeriodMinutes : { type : 'n' },
@@ -125,7 +128,10 @@ export class KalturaSubscription extends KalturaObjectBase {
 				isWaiverEnabled : { type : 'b' },
 				userTypes : { type : 'a', subTypeConstructor : KalturaOTTUserType, subType : 'KalturaOTTUserType' },
 				couponsGroups : { type : 'a', subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },
-				productCodes : { type : 'a', subTypeConstructor : KalturaProductCode, subType : 'KalturaProductCode' }
+				productCodes : { type : 'a', subTypeConstructor : KalturaProductCode, subType : 'KalturaProductCode' },
+				dependencyType : { type : 'es', subTypeConstructor : KalturaSubscriptionDependencyType, subType : 'KalturaSubscriptionDependencyType' },
+				externalId : { type : 's' },
+				isCancellationBlocked : { type : 'b' }
             }
         );
         return result;

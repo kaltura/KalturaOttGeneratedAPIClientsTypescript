@@ -11,9 +11,16 @@ export interface AnnouncementListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Lists all announcements in the system.
-**/
+/**
+ * Build request payload for service 'announcement' action 'list'.
+ *
+ * Usage: Lists all announcements in the system
+ *
+ * Server response type:         KalturaAnnouncementListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnouncementListAction extends KalturaRequest<KalturaAnnouncementListResponse> {
 
     filter : KalturaAnnouncementFilter;

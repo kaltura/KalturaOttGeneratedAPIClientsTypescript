@@ -8,9 +8,7 @@ export interface KalturaAssetHistoryListResponseArgs  extends KalturaListRespons
     objects? : KalturaAssetHistory[];
 }
 
-/** 
-* Watch history asset wrapper
-**/
+
 export class KalturaAssetHistoryListResponse extends KalturaListResponse {
 
     objects : KalturaAssetHistory[];

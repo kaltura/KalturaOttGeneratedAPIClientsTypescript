@@ -11,9 +11,16 @@ export interface ReminderListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Return a list of reminders with optional filter by KSQL.
-**/
+/**
+ * Build request payload for service 'reminder' action 'list'.
+ *
+ * Usage: Return a list of reminders with optional filter by KSQL
+ *
+ * Server response type:         KalturaReminderListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReminderListAction extends KalturaRequest<KalturaReminderListResponse> {
 
     filter : KalturaReminderFilter;

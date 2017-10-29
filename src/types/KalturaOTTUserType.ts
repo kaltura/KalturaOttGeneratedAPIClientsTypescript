@@ -7,9 +7,7 @@ export interface KalturaOTTUserTypeArgs  extends KalturaObjectBaseArgs {
     description? : string;
 }
 
-/** 
-* User type
-**/
+
 export class KalturaOTTUserType extends KalturaObjectBase {
 
     readonly id : number;

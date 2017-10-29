@@ -2,15 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDrmPlaybackPluginData } from './KalturaDrmPlaybackPluginData';
-import { KalturaAdsPolicy } from './KalturaAdsPolicy';
 import { KalturaMediaFile, KalturaMediaFileArgs } from './KalturaMediaFile';
 
 export interface KalturaPlaybackSourceArgs  extends KalturaMediaFileArgs {
     format? : string;
 	protocols? : string;
 	drm? : KalturaDrmPlaybackPluginData[];
-	adsPolicy? : KalturaAdsPolicy;
-	adsParam? : string;
 }
 
 
@@ -19,8 +16,6 @@ export class KalturaPlaybackSource extends KalturaMediaFile {
     format : string;
 	protocols : string;
 	drm : KalturaDrmPlaybackPluginData[];
-	adsPolicy : KalturaAdsPolicy;
-	adsParam : string;
 
     constructor(data? : KalturaPlaybackSourceArgs)
     {
@@ -37,9 +32,7 @@ export class KalturaPlaybackSource extends KalturaMediaFile {
                 objectType : { type : 'c', default : 'KalturaPlaybackSource' },
 				format : { type : 's' },
 				protocols : { type : 's' },
-				drm : { type : 'a', subTypeConstructor : KalturaDrmPlaybackPluginData, subType : 'KalturaDrmPlaybackPluginData' },
-				adsPolicy : { type : 'es', subTypeConstructor : KalturaAdsPolicy, subType : 'KalturaAdsPolicy' },
-				adsParam : { type : 's' }
+				drm : { type : 'a', subTypeConstructor : KalturaDrmPlaybackPluginData, subType : 'KalturaDrmPlaybackPluginData' }
             }
         );
         return result;

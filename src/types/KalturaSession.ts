@@ -1,12 +1,10 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaSessionType } from './KalturaSessionType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSessionArgs  extends KalturaObjectBaseArgs {
     ks? : string;
-	sessionType? : KalturaSessionType;
 	partnerId? : number;
 	userId? : string;
 	expiry? : number;
@@ -15,13 +13,10 @@ export interface KalturaSessionArgs  extends KalturaObjectBaseArgs {
 	createDate? : number;
 }
 
-/** 
-* Kaltura Session
-**/
+
 export class KalturaSession extends KalturaObjectBase {
 
     ks : string;
-	sessionType : KalturaSessionType;
 	partnerId : number;
 	userId : string;
 	expiry : number;
@@ -42,7 +37,6 @@ export class KalturaSession extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaSession' },
 				ks : { type : 's' },
-				sessionType : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
 				partnerId : { type : 'n' },
 				userId : { type : 's' },
 				expiry : { type : 'n' },

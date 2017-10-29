@@ -10,10 +10,16 @@ export interface OttUserSetInitialPasswordActionArgs  extends KalturaRequestArgs
 	password : string;
 }
 
-/** 
-* Renew the user&#39;s password after validating the token that sent as part of
-* URL in e-mail.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'setInitialPassword'.
+ *
+ * Usage: Renew the user&#39;s password after validating the token that sent as part of URL in e-mail
+ *
+ * Server response type:         KalturaOTTUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserSetInitialPasswordAction extends KalturaRequest<KalturaOTTUser> {
 
     partnerId : number;

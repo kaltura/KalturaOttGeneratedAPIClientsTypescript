@@ -9,9 +9,7 @@ export interface KalturaSlimAssetArgs  extends KalturaObjectBaseArgs {
 	type? : KalturaAssetType;
 }
 
-/** 
-* Slim Asset Details
-**/
+
 export class KalturaSlimAsset extends KalturaObjectBase {
 
     id : string;

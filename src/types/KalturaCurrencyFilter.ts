@@ -7,9 +7,7 @@ export interface KalturaCurrencyFilterArgs  extends KalturaFilterArgs {
     codeIn? : string;
 }
 
-/** 
-* Currency filter
-**/
+
 export class KalturaCurrencyFilter extends KalturaFilter {
 
     codeIn : string;

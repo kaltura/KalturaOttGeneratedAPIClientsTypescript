@@ -8,9 +8,16 @@ export interface SystemGetVersionActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns current server version
-**/
+/**
+ * Build request payload for service 'system' action 'getVersion'.
+ *
+ * Usage: Returns current server version
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SystemGetVersionAction extends KalturaRequest<string> {
 
     

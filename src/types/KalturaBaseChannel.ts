@@ -7,9 +7,7 @@ export interface KalturaBaseChannelArgs  extends KalturaObjectBaseArgs {
     name? : string;
 }
 
-/** 
-* Slim channel
-**/
+
 export class KalturaBaseChannel extends KalturaObjectBase {
 
     readonly id : number;

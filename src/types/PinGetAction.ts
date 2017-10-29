@@ -12,11 +12,16 @@ export interface PinGetActionArgs  extends KalturaRequestArgs {
 	ruleId? : number;
 }
 
-/** 
-* Retrieve the parental or purchase PIN that applies for the household or user.
-* Includes specification of where the PIN was defined at – account, household or
-* user  level
-**/
+/**
+ * Build request payload for service 'pin' action 'get'.
+ *
+ * Usage: Retrieve the parental or purchase PIN that applies for the household or user. Includes specification of where the PIN was defined at – account, household or user  level
+ *
+ * Server response type:         KalturaPin
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PinGetAction extends KalturaRequest<KalturaPin> {
 
     by : KalturaEntityReferenceBy;

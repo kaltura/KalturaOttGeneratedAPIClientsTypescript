@@ -8,9 +8,16 @@ export interface AnnouncementEnableSystemAnnouncementsActionArgs  extends Kaltur
     
 }
 
-/** 
-* Enable system announcements
-**/
+/**
+ * Build request payload for service 'announcement' action 'enableSystemAnnouncements'.
+ *
+ * Usage: Enable system announcements
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnouncementEnableSystemAnnouncementsAction extends KalturaRequest<boolean> {
 
     

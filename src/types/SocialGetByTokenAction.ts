@@ -11,10 +11,16 @@ export interface SocialGetByTokenActionArgs  extends KalturaRequestArgs {
 	type : KalturaSocialNetwork;
 }
 
-/** 
-* Return the user object with social information according to a provided external
-* social token
-**/
+/**
+ * Build request payload for service 'social' action 'getByToken'.
+ *
+ * Usage: Return the user object with social information according to a provided external social token
+ *
+ * Server response type:         KalturaSocial
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialGetByTokenAction extends KalturaRequest<KalturaSocial> {
 
     partnerId : number;

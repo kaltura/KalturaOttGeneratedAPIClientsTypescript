@@ -10,9 +10,7 @@ export interface KalturaHomeNetworkArgs  extends KalturaObjectBaseArgs {
 	isActive? : boolean;
 }
 
-/** 
-* Home network details
-**/
+
 export class KalturaHomeNetwork extends KalturaObjectBase {
 
     externalId : string;

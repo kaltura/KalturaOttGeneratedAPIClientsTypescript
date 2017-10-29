@@ -10,9 +10,16 @@ export interface TopicUpdateStatusActionArgs  extends KalturaRequestArgs {
 	automaticIssueNotification : KalturaTopicAutomaticIssueNotification;
 }
 
-/** 
-* Updates a topic &quot;automatic issue notification&quot; behavior.
-**/
+/**
+ * Build request payload for service 'topic' action 'updateStatus'.
+ *
+ * Usage: Updates a topic &quot;automatic issue notification&quot; behavior
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TopicUpdateStatusAction extends KalturaRequest<boolean> {
 
     id : number;

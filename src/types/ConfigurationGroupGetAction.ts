@@ -8,10 +8,16 @@ export interface ConfigurationGroupGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Return the configuration group details, including group identifiers, tags, and
-* number of associated devices, and list of device configuration
-**/
+/**
+ * Build request payload for service 'configurationGroup' action 'get'.
+ *
+ * Usage: Return the configuration group details, including group identifiers, tags, and number of associated devices, and list of device configuration
+ *
+ * Server response type:         KalturaConfigurationGroup
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupGetAction extends KalturaRequest<KalturaConfigurationGroup> {
 
     id : string;

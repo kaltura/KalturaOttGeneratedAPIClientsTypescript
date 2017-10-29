@@ -9,13 +9,18 @@ export interface BookmarkListActionArgs  extends KalturaRequestArgs {
     filter : KalturaBookmarkFilter;
 }
 
-/** 
-* Returns player position record/s for the requested asset and the requesting
-* user.               If default user makes the request – player position
-* records are provided for all of the users in the household.              If
-* non-default user makes the request - player position records are provided for
-* the requesting user and the default user of the household.
-**/
+/**
+ * Build request payload for service 'bookmark' action 'list'.
+ *
+ * Usage: Returns player position record/s for the requested asset and the requesting user.
+ * If default user makes the request – player position records are provided for all of the users in the household.
+ * If non-default user makes the request - player position records are provided for the requesting user and the default user of the household
+ *
+ * Server response type:         KalturaBookmarkListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BookmarkListAction extends KalturaRequest<KalturaBookmarkListResponse> {
 
     filter : KalturaBookmarkFilter;

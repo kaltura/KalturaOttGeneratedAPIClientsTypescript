@@ -11,9 +11,16 @@ export interface AssetCommentListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Returns asset comments by asset id
-**/
+/**
+ * Build request payload for service 'assetComment' action 'list'.
+ *
+ * Usage: Returns asset comments by asset id
+ *
+ * Server response type:         KalturaAssetCommentListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetCommentListAction extends KalturaRequest<KalturaAssetCommentListResponse> {
 
     filter : KalturaAssetCommentFilter;

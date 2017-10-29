@@ -11,9 +11,16 @@ export interface HouseholdPaymentGatewayInvokeActionArgs  extends KalturaRequest
 	extraParameters : KalturaKeyValue[];
 }
 
-/** 
-* Gets the Payment Gateway Configuration for the payment gateway identifier given
-**/
+/**
+ * Build request payload for service 'householdPaymentGateway' action 'invoke'.
+ *
+ * Usage: Gets the Payment Gateway Configuration for the payment gateway identifier given
+ *
+ * Server response type:         KalturaPaymentGatewayConfiguration
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentGatewayInvokeAction extends KalturaRequest<KalturaPaymentGatewayConfiguration> {
 
     paymentGatewayId : number;

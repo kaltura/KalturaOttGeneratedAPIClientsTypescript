@@ -9,10 +9,16 @@ export interface CountryListActionArgs  extends KalturaRequestArgs {
     filter : KalturaCountryFilter;
 }
 
-/** 
-* Get the list of countries for the partner with option to filter by countries
-* identifiers
-**/
+/**
+ * Build request payload for service 'country' action 'list'.
+ *
+ * Usage: Get the list of countries for the partner with option to filter by countries identifiers
+ *
+ * Server response type:         KalturaCountryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CountryListAction extends KalturaRequest<KalturaCountryListResponse> {
 
     filter : KalturaCountryFilter;

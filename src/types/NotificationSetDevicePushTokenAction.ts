@@ -8,9 +8,16 @@ export interface NotificationSetDevicePushTokenActionArgs  extends KalturaReques
     pushToken : string;
 }
 
-/** 
-* Registers the device push token to the push service
-**/
+/**
+ * Build request payload for service 'notification' action 'setDevicePushToken'.
+ *
+ * Usage: Registers the device push token to the push service
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationSetDevicePushTokenAction extends KalturaRequest<boolean> {
 
     pushToken : string;

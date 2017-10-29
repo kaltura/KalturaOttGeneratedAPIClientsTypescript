@@ -8,9 +8,16 @@ export interface CdnPartnerSettingsGetActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Retrieve the partner’s CDN settings (default adapters)
-**/
+/**
+ * Build request payload for service 'cdnPartnerSettings' action 'get'.
+ *
+ * Usage: Retrieve the partner’s CDN settings (default adapters)
+ *
+ * Server response type:         KalturaCDNPartnerSettings
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CdnPartnerSettingsGetAction extends KalturaRequest<KalturaCDNPartnerSettings> {
 
     

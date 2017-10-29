@@ -8,9 +8,16 @@ export interface ConfigurationGroupListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Return the list of configuration groups
-**/
+/**
+ * Build request payload for service 'configurationGroup' action 'list'.
+ *
+ * Usage: Return the list of configuration groups
+ *
+ * Server response type:         KalturaConfigurationGroupListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupListAction extends KalturaRequest<KalturaConfigurationGroupListResponse> {
 
     

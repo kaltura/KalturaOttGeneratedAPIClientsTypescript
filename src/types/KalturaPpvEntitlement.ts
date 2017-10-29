@@ -7,9 +7,7 @@ export interface KalturaPpvEntitlementArgs  extends KalturaEntitlementArgs {
     
 }
 
-/** 
-* KalturaPpvEntitlement
-**/
+
 export class KalturaPpvEntitlement extends KalturaEntitlement {
 
     readonly mediaFileId : number;

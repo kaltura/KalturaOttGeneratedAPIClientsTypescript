@@ -7,9 +7,7 @@ export interface KalturaLongValueArgs  extends KalturaValueArgs {
     value? : number;
 }
 
-/** 
-* A string representation to return an array of longs
-**/
+
 export class KalturaLongValue extends KalturaValue {
 
     value : number;

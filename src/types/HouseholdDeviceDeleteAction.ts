@@ -8,9 +8,16 @@ export interface HouseholdDeviceDeleteActionArgs  extends KalturaRequestArgs {
     udid : string;
 }
 
-/** 
-* Removes a device from household
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'delete'.
+ *
+ * Usage: Removes a device from household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceDeleteAction extends KalturaRequest<boolean> {
 
     udid : string;

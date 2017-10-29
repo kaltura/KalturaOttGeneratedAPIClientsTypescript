@@ -20,9 +20,7 @@ export interface KalturaParentalRuleArgs  extends KalturaObjectBaseArgs {
 	origin? : KalturaRuleLevel;
 }
 
-/** 
-* Parental rule
-**/
+
 export class KalturaParentalRule extends KalturaObjectBase {
 
     readonly id : number;

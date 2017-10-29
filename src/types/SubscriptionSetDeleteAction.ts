@@ -8,9 +8,16 @@ export interface SubscriptionSetDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete a subscriptionSet
-**/
+/**
+ * Build request payload for service 'subscriptionSet' action 'delete'.
+ *
+ * Usage: Delete a subscriptionSet
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SubscriptionSetDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

@@ -12,9 +12,16 @@ export interface AssetGetPlaybackContextActionArgs  extends KalturaRequestArgs {
 	contextDataParams : KalturaPlaybackContextOptions;
 }
 
-/** 
-* This action delivers all data relevant for player
-**/
+/**
+ * Build request payload for service 'asset' action 'getPlaybackContext'.
+ *
+ * Usage: This action delivers all data relevant for player
+ *
+ * Server response type:         KalturaPlaybackContext
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetGetPlaybackContextAction extends KalturaRequest<KalturaPlaybackContext> {
 
     assetId : string;

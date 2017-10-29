@@ -10,10 +10,7 @@ export interface KalturaAssetCountArgs  extends KalturaObjectBaseArgs {
 	subs? : KalturaAssetsCount[];
 }
 
-/** 
-* Asset count - represents a specific value of the field, its count and its sub
-* groups.
-**/
+
 export class KalturaAssetCount extends KalturaObjectBase {
 
     value : string;

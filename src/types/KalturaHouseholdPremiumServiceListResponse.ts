@@ -8,9 +8,7 @@ export interface KalturaHouseholdPremiumServiceListResponseArgs  extends Kaltura
     objects? : KalturaHouseholdPremiumService[];
 }
 
-/** 
-* Premium services list
-**/
+
 export class KalturaHouseholdPremiumServiceListResponse extends KalturaListResponse {
 
     objects : KalturaHouseholdPremiumService[];

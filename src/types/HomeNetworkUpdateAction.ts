@@ -9,9 +9,16 @@ export interface HomeNetworkUpdateActionArgs  extends KalturaRequestArgs {
 	homeNetwork : KalturaHomeNetwork;
 }
 
-/** 
-* Update and existing home network for a household
-**/
+/**
+ * Build request payload for service 'homeNetwork' action 'update'.
+ *
+ * Usage: Update and existing home network for a household
+ *
+ * Server response type:         KalturaHomeNetwork
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HomeNetworkUpdateAction extends KalturaRequest<KalturaHomeNetwork> {
 
     externalId : string;

@@ -8,9 +8,16 @@ export interface CdnAdapterProfileGenerateSharedSecretActionArgs  extends Kaltur
     adapterId : number;
 }
 
-/** 
-* Generate CDN adapter shared secret
-**/
+/**
+ * Build request payload for service 'cdnAdapterProfile' action 'generateSharedSecret'.
+ *
+ * Usage: Generate CDN adapter shared secret
+ *
+ * Server response type:         KalturaCDNAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CdnAdapterProfileGenerateSharedSecretAction extends KalturaRequest<KalturaCDNAdapterProfile> {
 
     adapterId : number;

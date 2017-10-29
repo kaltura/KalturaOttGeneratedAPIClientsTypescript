@@ -9,9 +9,16 @@ export interface HouseholdDeviceUpdateActionArgs  extends KalturaRequestArgs {
 	device : KalturaHouseholdDevice;
 }
 
-/** 
-* Update the name of the device by UDID
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'update'.
+ *
+ * Usage: Update the name of the device by UDID
+ *
+ * Server response type:         KalturaHouseholdDevice
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceUpdateAction extends KalturaRequest<KalturaHouseholdDevice> {
 
     udid : string;

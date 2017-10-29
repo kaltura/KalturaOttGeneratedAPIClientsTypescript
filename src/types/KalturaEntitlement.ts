@@ -8,9 +8,7 @@ export interface KalturaEntitlementArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Entitlement
-**/
+
 export class KalturaEntitlement extends KalturaObjectBase {
 
     readonly id : number;

@@ -7,9 +7,7 @@ export interface KalturaSessionInfoArgs  extends KalturaSessionArgs {
     
 }
 
-/** 
-* Kaltura Session
-**/
+
 export class KalturaSessionInfo extends KalturaSession {
 
     

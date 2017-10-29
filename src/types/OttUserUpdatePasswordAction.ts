@@ -9,9 +9,16 @@ export interface OttUserUpdatePasswordActionArgs  extends KalturaRequestArgs {
 	password : string;
 }
 
-/** 
-* Update the user&#39;s existing password.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'updatePassword'.
+ *
+ * Usage: Update the user&#39;s existing password
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserUpdatePasswordAction extends KalturaRequest<void> {
 
     userId : number;

@@ -9,9 +9,16 @@ export interface ExternalChannelProfileUpdateActionArgs  extends KalturaRequestA
 	externalChannel : KalturaExternalChannelProfile;
 }
 
-/** 
-* Update External channel details
-**/
+/**
+ * Build request payload for service 'externalChannelProfile' action 'update'.
+ *
+ * Usage: Update External channel details
+ *
+ * Server response type:         KalturaExternalChannelProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExternalChannelProfileUpdateAction extends KalturaRequest<KalturaExternalChannelProfile> {
 
     externalChannelId : number;

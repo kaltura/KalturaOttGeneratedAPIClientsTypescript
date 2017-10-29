@@ -8,9 +8,7 @@ export interface KalturaAnnouncementListResponseArgs  extends KalturaListRespons
     objects? : KalturaAnnouncement[];
 }
 
-/** 
-* List of message announcements from DB.
-**/
+
 export class KalturaAnnouncementListResponse extends KalturaListResponse {
 
     objects : KalturaAnnouncement[];

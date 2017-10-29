@@ -8,9 +8,7 @@ export interface KalturaEntitlementListResponseArgs  extends KalturaListResponse
     objects? : KalturaEntitlement[];
 }
 
-/** 
-* Entitlements list
-**/
+
 export class KalturaEntitlementListResponse extends KalturaListResponse {
 
     objects : KalturaEntitlement[];

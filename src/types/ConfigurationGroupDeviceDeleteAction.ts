@@ -8,9 +8,16 @@ export interface ConfigurationGroupDeviceDeleteActionArgs  extends KalturaReques
     udid : string;
 }
 
-/** 
-* Remove a device association
-**/
+/**
+ * Build request payload for service 'configurationGroupDevice' action 'delete'.
+ *
+ * Usage: Remove a device association
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupDeviceDeleteAction extends KalturaRequest<boolean> {
 
     udid : string;

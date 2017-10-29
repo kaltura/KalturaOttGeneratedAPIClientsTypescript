@@ -10,9 +10,16 @@ export interface OttUserRegisterActionArgs  extends KalturaRequestArgs {
 	password : string;
 }
 
-/** 
-* Sign up a new user.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'register'.
+ *
+ * Usage: Sign up a new user
+ *
+ * Server response type:         KalturaOTTUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserRegisterAction extends KalturaRequest<KalturaOTTUser> {
 
     partnerId : number;

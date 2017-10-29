@@ -9,9 +9,16 @@ export interface AssetStatisticsQueryActionArgs  extends KalturaRequestArgs {
     query : KalturaAssetStatisticsQuery;
 }
 
-/** 
-* Returns statistics for given list of assets by type and / or time period
-**/
+/**
+ * Build request payload for service 'assetStatistics' action 'query'.
+ *
+ * Usage: Returns statistics for given list of assets by type and / or time period
+ *
+ * Server response type:         KalturaAssetStatisticsListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetStatisticsQueryAction extends KalturaRequest<KalturaAssetStatisticsListResponse> {
 
     query : KalturaAssetStatisticsQuery;

@@ -8,10 +8,16 @@ export interface HouseholdPaymentGatewayGetChargeIDActionArgs  extends KalturaRe
     paymentGatewayExternalId : string;
 }
 
-/** 
-* Get a household’s billing account identifier (charge ID) for a given payment
-* gateway
-**/
+/**
+ * Build request payload for service 'householdPaymentGateway' action 'getChargeID'.
+ *
+ * Usage: Get a household’s billing account identifier (charge ID) for a given payment gateway
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentGatewayGetChargeIDAction extends KalturaRequest<string> {
 
     paymentGatewayExternalId : string;

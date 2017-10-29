@@ -9,9 +9,7 @@ export interface KalturaCouponArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Coupon details container
-**/
+
 export class KalturaCoupon extends KalturaObjectBase {
 
     readonly couponsGroup : KalturaCouponsGroup;

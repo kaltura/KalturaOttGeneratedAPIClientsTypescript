@@ -8,9 +8,16 @@ export interface EngagementAdapterGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Returns all Engagement adapters for partner : id + name
-**/
+/**
+ * Build request payload for service 'engagementAdapter' action 'get'.
+ *
+ * Usage: Returns all Engagement adapters for partner : id + name
+ *
+ * Server response type:         KalturaEngagementAdapter
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EngagementAdapterGetAction extends KalturaRequest<KalturaEngagementAdapter> {
 
     id : number;

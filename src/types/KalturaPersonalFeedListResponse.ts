@@ -8,9 +8,7 @@ export interface KalturaPersonalFeedListResponseArgs  extends KalturaListRespons
     objects? : KalturaPersonalFeed[];
 }
 
-/** 
-* List of message follow data.
-**/
+
 export class KalturaPersonalFeedListResponse extends KalturaListResponse {
 
     objects : KalturaPersonalFeed[];

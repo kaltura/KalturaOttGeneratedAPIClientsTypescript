@@ -8,9 +8,16 @@ export interface HomeNetworkListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Retrieve the household’s home networks
-**/
+/**
+ * Build request payload for service 'homeNetwork' action 'list'.
+ *
+ * Usage: Retrieve the household’s home networks
+ *
+ * Server response type:         KalturaHomeNetworkListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HomeNetworkListAction extends KalturaRequest<KalturaHomeNetworkListResponse> {
 
     

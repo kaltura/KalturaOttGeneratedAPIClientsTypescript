@@ -8,9 +8,7 @@ export interface KalturaFavoriteListResponseArgs  extends KalturaListResponseArg
     objects? : KalturaFavorite[];
 }
 
-/** 
-* Favorite list
-**/
+
 export class KalturaFavoriteListResponse extends KalturaListResponse {
 
     objects : KalturaFavorite[];

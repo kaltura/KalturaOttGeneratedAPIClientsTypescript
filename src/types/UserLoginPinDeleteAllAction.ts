@@ -8,9 +8,16 @@ export interface UserLoginPinDeleteAllActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Immediately expire all active login-PINs for a user
-**/
+/**
+ * Build request payload for service 'userLoginPin' action 'deleteAll'.
+ *
+ * Usage: Immediately expire all active login-PINs for a user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserLoginPinDeleteAllAction extends KalturaRequest<boolean> {
 
     

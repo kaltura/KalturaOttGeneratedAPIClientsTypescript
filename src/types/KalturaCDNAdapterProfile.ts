@@ -13,9 +13,7 @@ export interface KalturaCDNAdapterProfileArgs  extends KalturaObjectBaseArgs {
 	systemName? : string;
 }
 
-/** 
-* CDN Adapter
-**/
+
 export class KalturaCDNAdapterProfile extends KalturaObjectBase {
 
     readonly id : number;

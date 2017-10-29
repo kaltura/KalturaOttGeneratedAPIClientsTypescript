@@ -9,9 +9,16 @@ export interface SocialGetActionArgs  extends KalturaRequestArgs {
     type : KalturaSocialNetwork;
 }
 
-/** 
-* List social accounts
-**/
+/**
+ * Build request payload for service 'social' action 'get'.
+ *
+ * Usage: List social accounts
+ *
+ * Server response type:         KalturaSocial
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialGetAction extends KalturaRequest<KalturaSocial> {
 
     type : KalturaSocialNetwork;

@@ -11,9 +11,7 @@ export interface KalturaCompensationArgs  extends KalturaObjectBaseArgs {
 	purchaseId? : number;
 }
 
-/** 
-* Compensation request parameters
-**/
+
 export class KalturaCompensation extends KalturaObjectBase {
 
     readonly id : number;

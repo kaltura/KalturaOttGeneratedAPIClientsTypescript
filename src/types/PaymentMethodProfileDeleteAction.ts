@@ -8,9 +8,16 @@ export interface PaymentMethodProfileDeleteActionArgs  extends KalturaRequestArg
     paymentMethodId : number;
 }
 
-/** 
-* Delete payment method profile
-**/
+/**
+ * Build request payload for service 'paymentMethodProfile' action 'delete'.
+ *
+ * Usage: Delete payment method profile
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentMethodProfileDeleteAction extends KalturaRequest<boolean> {
 
     paymentMethodId : number;

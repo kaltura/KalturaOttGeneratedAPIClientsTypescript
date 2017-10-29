@@ -11,10 +11,16 @@ export interface ReportListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Return device configurations retrieval log. Supports paging and can be filtered
-* with the parameter &quot;FromData&quot;.
-**/
+/**
+ * Build request payload for service 'report' action 'list'.
+ *
+ * Usage: Return device configurations retrieval log. Supports paging and can be filtered with the parameter &quot;FromData&quot;
+ *
+ * Server response type:         KalturaReportListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportListAction extends KalturaRequest<KalturaReportListResponse> {
 
     filter : KalturaReportFilter;

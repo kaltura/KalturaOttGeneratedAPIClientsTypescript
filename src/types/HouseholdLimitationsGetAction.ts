@@ -8,9 +8,16 @@ export interface HouseholdLimitationsGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get the limitation module by id
-**/
+/**
+ * Build request payload for service 'householdLimitations' action 'get'.
+ *
+ * Usage: Get the limitation module by id
+ *
+ * Server response type:         KalturaHouseholdLimitations
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdLimitationsGetAction extends KalturaRequest<KalturaHouseholdLimitations> {
 
     id : number;

@@ -8,9 +8,16 @@ export interface RecommendationProfileListActionArgs  extends KalturaRequestArgs
     
 }
 
-/** 
-* Returns all recommendation engines for partner
-**/
+/**
+ * Build request payload for service 'recommendationProfile' action 'list'.
+ *
+ * Usage: Returns all recommendation engines for partner
+ *
+ * Server response type:         KalturaRecommendationProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecommendationProfileListAction extends KalturaRequest<KalturaRecommendationProfileListResponse> {
 
     

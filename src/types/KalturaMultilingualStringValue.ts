@@ -9,9 +9,7 @@ export interface KalturaMultilingualStringValueArgs  extends KalturaValueArgs {
 	multilingualValue? : KalturaMultilingualString;
 }
 
-/** 
-* Array of translated strings
-**/
+
 export class KalturaMultilingualStringValue extends KalturaValue {
 
     value : string;

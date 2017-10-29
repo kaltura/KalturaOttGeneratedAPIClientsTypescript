@@ -8,9 +8,16 @@ export interface ConfigurationGroupDeviceGetActionArgs  extends KalturaRequestAr
     udid : string;
 }
 
-/** 
-* Return the configuration group to which a specific device is associated to
-**/
+/**
+ * Build request payload for service 'configurationGroupDevice' action 'get'.
+ *
+ * Usage: Return the configuration group to which a specific device is associated to
+ *
+ * Server response type:         KalturaConfigurationGroupDevice
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupDeviceGetAction extends KalturaRequest<KalturaConfigurationGroupDevice> {
 
     udid : string;

@@ -7,9 +7,7 @@ export interface KalturaSocialConfigArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Returns social configuration for the partner
-**/
+
 export class KalturaSocialConfig extends KalturaObjectBase {
 
     

@@ -8,10 +8,17 @@ export interface FollowTvSeriesAddActionArgs  extends KalturaRequestArgs {
     followTvSeries : KalturaFollowTvSeries;
 }
 
-/** 
-* Add a user&#39;s tv series follow.              Possible status codes:
-* UserAlreadyFollowing = 8013, NotFound = 500007, InvalidAssetId = 4024
-**/
+/**
+ * Build request payload for service 'followTvSeries' action 'add'.
+ *
+ * Usage: Add a user&#39;s tv series follow.
+ * Possible status codes: UserAlreadyFollowing = 8013, NotFound = 500007, InvalidAssetId = 4024
+ *
+ * Server response type:         KalturaFollowTvSeries
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FollowTvSeriesAddAction extends KalturaRequest<KalturaFollowTvSeries> {
 
     followTvSeries : KalturaFollowTvSeries;

@@ -9,9 +9,16 @@ export interface OttUserAnonymousLoginActionArgs  extends KalturaRequestArgs {
 	udid? : string;
 }
 
-/** 
-* Returns tokens (KS and refresh token) for anonymous access
-**/
+/**
+ * Build request payload for service 'ottUser' action 'anonymousLogin'.
+ *
+ * Usage: Returns tokens (KS and refresh token) for anonymous access
+ *
+ * Server response type:         KalturaLoginSession
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserAnonymousLoginAction extends KalturaRequest<KalturaLoginSession> {
 
     partnerId : number;

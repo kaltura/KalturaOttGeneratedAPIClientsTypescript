@@ -8,9 +8,16 @@ export interface SessionRevokeActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Revokes all the sessions (KS) of a given user
-**/
+/**
+ * Build request payload for service 'session' action 'revoke'.
+ *
+ * Usage: Revokes all the sessions (KS) of a given user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SessionRevokeAction extends KalturaRequest<boolean> {
 
     

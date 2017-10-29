@@ -1,29 +1,21 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMetaFieldName } from './KalturaMetaFieldName';
 import { KalturaMetaType } from './KalturaMetaType';
-import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaMetaFilterArgs  extends KalturaFilterArgs {
-    fieldNameEqual? : KalturaMetaFieldName;
-	fieldNameNotEqual? : KalturaMetaFieldName;
+    idIn? : string;
+	assetStructIdEqual? : number;
 	typeEqual? : KalturaMetaType;
-	assetTypeEqual? : KalturaAssetType;
-	featuresIn? : string;
 }
 
-/** 
-* Meta filter
-**/
+
 export class KalturaMetaFilter extends KalturaFilter {
 
-    fieldNameEqual : KalturaMetaFieldName;
-	fieldNameNotEqual : KalturaMetaFieldName;
+    idIn : string;
+	assetStructIdEqual : number;
 	typeEqual : KalturaMetaType;
-	assetTypeEqual : KalturaAssetType;
-	featuresIn : string;
 
     constructor(data? : KalturaMetaFilterArgs)
     {
@@ -37,11 +29,9 @@ export class KalturaMetaFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMetaFilter' },
-				fieldNameEqual : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
-				fieldNameNotEqual : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
-				typeEqual : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' },
-				assetTypeEqual : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
-				featuresIn : { type : 's' }
+				idIn : { type : 's' },
+				assetStructIdEqual : { type : 'n' },
+				typeEqual : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' }
             }
         );
         return result;

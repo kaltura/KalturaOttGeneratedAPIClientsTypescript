@@ -8,9 +8,16 @@ export interface HouseholdResumeActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Resumed a given household service to its previous service settings
-**/
+/**
+ * Build request payload for service 'household' action 'resume'.
+ *
+ * Usage: Resumed a given household service to its previous service settings
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdResumeAction extends KalturaRequest<boolean> {
 
     

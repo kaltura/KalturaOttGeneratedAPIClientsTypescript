@@ -9,9 +9,16 @@ export interface ExportTaskUpdateActionArgs  extends KalturaRequestArgs {
 	task : KalturaExportTask;
 }
 
-/** 
-* Updates an existing bulk export task by task identifier
-**/
+/**
+ * Build request payload for service 'exportTask' action 'update'.
+ *
+ * Usage: Updates an existing bulk export task by task identifier
+ *
+ * Server response type:         KalturaExportTask
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExportTaskUpdateAction extends KalturaRequest<KalturaExportTask> {
 
     id : number;

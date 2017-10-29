@@ -7,9 +7,7 @@ export interface KalturaLoginSessionArgs  extends KalturaObjectBaseArgs {
     ks? : string;
 }
 
-/** 
-* Login response
-**/
+
 export class KalturaLoginSession extends KalturaObjectBase {
 
     ks : string;

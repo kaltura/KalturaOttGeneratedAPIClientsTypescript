@@ -8,9 +8,16 @@ export interface ReminderAddActionArgs  extends KalturaRequestArgs {
     reminder : KalturaReminder;
 }
 
-/** 
-* Add a new future reminder
-**/
+/**
+ * Build request payload for service 'reminder' action 'add'.
+ *
+ * Usage: Add a new future reminder
+ *
+ * Server response type:         KalturaReminder
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReminderAddAction extends KalturaRequest<KalturaReminder> {
 
     reminder : KalturaReminder;

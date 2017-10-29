@@ -9,9 +9,16 @@ export interface TransactionGetPurchaseSessionIdActionArgs  extends KalturaReque
     purchaseSession : KalturaPurchaseSession;
 }
 
-/** 
-* Retrieve the purchase session identifier
-**/
+/**
+ * Build request payload for service 'transaction' action 'getPurchaseSessionId'.
+ *
+ * Usage: Retrieve the purchase session identifier
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionGetPurchaseSessionIdAction extends KalturaRequest<number> {
 
     purchaseSession : KalturaPurchaseSession;

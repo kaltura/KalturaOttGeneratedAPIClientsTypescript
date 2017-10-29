@@ -13,9 +13,7 @@ export interface KalturaCountryArgs  extends KalturaObjectBaseArgs {
 	vatPercent? : number;
 }
 
-/** 
-* Country details
-**/
+
 export class KalturaCountry extends KalturaObjectBase {
 
     readonly id : number;

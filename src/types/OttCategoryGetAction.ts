@@ -8,9 +8,16 @@ export interface OttCategoryGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Retrieve the list of categories (hierarchical) and their associated channels
-**/
+/**
+ * Build request payload for service 'ottCategory' action 'get'.
+ *
+ * Usage: Retrieve the list of categories (hierarchical) and their associated channels
+ *
+ * Server response type:         KalturaOTTCategory
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttCategoryGetAction extends KalturaRequest<KalturaOTTCategory> {
 
     id : number;

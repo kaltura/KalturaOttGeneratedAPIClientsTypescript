@@ -8,9 +8,16 @@ export interface UserInterestListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns all Engagement for partner
-**/
+/**
+ * Build request payload for service 'userInterest' action 'list'.
+ *
+ * Usage: Returns all Engagement for partner
+ *
+ * Server response type:         KalturaUserInterestListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserInterestListAction extends KalturaRequest<KalturaUserInterestListResponse> {
 
     

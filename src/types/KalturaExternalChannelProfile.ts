@@ -13,9 +13,7 @@ export interface KalturaExternalChannelProfileArgs  extends KalturaObjectBaseArg
 	enrichments? : KalturaChannelEnrichmentHolder[];
 }
 
-/** 
-* OSS Adapter
-**/
+
 export class KalturaExternalChannelProfile extends KalturaObjectBase {
 
     readonly id : number;

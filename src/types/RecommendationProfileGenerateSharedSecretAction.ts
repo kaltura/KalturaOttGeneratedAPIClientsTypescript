@@ -8,9 +8,16 @@ export interface RecommendationProfileGenerateSharedSecretActionArgs  extends Ka
     recommendationEngineId : number;
 }
 
-/** 
-* Generate recommendation engine  shared secret
-**/
+/**
+ * Build request payload for service 'recommendationProfile' action 'generateSharedSecret'.
+ *
+ * Usage: Generate recommendation engine  shared secret
+ *
+ * Server response type:         KalturaRecommendationProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecommendationProfileGenerateSharedSecretAction extends KalturaRequest<KalturaRecommendationProfile> {
 
     recommendationEngineId : number;

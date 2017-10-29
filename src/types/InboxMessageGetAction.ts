@@ -8,9 +8,16 @@ export interface InboxMessageGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* TBD
-**/
+/**
+ * Build request payload for service 'inboxMessage' action 'get'.
+ *
+ * Usage: TBD
+ *
+ * Server response type:         KalturaInboxMessage
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class InboxMessageGetAction extends KalturaRequest<KalturaInboxMessage> {
 
     id : string;

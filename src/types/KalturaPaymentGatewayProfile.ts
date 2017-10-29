@@ -19,9 +19,7 @@ export interface KalturaPaymentGatewayProfileArgs  extends KalturaPaymentGateway
 	renewStartMinutes? : number;
 }
 
-/** 
-* Payment gateway profile
-**/
+
 export class KalturaPaymentGatewayProfile extends KalturaPaymentGatewayBaseProfile {
 
     isActive : number;

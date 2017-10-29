@@ -11,9 +11,16 @@ export interface SocialFriendActivityListActionArgs  extends KalturaRequestArgs 
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Get a list of the social friends activity for a user
-**/
+/**
+ * Build request payload for service 'socialFriendActivity' action 'list'.
+ *
+ * Usage: Get a list of the social friends activity for a user
+ *
+ * Server response type:         KalturaSocialFriendActivityListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialFriendActivityListAction extends KalturaRequest<KalturaSocialFriendActivityListResponse> {
 
     filter : KalturaSocialFriendActivityFilter;

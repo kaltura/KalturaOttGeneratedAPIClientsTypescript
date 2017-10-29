@@ -8,9 +8,16 @@ export interface OssAdapterProfileDeleteActionArgs  extends KalturaRequestArgs {
     ossAdapterId : number;
 }
 
-/** 
-* Delete OSS adapter by OSS adapter id
-**/
+/**
+ * Build request payload for service 'ossAdapterProfile' action 'delete'.
+ *
+ * Usage: Delete OSS adapter by OSS adapter id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OssAdapterProfileDeleteAction extends KalturaRequest<boolean> {
 
     ossAdapterId : number;

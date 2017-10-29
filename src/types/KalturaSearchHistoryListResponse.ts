@@ -8,9 +8,7 @@ export interface KalturaSearchHistoryListResponseArgs  extends KalturaListRespon
     objects? : KalturaSearchHistory[];
 }
 
-/** 
-* Search history wrapper
-**/
+
 export class KalturaSearchHistoryListResponse extends KalturaListResponse {
 
     objects : KalturaSearchHistory[];

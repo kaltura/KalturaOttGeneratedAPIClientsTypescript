@@ -6,26 +6,25 @@ import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPriceDetailsArgs  extends KalturaObjectBaseArgs {
-    id? : number;
-	name? : string;
-	price? : KalturaPrice;
+    name? : string;
+	multiCurrencyPrice? : KalturaPrice[];
 	descriptions? : KalturaTranslationToken[];
 }
 
-/** 
-* Price details
-**/
+
 export class KalturaPriceDetails extends KalturaObjectBase {
 
-    id : number;
+    readonly id : number;
 	name : string;
-	price : KalturaPrice;
+	readonly price : KalturaPrice;
+	multiCurrencyPrice : KalturaPrice[];
 	descriptions : KalturaTranslationToken[];
 
     constructor(data? : KalturaPriceDetailsArgs)
     {
         super(data);
-        if (typeof this.descriptions === 'undefined') this.descriptions = [];
+        if (typeof this.multiCurrencyPrice === 'undefined') this.multiCurrencyPrice = [];
+		if (typeof this.descriptions === 'undefined') this.descriptions = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,9 +34,10 @@ export class KalturaPriceDetails extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaPriceDetails' },
-				id : { type : 'n' },
+				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
-				price : { type : 'o', subTypeConstructor : KalturaPrice, subType : 'KalturaPrice' },
+				price : { type : 'o', readOnly : true, subTypeConstructor : KalturaPrice, subType : 'KalturaPrice' },
+				multiCurrencyPrice : { type : 'a', subTypeConstructor : KalturaPrice, subType : 'KalturaPrice' },
 				descriptions : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' }
             }
         );

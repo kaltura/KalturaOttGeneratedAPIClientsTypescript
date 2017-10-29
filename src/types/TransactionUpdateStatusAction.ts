@@ -12,9 +12,16 @@ export interface TransactionUpdateStatusActionArgs  extends KalturaRequestArgs {
 	status : KalturaTransactionStatus;
 }
 
-/** 
-* Updates a pending purchase transaction state.
-**/
+/**
+ * Build request payload for service 'transaction' action 'updateStatus'.
+ *
+ * Usage: Updates a pending purchase transaction state
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionUpdateStatusAction extends KalturaRequest<void> {
 
     paymentGatewayId : string;

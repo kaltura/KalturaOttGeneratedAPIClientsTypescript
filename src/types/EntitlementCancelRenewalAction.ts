@@ -8,10 +8,16 @@ export interface EntitlementCancelRenewalActionArgs  extends KalturaRequestArgs 
     subscriptionId : string;
 }
 
-/** 
-* Cancel a household service subscription at the next renewal. The subscription
-* stays valid till the next renewal.
-**/
+/**
+ * Build request payload for service 'entitlement' action 'cancelRenewal'.
+ *
+ * Usage: Cancel a household service subscription at the next renewal. The subscription stays valid till the next renewal
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementCancelRenewalAction extends KalturaRequest<void> {
 
     subscriptionId : string;

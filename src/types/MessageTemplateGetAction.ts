@@ -9,9 +9,16 @@ export interface MessageTemplateGetActionArgs  extends KalturaRequestArgs {
     messageType : KalturaMessageTemplateType;
 }
 
-/** 
-* Retrieve a message template used in push notifications and inbox
-**/
+/**
+ * Build request payload for service 'messageTemplate' action 'get'.
+ *
+ * Usage: Retrieve a message template used in push notifications and inbox
+ *
+ * Server response type:         KalturaMessageTemplate
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MessageTemplateGetAction extends KalturaRequest<KalturaMessageTemplate> {
 
     messageType : KalturaMessageTemplateType;
@@ -29,7 +36,7 @@ export class MessageTemplateGetAction extends KalturaRequest<KalturaMessageTempl
             {
                 service : { type : 'c', default : 'messagetemplate' },
 				action : { type : 'c', default : 'get' },
-				messageType : { type : 'en', subTypeConstructor : KalturaMessageTemplateType, subType : 'KalturaMessageTemplateType' }
+				messageType : { type : 'es', subTypeConstructor : KalturaMessageTemplateType, subType : 'KalturaMessageTemplateType' }
             }
         );
         return result;

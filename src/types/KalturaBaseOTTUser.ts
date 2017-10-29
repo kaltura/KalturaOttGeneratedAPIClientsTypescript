@@ -9,9 +9,7 @@ export interface KalturaBaseOTTUserArgs  extends KalturaObjectBaseArgs {
 	lastName? : string;
 }
 
-/** 
-* Slim user data
-**/
+
 export class KalturaBaseOTTUser extends KalturaObjectBase {
 
     readonly id : string;

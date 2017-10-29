@@ -9,9 +9,16 @@ export interface AnnouncementUpdateStatusActionArgs  extends KalturaRequestArgs 
 	status : boolean;
 }
 
-/** 
-* Update a system announcement status
-**/
+/**
+ * Build request payload for service 'announcement' action 'updateStatus'.
+ *
+ * Usage: Update a system announcement status
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnouncementUpdateStatusAction extends KalturaRequest<boolean> {
 
     id : number;

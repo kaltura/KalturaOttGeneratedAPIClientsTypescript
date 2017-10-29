@@ -27,9 +27,7 @@ export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
 	externalId? : string;
 }
 
-/** 
-* Asset info
-**/
+
 export class KalturaAsset extends KalturaObjectBase {
 
     readonly id : number;

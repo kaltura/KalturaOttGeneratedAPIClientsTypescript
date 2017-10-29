@@ -13,9 +13,7 @@ export interface KalturaCDVRAdapterProfileArgs  extends KalturaObjectBaseArgs {
 	dynamicLinksSupport? : boolean;
 }
 
-/** 
-* C-DVR Adapter
-**/
+
 export class KalturaCDVRAdapterProfile extends KalturaObjectBase {
 
     readonly id : number;

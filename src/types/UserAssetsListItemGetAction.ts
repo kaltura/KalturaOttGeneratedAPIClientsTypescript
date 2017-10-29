@@ -12,9 +12,16 @@ export interface UserAssetsListItemGetActionArgs  extends KalturaRequestArgs {
 	itemType : KalturaUserAssetsListItemType;
 }
 
-/** 
-* Get an item from user’s private asset list
-**/
+/**
+ * Build request payload for service 'userAssetsListItem' action 'get'.
+ *
+ * Usage: Get an item from user’s private asset list
+ *
+ * Server response type:         KalturaUserAssetsListItem
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserAssetsListItemGetAction extends KalturaRequest<KalturaUserAssetsListItem> {
 
     assetId : string;

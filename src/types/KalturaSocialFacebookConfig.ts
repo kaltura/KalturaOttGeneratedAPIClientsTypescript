@@ -8,9 +8,7 @@ export interface KalturaSocialFacebookConfigArgs  extends KalturaSocialConfigArg
 	permissions? : string;
 }
 
-/** 
-* Returns social configuration for the partner
-**/
+
 export class KalturaSocialFacebookConfig extends KalturaSocialConfig {
 
     appId : string;

@@ -8,10 +8,16 @@ export interface OttUserDeleteActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Permanently delete a user. User to delete cannot be an exclusive household
-* master, and cannot be default user.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'delete'.
+ *
+ * Usage: Permanently delete a user. User to delete cannot be an exclusive household master, and cannot be default user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserDeleteAction extends KalturaRequest<boolean> {
 
     

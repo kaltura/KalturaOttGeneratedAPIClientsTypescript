@@ -10,9 +10,16 @@ export interface ReminderDeleteActionArgs  extends KalturaRequestArgs {
 	type : KalturaReminderType;
 }
 
-/** 
-* Delete a reminder. Reminder cannot be delete while being sent.
-**/
+/**
+ * Build request payload for service 'reminder' action 'delete'.
+ *
+ * Usage: Delete a reminder. Reminder cannot be delete while being sent
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReminderDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

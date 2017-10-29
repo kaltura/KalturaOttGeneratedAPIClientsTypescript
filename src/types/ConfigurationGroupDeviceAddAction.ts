@@ -9,10 +9,16 @@ export interface ConfigurationGroupDeviceAddActionArgs  extends KalturaRequestAr
     configurationGroupDevice : KalturaConfigurationGroupDevice;
 }
 
-/** 
-* Associate a collection of devices to a configuration group. If a device is
-* already associated to another group – old association is replaced
-**/
+/**
+ * Build request payload for service 'configurationGroupDevice' action 'add'.
+ *
+ * Usage: Associate a collection of devices to a configuration group. If a device is already associated to another group – old association is replaced
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupDeviceAddAction extends KalturaRequest<boolean> {
 
     configurationGroupDevice : KalturaConfigurationGroupDevice;

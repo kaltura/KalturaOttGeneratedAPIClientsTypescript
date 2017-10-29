@@ -11,9 +11,16 @@ export interface EntitlementListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Gets all the entitled media items for a household
-**/
+/**
+ * Build request payload for service 'entitlement' action 'list'.
+ *
+ * Usage: Gets all the entitled media items for a household
+ *
+ * Server response type:         KalturaEntitlementListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementListAction extends KalturaRequest<KalturaEntitlementListResponse> {
 
     filter : KalturaEntitlementFilter;

@@ -7,9 +7,7 @@ export interface KalturaDeviceBrandArgs  extends KalturaObjectBaseArgs {
     name? : string;
 }
 
-/** 
-* Device brand details
-**/
+
 export class KalturaDeviceBrand extends KalturaObjectBase {
 
     readonly id : number;

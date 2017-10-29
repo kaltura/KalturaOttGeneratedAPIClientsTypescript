@@ -9,9 +9,7 @@ export interface KalturaPreviewModuleArgs  extends KalturaObjectBaseArgs {
 	nonRenewablePeriod? : number;
 }
 
-/** 
-* Preview module
-**/
+
 export class KalturaPreviewModule extends KalturaObjectBase {
 
     readonly id : number;

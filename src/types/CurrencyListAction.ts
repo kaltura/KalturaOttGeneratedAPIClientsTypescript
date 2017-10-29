@@ -9,10 +9,16 @@ export interface CurrencyListActionArgs  extends KalturaRequestArgs {
     filter : KalturaCurrencyFilter;
 }
 
-/** 
-* Get the list of currencies for the partner with option to filter by currency
-* codes
-**/
+/**
+ * Build request payload for service 'currency' action 'list'.
+ *
+ * Usage: Get the list of currencies for the partner with option to filter by currency codes
+ *
+ * Server response type:         KalturaCurrencyListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CurrencyListAction extends KalturaRequest<KalturaCurrencyListResponse> {
 
     filter : KalturaCurrencyFilter;

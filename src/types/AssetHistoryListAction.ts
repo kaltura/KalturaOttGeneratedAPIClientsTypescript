@@ -11,9 +11,16 @@ export interface AssetHistoryListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Get recently watched media for user, ordered by recently watched first.
-**/
+/**
+ * Build request payload for service 'assetHistory' action 'list'.
+ *
+ * Usage: Get recently watched media for user, ordered by recently watched first
+ *
+ * Server response type:         KalturaAssetHistoryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetHistoryListAction extends KalturaRequest<KalturaAssetHistoryListResponse> {
 
     filter : KalturaAssetHistoryFilter;

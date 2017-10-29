@@ -9,9 +9,16 @@ export interface PaymentGatewayProfileUpdateActionArgs  extends KalturaRequestAr
 	paymentGateway : KalturaPaymentGatewayProfile;
 }
 
-/** 
-* Update payment gateway details
-**/
+/**
+ * Build request payload for service 'paymentGatewayProfile' action 'update'.
+ *
+ * Usage: Update payment gateway details
+ *
+ * Server response type:         KalturaPaymentGatewayProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentGatewayProfileUpdateAction extends KalturaRequest<KalturaPaymentGatewayProfile> {
 
     paymentGatewayId : number;

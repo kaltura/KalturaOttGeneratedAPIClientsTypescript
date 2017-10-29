@@ -8,9 +8,16 @@ export interface OttUserAddRoleActionArgs  extends KalturaRequestArgs {
     roleId : number;
 }
 
-/** 
-* Edit user details.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'addRole'.
+ *
+ * Usage: Edit user details
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserAddRoleAction extends KalturaRequest<boolean> {
 
     roleId : number;

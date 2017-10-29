@@ -9,10 +9,16 @@ export interface BookmarkAddActionArgs  extends KalturaRequestArgs {
     bookmark : KalturaBookmark;
 }
 
-/** 
-* Report player position and action for the user on the watched asset. Player
-* position is used to later allow resume watching.
-**/
+/**
+ * Build request payload for service 'bookmark' action 'add'.
+ *
+ * Usage: Report player position and action for the user on the watched asset. Player position is used to later allow resume watching
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BookmarkAddAction extends KalturaRequest<boolean> {
 
     bookmark : KalturaBookmark;

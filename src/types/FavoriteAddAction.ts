@@ -8,9 +8,16 @@ export interface FavoriteAddActionArgs  extends KalturaRequestArgs {
     favorite : KalturaFavorite;
 }
 
-/** 
-* Add media to user&#39;s favorite list
-**/
+/**
+ * Build request payload for service 'favorite' action 'add'.
+ *
+ * Usage: Add media to user&#39;s favorite list
+ *
+ * Server response type:         KalturaFavorite
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FavoriteAddAction extends KalturaRequest<KalturaFavorite> {
 
     favorite : KalturaFavorite;

@@ -8,9 +8,16 @@ export interface OttUserGetEncryptedUserIdActionArgs  extends KalturaRequestArgs
     
 }
 
-/** 
-* Returns the identifier of the user encrypted with SHA1 using configured key
-**/
+/**
+ * Build request payload for service 'ottUser' action 'getEncryptedUserId'.
+ *
+ * Usage: Returns the identifier of the user encrypted with SHA1 using configured key
+ *
+ * Server response type:         KalturaStringValue
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserGetEncryptedUserIdAction extends KalturaRequest<KalturaStringValue> {
 
     

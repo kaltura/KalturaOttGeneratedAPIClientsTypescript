@@ -8,9 +8,16 @@ export interface CouponGetActionArgs  extends KalturaRequestArgs {
     code : string;
 }
 
-/** 
-* Returns information about a coupon
-**/
+/**
+ * Build request payload for service 'coupon' action 'get'.
+ *
+ * Usage: Returns information about a coupon
+ *
+ * Server response type:         KalturaCoupon
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CouponGetAction extends KalturaRequest<KalturaCoupon> {
 
     code : string;

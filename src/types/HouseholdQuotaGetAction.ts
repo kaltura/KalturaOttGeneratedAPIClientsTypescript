@@ -8,9 +8,16 @@ export interface HouseholdQuotaGetActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns the household&#39;s quota data
-**/
+/**
+ * Build request payload for service 'householdQuota' action 'get'.
+ *
+ * Usage: Returns the household&#39;s quota data
+ *
+ * Server response type:         KalturaHouseholdQuota
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdQuotaGetAction extends KalturaRequest<KalturaHouseholdQuota> {
 
     

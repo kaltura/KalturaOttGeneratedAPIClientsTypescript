@@ -13,9 +13,7 @@ export interface KalturaOTTCategoryArgs  extends KalturaObjectBaseArgs {
 	images? : KalturaMediaImage[];
 }
 
-/** 
-* Category details
-**/
+
 export class KalturaOTTCategory extends KalturaObjectBase {
 
     readonly id : number;

@@ -7,9 +7,7 @@ export interface KalturaExportTaskFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
 }
 
-/** 
-* Bulk export tasks filter
-**/
+
 export class KalturaExportTaskFilter extends KalturaFilter {
 
     idIn : string;

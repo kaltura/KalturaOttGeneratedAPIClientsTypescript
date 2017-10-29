@@ -8,9 +8,16 @@ export interface ConfigurationsGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Return the device configuration
-**/
+/**
+ * Build request payload for service 'configurations' action 'get'.
+ *
+ * Usage: Return the device configuration
+ *
+ * Server response type:         KalturaConfigurations
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationsGetAction extends KalturaRequest<KalturaConfigurations> {
 
     id : string;

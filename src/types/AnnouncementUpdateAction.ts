@@ -9,10 +9,16 @@ export interface AnnouncementUpdateActionArgs  extends KalturaRequestArgs {
 	announcement : KalturaAnnouncement;
 }
 
-/** 
-* Update an existing future system announcement push notification. Announcement
-* can only be updated only before sending
-**/
+/**
+ * Build request payload for service 'announcement' action 'update'.
+ *
+ * Usage: Update an existing future system announcement push notification. Announcement can only be updated only before sending
+ *
+ * Server response type:         KalturaAnnouncement
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnouncementUpdateAction extends KalturaRequest<KalturaAnnouncement> {
 
     announcementId : number;

@@ -9,10 +9,16 @@ export interface ParentalRuleDisableDefaultActionArgs  extends KalturaRequestArg
     entityReference : KalturaEntityReferenceBy;
 }
 
-/** 
-* Disables a parental rule that was defined at account level. Disable can be at
-* specific user or household level.
-**/
+/**
+ * Build request payload for service 'parentalRule' action 'disableDefault'.
+ *
+ * Usage: Disables a parental rule that was defined at account level. Disable can be at specific user or household level
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ParentalRuleDisableDefaultAction extends KalturaRequest<boolean> {
 
     entityReference : KalturaEntityReferenceBy;

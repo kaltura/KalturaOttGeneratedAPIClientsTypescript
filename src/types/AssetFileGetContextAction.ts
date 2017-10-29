@@ -10,9 +10,16 @@ export interface AssetFileGetContextActionArgs  extends KalturaRequestArgs {
 	contextType : KalturaContextType;
 }
 
-/** 
-* get KalturaAssetFileContext
-**/
+/**
+ * Build request payload for service 'assetFile' action 'getContext'.
+ *
+ * Usage: get KalturaAssetFileContext
+ *
+ * Server response type:         KalturaAssetFileContext
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetFileGetContextAction extends KalturaRequest<KalturaAssetFileContext> {
 
     id : string;

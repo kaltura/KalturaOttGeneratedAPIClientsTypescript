@@ -8,9 +8,7 @@ export interface KalturaCDVRAdapterProfileListResponseArgs  extends KalturaListR
     objects? : KalturaCDVRAdapterProfile[];
 }
 
-/** 
-* C-DVR adapter profiles
-**/
+
 export class KalturaCDVRAdapterProfileListResponse extends KalturaListResponse {
 
     objects : KalturaCDVRAdapterProfile[];

@@ -11,9 +11,16 @@ export interface OttUserLoginWithPinActionArgs  extends KalturaRequestArgs {
 	secret? : string;
 }
 
-/** 
-* User sign-in via a time-expired sign-in PIN.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'loginWithPin'.
+ *
+ * Usage: User sign-in via a time-expired sign-in PIN
+ *
+ * Server response type:         KalturaLoginResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserLoginWithPinAction extends KalturaRequest<KalturaLoginResponse> {
 
     partnerId : number;

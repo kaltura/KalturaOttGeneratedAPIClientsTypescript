@@ -8,9 +8,7 @@ export interface KalturaExportTaskListResponseArgs  extends KalturaListResponseA
     objects? : KalturaExportTask[];
 }
 
-/** 
-* Export task list wrapper
-**/
+
 export class KalturaExportTaskListResponse extends KalturaListResponse {
 
     objects : KalturaExportTask[];

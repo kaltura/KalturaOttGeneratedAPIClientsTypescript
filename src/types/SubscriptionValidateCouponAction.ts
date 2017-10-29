@@ -9,9 +9,16 @@ export interface SubscriptionValidateCouponActionArgs  extends KalturaRequestArg
 	code : string;
 }
 
-/** 
-* Returns information about a coupon for subscription
-**/
+/**
+ * Build request payload for service 'subscription' action 'validateCoupon'.
+ *
+ * Usage: Returns information about a coupon for subscription
+ *
+ * Server response type:         KalturaCoupon
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SubscriptionValidateCouponAction extends KalturaRequest<KalturaCoupon> {
 
     id : number;

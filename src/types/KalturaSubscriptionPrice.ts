@@ -4,15 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaProductPrice, KalturaProductPriceArgs } from './KalturaProductPrice';
 
 export interface KalturaSubscriptionPriceArgs  extends KalturaProductPriceArgs {
-    
+    endDate? : number;
 }
 
-/** 
-* Subscription price details
-**/
+
 export class KalturaSubscriptionPrice extends KalturaProductPrice {
 
-    
+    endDate : number;
 
     constructor(data? : KalturaSubscriptionPriceArgs)
     {
@@ -25,7 +23,8 @@ export class KalturaSubscriptionPrice extends KalturaProductPrice {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaSubscriptionPrice' }
+                objectType : { type : 'c', default : 'KalturaSubscriptionPrice' },
+				endDate : { type : 'n' }
             }
         );
         return result;

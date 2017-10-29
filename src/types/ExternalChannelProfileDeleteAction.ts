@@ -8,9 +8,16 @@ export interface ExternalChannelProfileDeleteActionArgs  extends KalturaRequestA
     externalChannelId : number;
 }
 
-/** 
-* Delete External channel by External channel id
-**/
+/**
+ * Build request payload for service 'externalChannelProfile' action 'delete'.
+ *
+ * Usage: Delete External channel by External channel id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExternalChannelProfileDeleteAction extends KalturaRequest<boolean> {
 
     externalChannelId : number;

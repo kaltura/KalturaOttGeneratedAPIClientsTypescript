@@ -8,9 +8,16 @@ export interface HouseholdPaymentMethodAddActionArgs  extends KalturaRequestArgs
     householdPaymentMethod : KalturaHouseholdPaymentMethod;
 }
 
-/** 
-* Add a new payment method for household
-**/
+/**
+ * Build request payload for service 'householdPaymentMethod' action 'add'.
+ *
+ * Usage: Add a new payment method for household
+ *
+ * Server response type:         KalturaHouseholdPaymentMethod
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentMethodAddAction extends KalturaRequest<KalturaHouseholdPaymentMethod> {
 
     householdPaymentMethod : KalturaHouseholdPaymentMethod;

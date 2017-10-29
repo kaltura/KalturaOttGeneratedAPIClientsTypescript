@@ -10,9 +10,7 @@ export interface KalturaTransactionHistoryFilterArgs  extends KalturaFilterArgs 
 	endDateLessThanOrEqual? : number;
 }
 
-/** 
-* Transactions filter
-**/
+
 export class KalturaTransactionHistoryFilter extends KalturaFilter {
 
     entityReferenceEqual : KalturaEntityReferenceBy;

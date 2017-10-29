@@ -4,6 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaMediaImage } from './KalturaMediaImage';
 import { KalturaIntegerValue } from './KalturaIntegerValue';
 import { KalturaAssetOrderBy } from './KalturaAssetOrderBy';
+import { KalturaAssetGroupBy } from './KalturaAssetGroupBy';
 import { KalturaBaseChannel, KalturaBaseChannelArgs } from './KalturaBaseChannel';
 
 export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
@@ -13,11 +14,10 @@ export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
 	filterExpression? : string;
 	isActive? : boolean;
 	order? : KalturaAssetOrderBy;
+	groupBy? : KalturaAssetGroupBy;
 }
 
-/** 
-* Channel details
-**/
+
 export class KalturaChannel extends KalturaBaseChannel {
 
     description : string;
@@ -26,6 +26,7 @@ export class KalturaChannel extends KalturaBaseChannel {
 	filterExpression : string;
 	isActive : boolean;
 	order : KalturaAssetOrderBy;
+	groupBy : KalturaAssetGroupBy;
 
     constructor(data? : KalturaChannelArgs)
     {
@@ -46,7 +47,8 @@ export class KalturaChannel extends KalturaBaseChannel {
 				assetTypes : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
 				filterExpression : { type : 's' },
 				isActive : { type : 'b' },
-				order : { type : 'es', subTypeConstructor : KalturaAssetOrderBy, subType : 'KalturaAssetOrderBy' }
+				order : { type : 'es', subTypeConstructor : KalturaAssetOrderBy, subType : 'KalturaAssetOrderBy' },
+				groupBy : { type : 'o', subTypeConstructor : KalturaAssetGroupBy, subType : 'KalturaAssetGroupBy' }
             }
         );
         return result;

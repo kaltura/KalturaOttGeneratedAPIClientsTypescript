@@ -8,9 +8,7 @@ export interface KalturaAssetCommentListResponseArgs  extends KalturaListRespons
     objects? : KalturaAssetComment[];
 }
 
-/** 
-* Asset Comment Response
-**/
+
 export class KalturaAssetCommentListResponse extends KalturaListResponse {
 
     objects : KalturaAssetComment[];

@@ -8,9 +8,7 @@ export interface KalturaMultilingualStringValueArrayArgs  extends KalturaObjectB
     objects? : KalturaMultilingualStringValue[];
 }
 
-/** 
-* Array of translated strings
-**/
+
 export class KalturaMultilingualStringValueArray extends KalturaObjectBase {
 
     objects : KalturaMultilingualStringValue[];

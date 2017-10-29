@@ -11,9 +11,16 @@ export interface PinValidateActionArgs  extends KalturaRequestArgs {
 	ruleId? : number;
 }
 
-/** 
-* Validate a purchase or parental PIN for a user.
-**/
+/**
+ * Build request payload for service 'pin' action 'validate'.
+ *
+ * Usage: Validate a purchase or parental PIN for a user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PinValidateAction extends KalturaRequest<boolean> {
 
     pin : string;

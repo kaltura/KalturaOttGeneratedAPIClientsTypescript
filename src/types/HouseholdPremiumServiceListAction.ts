@@ -8,9 +8,16 @@ export interface HouseholdPremiumServiceListActionArgs  extends KalturaRequestAr
     
 }
 
-/** 
-* Returns all the premium services allowed for the household
-**/
+/**
+ * Build request payload for service 'householdPremiumService' action 'list'.
+ *
+ * Usage: Returns all the premium services allowed for the household
+ *
+ * Server response type:         KalturaHouseholdPremiumServiceListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPremiumServiceListAction extends KalturaRequest<KalturaHouseholdPremiumServiceListResponse> {
 
     

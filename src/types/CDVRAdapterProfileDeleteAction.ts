@@ -8,9 +8,16 @@ export interface CDVRAdapterProfileDeleteActionArgs  extends KalturaRequestArgs 
     adapterId : number;
 }
 
-/** 
-* Delete C-DVR adapter by C-DVR adapter id
-**/
+/**
+ * Build request payload for service 'cDVRAdapterProfile' action 'delete'.
+ *
+ * Usage: Delete C-DVR adapter by C-DVR adapter id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CDVRAdapterProfileDeleteAction extends KalturaRequest<boolean> {
 
     adapterId : number;

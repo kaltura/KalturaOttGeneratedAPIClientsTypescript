@@ -7,9 +7,7 @@ export interface KalturaDeviceFamilyBaseArgs  extends KalturaObjectBaseArgs {
     name? : string;
 }
 
-/** 
-* Device family details
-**/
+
 export class KalturaDeviceFamilyBase extends KalturaObjectBase {
 
     readonly id : number;

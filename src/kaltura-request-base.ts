@@ -1,25 +1,28 @@
 
 import { KalturaObjectMetadata } from './kaltura-object-base';
+import { KalturaBaseResponseProfile } from './types/KalturaBaseResponseProfile';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from './kaltura-object-base';
 
 export interface KalturaRequestBaseArgs  extends KalturaObjectBaseArgs {
-    acceptedTypes? : KalturaObjectBase[];
+    acceptedTypes? : {new(...args) : KalturaObjectBase}[];
 	partnerId? : number;
 	userId? : number;
 	language? : string;
 	currency? : string;
 	ks? : string;
+	responseProfile? : KalturaBaseResponseProfile;
 }
 
 
 export class KalturaRequestBase extends KalturaObjectBase {
 
-    acceptedTypes : KalturaObjectBase[];
+    acceptedTypes : {new(...args) : KalturaObjectBase}[];
 	partnerId : number;
 	userId : number;
 	language : string;
 	currency : string;
 	ks : string;
+	responseProfile : KalturaBaseResponseProfile;
 
     constructor(data : KalturaRequestBaseArgs)
     {
@@ -33,12 +36,13 @@ export class KalturaRequestBase extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                apiVersion : { type : 'c', default : '4.4.3.22880' },
+                apiVersion : { type : 'c', default : '4.5.58.15575' },
 				partnerId : { type : 'n' },
 				userId : { type : 'n' },
 				language : { type : 's' },
 				currency : { type : 's' },
-				ks : { type : 's' }
+				ks : { type : 's' },
+				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
             }
         );
         return result;

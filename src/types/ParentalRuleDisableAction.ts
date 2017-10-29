@@ -10,10 +10,16 @@ export interface ParentalRuleDisableActionArgs  extends KalturaRequestArgs {
 	entityReference : KalturaEntityReferenceBy;
 }
 
-/** 
-* Disables a parental rule that was previously defined by the household master.
-* Disable can be at specific user or household level.
-**/
+/**
+ * Build request payload for service 'parentalRule' action 'disable'.
+ *
+ * Usage: Disables a parental rule that was previously defined by the household master. Disable can be at specific user or household level
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ParentalRuleDisableAction extends KalturaRequest<boolean> {
 
     ruleId : number;

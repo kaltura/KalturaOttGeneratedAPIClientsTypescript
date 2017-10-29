@@ -8,10 +8,16 @@ export interface RecordingProtectActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Protects an existing recording from the cleanup process for the defined
-* protection period
-**/
+/**
+ * Build request payload for service 'recording' action 'protect'.
+ *
+ * Usage: Protects an existing recording from the cleanup process for the defined protection period
+ *
+ * Server response type:         KalturaRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecordingProtectAction extends KalturaRequest<KalturaRecording> {
 
     id : number;

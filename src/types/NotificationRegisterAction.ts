@@ -10,9 +10,16 @@ export interface NotificationRegisterActionArgs  extends KalturaRequestArgs {
 	type : KalturaNotificationType;
 }
 
-/** 
-* TBD
-**/
+/**
+ * Build request payload for service 'notification' action 'register'.
+ *
+ * Usage: TBD
+ *
+ * Server response type:         KalturaRegistryResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationRegisterAction extends KalturaRequest<KalturaRegistryResponse> {
 
     identifier : string;

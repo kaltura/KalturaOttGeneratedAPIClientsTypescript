@@ -8,9 +8,7 @@ export interface KalturaSubscriptionSetListResponseArgs  extends KalturaListResp
     objects? : KalturaSubscriptionSet[];
 }
 
-/** 
-* SubscriptionSets list
-**/
+
 export class KalturaSubscriptionSetListResponse extends KalturaListResponse {
 
     objects : KalturaSubscriptionSet[];

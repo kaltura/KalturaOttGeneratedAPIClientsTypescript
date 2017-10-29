@@ -8,9 +8,16 @@ export interface HouseholdUpdateActionArgs  extends KalturaRequestArgs {
     household : KalturaHousehold;
 }
 
-/** 
-* Update the household name and description
-**/
+/**
+ * Build request payload for service 'household' action 'update'.
+ *
+ * Usage: Update the household name and description
+ *
+ * Server response type:         KalturaHousehold
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdUpdateAction extends KalturaRequest<KalturaHousehold> {
 
     household : KalturaHousehold;

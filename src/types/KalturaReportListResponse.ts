@@ -8,9 +8,7 @@ export interface KalturaReportListResponseArgs  extends KalturaListResponseArgs 
     objects? : KalturaReport[];
 }
 
-/** 
-* Reports info wrapper
-**/
+
 export class KalturaReportListResponse extends KalturaListResponse {
 
     objects : KalturaReport[];

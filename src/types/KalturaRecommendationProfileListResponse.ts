@@ -8,9 +8,7 @@ export interface KalturaRecommendationProfileListResponseArgs  extends KalturaLi
     objects? : KalturaRecommendationProfile[];
 }
 
-/** 
-* List of recommendation profiles.
-**/
+
 export class KalturaRecommendationProfileListResponse extends KalturaListResponse {
 
     objects : KalturaRecommendationProfile[];

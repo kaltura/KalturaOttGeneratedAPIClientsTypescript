@@ -10,9 +10,16 @@ export interface MessageTemplateUpdateActionArgs  extends KalturaRequestArgs {
 	template : KalturaMessageTemplate;
 }
 
-/** 
-* Set the account’s push notifications and inbox messages templates
-**/
+/**
+ * Build request payload for service 'messageTemplate' action 'update'.
+ *
+ * Usage: Set the account’s push notifications and inbox messages templates
+ *
+ * Server response type:         KalturaMessageTemplate
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MessageTemplateUpdateAction extends KalturaRequest<KalturaMessageTemplate> {
 
     messageType : KalturaMessageTemplateType;
@@ -31,7 +38,7 @@ export class MessageTemplateUpdateAction extends KalturaRequest<KalturaMessageTe
             {
                 service : { type : 'c', default : 'messagetemplate' },
 				action : { type : 'c', default : 'update' },
-				messageType : { type : 'en', subTypeConstructor : KalturaMessageTemplateType, subType : 'KalturaMessageTemplateType' },
+				messageType : { type : 'es', subTypeConstructor : KalturaMessageTemplateType, subType : 'KalturaMessageTemplateType' },
 				template : { type : 'o', subTypeConstructor : KalturaMessageTemplate, subType : 'KalturaMessageTemplate' }
             }
         );

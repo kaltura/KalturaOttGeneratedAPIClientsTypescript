@@ -8,9 +8,16 @@ export interface ConfigurationGroupTagGetActionArgs  extends KalturaRequestArgs 
     tag : string;
 }
 
-/** 
-* Return the configuration group the tag is associated to
-**/
+/**
+ * Build request payload for service 'configurationGroupTag' action 'get'.
+ *
+ * Usage: Return the configuration group the tag is associated to
+ *
+ * Server response type:         KalturaConfigurationGroupTag
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupTagGetAction extends KalturaRequest<KalturaConfigurationGroupTag> {
 
     tag : string;

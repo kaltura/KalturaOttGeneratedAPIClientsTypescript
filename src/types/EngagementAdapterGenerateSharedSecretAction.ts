@@ -8,9 +8,16 @@ export interface EngagementAdapterGenerateSharedSecretActionArgs  extends Kaltur
     id : number;
 }
 
-/** 
-* Generate engagement adapter shared secret
-**/
+/**
+ * Build request payload for service 'engagementAdapter' action 'generateSharedSecret'.
+ *
+ * Usage: Generate engagement adapter shared secret
+ *
+ * Server response type:         KalturaEngagementAdapter
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EngagementAdapterGenerateSharedSecretAction extends KalturaRequest<KalturaEngagementAdapter> {
 
     id : number;

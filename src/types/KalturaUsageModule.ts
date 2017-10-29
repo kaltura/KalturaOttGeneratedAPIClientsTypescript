@@ -4,30 +4,21 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUsageModuleArgs  extends KalturaObjectBaseArgs {
-    name? : string;
-	maxViewsNumber? : number;
-	viewLifeCycle? : number;
-	fullLifeCycle? : number;
-	couponId? : number;
-	waiverPeriod? : number;
-	isWaiverEnabled? : boolean;
-	isOfflinePlayback? : boolean;
+    
 }
 
-/** 
-* Pricing usage module
-**/
+
 export class KalturaUsageModule extends KalturaObjectBase {
 
     readonly id : number;
-	name : string;
-	maxViewsNumber : number;
-	viewLifeCycle : number;
-	fullLifeCycle : number;
-	couponId : number;
-	waiverPeriod : number;
-	isWaiverEnabled : boolean;
-	isOfflinePlayback : boolean;
+	readonly name : string;
+	readonly maxViewsNumber : number;
+	readonly viewLifeCycle : number;
+	readonly fullLifeCycle : number;
+	readonly couponId : number;
+	readonly waiverPeriod : number;
+	readonly isWaiverEnabled : boolean;
+	readonly isOfflinePlayback : boolean;
 
     constructor(data? : KalturaUsageModuleArgs)
     {
@@ -42,14 +33,14 @@ export class KalturaUsageModule extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaUsageModule' },
 				id : { type : 'n', readOnly : true },
-				name : { type : 's' },
-				maxViewsNumber : { type : 'n' },
-				viewLifeCycle : { type : 'n' },
-				fullLifeCycle : { type : 'n' },
-				couponId : { type : 'n' },
-				waiverPeriod : { type : 'n' },
-				isWaiverEnabled : { type : 'b' },
-				isOfflinePlayback : { type : 'b' }
+				name : { type : 's', readOnly : true },
+				maxViewsNumber : { type : 'n', readOnly : true },
+				viewLifeCycle : { type : 'n', readOnly : true },
+				fullLifeCycle : { type : 'n', readOnly : true },
+				couponId : { type : 'n', readOnly : true },
+				waiverPeriod : { type : 'n', readOnly : true },
+				isWaiverEnabled : { type : 'b', readOnly : true },
+				isOfflinePlayback : { type : 'b', readOnly : true }
             }
         );
         return result;

@@ -8,9 +8,16 @@ export interface RecommendationProfileDeleteActionArgs  extends KalturaRequestAr
     id : number;
 }
 
-/** 
-* Delete recommendation engine by recommendation engine id
-**/
+/**
+ * Build request payload for service 'recommendationProfile' action 'delete'.
+ *
+ * Usage: Delete recommendation engine by recommendation engine id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecommendationProfileDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

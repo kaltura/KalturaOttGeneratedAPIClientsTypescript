@@ -7,9 +7,7 @@ export interface KalturaEngagementAdapterBaseArgs  extends KalturaObjectBaseArgs
     name? : string;
 }
 
-/** 
-* Engagement adapter basic
-**/
+
 export class KalturaEngagementAdapterBase extends KalturaObjectBase {
 
     readonly id : number;

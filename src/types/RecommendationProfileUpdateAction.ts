@@ -9,9 +9,16 @@ export interface RecommendationProfileUpdateActionArgs  extends KalturaRequestAr
 	recommendationEngine : KalturaRecommendationProfile;
 }
 
-/** 
-* Update recommendation engine details
-**/
+/**
+ * Build request payload for service 'recommendationProfile' action 'update'.
+ *
+ * Usage: Update recommendation engine details
+ *
+ * Server response type:         KalturaRecommendationProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecommendationProfileUpdateAction extends KalturaRequest<KalturaRecommendationProfile> {
 
     recommendationEngineId : number;

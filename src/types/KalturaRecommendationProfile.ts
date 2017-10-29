@@ -12,9 +12,7 @@ export interface KalturaRecommendationProfileArgs  extends KalturaObjectBaseArgs
 	externalIdentifier? : string;
 }
 
-/** 
-* PaymentGW
-**/
+
 export class KalturaRecommendationProfile extends KalturaObjectBase {
 
     readonly id : number;

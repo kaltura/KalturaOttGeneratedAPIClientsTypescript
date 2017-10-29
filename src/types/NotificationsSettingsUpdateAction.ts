@@ -9,9 +9,16 @@ export interface NotificationsSettingsUpdateActionArgs  extends KalturaRequestAr
     settings : KalturaNotificationsSettings;
 }
 
-/** 
-* Update the user’s notification settings.
-**/
+/**
+ * Build request payload for service 'notificationsSettings' action 'update'.
+ *
+ * Usage: Update the user’s notification settings
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationsSettingsUpdateAction extends KalturaRequest<boolean> {
 
     settings : KalturaNotificationsSettings;

@@ -9,9 +9,16 @@ export interface SeriesRecordingCancelBySeasonNumberActionArgs  extends KalturaR
 	seasonNumber : number;
 }
 
-/** 
-* Cancel Season recording epgs that was recorded as part of series
-**/
+/**
+ * Build request payload for service 'seriesRecording' action 'cancelBySeasonNumber'.
+ *
+ * Usage: Cancel Season recording epgs that was recorded as part of series
+ *
+ * Server response type:         KalturaSeriesRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SeriesRecordingCancelBySeasonNumberAction extends KalturaRequest<KalturaSeriesRecording> {
 
     id : number;

@@ -11,9 +11,7 @@ export interface KalturaPinArgs  extends KalturaObjectBaseArgs {
 	type? : KalturaPinType;
 }
 
-/** 
-* PIN and its origin of definition
-**/
+
 export class KalturaPin extends KalturaObjectBase {
 
     pin : string;

@@ -8,11 +8,16 @@ export interface EntitlementExternalReconcileActionArgs  extends KalturaRequestA
     
 }
 
-/** 
-* Reconcile the user household&#39;s entitlements with an external entitlements
-* source. This request is frequency protected to avoid too frequent calls per
-* household.
-**/
+/**
+ * Build request payload for service 'entitlement' action 'externalReconcile'.
+ *
+ * Usage: Reconcile the user household&#39;s entitlements with an external entitlements source. This request is frequency protected to avoid too frequent calls per household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementExternalReconcileAction extends KalturaRequest<boolean> {
 
     

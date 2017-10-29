@@ -9,10 +9,16 @@ export interface TimeShiftedTvPartnerSettingsUpdateActionArgs  extends KalturaRe
     settings : KalturaTimeShiftedTvPartnerSettings;
 }
 
-/** 
-* Configure the account’s time-shifted TV settings (catch-up and C-DVR,
-* Trick-play, Start-over)
-**/
+/**
+ * Build request payload for service 'timeShiftedTvPartnerSettings' action 'update'.
+ *
+ * Usage: Configure the account’s time-shifted TV settings (catch-up and C-DVR, Trick-play, Start-over)
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TimeShiftedTvPartnerSettingsUpdateAction extends KalturaRequest<boolean> {
 
     settings : KalturaTimeShiftedTvPartnerSettings;

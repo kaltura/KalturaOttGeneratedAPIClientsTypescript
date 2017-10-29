@@ -8,9 +8,16 @@ export interface PaymentMethodProfileAddActionArgs  extends KalturaRequestArgs {
     paymentMethod : KalturaPaymentMethodProfile;
 }
 
-/** 
-* TBD
-**/
+/**
+ * Build request payload for service 'paymentMethodProfile' action 'add'.
+ *
+ * Usage: TBD
+ *
+ * Server response type:         KalturaPaymentMethodProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentMethodProfileAddAction extends KalturaRequest<KalturaPaymentMethodProfile> {
 
     paymentMethod : KalturaPaymentMethodProfile;

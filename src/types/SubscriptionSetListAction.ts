@@ -9,9 +9,16 @@ export interface SubscriptionSetListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaSubscriptionSetFilter;
 }
 
-/** 
-* Returns a list of subscriptionSets requested by ids or subscription ids
-**/
+/**
+ * Build request payload for service 'subscriptionSet' action 'list'.
+ *
+ * Usage: Returns a list of subscriptionSets requested by ids or subscription ids
+ *
+ * Server response type:         KalturaSubscriptionSetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SubscriptionSetListAction extends KalturaRequest<KalturaSubscriptionSetListResponse> {
 
     filter : KalturaSubscriptionSetFilter;

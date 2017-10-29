@@ -7,9 +7,7 @@ export interface KalturaAnnouncementFilterArgs  extends KalturaFilterArgs {
     
 }
 
-/** 
-* order announcements
-**/
+
 export class KalturaAnnouncementFilter extends KalturaFilter {
 
     

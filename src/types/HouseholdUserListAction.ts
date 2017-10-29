@@ -9,9 +9,16 @@ export interface HouseholdUserListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaHouseholdUserFilter;
 }
 
-/** 
-* Returns the users within the household
-**/
+/**
+ * Build request payload for service 'householdUser' action 'list'.
+ *
+ * Usage: Returns the users within the household
+ *
+ * Server response type:         KalturaHouseholdUserListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdUserListAction extends KalturaRequest<KalturaHouseholdUserListResponse> {
 
     filter : KalturaHouseholdUserFilter;

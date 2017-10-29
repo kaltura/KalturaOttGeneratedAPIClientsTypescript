@@ -8,9 +8,16 @@ export interface RecordingAddActionArgs  extends KalturaRequestArgs {
     recording : KalturaRecording;
 }
 
-/** 
-* Issue a record request for a program
-**/
+/**
+ * Build request payload for service 'recording' action 'add'.
+ *
+ * Usage: Issue a record request for a program
+ *
+ * Server response type:         KalturaRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecordingAddAction extends KalturaRequest<KalturaRecording> {
 
     recording : KalturaRecording;

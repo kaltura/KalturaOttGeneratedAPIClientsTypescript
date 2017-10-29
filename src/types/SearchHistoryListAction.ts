@@ -11,9 +11,16 @@ export interface SearchHistoryListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Get user&#39;s last search requests
-**/
+/**
+ * Build request payload for service 'searchHistory' action 'list'.
+ *
+ * Usage: Get user&#39;s last search requests
+ *
+ * Server response type:         KalturaSearchHistoryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SearchHistoryListAction extends KalturaRequest<KalturaSearchHistoryListResponse> {
 
     filter : KalturaSearchHistoryFilter;

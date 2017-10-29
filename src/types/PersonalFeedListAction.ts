@@ -11,9 +11,17 @@ export interface PersonalFeedListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List user&#39;s feeds.              Possible status codes:
-**/
+/**
+ * Build request payload for service 'personalFeed' action 'list'.
+ *
+ * Usage: List user&#39;s feeds.
+ * Possible status codes:
+ *
+ * Server response type:         KalturaPersonalFeedListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PersonalFeedListAction extends KalturaRequest<KalturaPersonalFeedListResponse> {
 
     filter : KalturaPersonalFeedFilter;

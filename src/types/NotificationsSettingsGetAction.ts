@@ -8,9 +8,16 @@ export interface NotificationsSettingsGetActionArgs  extends KalturaRequestArgs 
     
 }
 
-/** 
-* Retrieve the user’s notification settings.
-**/
+/**
+ * Build request payload for service 'notificationsSettings' action 'get'.
+ *
+ * Usage: Retrieve the user’s notification settings
+ *
+ * Server response type:         KalturaNotificationsSettings
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationsSettingsGetAction extends KalturaRequest<KalturaNotificationsSettings> {
 
     

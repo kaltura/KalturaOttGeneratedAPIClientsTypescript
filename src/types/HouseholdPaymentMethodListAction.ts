@@ -8,9 +8,16 @@ export interface HouseholdPaymentMethodListActionArgs  extends KalturaRequestArg
     
 }
 
-/** 
-* Get a list of all payment methods of the household.
-**/
+/**
+ * Build request payload for service 'householdPaymentMethod' action 'list'.
+ *
+ * Usage: Get a list of all payment methods of the household
+ *
+ * Server response type:         KalturaHouseholdPaymentMethodListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentMethodListAction extends KalturaRequest<KalturaHouseholdPaymentMethodListResponse> {
 
     

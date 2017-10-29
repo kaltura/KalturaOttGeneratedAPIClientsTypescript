@@ -12,9 +12,7 @@ export interface KalturaUserAssetsListItemArgs  extends KalturaObjectBaseArgs {
 	listType? : KalturaUserAssetsListType;
 }
 
-/** 
-* An item of user asset list
-**/
+
 export class KalturaUserAssetsListItem extends KalturaObjectBase {
 
     id : string;

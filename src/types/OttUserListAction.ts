@@ -9,10 +9,16 @@ export interface OttUserListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaOTTUserFilter;
 }
 
-/** 
-* Retrieve user by external identifier or username or if filter is null all user
-* in the master or the user itself
-**/
+/**
+ * Build request payload for service 'ottUser' action 'list'.
+ *
+ * Usage: Retrieve user by external identifier or username or if filter is null all user in the master or the user itself
+ *
+ * Server response type:         KalturaOTTUserListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserListAction extends KalturaRequest<KalturaOTTUserListResponse> {
 
     filter : KalturaOTTUserFilter;

@@ -8,9 +8,16 @@ export interface HouseholdUserDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Removes a user from household
-**/
+/**
+ * Build request payload for service 'householdUser' action 'delete'.
+ *
+ * Usage: Removes a user from household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdUserDeleteAction extends KalturaRequest<boolean> {
 
     id : string;

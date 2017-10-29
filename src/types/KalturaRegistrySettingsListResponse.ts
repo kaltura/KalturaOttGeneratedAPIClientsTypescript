@@ -8,9 +8,7 @@ export interface KalturaRegistrySettingsListResponseArgs  extends KalturaListRes
     objects? : KalturaRegistrySettings[];
 }
 
-/** 
-* List of registry settings.
-**/
+
 export class KalturaRegistrySettingsListResponse extends KalturaListResponse {
 
     objects : KalturaRegistrySettings[];

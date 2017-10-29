@@ -8,9 +8,7 @@ export interface KalturaParentalRuleListResponseArgs  extends KalturaListRespons
     objects? : KalturaParentalRule[];
 }
 
-/** 
-* ParentalRules list
-**/
+
 export class KalturaParentalRuleListResponse extends KalturaListResponse {
 
     objects : KalturaParentalRule[];

@@ -11,10 +11,16 @@ export interface AssetListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Returns media or EPG assets. Filters by media identifiers or by EPG internal or
-* external identifier.
-**/
+/**
+ * Build request payload for service 'asset' action 'list'.
+ *
+ * Usage: Returns media or EPG assets. Filters by media identifiers or by EPG internal or external identifier
+ *
+ * Server response type:         KalturaAssetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetListAction extends KalturaRequest<KalturaAssetListResponse> {
 
     filter : KalturaAssetFilter;

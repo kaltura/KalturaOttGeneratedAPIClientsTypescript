@@ -8,9 +8,7 @@ export interface KalturaConfigurationGroupListResponseArgs  extends KalturaListR
     objects? : KalturaConfigurationGroup[];
 }
 
-/** 
-* Configuration groups info wrapper
-**/
+
 export class KalturaConfigurationGroupListResponse extends KalturaListResponse {
 
     objects : KalturaConfigurationGroup[];

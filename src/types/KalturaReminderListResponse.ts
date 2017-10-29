@@ -8,9 +8,7 @@ export interface KalturaReminderListResponseArgs  extends KalturaListResponseArg
     objects? : KalturaReminder[];
 }
 
-/** 
-* List of reminders from DB.
-**/
+
 export class KalturaReminderListResponse extends KalturaListResponse {
 
     objects : KalturaReminder[];

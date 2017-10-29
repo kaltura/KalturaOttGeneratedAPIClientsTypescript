@@ -8,9 +8,16 @@ export interface CdnAdapterProfileListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns all CDN adapters for partner
-**/
+/**
+ * Build request payload for service 'cdnAdapterProfile' action 'list'.
+ *
+ * Usage: Returns all CDN adapters for partner
+ *
+ * Server response type:         KalturaCDNAdapterProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CdnAdapterProfileListAction extends KalturaRequest<KalturaCDNAdapterProfileListResponse> {
 
     

@@ -9,11 +9,17 @@ export interface ParentalRuleListActionArgs  extends KalturaRequestArgs {
     filter : KalturaParentalRuleFilter;
 }
 
-/** 
-* Return the parental rules that applies for the user or household. Can include
-* rules that have been associated in account, household, or user level.           
-*   Association level is also specified in the response.
-**/
+/**
+ * Build request payload for service 'parentalRule' action 'list'.
+ *
+ * Usage: Return the parental rules that applies for the user or household. Can include rules that have been associated in account, household, or user level.
+ * Association level is also specified in the response
+ *
+ * Server response type:         KalturaParentalRuleListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ParentalRuleListAction extends KalturaRequest<KalturaParentalRuleListResponse> {
 
     filter : KalturaParentalRuleFilter;

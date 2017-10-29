@@ -8,10 +8,16 @@ export interface HouseholdDeleteActionArgs  extends KalturaRequestArgs {
     id? : number;
 }
 
-/** 
-* Fully delete a household. Delete all of the household information, including
-* users, devices, entitlements, payment methods and notification date.
-**/
+/**
+ * Build request payload for service 'household' action 'delete'.
+ *
+ * Usage: Fully delete a household. Delete all of the household information, including users, devices, entitlements, payment methods and notification date
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

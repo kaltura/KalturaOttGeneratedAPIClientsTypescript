@@ -8,9 +8,7 @@ export interface KalturaOTTUserListResponseArgs  extends KalturaListResponseArgs
     objects? : KalturaOTTUser[];
 }
 
-/** 
-* Users list
-**/
+
 export class KalturaOTTUserListResponse extends KalturaListResponse {
 
     objects : KalturaOTTUser[];

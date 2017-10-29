@@ -8,9 +8,7 @@ export interface KalturaEngagementAdapterListResponseArgs  extends KalturaListRe
     objects? : KalturaEngagementAdapter[];
 }
 
-/** 
-* Engagement adapter list
-**/
+
 export class KalturaEngagementAdapterListResponse extends KalturaListResponse {
 
     objects : KalturaEngagementAdapter[];

@@ -7,9 +7,7 @@ export interface KalturaPremiumServiceArgs  extends KalturaObjectBaseArgs {
     name? : string;
 }
 
-/** 
-* Premium service
-**/
+
 export class KalturaPremiumService extends KalturaObjectBase {
 
     readonly id : number;

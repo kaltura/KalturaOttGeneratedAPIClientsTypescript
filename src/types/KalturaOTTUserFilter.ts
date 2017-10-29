@@ -9,9 +9,7 @@ export interface KalturaOTTUserFilterArgs  extends KalturaFilterArgs {
 	idIn? : string;
 }
 
-/** 
-* OTT User filter
-**/
+
 export class KalturaOTTUserFilter extends KalturaFilter {
 
     usernameEqual : string;

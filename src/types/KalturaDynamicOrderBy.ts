@@ -9,9 +9,7 @@ export interface KalturaDynamicOrderByArgs  extends KalturaObjectBaseArgs {
 	orderBy? : KalturaMetaTagOrderBy;
 }
 
-/** 
-* Kaltura Asset Order
-**/
+
 export class KalturaDynamicOrderBy extends KalturaObjectBase {
 
     name : string;

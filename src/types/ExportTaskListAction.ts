@@ -9,9 +9,16 @@ export interface ExportTaskListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaExportTaskFilter;
 }
 
-/** 
-* Returns bulk export tasks by tasks identifiers
-**/
+/**
+ * Build request payload for service 'exportTask' action 'list'.
+ *
+ * Usage: Returns bulk export tasks by tasks identifiers
+ *
+ * Server response type:         KalturaExportTaskListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExportTaskListAction extends KalturaRequest<KalturaExportTaskListResponse> {
 
     filter : KalturaExportTaskFilter;

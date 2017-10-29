@@ -10,9 +10,16 @@ export interface HouseholdDeviceUpdateStatusActionArgs  extends KalturaRequestAr
 	status : KalturaDeviceStatus;
 }
 
-/** 
-* Update the name of the device by UDID
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'updateStatus'.
+ *
+ * Usage: Update the name of the device by UDID
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceUpdateStatusAction extends KalturaRequest<boolean> {
 
     udid : string;

@@ -11,9 +11,16 @@ export interface SocialActionListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Get list of user social actions
-**/
+/**
+ * Build request payload for service 'socialAction' action 'list'.
+ *
+ * Usage: Get list of user social actions
+ *
+ * Server response type:         KalturaSocialActionListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialActionListAction extends KalturaRequest<KalturaSocialActionListResponse> {
 
     filter : KalturaSocialActionFilter;

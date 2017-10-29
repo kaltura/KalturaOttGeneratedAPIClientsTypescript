@@ -14,9 +14,7 @@ export interface KalturaEngagementArgs  extends KalturaObjectBaseArgs {
 	couponGroupId? : number;
 }
 
-/** 
-* Engagement
-**/
+
 export class KalturaEngagement extends KalturaObjectBase {
 
     readonly id : number;

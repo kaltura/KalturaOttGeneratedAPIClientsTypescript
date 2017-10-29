@@ -9,9 +9,16 @@ export interface ConfigurationsListActionArgs  extends KalturaRequestArgs {
     filter : KalturaConfigurationsFilter;
 }
 
-/** 
-* Return a list of device configurations of a configuration group
-**/
+/**
+ * Build request payload for service 'configurations' action 'list'.
+ *
+ * Usage: Return a list of device configurations of a configuration group
+ *
+ * Server response type:         KalturaConfigurationsListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationsListAction extends KalturaRequest<KalturaConfigurationsListResponse> {
 
     filter : KalturaConfigurationsFilter;

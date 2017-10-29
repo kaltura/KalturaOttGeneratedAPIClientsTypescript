@@ -11,9 +11,7 @@ export interface KalturaEngagementAdapterArgs  extends KalturaEngagementAdapterB
 	engagementAdapterSettings? : { [key : string] : KalturaStringValue};
 }
 
-/** 
-* Engagement Adapter
-**/
+
 export class KalturaEngagementAdapter extends KalturaEngagementAdapterBase {
 
     isActive : boolean;

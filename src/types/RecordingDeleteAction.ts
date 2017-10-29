@@ -8,10 +8,16 @@ export interface RecordingDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete one or more user recording(s). Delete recording can be called only for
-* recordings in status Recorded
-**/
+/**
+ * Build request payload for service 'recording' action 'delete'.
+ *
+ * Usage: Delete one or more user recording(s). Delete recording can be called only for recordings in status Recorded
+ *
+ * Server response type:         KalturaRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecordingDeleteAction extends KalturaRequest<KalturaRecording> {
 
     id : number;

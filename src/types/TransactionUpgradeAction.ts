@@ -9,10 +9,16 @@ export interface TransactionUpgradeActionArgs  extends KalturaRequestArgs {
     purchase : KalturaPurchase;
 }
 
-/** 
-* upgrade specific subscription for a household. Upon successful charge
-* entitlements to use the requested product or subscription are granted.
-**/
+/**
+ * Build request payload for service 'transaction' action 'upgrade'.
+ *
+ * Usage: upgrade specific subscription for a household. Upon successful charge entitlements to use the requested product or subscription are granted
+ *
+ * Server response type:         KalturaTransaction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionUpgradeAction extends KalturaRequest<KalturaTransaction> {
 
     purchase : KalturaPurchase;

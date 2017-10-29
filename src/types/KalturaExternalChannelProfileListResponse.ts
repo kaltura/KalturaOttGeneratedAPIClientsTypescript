@@ -8,9 +8,7 @@ export interface KalturaExternalChannelProfileListResponseArgs  extends KalturaL
     objects? : KalturaExternalChannelProfile[];
 }
 
-/** 
-* External channel profiles
-**/
+
 export class KalturaExternalChannelProfileListResponse extends KalturaListResponse {
 
     objects : KalturaExternalChannelProfile[];

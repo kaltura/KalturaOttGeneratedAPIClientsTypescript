@@ -10,9 +10,7 @@ export interface KalturaCurrencyArgs  extends KalturaObjectBaseArgs {
 	isDefault? : boolean;
 }
 
-/** 
-* Currency details
-**/
+
 export class KalturaCurrency extends KalturaObjectBase {
 
     name : string;

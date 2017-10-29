@@ -8,9 +8,7 @@ export interface KalturaInboxMessageListResponseArgs  extends KalturaListRespons
     objects? : KalturaInboxMessage[];
 }
 
-/** 
-* List of inbox message.
-**/
+
 export class KalturaInboxMessageListResponse extends KalturaListResponse {
 
     objects : KalturaInboxMessage[];

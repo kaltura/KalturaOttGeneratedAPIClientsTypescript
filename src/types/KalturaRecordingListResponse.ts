@@ -8,9 +8,7 @@ export interface KalturaRecordingListResponseArgs  extends KalturaListResponseAr
     objects? : KalturaRecording[];
 }
 
-/** 
-* Recordings info wrapper
-**/
+
 export class KalturaRecordingListResponse extends KalturaListResponse {
 
     objects : KalturaRecording[];

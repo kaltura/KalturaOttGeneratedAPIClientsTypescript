@@ -7,9 +7,7 @@ export interface KalturaAssetGroupByArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Abstarct class - represents an asset parameter that can be used for grouping
-**/
+
 export class KalturaAssetGroupBy extends KalturaObjectBase {
 
     

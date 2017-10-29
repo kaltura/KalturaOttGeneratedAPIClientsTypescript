@@ -8,9 +8,16 @@ export interface PaymentGatewayProfileGenerateSharedSecretActionArgs  extends Ka
     paymentGatewayId : number;
 }
 
-/** 
-* Generate payment gateway shared secret
-**/
+/**
+ * Build request payload for service 'paymentGatewayProfile' action 'generateSharedSecret'.
+ *
+ * Usage: Generate payment gateway shared secret
+ *
+ * Server response type:         KalturaPaymentGatewayProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentGatewayProfileGenerateSharedSecretAction extends KalturaRequest<KalturaPaymentGatewayProfile> {
 
     paymentGatewayId : number;

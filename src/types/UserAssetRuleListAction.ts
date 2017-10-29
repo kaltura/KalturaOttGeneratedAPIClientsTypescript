@@ -9,10 +9,16 @@ export interface UserAssetRuleListActionArgs  extends KalturaRequestArgs {
     filter : KalturaUserAssetRuleFilter;
 }
 
-/** 
-* Retrieve all the rules (parental, geo, device or user-type) that applies for
-* this user and asset.
-**/
+/**
+ * Build request payload for service 'userAssetRule' action 'list'.
+ *
+ * Usage: Retrieve all the rules (parental, geo, device or user-type) that applies for this user and asset
+ *
+ * Server response type:         KalturaUserAssetRuleListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserAssetRuleListAction extends KalturaRequest<KalturaUserAssetRuleListResponse> {
 
     filter : KalturaUserAssetRuleFilter;

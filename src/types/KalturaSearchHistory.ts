@@ -7,9 +7,7 @@ export interface KalturaSearchHistoryArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Search history info
-**/
+
 export class KalturaSearchHistory extends KalturaObjectBase {
 
     readonly id : string;

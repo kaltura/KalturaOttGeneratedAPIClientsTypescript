@@ -7,9 +7,7 @@ export interface KalturaSeriesRecordingFilterArgs  extends KalturaFilterArgs {
     
 }
 
-/** 
-* Filtering recordings
-**/
+
 export class KalturaSeriesRecordingFilter extends KalturaFilter {
 
     

@@ -6,14 +6,23 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface OttUserUpdateActionArgs  extends KalturaRequestArgs {
     user : KalturaOTTUser;
+	id? : string;
 }
 
-/** 
-* Update user information
-**/
+/**
+ * Build request payload for service 'ottUser' action 'update'.
+ *
+ * Usage: Update user information
+ *
+ * Server response type:         KalturaOTTUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserUpdateAction extends KalturaRequest<KalturaOTTUser> {
 
     user : KalturaOTTUser;
+	id : string;
 
     constructor(data : OttUserUpdateActionArgs)
     {
@@ -28,7 +37,8 @@ export class OttUserUpdateAction extends KalturaRequest<KalturaOTTUser> {
             {
                 service : { type : 'c', default : 'ottuser' },
 				action : { type : 'c', default : 'update' },
-				user : { type : 'o', subTypeConstructor : KalturaOTTUser, subType : 'KalturaOTTUser' }
+				user : { type : 'o', subTypeConstructor : KalturaOTTUser, subType : 'KalturaOTTUser' },
+				id : { type : 's' }
             }
         );
         return result;

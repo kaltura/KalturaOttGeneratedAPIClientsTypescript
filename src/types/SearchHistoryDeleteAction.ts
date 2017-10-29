@@ -8,10 +8,17 @@ export interface SearchHistoryDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete a specific search history.              Possible error code: 2032 -
-* ItemNotFound
-**/
+/**
+ * Build request payload for service 'searchHistory' action 'delete'.
+ *
+ * Usage: Delete a specific search history.
+ * Possible error code: 2032 - ItemNotFound
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SearchHistoryDeleteAction extends KalturaRequest<boolean> {
 
     id : string;

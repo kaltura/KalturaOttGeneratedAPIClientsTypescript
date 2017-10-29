@@ -13,9 +13,16 @@ export interface OttUserLoginActionArgs  extends KalturaRequestArgs {
 	udid? : string;
 }
 
-/** 
-* login with user name and password.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'login'.
+ *
+ * Usage: login with user name and password
+ *
+ * Server response type:         KalturaLoginResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserLoginAction extends KalturaRequest<KalturaLoginResponse> {
 
     partnerId : number;

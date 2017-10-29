@@ -8,9 +8,16 @@ export interface CdnAdapterProfileDeleteActionArgs  extends KalturaRequestArgs {
     adapterId : number;
 }
 
-/** 
-* Delete CDN adapter by CDN adapter id
-**/
+/**
+ * Build request payload for service 'cdnAdapterProfile' action 'delete'.
+ *
+ * Usage: Delete CDN adapter by CDN adapter id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CdnAdapterProfileDeleteAction extends KalturaRequest<boolean> {
 
     adapterId : number;

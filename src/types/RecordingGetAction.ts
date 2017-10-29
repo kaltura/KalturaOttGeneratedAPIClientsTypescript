@@ -8,9 +8,16 @@ export interface RecordingGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Returns recording object by internal identifier
-**/
+/**
+ * Build request payload for service 'recording' action 'get'.
+ *
+ * Usage: Returns recording object by internal identifier
+ *
+ * Server response type:         KalturaRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecordingGetAction extends KalturaRequest<KalturaRecording> {
 
     id : number;

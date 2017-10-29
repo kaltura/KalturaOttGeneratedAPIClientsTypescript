@@ -8,9 +8,16 @@ export interface AssetCommentAddActionArgs  extends KalturaRequestArgs {
     comment : KalturaAssetComment;
 }
 
-/** 
-* Add asset comments by asset id
-**/
+/**
+ * Build request payload for service 'assetComment' action 'add'.
+ *
+ * Usage: Add asset comments by asset id
+ *
+ * Server response type:         KalturaAssetComment
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetCommentAddAction extends KalturaRequest<KalturaAssetComment> {
 
     comment : KalturaAssetComment;

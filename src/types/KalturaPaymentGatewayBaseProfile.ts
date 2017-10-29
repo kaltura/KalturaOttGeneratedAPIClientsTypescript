@@ -10,9 +10,7 @@ export interface KalturaPaymentGatewayBaseProfileArgs  extends KalturaObjectBase
 	selectedBy? : KalturaHouseholdPaymentGatewaySelectedBy;
 }
 
-/** 
-* Payment gateway base profile
-**/
+
 export class KalturaPaymentGatewayBaseProfile extends KalturaObjectBase {
 
     readonly id : number;

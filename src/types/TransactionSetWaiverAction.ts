@@ -10,10 +10,16 @@ export interface TransactionSetWaiverActionArgs  extends KalturaRequestArgs {
 	transactionType : KalturaTransactionType;
 }
 
-/** 
-* This method shall set the waiver flag on the user entitlement table and the
-* waiver date field to the current date.
-**/
+/**
+ * Build request payload for service 'transaction' action 'setWaiver'.
+ *
+ * Usage: This method shall set the waiver flag on the user entitlement table and the waiver date field to the current date
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionSetWaiverAction extends KalturaRequest<boolean> {
 
     assetId : number;

@@ -12,9 +12,7 @@ export interface KalturaHouseholdDeviceArgs  extends KalturaObjectBaseArgs {
 	activatedOn? : number;
 }
 
-/** 
-* Device details
-**/
+
 export class KalturaHouseholdDevice extends KalturaObjectBase {
 
     householdId : number;

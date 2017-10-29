@@ -8,9 +8,16 @@ export interface ExternalChannelProfileListActionArgs  extends KalturaRequestArg
     
 }
 
-/** 
-* Returns all External channels for partner
-**/
+/**
+ * Build request payload for service 'externalChannelProfile' action 'list'.
+ *
+ * Usage: Returns all External channels for partner
+ *
+ * Server response type:         KalturaExternalChannelProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExternalChannelProfileListAction extends KalturaRequest<KalturaExternalChannelProfileListResponse> {
 
     

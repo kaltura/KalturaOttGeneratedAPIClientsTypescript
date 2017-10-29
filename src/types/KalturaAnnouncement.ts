@@ -12,6 +12,7 @@ export interface KalturaAnnouncementArgs  extends KalturaObjectBaseArgs {
 	startTime? : number;
 	timezone? : string;
 	recipients? : KalturaAnnouncementRecipientsType;
+	imageUrl? : string;
 }
 
 
@@ -25,6 +26,7 @@ export class KalturaAnnouncement extends KalturaObjectBase {
 	readonly status : KalturaAnnouncementStatus;
 	recipients : KalturaAnnouncementRecipientsType;
 	readonly id : number;
+	imageUrl : string;
 
     constructor(data? : KalturaAnnouncementArgs)
     {
@@ -45,7 +47,8 @@ export class KalturaAnnouncement extends KalturaObjectBase {
 				timezone : { type : 's' },
 				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaAnnouncementStatus, subType : 'KalturaAnnouncementStatus' },
 				recipients : { type : 'es', subTypeConstructor : KalturaAnnouncementRecipientsType, subType : 'KalturaAnnouncementRecipientsType' },
-				id : { type : 'n', readOnly : true }
+				id : { type : 'n', readOnly : true },
+				imageUrl : { type : 's' }
             }
         );
         return result;

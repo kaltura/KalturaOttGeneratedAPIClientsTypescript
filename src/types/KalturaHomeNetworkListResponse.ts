@@ -8,9 +8,7 @@ export interface KalturaHomeNetworkListResponseArgs  extends KalturaListResponse
     objects? : KalturaHomeNetwork[];
 }
 
-/** 
-* Home networks
-**/
+
 export class KalturaHomeNetworkListResponse extends KalturaListResponse {
 
     objects : KalturaHomeNetwork[];

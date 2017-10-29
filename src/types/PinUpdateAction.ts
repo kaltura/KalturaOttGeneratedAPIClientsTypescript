@@ -13,9 +13,16 @@ export interface PinUpdateActionArgs  extends KalturaRequestArgs {
 	ruleId? : number;
 }
 
-/** 
-* Set the parental or purchase PIN that applies for the user or the household.
-**/
+/**
+ * Build request payload for service 'pin' action 'update'.
+ *
+ * Usage: Set the parental or purchase PIN that applies for the user or the household
+ *
+ * Server response type:         KalturaPin
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PinUpdateAction extends KalturaRequest<KalturaPin> {
 
     by : KalturaEntityReferenceBy;

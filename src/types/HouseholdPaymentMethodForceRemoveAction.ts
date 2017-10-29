@@ -9,9 +9,16 @@ export interface HouseholdPaymentMethodForceRemoveActionArgs  extends KalturaReq
 	paymentMethodId : number;
 }
 
-/** 
-* Force remove of a payment method of the household.
-**/
+/**
+ * Build request payload for service 'householdPaymentMethod' action 'forceRemove'.
+ *
+ * Usage: Force remove of a payment method of the household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentMethodForceRemoveAction extends KalturaRequest<boolean> {
 
     paymentGatewayId : number;

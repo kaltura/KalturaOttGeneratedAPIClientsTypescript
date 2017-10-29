@@ -9,9 +9,16 @@ export interface ConfigurationGroupUpdateActionArgs  extends KalturaRequestArgs 
 	configurationGroup : KalturaConfigurationGroup;
 }
 
-/** 
-* Update configuration group name
-**/
+/**
+ * Build request payload for service 'configurationGroup' action 'update'.
+ *
+ * Usage: Update configuration group name
+ *
+ * Server response type:         KalturaConfigurationGroup
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupUpdateAction extends KalturaRequest<KalturaConfigurationGroup> {
 
     id : string;

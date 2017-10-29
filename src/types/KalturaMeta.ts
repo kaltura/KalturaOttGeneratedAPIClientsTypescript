@@ -1,35 +1,37 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMetaFieldName } from './KalturaMetaFieldName';
+import { KalturaMultilingualString } from './KalturaMultilingualString';
 import { KalturaMetaType } from './KalturaMetaType';
-import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
     name? : string;
-	fieldName? : KalturaMetaFieldName;
+	multilingualName? : KalturaMultilingualString;
+	systemName? : string;
 	type? : KalturaMetaType;
-	assetType? : KalturaAssetType;
+	multipleValue? : boolean;
+	isProtected? : boolean;
+	helpText? : string;
 	features? : string;
-	id? : string;
-	parentId? : string;
-	partnerId? : number;
+	parentId? : number;
 }
 
-/** 
-* Asset meta
-**/
+
 export class KalturaMeta extends KalturaObjectBase {
 
-    name : string;
-	fieldName : KalturaMetaFieldName;
+    readonly id : number;
+	name : string;
+	multilingualName : KalturaMultilingualString;
+	systemName : string;
 	type : KalturaMetaType;
-	assetType : KalturaAssetType;
+	multipleValue : boolean;
+	isProtected : boolean;
+	helpText : string;
 	features : string;
-	id : string;
-	parentId : string;
-	partnerId : number;
+	parentId : number;
+	readonly createDate : number;
+	readonly updateDate : number;
 
     constructor(data? : KalturaMetaArgs)
     {
@@ -43,14 +45,18 @@ export class KalturaMeta extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMeta' },
+				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
-				fieldName : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
+				multilingualName : { type : 'o', subTypeConstructor : KalturaMultilingualString, subType : 'KalturaMultilingualString' },
+				systemName : { type : 's' },
 				type : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' },
-				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
+				multipleValue : { type : 'b' },
+				isProtected : { type : 'b' },
+				helpText : { type : 's' },
 				features : { type : 's' },
-				id : { type : 's' },
-				parentId : { type : 's' },
-				partnerId : { type : 'n' }
+				parentId : { type : 'n' },
+				createDate : { type : 'n', readOnly : true },
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;

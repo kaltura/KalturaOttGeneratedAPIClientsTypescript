@@ -8,9 +8,16 @@ export interface EntitlementCancelScheduledSubscriptionActionArgs  extends Kaltu
     scheduledSubscriptionId : number;
 }
 
-/** 
-* Cancel Scheduled Subscription
-**/
+/**
+ * Build request payload for service 'entitlement' action 'cancelScheduledSubscription'.
+ *
+ * Usage: Cancel Scheduled Subscription
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementCancelScheduledSubscriptionAction extends KalturaRequest<boolean> {
 
     scheduledSubscriptionId : number;

@@ -9,9 +9,7 @@ export interface KalturaSubscriptionEntitlementArgs  extends KalturaEntitlementA
 	scheduledSubscriptionId? : number;
 }
 
-/** 
-* KalturaSubscriptionEntitlement
-**/
+
 export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
 
     readonly nextRenewalDate : number;

@@ -10,9 +10,16 @@ export interface UserAssetsListItemDeleteActionArgs  extends KalturaRequestArgs 
 	listType : KalturaUserAssetsListType;
 }
 
-/** 
-* Deletes an item from user’s private asset list
-**/
+/**
+ * Build request payload for service 'userAssetsListItem' action 'delete'.
+ *
+ * Usage: Deletes an item from user’s private asset list
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserAssetsListItemDeleteAction extends KalturaRequest<boolean> {
 
     assetId : string;

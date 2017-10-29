@@ -8,9 +8,7 @@ export interface KalturaUserAssetRuleListResponseArgs  extends KalturaListRespon
     objects? : KalturaUserAssetRule[];
 }
 
-/** 
-* GenericRules list
-**/
+
 export class KalturaUserAssetRuleListResponse extends KalturaListResponse {
 
     objects : KalturaUserAssetRule[];

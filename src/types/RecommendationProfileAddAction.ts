@@ -8,9 +8,16 @@ export interface RecommendationProfileAddActionArgs  extends KalturaRequestArgs 
     recommendationEngine : KalturaRecommendationProfile;
 }
 
-/** 
-* Insert new recommendation engine for partner
-**/
+/**
+ * Build request payload for service 'recommendationProfile' action 'add'.
+ *
+ * Usage: Insert new recommendation engine for partner
+ *
+ * Server response type:         KalturaRecommendationProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecommendationProfileAddAction extends KalturaRequest<KalturaRecommendationProfile> {
 
     recommendationEngine : KalturaRecommendationProfile;

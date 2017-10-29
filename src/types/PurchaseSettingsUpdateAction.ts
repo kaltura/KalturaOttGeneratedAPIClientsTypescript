@@ -10,9 +10,16 @@ export interface PurchaseSettingsUpdateActionArgs  extends KalturaRequestArgs {
 	settings : KalturaPurchaseSettings;
 }
 
-/** 
-* Set a purchase PIN for the household or user
-**/
+/**
+ * Build request payload for service 'purchaseSettings' action 'update'.
+ *
+ * Usage: Set a purchase PIN for the household or user
+ *
+ * Server response type:         KalturaPurchaseSettings
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PurchaseSettingsUpdateAction extends KalturaRequest<KalturaPurchaseSettings> {
 
     entityReference : KalturaEntityReferenceBy;

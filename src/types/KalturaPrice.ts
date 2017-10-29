@@ -7,16 +7,16 @@ export interface KalturaPriceArgs  extends KalturaObjectBaseArgs {
     amount? : number;
 	currency? : string;
 	currencySign? : string;
+	countryId? : number;
 }
 
-/** 
-* Price
-**/
+
 export class KalturaPrice extends KalturaObjectBase {
 
     amount : number;
 	currency : string;
 	currencySign : string;
+	countryId : number;
 
     constructor(data? : KalturaPriceArgs)
     {
@@ -32,7 +32,8 @@ export class KalturaPrice extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaPrice' },
 				amount : { type : 'n' },
 				currency : { type : 's' },
-				currencySign : { type : 's' }
+				currencySign : { type : 's' },
+				countryId : { type : 'n' }
             }
         );
         return result;

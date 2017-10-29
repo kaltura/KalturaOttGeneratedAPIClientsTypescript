@@ -8,9 +8,7 @@ export interface KalturaFollowTvSeriesListResponseArgs  extends KalturaListRespo
     objects? : KalturaFollowTvSeries[];
 }
 
-/** 
-* List of message follow data.
-**/
+
 export class KalturaFollowTvSeriesListResponse extends KalturaListResponse {
 
     objects : KalturaFollowTvSeries[];

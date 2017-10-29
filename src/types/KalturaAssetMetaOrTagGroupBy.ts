@@ -7,10 +7,7 @@ export interface KalturaAssetMetaOrTagGroupByArgs  extends KalturaAssetGroupByAr
     value? : string;
 }
 
-/** 
-* Group by a tag or meta - according to the name that appears in the system
-* (similar to KSQL)
-**/
+
 export class KalturaAssetMetaOrTagGroupBy extends KalturaAssetGroupBy {
 
     value : string;

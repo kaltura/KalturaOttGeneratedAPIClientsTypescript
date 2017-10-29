@@ -8,9 +8,16 @@ export interface ConfigurationsAddActionArgs  extends KalturaRequestArgs {
     configurations : KalturaConfigurations;
 }
 
-/** 
-* Add a new device configuration to a configuration group
-**/
+/**
+ * Build request payload for service 'configurations' action 'add'.
+ *
+ * Usage: Add a new device configuration to a configuration group
+ *
+ * Server response type:         KalturaConfigurations
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationsAddAction extends KalturaRequest<KalturaConfigurations> {
 
     configurations : KalturaConfigurations;

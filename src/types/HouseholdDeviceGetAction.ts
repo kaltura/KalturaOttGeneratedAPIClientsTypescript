@@ -8,9 +8,16 @@ export interface HouseholdDeviceGetActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns device registration status to the supplied household
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'get'.
+ *
+ * Usage: Returns device registration status to the supplied household
+ *
+ * Server response type:         KalturaHouseholdDevice
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceGetAction extends KalturaRequest<KalturaHouseholdDevice> {
 
     

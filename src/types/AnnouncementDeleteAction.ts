@@ -8,9 +8,16 @@ export interface AnnouncementDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete an existing announcing. Announcement cannot be delete while being sent.
-**/
+/**
+ * Build request payload for service 'announcement' action 'delete'.
+ *
+ * Usage: Delete an existing announcing. Announcement cannot be delete while being sent
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnouncementDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

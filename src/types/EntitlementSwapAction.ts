@@ -10,10 +10,16 @@ export interface EntitlementSwapActionArgs  extends KalturaRequestArgs {
 	history : boolean;
 }
 
-/** 
-* Swap current entitlement (subscription) with new entitlement (subscription) -
-* only Grant
-**/
+/**
+ * Build request payload for service 'entitlement' action 'swap'.
+ *
+ * Usage: Swap current entitlement (subscription) with new entitlement (subscription) - only Grant
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementSwapAction extends KalturaRequest<boolean> {
 
     currentProductId : number;

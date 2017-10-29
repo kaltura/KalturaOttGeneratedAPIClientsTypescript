@@ -7,9 +7,7 @@ export interface KalturaDeviceFamilyArgs  extends KalturaDeviceFamilyBaseArgs {
     
 }
 
-/** 
-* Device family details
-**/
+
 export class KalturaDeviceFamily extends KalturaDeviceFamilyBase {
 
     

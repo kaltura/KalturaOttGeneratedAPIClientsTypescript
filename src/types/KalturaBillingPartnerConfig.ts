@@ -9,9 +9,7 @@ export interface KalturaBillingPartnerConfigArgs  extends KalturaPartnerConfigur
 	type? : KalturaPartnerConfigurationType;
 }
 
-/** 
-* Partner billing configuration
-**/
+
 export class KalturaBillingPartnerConfig extends KalturaPartnerConfiguration {
 
     value : string;

@@ -11,9 +11,7 @@ export interface KalturaHouseholdArgs  extends KalturaObjectBaseArgs {
 	externalId? : string;
 }
 
-/** 
-* Household details
-**/
+
 export class KalturaHousehold extends KalturaObjectBase {
 
     readonly id : number;

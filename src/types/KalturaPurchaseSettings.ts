@@ -8,9 +8,7 @@ export interface KalturaPurchaseSettingsArgs  extends KalturaPinArgs {
     permission? : KalturaPurchaseSettingsType;
 }
 
-/** 
-* Purchase settings and PIN
-**/
+
 export class KalturaPurchaseSettings extends KalturaPin {
 
     permission : KalturaPurchaseSettingsType;

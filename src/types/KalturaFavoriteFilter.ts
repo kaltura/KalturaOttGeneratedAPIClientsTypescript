@@ -6,15 +6,15 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaFavoriteFilterArgs  extends KalturaFilterArgs {
     mediaTypeEqual? : number;
 	mediaIdIn? : string;
+	udidEqualCurrent? : boolean;
 }
 
-/** 
-* Favorite request filter
-**/
+
 export class KalturaFavoriteFilter extends KalturaFilter {
 
     mediaTypeEqual : number;
 	mediaIdIn : string;
+	udidEqualCurrent : boolean;
 
     constructor(data? : KalturaFavoriteFilterArgs)
     {
@@ -29,7 +29,8 @@ export class KalturaFavoriteFilter extends KalturaFilter {
             {
                 objectType : { type : 'c', default : 'KalturaFavoriteFilter' },
 				mediaTypeEqual : { type : 'n' },
-				mediaIdIn : { type : 's' }
+				mediaIdIn : { type : 's' },
+				udidEqualCurrent : { type : 'b' }
             }
         );
         return result;

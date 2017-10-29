@@ -9,9 +9,16 @@ export interface PaymentMethodProfileListActionArgs  extends KalturaRequestArgs 
     filter : KalturaPaymentMethodProfileFilter;
 }
 
-/** 
-* TBD
-**/
+/**
+ * Build request payload for service 'paymentMethodProfile' action 'list'.
+ *
+ * Usage: TBD
+ *
+ * Server response type:         KalturaPaymentMethodProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentMethodProfileListAction extends KalturaRequest<KalturaPaymentMethodProfileListResponse> {
 
     filter : KalturaPaymentMethodProfileFilter;

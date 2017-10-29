@@ -8,9 +8,16 @@ export interface ChannelAddActionArgs  extends KalturaRequestArgs {
     channel : KalturaChannel;
 }
 
-/** 
-* Insert new channel for partner. Currently supports only KSQL channel
-**/
+/**
+ * Build request payload for service 'channel' action 'add'.
+ *
+ * Usage: Insert new channel for partner. Currently supports only KSQL channel
+ *
+ * Server response type:         KalturaChannel
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ChannelAddAction extends KalturaRequest<KalturaChannel> {
 
     channel : KalturaChannel;

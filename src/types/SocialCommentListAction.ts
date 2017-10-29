@@ -11,9 +11,16 @@ export interface SocialCommentListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Get a list of all social comments filtered by asset ID and social platform
-**/
+/**
+ * Build request payload for service 'socialComment' action 'list'.
+ *
+ * Usage: Get a list of all social comments filtered by asset ID and social platform
+ *
+ * Server response type:         KalturaSocialCommentListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialCommentListAction extends KalturaRequest<KalturaSocialCommentListResponse> {
 
     filter : KalturaSocialCommentFilter;

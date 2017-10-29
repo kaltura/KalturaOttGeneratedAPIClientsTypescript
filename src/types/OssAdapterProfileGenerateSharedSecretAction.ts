@@ -8,9 +8,16 @@ export interface OssAdapterProfileGenerateSharedSecretActionArgs  extends Kaltur
     ossAdapterId : number;
 }
 
-/** 
-* Generate oss adapter shared secret
-**/
+/**
+ * Build request payload for service 'ossAdapterProfile' action 'generateSharedSecret'.
+ *
+ * Usage: Generate oss adapter shared secret
+ *
+ * Server response type:         KalturaOSSAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OssAdapterProfileGenerateSharedSecretAction extends KalturaRequest<KalturaOSSAdapterProfile> {
 
     ossAdapterId : number;

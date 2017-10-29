@@ -1,24 +1,27 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaBaseResponseProfile } from './KalturaBaseResponseProfile';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaRequestConfigurationArgs  extends KalturaObjectBaseArgs {
     partnerId? : number;
 	userId? : number;
 	language? : string;
+	currency? : string;
 	ks? : string;
+	responseProfile? : KalturaBaseResponseProfile;
 }
 
-/** 
-* Define client request optional configurations
-**/
+
 export class KalturaRequestConfiguration extends KalturaObjectBase {
 
     partnerId : number;
 	userId : number;
 	language : string;
+	currency : string;
 	ks : string;
+	responseProfile : KalturaBaseResponseProfile;
 
     constructor(data? : KalturaRequestConfigurationArgs)
     {
@@ -35,7 +38,9 @@ export class KalturaRequestConfiguration extends KalturaObjectBase {
 				partnerId : { type : 'n' },
 				userId : { type : 'n' },
 				language : { type : 's' },
-				ks : { type : 's' }
+				currency : { type : 's' },
+				ks : { type : 's' },
+				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
             }
         );
         return result;

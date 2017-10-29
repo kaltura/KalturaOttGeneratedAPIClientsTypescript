@@ -8,9 +8,16 @@ export interface SocialUpdateConfigurationActionArgs  extends KalturaRequestArgs
     configuration : KalturaSocialConfig;
 }
 
-/** 
-* Set the user social network’s configuration information
-**/
+/**
+ * Build request payload for service 'social' action 'UpdateConfiguration'.
+ *
+ * Usage: Set the user social network’s configuration information
+ *
+ * Server response type:         KalturaSocialConfig
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialUpdateConfigurationAction extends KalturaRequest<KalturaSocialConfig> {
 
     configuration : KalturaSocialConfig;

@@ -9,9 +9,16 @@ export interface ChannelUpdateActionArgs  extends KalturaRequestArgs {
 	channel : KalturaChannel;
 }
 
-/** 
-* Update channel details. Currently supports only KSQL channel
-**/
+/**
+ * Build request payload for service 'channel' action 'update'.
+ *
+ * Usage: Update channel details. Currently supports only KSQL channel
+ *
+ * Server response type:         KalturaChannel
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ChannelUpdateAction extends KalturaRequest<KalturaChannel> {
 
     channelId : number;

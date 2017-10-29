@@ -8,9 +8,7 @@ export interface KalturaAssetListResponseArgs  extends KalturaListResponseArgs {
     objects? : KalturaAsset[];
 }
 
-/** 
-* Asset wrapper
-**/
+
 export class KalturaAssetListResponse extends KalturaListResponse {
 
     objects : KalturaAsset[];

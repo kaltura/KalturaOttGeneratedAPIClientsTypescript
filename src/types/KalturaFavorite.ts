@@ -8,9 +8,7 @@ export interface KalturaFavoriteArgs  extends KalturaObjectBaseArgs {
 	extraData? : string;
 }
 
-/** 
-* Favorite details
-**/
+
 export class KalturaFavorite extends KalturaObjectBase {
 
     assetId : number;

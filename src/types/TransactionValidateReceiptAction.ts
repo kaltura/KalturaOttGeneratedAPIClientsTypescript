@@ -9,10 +9,16 @@ export interface TransactionValidateReceiptActionArgs  extends KalturaRequestArg
     externalReceipt : KalturaExternalReceipt;
 }
 
-/** 
-* Verifies PPV/Subscription/Collection client purchase (such as InApp) and
-* entitles the user.
-**/
+/**
+ * Build request payload for service 'transaction' action 'validateReceipt'.
+ *
+ * Usage: Verifies PPV/Subscription/Collection client purchase (such as InApp) and entitles the user
+ *
+ * Server response type:         KalturaTransaction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionValidateReceiptAction extends KalturaRequest<KalturaTransaction> {
 
     externalReceipt : KalturaExternalReceipt;

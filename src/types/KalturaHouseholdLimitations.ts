@@ -8,9 +8,7 @@ export interface KalturaHouseholdLimitationsArgs  extends KalturaObjectBaseArgs 
     
 }
 
-/** 
-* Household limitations details
-**/
+
 export class KalturaHouseholdLimitations extends KalturaObjectBase {
 
     readonly id : number;

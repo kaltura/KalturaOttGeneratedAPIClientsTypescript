@@ -7,9 +7,7 @@ export interface KalturaReportFilterArgs  extends KalturaFilterArgs {
     
 }
 
-/** 
-* Report filter
-**/
+
 export class KalturaReportFilter extends KalturaFilter {
 
     

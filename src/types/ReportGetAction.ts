@@ -8,9 +8,16 @@ export interface ReportGetActionArgs  extends KalturaRequestArgs {
     udid : string;
 }
 
-/** 
-* Return a device configuration retrieval log request for a specific device.
-**/
+/**
+ * Build request payload for service 'report' action 'get'.
+ *
+ * Usage: Return a device configuration retrieval log request for a specific device
+ *
+ * Server response type:         KalturaReport
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportGetAction extends KalturaRequest<KalturaReport> {
 
     udid : string;

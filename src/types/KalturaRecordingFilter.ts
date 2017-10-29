@@ -8,9 +8,7 @@ export interface KalturaRecordingFilterArgs  extends KalturaFilterArgs {
 	filterExpression? : string;
 }
 
-/** 
-* Filtering recordings
-**/
+
 export class KalturaRecordingFilter extends KalturaFilter {
 
     statusIn : string;

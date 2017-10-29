@@ -8,9 +8,16 @@ export interface SubscriptionSetGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get the subscriptionSet according to the Identifier
-**/
+/**
+ * Build request payload for service 'subscriptionSet' action 'get'.
+ *
+ * Usage: Get the subscriptionSet according to the Identifier
+ *
+ * Server response type:         KalturaSubscriptionSet
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SubscriptionSetGetAction extends KalturaRequest<KalturaSubscriptionSet> {
 
     id : number;

@@ -8,9 +8,7 @@ export interface KalturaUserAssetRuleFilterArgs  extends KalturaFilterArgs {
 	assetTypeEqual? : number;
 }
 
-/** 
-* User asset rule filter
-**/
+
 export class KalturaUserAssetRuleFilter extends KalturaFilter {
 
     assetIdEqual : number;

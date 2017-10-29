@@ -8,9 +8,16 @@ export interface ConfigurationsDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete a device configuration
-**/
+/**
+ * Build request payload for service 'configurations' action 'delete'.
+ *
+ * Usage: Delete a device configuration
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationsDeleteAction extends KalturaRequest<boolean> {
 
     id : string;

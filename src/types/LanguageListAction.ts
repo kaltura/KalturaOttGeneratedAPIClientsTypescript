@@ -9,10 +9,16 @@ export interface LanguageListActionArgs  extends KalturaRequestArgs {
     filter : KalturaLanguageFilter;
 }
 
-/** 
-* Get the list of languages for the partner with option to filter by language
-* codes
-**/
+/**
+ * Build request payload for service 'language' action 'list'.
+ *
+ * Usage: Get the list of languages for the partner with option to filter by language codes
+ *
+ * Server response type:         KalturaLanguageListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LanguageListAction extends KalturaRequest<KalturaLanguageListResponse> {
 
     filter : KalturaLanguageFilter;

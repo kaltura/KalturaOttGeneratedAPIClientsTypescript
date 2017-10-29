@@ -7,9 +7,7 @@ export interface KalturaHouseholdPremiumServiceArgs  extends KalturaPremiumServi
     
 }
 
-/** 
-* Houshold premium service
-**/
+
 export class KalturaHouseholdPremiumService extends KalturaPremiumService {
 
     

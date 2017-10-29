@@ -8,9 +8,7 @@ export interface KalturaConfigurationGroupDeviceListResponseArgs  extends Kaltur
     objects? : KalturaConfigurationGroupDevice[];
 }
 
-/** 
-* Configuration group devices info wrapper
-**/
+
 export class KalturaConfigurationGroupDeviceListResponse extends KalturaListResponse {
 
     objects : KalturaConfigurationGroupDevice[];

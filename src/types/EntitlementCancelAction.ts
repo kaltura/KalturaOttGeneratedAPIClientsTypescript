@@ -10,10 +10,16 @@ export interface EntitlementCancelActionArgs  extends KalturaRequestArgs {
 	transactionType : KalturaTransactionType;
 }
 
-/** 
-* Immediately cancel a subscription, PPV or collection. Cancel is possible only if
-* within cancellation window and content not already consumed
-**/
+/**
+ * Build request payload for service 'entitlement' action 'cancel'.
+ *
+ * Usage: Immediately cancel a subscription, PPV or collection. Cancel is possible only if within cancellation window and content not already consumed
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementCancelAction extends KalturaRequest<boolean> {
 
     assetId : number;

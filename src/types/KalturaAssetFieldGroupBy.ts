@@ -8,9 +8,7 @@ export interface KalturaAssetFieldGroupByArgs  extends KalturaAssetGroupByArgs {
     value? : KalturaGroupByField;
 }
 
-/** 
-* Group by a field that is defined in enum
-**/
+
 export class KalturaAssetFieldGroupBy extends KalturaAssetGroupBy {
 
     value : KalturaGroupByField;

@@ -7,9 +7,7 @@ export interface KalturaRecordingContextFilterArgs  extends KalturaFilterArgs {
     assetIdIn? : string;
 }
 
-/** 
-* Filtering assets
-**/
+
 export class KalturaRecordingContextFilter extends KalturaFilter {
 
     assetIdIn : string;

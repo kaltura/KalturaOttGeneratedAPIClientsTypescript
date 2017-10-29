@@ -9,10 +9,16 @@ export interface TransactionDowngradeActionArgs  extends KalturaRequestArgs {
     purchase : KalturaPurchase;
 }
 
-/** 
-* downgrade specific subscription for a household. entitlements will be updated on
-* the existing subscription end date.
-**/
+/**
+ * Build request payload for service 'transaction' action 'downgrade'.
+ *
+ * Usage: downgrade specific subscription for a household. entitlements will be updated on the existing subscription end date
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionDowngradeAction extends KalturaRequest<void> {
 
     purchase : KalturaPurchase;

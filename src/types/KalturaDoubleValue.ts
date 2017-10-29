@@ -7,9 +7,7 @@ export interface KalturaDoubleValueArgs  extends KalturaValueArgs {
     value? : number;
 }
 
-/** 
-* A string representation to return an array of doubles
-**/
+
 export class KalturaDoubleValue extends KalturaValue {
 
     value : number;

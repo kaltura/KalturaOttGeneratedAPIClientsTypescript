@@ -10,9 +10,16 @@ export interface OttUserActivateActionArgs  extends KalturaRequestArgs {
 	activationToken : string;
 }
 
-/** 
-* Activate the account by activation token
-**/
+/**
+ * Build request payload for service 'ottUser' action 'activate'.
+ *
+ * Usage: Activate the account by activation token
+ *
+ * Server response type:         KalturaOTTUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserActivateAction extends KalturaRequest<KalturaOTTUser> {
 
     partnerId : number;

@@ -8,9 +8,7 @@ export interface KalturaBookmarkListResponseArgs  extends KalturaListResponseArg
     objects? : KalturaBookmark[];
 }
 
-/** 
-* List of assets and their bookmarks
-**/
+
 export class KalturaBookmarkListResponse extends KalturaListResponse {
 
     objects : KalturaBookmark[];

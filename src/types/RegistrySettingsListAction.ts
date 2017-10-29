@@ -8,9 +8,16 @@ export interface RegistrySettingsListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Retrieve the registry settings.
-**/
+/**
+ * Build request payload for service 'registrySettings' action 'list'.
+ *
+ * Usage: Retrieve the registry settings
+ *
+ * Server response type:         KalturaRegistrySettingsListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RegistrySettingsListAction extends KalturaRequest<KalturaRegistrySettingsListResponse> {
 
     

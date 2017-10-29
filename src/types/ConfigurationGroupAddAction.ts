@@ -8,9 +8,16 @@ export interface ConfigurationGroupAddActionArgs  extends KalturaRequestArgs {
     configurationGroup : KalturaConfigurationGroup;
 }
 
-/** 
-* Add a new configuration group
-**/
+/**
+ * Build request payload for service 'configurationGroup' action 'add'.
+ *
+ * Usage: Add a new configuration group
+ *
+ * Server response type:         KalturaConfigurationGroup
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupAddAction extends KalturaRequest<KalturaConfigurationGroup> {
 
     configurationGroup : KalturaConfigurationGroup;

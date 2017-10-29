@@ -9,9 +9,16 @@ export interface CdnAdapterProfileUpdateActionArgs  extends KalturaRequestArgs {
 	adapter : KalturaCDNAdapterProfile;
 }
 
-/** 
-* Update CDN adapter details
-**/
+/**
+ * Build request payload for service 'cdnAdapterProfile' action 'update'.
+ *
+ * Usage: Update CDN adapter details
+ *
+ * Server response type:         KalturaCDNAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CdnAdapterProfileUpdateAction extends KalturaRequest<KalturaCDNAdapterProfile> {
 
     adapterId : number;

@@ -8,11 +8,16 @@ export interface UserLoginPinAddActionArgs  extends KalturaRequestArgs {
     secret? : string;
 }
 
-/** 
-* Generate a time and usage expiry login-PIN that can allow a single login per
-* PIN. If an active login-PIN already exists. Calling this API again for same user
-* will add another login-PIN
-**/
+/**
+ * Build request payload for service 'userLoginPin' action 'add'.
+ *
+ * Usage: Generate a time and usage expiry login-PIN that can allow a single login per PIN. If an active login-PIN already exists. Calling this API again for same user will add another login-PIN
+ *
+ * Server response type:         KalturaUserLoginPin
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserLoginPinAddAction extends KalturaRequest<KalturaUserLoginPin> {
 
     secret : string;

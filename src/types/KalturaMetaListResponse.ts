@@ -8,9 +8,7 @@ export interface KalturaMetaListResponseArgs  extends KalturaListResponseArgs {
     objects? : KalturaMeta[];
 }
 
-/** 
-* Meta list response
-**/
+
 export class KalturaMetaListResponse extends KalturaListResponse {
 
     objects : KalturaMeta[];

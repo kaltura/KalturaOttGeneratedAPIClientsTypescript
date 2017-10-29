@@ -9,9 +9,16 @@ export interface SocialUnmergeActionArgs  extends KalturaRequestArgs {
     type : KalturaSocialNetwork;
 }
 
-/** 
-* Disconnect an existing user in the system from its external social network user
-**/
+/**
+ * Build request payload for service 'social' action 'unmerge'.
+ *
+ * Usage: Disconnect an existing user in the system from its external social network user
+ *
+ * Server response type:         KalturaSocial
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialUnmergeAction extends KalturaRequest<KalturaSocial> {
 
     type : KalturaSocialNetwork;

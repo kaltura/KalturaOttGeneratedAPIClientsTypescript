@@ -8,9 +8,16 @@ export interface EngagementAdapterAddActionArgs  extends KalturaRequestArgs {
     engagementAdapter : KalturaEngagementAdapter;
 }
 
-/** 
-* Insert new Engagement adapter for partner
-**/
+/**
+ * Build request payload for service 'engagementAdapter' action 'add'.
+ *
+ * Usage: Insert new Engagement adapter for partner
+ *
+ * Server response type:         KalturaEngagementAdapter
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EngagementAdapterAddAction extends KalturaRequest<KalturaEngagementAdapter> {
 
     engagementAdapter : KalturaEngagementAdapter;

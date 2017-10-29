@@ -8,9 +8,7 @@ export interface KalturaChannelEnrichmentHolderArgs  extends KalturaObjectBaseAr
     type? : KalturaChannelEnrichment;
 }
 
-/** 
-* Holder object for channel enrichment enum
-**/
+
 export class KalturaChannelEnrichmentHolder extends KalturaObjectBase {
 
     type : KalturaChannelEnrichment;

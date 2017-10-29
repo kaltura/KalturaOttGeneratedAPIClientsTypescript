@@ -7,9 +7,7 @@ export interface KalturaUserRoleFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
 }
 
-/** 
-* User roles filter
-**/
+
 export class KalturaUserRoleFilter extends KalturaFilter {
 
     idIn : string;

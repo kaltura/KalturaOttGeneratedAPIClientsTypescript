@@ -12,9 +12,7 @@ export interface KalturaMediaImageArgs  extends KalturaObjectBaseArgs {
 	isDefault? : boolean;
 }
 
-/** 
-* Image details
-**/
+
 export class KalturaMediaImage extends KalturaObjectBase {
 
     ratio : string;

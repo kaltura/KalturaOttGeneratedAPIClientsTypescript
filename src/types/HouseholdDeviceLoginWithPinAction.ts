@@ -10,9 +10,16 @@ export interface HouseholdDeviceLoginWithPinActionArgs  extends KalturaRequestAr
 	udid? : string;
 }
 
-/** 
-* User sign-in via a time-expired sign-in PIN.
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'loginWithPin'.
+ *
+ * Usage: User sign-in via a time-expired sign-in PIN
+ *
+ * Server response type:         KalturaLoginResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceLoginWithPinAction extends KalturaRequest<KalturaLoginResponse> {
 
     partnerId : number;

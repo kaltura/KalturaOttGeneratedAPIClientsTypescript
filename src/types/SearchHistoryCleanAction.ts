@@ -9,9 +9,16 @@ export interface SearchHistoryCleanActionArgs  extends KalturaRequestArgs {
     filter? : KalturaSearchHistoryFilter;
 }
 
-/** 
-* Clean the user’s search history
-**/
+/**
+ * Build request payload for service 'searchHistory' action 'clean'.
+ *
+ * Usage: Clean the user’s search history
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SearchHistoryCleanAction extends KalturaRequest<boolean> {
 
     filter : KalturaSearchHistoryFilter;

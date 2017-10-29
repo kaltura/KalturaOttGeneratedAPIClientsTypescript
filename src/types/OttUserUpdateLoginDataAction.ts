@@ -10,9 +10,16 @@ export interface OttUserUpdateLoginDataActionArgs  extends KalturaRequestArgs {
 	newPassword : string;
 }
 
-/** 
-* Given a user name and existing password, change to a new password.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'updateLoginData'.
+ *
+ * Usage: Given a user name and existing password, change to a new password
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserUpdateLoginDataAction extends KalturaRequest<boolean> {
 
     username : string;

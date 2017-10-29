@@ -8,9 +8,16 @@ export interface PaymentGatewayProfileAddActionArgs  extends KalturaRequestArgs 
     paymentGateway : KalturaPaymentGatewayProfile;
 }
 
-/** 
-* Insert new payment gateway for partner
-**/
+/**
+ * Build request payload for service 'paymentGatewayProfile' action 'add'.
+ *
+ * Usage: Insert new payment gateway for partner
+ *
+ * Server response type:         KalturaPaymentGatewayProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentGatewayProfileAddAction extends KalturaRequest<KalturaPaymentGatewayProfile> {
 
     paymentGateway : KalturaPaymentGatewayProfile;

@@ -7,9 +7,7 @@ export interface KalturaPartnerConfigurationArgs  extends KalturaObjectBaseArgs 
     
 }
 
-/** 
-* Partner  base configuration
-**/
+
 export class KalturaPartnerConfiguration extends KalturaObjectBase {
 
     

@@ -8,9 +8,7 @@ export interface KalturaUserLoginPinArgs  extends KalturaObjectBaseArgs {
 	expirationTime? : number;
 }
 
-/** 
-* Log in pin code details
-**/
+
 export class KalturaUserLoginPin extends KalturaObjectBase {
 
     pinCode : string;

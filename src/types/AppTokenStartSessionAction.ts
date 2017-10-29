@@ -2,27 +2,31 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaSessionInfo } from './KalturaSessionInfo';
 
-import { KalturaSessionType } from './KalturaSessionType';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AppTokenStartSessionActionArgs  extends KalturaRequestArgs {
     id : string;
 	tokenHash : string;
-	userId? : number;
-	type? : KalturaSessionType;
+	userId? : string;
 	expiry? : number;
 	udid? : string;
 }
 
-/** 
-* Starts a new KS (Kaltura Session) based on application authentication token id
-**/
+/**
+ * Build request payload for service 'appToken' action 'startSession'.
+ *
+ * Usage: Starts a new KS (Kaltura Session) based on application authentication token id
+ *
+ * Server response type:         KalturaSessionInfo
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInfo> {
 
     id : string;
 	tokenHash : string;
-	userId : number;
-	type : KalturaSessionType;
+	userId : string;
 	expiry : number;
 	udid : string;
 
@@ -42,7 +46,6 @@ export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInf
 				id : { type : 's' },
 				tokenHash : { type : 's' },
 				userId : { type : 's' },
-				type : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
 				expiry : { type : 'n' },
 				udid : { type : 's' }
             }

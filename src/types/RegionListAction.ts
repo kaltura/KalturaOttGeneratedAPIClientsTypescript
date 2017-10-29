@@ -9,9 +9,16 @@ export interface RegionListActionArgs  extends KalturaRequestArgs {
     filter : KalturaRegionFilter;
 }
 
-/** 
-* Returns all regions for the partner
-**/
+/**
+ * Build request payload for service 'region' action 'list'.
+ *
+ * Usage: Returns all regions for the partner
+ *
+ * Server response type:         KalturaRegionListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RegionListAction extends KalturaRequest<KalturaRegionListResponse> {
 
     filter : KalturaRegionFilter;

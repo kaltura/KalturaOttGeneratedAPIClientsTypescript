@@ -12,9 +12,16 @@ export interface SocialLoginActionArgs  extends KalturaRequestArgs {
 	udid? : string;
 }
 
-/** 
-* Login using social token
-**/
+/**
+ * Build request payload for service 'social' action 'login'.
+ *
+ * Usage: Login using social token
+ *
+ * Server response type:         KalturaLoginResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialLoginAction extends KalturaRequest<KalturaLoginResponse> {
 
     partnerId : number;

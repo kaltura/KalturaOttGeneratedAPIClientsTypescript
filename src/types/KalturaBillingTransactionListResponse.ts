@@ -8,9 +8,7 @@ export interface KalturaBillingTransactionListResponseArgs  extends KalturaListR
     objects? : KalturaBillingTransaction[];
 }
 
-/** 
-* Billing Transactions
-**/
+
 export class KalturaBillingTransactionListResponse extends KalturaListResponse {
 
     objects : KalturaBillingTransaction[];

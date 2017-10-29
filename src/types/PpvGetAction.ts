@@ -8,9 +8,16 @@ export interface PpvGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Returns ppv object by internal identifier
-**/
+/**
+ * Build request payload for service 'ppv' action 'get'.
+ *
+ * Usage: Returns ppv object by internal identifier
+ *
+ * Server response type:         KalturaPpv
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PpvGetAction extends KalturaRequest<KalturaPpv> {
 
     id : number;

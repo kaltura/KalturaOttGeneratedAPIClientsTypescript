@@ -8,9 +8,16 @@ export interface OttUserLogoutActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Logout the calling user.
-**/
+/**
+ * Build request payload for service 'ottUser' action 'logout'.
+ *
+ * Usage: Logout the calling user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OttUserLogoutAction extends KalturaRequest<boolean> {
 
     

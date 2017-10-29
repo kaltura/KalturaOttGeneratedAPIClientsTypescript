@@ -8,9 +8,16 @@ export interface CompensationDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete a compensation by identifier
-**/
+/**
+ * Build request payload for service 'compensation' action 'delete'.
+ *
+ * Usage: Delete a compensation by identifier
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CompensationDeleteAction extends KalturaRequest<void> {
 
     id : number;

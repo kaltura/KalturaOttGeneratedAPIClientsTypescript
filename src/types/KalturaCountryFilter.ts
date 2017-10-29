@@ -9,9 +9,7 @@ export interface KalturaCountryFilterArgs  extends KalturaFilterArgs {
 	ipEqualCurrent? : boolean;
 }
 
-/** 
-* Country filter
-**/
+
 export class KalturaCountryFilter extends KalturaFilter {
 
     idIn : string;

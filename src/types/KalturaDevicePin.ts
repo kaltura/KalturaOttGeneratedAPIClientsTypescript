@@ -7,9 +7,7 @@ export interface KalturaDevicePinArgs  extends KalturaObjectBaseArgs {
     pin? : string;
 }
 
-/** 
-* Device pin
-**/
+
 export class KalturaDevicePin extends KalturaObjectBase {
 
     pin : string;

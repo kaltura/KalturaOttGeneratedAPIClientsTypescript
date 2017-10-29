@@ -8,9 +8,7 @@ export interface KalturaProductsPriceListResponseArgs  extends KalturaListRespon
     objects? : KalturaProductPrice[];
 }
 
-/** 
-* Prices list
-**/
+
 export class KalturaProductsPriceListResponse extends KalturaListResponse {
 
     objects : KalturaProductPrice[];

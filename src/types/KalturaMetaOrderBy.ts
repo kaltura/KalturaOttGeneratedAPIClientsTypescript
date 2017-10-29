@@ -19,6 +19,13 @@ export class KalturaMetaOrderBy extends KalturaObjectBase {
         return this._value;
     }
 
-    static none = new KalturaMetaOrderBy('NONE');
+    static createDateAsc = new KalturaMetaOrderBy('CREATE_DATE_ASC');
+	static createDateDesc = new KalturaMetaOrderBy('CREATE_DATE_DESC');
+	static nameAsc = new KalturaMetaOrderBy('NAME_ASC');
+	static nameDesc = new KalturaMetaOrderBy('NAME_DESC');
+	static systemNameAsc = new KalturaMetaOrderBy('SYSTEM_NAME_ASC');
+	static systemNameDesc = new KalturaMetaOrderBy('SYSTEM_NAME_DESC');
+	static updateDateAsc = new KalturaMetaOrderBy('UPDATE_DATE_ASC');
+	static updateDateDesc = new KalturaMetaOrderBy('UPDATE_DATE_DESC');
 }
 KalturaTypesFactory.registerType('KalturaMetaOrderBy',KalturaMetaOrderBy);

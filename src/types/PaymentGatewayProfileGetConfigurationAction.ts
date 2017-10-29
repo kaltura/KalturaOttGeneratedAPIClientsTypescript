@@ -11,9 +11,16 @@ export interface PaymentGatewayProfileGetConfigurationActionArgs  extends Kaltur
 	extraParameters : KalturaKeyValue[];
 }
 
-/** 
-* Gets the Payment Gateway Configuration for the payment gateway identifier given
-**/
+/**
+ * Build request payload for service 'paymentGatewayProfile' action 'getConfiguration'.
+ *
+ * Usage: Gets the Payment Gateway Configuration for the payment gateway identifier given
+ *
+ * Server response type:         KalturaPaymentGatewayConfiguration
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentGatewayProfileGetConfigurationAction extends KalturaRequest<KalturaPaymentGatewayConfiguration> {
 
     alias : string;

@@ -9,9 +9,16 @@ export interface HouseholdPaymentMethodSetAsDefaultActionArgs  extends KalturaRe
 	paymentMethodId : number;
 }
 
-/** 
-* Set a payment method as default for the household.
-**/
+/**
+ * Build request payload for service 'householdPaymentMethod' action 'setAsDefault'.
+ *
+ * Usage: Set a payment method as default for the household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentMethodSetAsDefaultAction extends KalturaRequest<boolean> {
 
     paymentGatewayId : number;

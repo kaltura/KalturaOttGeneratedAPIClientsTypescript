@@ -7,9 +7,7 @@ export interface KalturaListResponseArgs  extends KalturaObjectBaseArgs {
     totalCount? : number;
 }
 
-/** 
-* Base list wrapper
-**/
+
 export class KalturaListResponse extends KalturaObjectBase {
 
     totalCount : number;

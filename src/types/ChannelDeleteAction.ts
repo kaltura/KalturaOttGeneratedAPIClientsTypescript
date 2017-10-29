@@ -8,9 +8,16 @@ export interface ChannelDeleteActionArgs  extends KalturaRequestArgs {
     channelId : number;
 }
 
-/** 
-* Delete channel by its channel id
-**/
+/**
+ * Build request payload for service 'channel' action 'delete'.
+ *
+ * Usage: Delete channel by its channel id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ChannelDeleteAction extends KalturaRequest<boolean> {
 
     channelId : number;

@@ -8,9 +8,7 @@ export interface KalturaTopicListResponseArgs  extends KalturaListResponseArgs {
     objects? : KalturaTopic[];
 }
 
-/** 
-* List of inbox message.
-**/
+
 export class KalturaTopicListResponse extends KalturaListResponse {
 
     objects : KalturaTopic[];

@@ -9,9 +9,16 @@ export interface EntitlementUpdateActionArgs  extends KalturaRequestArgs {
 	entitlement : KalturaEntitlement;
 }
 
-/** 
-* Update Kaltura Entitelment by Purchase id
-**/
+/**
+ * Build request payload for service 'entitlement' action 'update'.
+ *
+ * Usage: Update Kaltura Entitelment by Purchase id
+ *
+ * Server response type:         KalturaEntitlement
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntitlementUpdateAction extends KalturaRequest<KalturaEntitlement> {
 
     id : number;

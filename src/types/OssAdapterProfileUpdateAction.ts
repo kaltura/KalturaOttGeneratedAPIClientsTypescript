@@ -9,9 +9,16 @@ export interface OssAdapterProfileUpdateActionArgs  extends KalturaRequestArgs {
 	ossAdapter : KalturaOSSAdapterProfile;
 }
 
-/** 
-* Update OSS adapter details
-**/
+/**
+ * Build request payload for service 'ossAdapterProfile' action 'update'.
+ *
+ * Usage: Update OSS adapter details
+ *
+ * Server response type:         KalturaOSSAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OssAdapterProfileUpdateAction extends KalturaRequest<KalturaOSSAdapterProfile> {
 
     ossAdapterId : number;

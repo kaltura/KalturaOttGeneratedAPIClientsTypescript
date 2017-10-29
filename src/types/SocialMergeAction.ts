@@ -10,9 +10,16 @@ export interface SocialMergeActionArgs  extends KalturaRequestArgs {
 	type : KalturaSocialNetwork;
 }
 
-/** 
-* Connect an existing user in the system to an external social network user
-**/
+/**
+ * Build request payload for service 'social' action 'merge'.
+ *
+ * Usage: Connect an existing user in the system to an external social network user
+ *
+ * Server response type:         KalturaSocial
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialMergeAction extends KalturaRequest<KalturaSocial> {
 
     token : string;

@@ -9,9 +9,7 @@ export interface KalturaUserInterestTopicArgs  extends KalturaObjectBaseArgs {
 	parentTopic? : KalturaUserInterestTopic;
 }
 
-/** 
-* User interest topic
-**/
+
 export class KalturaUserInterestTopic extends KalturaObjectBase {
 
     metaId : string;

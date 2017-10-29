@@ -9,9 +9,16 @@ export interface LicensedUrlGetActionArgs  extends KalturaRequestArgs {
     request : KalturaLicensedUrlBaseRequest;
 }
 
-/** 
-* Get the URL for playing an asset - program, media or recording
-**/
+/**
+ * Build request payload for service 'licensedUrl' action 'get'.
+ *
+ * Usage: Get the URL for playing an asset - program, media or recording
+ *
+ * Server response type:         KalturaLicensedUrl
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LicensedUrlGetAction extends KalturaRequest<KalturaLicensedUrl> {
 
     request : KalturaLicensedUrlBaseRequest;

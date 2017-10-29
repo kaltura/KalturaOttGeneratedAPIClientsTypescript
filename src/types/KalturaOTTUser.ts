@@ -20,9 +20,7 @@ export interface KalturaOTTUserArgs  extends KalturaBaseOTTUserArgs {
 	dynamicData? : { [key : string] : KalturaStringValue};
 }
 
-/** 
-* User
-**/
+
 export class KalturaOTTUser extends KalturaBaseOTTUser {
 
     readonly householdId : number;

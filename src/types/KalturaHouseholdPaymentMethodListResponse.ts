@@ -8,9 +8,7 @@ export interface KalturaHouseholdPaymentMethodListResponseArgs  extends KalturaL
     objects? : KalturaHouseholdPaymentMethod[];
 }
 
-/** 
-* List of household payment methods.
-**/
+
 export class KalturaHouseholdPaymentMethodListResponse extends KalturaListResponse {
 
     objects : KalturaHouseholdPaymentMethod[];

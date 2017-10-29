@@ -8,9 +8,16 @@ export interface ChannelGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Returns channel info
-**/
+/**
+ * Build request payload for service 'channel' action 'get'.
+ *
+ * Usage: Returns channel info
+ *
+ * Server response type:         KalturaChannel
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ChannelGetAction extends KalturaRequest<KalturaChannel> {
 
     id : number;

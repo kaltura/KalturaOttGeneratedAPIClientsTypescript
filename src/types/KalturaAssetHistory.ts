@@ -8,9 +8,7 @@ export interface KalturaAssetHistoryArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Watch history asset info
-**/
+
 export class KalturaAssetHistory extends KalturaObjectBase {
 
     readonly assetId : number;

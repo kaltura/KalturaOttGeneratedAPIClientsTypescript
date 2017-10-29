@@ -8,10 +8,16 @@ export interface TimeShiftedTvPartnerSettingsGetActionArgs  extends KalturaReque
     
 }
 
-/** 
-* Retrieve the account’s time-shifted TV settings (catch-up and C-DVR,
-* Trick-play, Start-over)
-**/
+/**
+ * Build request payload for service 'timeShiftedTvPartnerSettings' action 'get'.
+ *
+ * Usage: Retrieve the account’s time-shifted TV settings (catch-up and C-DVR, Trick-play, Start-over)
+ *
+ * Server response type:         KalturaTimeShiftedTvPartnerSettings
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TimeShiftedTvPartnerSettingsGetAction extends KalturaRequest<KalturaTimeShiftedTvPartnerSettings> {
 
     

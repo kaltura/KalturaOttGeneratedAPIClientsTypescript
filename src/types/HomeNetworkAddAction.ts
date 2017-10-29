@@ -8,9 +8,16 @@ export interface HomeNetworkAddActionArgs  extends KalturaRequestArgs {
     homeNetwork : KalturaHomeNetwork;
 }
 
-/** 
-* Add a new home network to a household
-**/
+/**
+ * Build request payload for service 'homeNetwork' action 'add'.
+ *
+ * Usage: Add a new home network to a household
+ *
+ * Server response type:         KalturaHomeNetwork
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HomeNetworkAddAction extends KalturaRequest<KalturaHomeNetwork> {
 
     homeNetwork : KalturaHomeNetwork;

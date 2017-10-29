@@ -11,9 +11,17 @@ export interface FollowTvSeriesListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List user&#39;s tv series follows.              Possible status codes:
-**/
+/**
+ * Build request payload for service 'followTvSeries' action 'list'.
+ *
+ * Usage: List user&#39;s tv series follows.
+ * Possible status codes:
+ *
+ * Server response type:         KalturaFollowTvSeriesListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FollowTvSeriesListAction extends KalturaRequest<KalturaFollowTvSeriesListResponse> {
 
     filter : KalturaFollowTvSeriesFilter;

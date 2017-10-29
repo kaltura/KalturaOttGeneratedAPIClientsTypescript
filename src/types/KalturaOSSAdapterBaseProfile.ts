@@ -7,9 +7,7 @@ export interface KalturaOSSAdapterBaseProfileArgs  extends KalturaObjectBaseArgs
     name? : string;
 }
 
-/** 
-* OSS adapter basic
-**/
+
 export class KalturaOSSAdapterBaseProfile extends KalturaObjectBase {
 
     readonly id : number;

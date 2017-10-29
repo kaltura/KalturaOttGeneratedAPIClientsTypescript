@@ -8,9 +8,16 @@ export interface HouseholdPaymentGatewayEnableActionArgs  extends KalturaRequest
     paymentGatewayId : number;
 }
 
-/** 
-* Enable a payment-gateway provider for the household.
-**/
+/**
+ * Build request payload for service 'householdPaymentGateway' action 'enable'.
+ *
+ * Usage: Enable a payment-gateway provider for the household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentGatewayEnableAction extends KalturaRequest<boolean> {
 
     paymentGatewayId : number;

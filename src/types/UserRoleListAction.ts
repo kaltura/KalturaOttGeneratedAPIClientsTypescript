@@ -9,10 +9,16 @@ export interface UserRoleListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaUserRoleFilter;
 }
 
-/** 
-* Retrieving user roles by identifiers, if filter is empty, returns all partner
-* roles
-**/
+/**
+ * Build request payload for service 'userRole' action 'list'.
+ *
+ * Usage: Retrieving user roles by identifiers, if filter is empty, returns all partner roles
+ *
+ * Server response type:         KalturaUserRoleListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserRoleListAction extends KalturaRequest<KalturaUserRoleListResponse> {
 
     filter : KalturaUserRoleFilter;

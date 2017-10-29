@@ -9,9 +9,7 @@ export interface KalturaDiscountModuleArgs  extends KalturaObjectBaseArgs {
 	endDate? : number;
 }
 
-/** 
-* Discount module
-**/
+
 export class KalturaDiscountModule extends KalturaObjectBase {
 
     percent : number;

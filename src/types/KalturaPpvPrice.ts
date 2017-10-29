@@ -26,9 +26,7 @@ export interface KalturaPpvPriceArgs  extends KalturaProductPriceArgs {
 	ppvProductCode? : string;
 }
 
-/** 
-* PPV price details
-**/
+
 export class KalturaPpvPrice extends KalturaProductPrice {
 
     fileId : number;

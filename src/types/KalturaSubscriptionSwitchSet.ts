@@ -7,9 +7,7 @@ export interface KalturaSubscriptionSwitchSetArgs  extends KalturaSubscriptionSe
     
 }
 
-/** 
-* Subscription details
-**/
+
 export class KalturaSubscriptionSwitchSet extends KalturaSubscriptionSet {
 
     

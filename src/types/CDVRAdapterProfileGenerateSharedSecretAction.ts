@@ -8,9 +8,16 @@ export interface CDVRAdapterProfileGenerateSharedSecretActionArgs  extends Kaltu
     adapterId : number;
 }
 
-/** 
-* Generate C-DVR adapter shared secret
-**/
+/**
+ * Build request payload for service 'cDVRAdapterProfile' action 'generateSharedSecret'.
+ *
+ * Usage: Generate C-DVR adapter shared secret
+ *
+ * Server response type:         KalturaCDVRAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CDVRAdapterProfileGenerateSharedSecretAction extends KalturaRequest<KalturaCDVRAdapterProfile> {
 
     adapterId : number;

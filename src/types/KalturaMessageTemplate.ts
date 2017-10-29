@@ -37,7 +37,7 @@ export class KalturaMessageTemplate extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaMessageTemplate' },
 				message : { type : 's' },
 				dateFormat : { type : 's' },
-				messageType : { type : 'en', subTypeConstructor : KalturaMessageTemplateType, subType : 'KalturaMessageTemplateType' },
+				messageType : { type : 'es', subTypeConstructor : KalturaMessageTemplateType, subType : 'KalturaMessageTemplateType' },
 				sound : { type : 's' },
 				action : { type : 's' },
 				url : { type : 's' }

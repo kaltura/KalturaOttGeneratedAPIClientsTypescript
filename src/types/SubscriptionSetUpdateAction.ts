@@ -9,9 +9,16 @@ export interface SubscriptionSetUpdateActionArgs  extends KalturaRequestArgs {
 	subscriptionSet : KalturaSubscriptionSet;
 }
 
-/** 
-* Update the subscriptionSet
-**/
+/**
+ * Build request payload for service 'subscriptionSet' action 'update'.
+ *
+ * Usage: Update the subscriptionSet
+ *
+ * Server response type:         KalturaSubscriptionSet
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SubscriptionSetUpdateAction extends KalturaRequest<KalturaSubscriptionSet> {
 
     id : number;

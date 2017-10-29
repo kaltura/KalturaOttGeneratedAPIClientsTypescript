@@ -14,9 +14,7 @@ export interface KalturaMediaAssetArgs  extends KalturaAssetArgs {
 	watchPermissionRule? : string;
 }
 
-/** 
-* Media-asset info
-**/
+
 export class KalturaMediaAsset extends KalturaAsset {
 
     externalIds : string;

@@ -7,9 +7,7 @@ export interface KalturaBooleanValueArgs  extends KalturaValueArgs {
     value? : boolean;
 }
 
-/** 
-* A string representation to return an array of booleans
-**/
+
 export class KalturaBooleanValue extends KalturaValue {
 
     value : boolean;

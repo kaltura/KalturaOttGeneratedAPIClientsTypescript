@@ -8,9 +8,16 @@ export interface PaymentGatewayProfileListActionArgs  extends KalturaRequestArgs
     
 }
 
-/** 
-* Returns all payment gateways for partner : id + name
-**/
+/**
+ * Build request payload for service 'paymentGatewayProfile' action 'list'.
+ *
+ * Usage: Returns all payment gateways for partner : id + name
+ *
+ * Server response type:         KalturaPaymentGatewayProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentGatewayProfileListAction extends KalturaRequest<KalturaPaymentGatewayProfileListResponse> {
 
     

@@ -8,9 +8,7 @@ export interface KalturaProductCodeArgs  extends KalturaObjectBaseArgs {
 	code? : string;
 }
 
-/** 
-* Product Code
-**/
+
 export class KalturaProductCode extends KalturaObjectBase {
 
     inappProvider : string;

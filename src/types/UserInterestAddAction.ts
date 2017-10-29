@@ -8,9 +8,16 @@ export interface UserInterestAddActionArgs  extends KalturaRequestArgs {
     userInterest : KalturaUserInterest;
 }
 
-/** 
-* Insert new user interest for partner user
-**/
+/**
+ * Build request payload for service 'userInterest' action 'add'.
+ *
+ * Usage: Insert new user interest for partner user
+ *
+ * Server response type:         KalturaUserInterest
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserInterestAddAction extends KalturaRequest<KalturaUserInterest> {
 
     userInterest : KalturaUserInterest;

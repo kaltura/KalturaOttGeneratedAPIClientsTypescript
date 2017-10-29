@@ -8,9 +8,7 @@ export interface KalturaPaymentGatewayProfileListResponseArgs  extends KalturaLi
     objects? : KalturaPaymentGatewayProfile[];
 }
 
-/** 
-* PaymentGatewayProfile list
-**/
+
 export class KalturaPaymentGatewayProfileListResponse extends KalturaListResponse {
 
     objects : KalturaPaymentGatewayProfile[];

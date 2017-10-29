@@ -8,9 +8,7 @@ export interface KalturaConfigurationGroupTagListResponseArgs  extends KalturaLi
     objects? : KalturaConfigurationGroupTag[];
 }
 
-/** 
-* Configurations group tags info wrapper
-**/
+
 export class KalturaConfigurationGroupTagListResponse extends KalturaListResponse {
 
     objects : KalturaConfigurationGroupTag[];

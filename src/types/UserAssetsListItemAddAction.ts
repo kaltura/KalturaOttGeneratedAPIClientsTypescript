@@ -8,9 +8,16 @@ export interface UserAssetsListItemAddActionArgs  extends KalturaRequestArgs {
     userAssetsListItem : KalturaUserAssetsListItem;
 }
 
-/** 
-* Adds a new item to user’s private asset list
-**/
+/**
+ * Build request payload for service 'userAssetsListItem' action 'add'.
+ *
+ * Usage: Adds a new item to user’s private asset list
+ *
+ * Server response type:         KalturaUserAssetsListItem
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserAssetsListItemAddAction extends KalturaRequest<KalturaUserAssetsListItem> {
 
     userAssetsListItem : KalturaUserAssetsListItem;

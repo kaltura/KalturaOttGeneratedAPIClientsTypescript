@@ -9,9 +9,16 @@ export interface ConfigurationGroupTagListActionArgs  extends KalturaRequestArgs
     filter : KalturaConfigurationGroupTagFilter;
 }
 
-/** 
-* Return list of tags for a configuration group
-**/
+/**
+ * Build request payload for service 'configurationGroupTag' action 'list'.
+ *
+ * Usage: Return list of tags for a configuration group
+ *
+ * Server response type:         KalturaConfigurationGroupTagListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupTagListAction extends KalturaRequest<KalturaConfigurationGroupTagListResponse> {
 
     filter : KalturaConfigurationGroupTagFilter;

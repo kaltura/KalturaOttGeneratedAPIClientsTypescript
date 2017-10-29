@@ -9,9 +9,16 @@ export interface HouseholdResetFrequencyActionArgs  extends KalturaRequestArgs {
     frequencyType : KalturaHouseholdFrequencyType;
 }
 
-/** 
-* Reset a household’s time limitation for removing user or device
-**/
+/**
+ * Build request payload for service 'household' action 'resetFrequency'.
+ *
+ * Usage: Reset a household’s time limitation for removing user or device
+ *
+ * Server response type:         KalturaHousehold
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdResetFrequencyAction extends KalturaRequest<KalturaHousehold> {
 
     frequencyType : KalturaHouseholdFrequencyType;

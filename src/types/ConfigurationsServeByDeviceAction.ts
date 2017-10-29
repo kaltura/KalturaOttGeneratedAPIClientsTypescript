@@ -13,10 +13,16 @@ export interface ConfigurationsServeByDeviceActionArgs  extends KalturaRequestAr
 	partnerId? : number;
 }
 
-/** 
-* Return a device configuration applicable for a specific device (UDID), app name,
-* software version, platform and optionally a configuration group’s tag
-**/
+/**
+ * Build request payload for service 'configurations' action 'serveByDevice'.
+ *
+ * Usage: Return a device configuration applicable for a specific device (UDID), app name, software version, platform and optionally a configuration group’s tag
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationsServeByDeviceAction extends KalturaRequest<string> {
 
     applicationName : string;

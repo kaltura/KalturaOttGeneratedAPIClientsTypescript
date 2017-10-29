@@ -9,11 +9,16 @@ export interface ProductPriceListActionArgs  extends KalturaRequestArgs {
     filter : KalturaProductPriceFilter;
 }
 
-/** 
-* Returns a price and a purchase status for each subscription or/and media file,
-* for a given user (if passed) and with the consideration of a coupon code (if
-* passed).
-**/
+/**
+ * Build request payload for service 'productPrice' action 'list'.
+ *
+ * Usage: Returns a price and a purchase status for each subscription or/and media file, for a given user (if passed) and with the consideration of a coupon code (if passed)
+ *
+ * Server response type:         KalturaProductPriceListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ProductPriceListAction extends KalturaRequest<KalturaProductPriceListResponse> {
 
     filter : KalturaProductPriceFilter;

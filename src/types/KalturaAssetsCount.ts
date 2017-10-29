@@ -9,9 +9,7 @@ export interface KalturaAssetsCountArgs  extends KalturaObjectBaseArgs {
 	objects? : KalturaAssetCount[];
 }
 
-/** 
-* Single aggregation objects
-**/
+
 export class KalturaAssetsCount extends KalturaObjectBase {
 
     field : string;

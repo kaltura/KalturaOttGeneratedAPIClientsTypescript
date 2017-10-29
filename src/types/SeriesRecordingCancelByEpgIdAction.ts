@@ -9,9 +9,16 @@ export interface SeriesRecordingCancelByEpgIdActionArgs  extends KalturaRequestA
 	epgId : number;
 }
 
-/** 
-* Cancel EPG recording that was recorded as part of series
-**/
+/**
+ * Build request payload for service 'seriesRecording' action 'cancelByEpgId'.
+ *
+ * Usage: Cancel EPG recording that was recorded as part of series
+ *
+ * Server response type:         KalturaSeriesRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SeriesRecordingCancelByEpgIdAction extends KalturaRequest<KalturaSeriesRecording> {
 
     id : number;

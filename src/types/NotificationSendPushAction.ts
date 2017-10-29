@@ -10,9 +10,16 @@ export interface NotificationSendPushActionArgs  extends KalturaRequestArgs {
 	pushMessage : KalturaPushMessage;
 }
 
-/** 
-* Sends push notification to user devices
-**/
+/**
+ * Build request payload for service 'notification' action 'sendPush'.
+ *
+ * Usage: Sends push notification to user devices
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationSendPushAction extends KalturaRequest<boolean> {
 
     userId : number;

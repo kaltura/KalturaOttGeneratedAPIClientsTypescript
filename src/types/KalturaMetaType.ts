@@ -20,8 +20,8 @@ export class KalturaMetaType extends KalturaObjectBase {
     }
 
     static boolean = new KalturaMetaType('BOOLEAN');
+	static date = new KalturaMetaType('DATE');
 	static number = new KalturaMetaType('NUMBER');
 	static string = new KalturaMetaType('STRING');
-	static stringArray = new KalturaMetaType('STRING_ARRAY');
 }
 KalturaTypesFactory.registerType('KalturaMetaType',KalturaMetaType);

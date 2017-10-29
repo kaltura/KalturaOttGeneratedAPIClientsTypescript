@@ -9,9 +9,16 @@ export interface FavoriteListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaFavoriteFilter;
 }
 
-/** 
-* Retrieving users&#39; favorites
-**/
+/**
+ * Build request payload for service 'favorite' action 'list'.
+ *
+ * Usage: Retrieving users&#39; favorites
+ *
+ * Server response type:         KalturaFavoriteListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FavoriteListAction extends KalturaRequest<KalturaFavoriteListResponse> {
 
     filter : KalturaFavoriteFilter;

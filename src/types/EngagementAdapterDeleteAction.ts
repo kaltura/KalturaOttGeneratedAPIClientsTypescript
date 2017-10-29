@@ -8,9 +8,16 @@ export interface EngagementAdapterDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete Engagement adapter by Engagement adapter id
-**/
+/**
+ * Build request payload for service 'engagementAdapter' action 'delete'.
+ *
+ * Usage: Delete Engagement adapter by Engagement adapter id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EngagementAdapterDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

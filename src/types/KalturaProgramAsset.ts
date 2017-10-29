@@ -11,9 +11,7 @@ export interface KalturaProgramAssetArgs  extends KalturaAssetArgs {
 	linearAssetId? : number;
 }
 
-/** 
-* Program-asset info
-**/
+
 export class KalturaProgramAsset extends KalturaAsset {
 
     epgChannelId : number;

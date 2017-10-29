@@ -9,10 +9,17 @@ export interface PurchaseSettingsGetActionArgs  extends KalturaRequestArgs {
     by : KalturaEntityReferenceBy;
 }
 
-/** 
-* Retrieve the purchase settings.              Includes specification of where
-* these settings were defined – account, household or user
-**/
+/**
+ * Build request payload for service 'purchaseSettings' action 'get'.
+ *
+ * Usage: Retrieve the purchase settings.
+ * Includes specification of where these settings were defined – account, household or user
+ *
+ * Server response type:         KalturaPurchaseSettings
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PurchaseSettingsGetAction extends KalturaRequest<KalturaPurchaseSettings> {
 
     by : KalturaEntityReferenceBy;

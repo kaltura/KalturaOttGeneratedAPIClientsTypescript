@@ -9,9 +9,16 @@ export interface SocialActionAddActionArgs  extends KalturaRequestArgs {
     socialAction : KalturaSocialAction;
 }
 
-/** 
-* Insert new user social action
-**/
+/**
+ * Build request payload for service 'socialAction' action 'add'.
+ *
+ * Usage: Insert new user social action
+ *
+ * Server response type:         KalturaUserSocialActionResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialActionAddAction extends KalturaRequest<KalturaUserSocialActionResponse> {
 
     socialAction : KalturaSocialAction;

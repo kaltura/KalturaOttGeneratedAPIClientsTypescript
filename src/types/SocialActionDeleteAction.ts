@@ -8,9 +8,16 @@ export interface SocialActionDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* delete user social action
-**/
+/**
+ * Build request payload for service 'socialAction' action 'delete'.
+ *
+ * Usage: delete user social action
+ *
+ * Server response type:         KalturaNetworkActionStatus[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialActionDeleteAction extends KalturaRequest<KalturaNetworkActionStatus[]> {
 
     id : string;

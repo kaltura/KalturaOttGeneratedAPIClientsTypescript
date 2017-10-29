@@ -9,9 +9,7 @@ export interface KalturaHouseholdDeviceFamilyLimitationsArgs  extends KalturaDev
 	concurrentLimit? : number;
 }
 
-/** 
-* Device family limitations details
-**/
+
 export class KalturaHouseholdDeviceFamilyLimitations extends KalturaDeviceFamilyBase {
 
     frequency : number;

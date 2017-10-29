@@ -7,9 +7,7 @@ export interface KalturaDeviceReportFilterArgs  extends KalturaReportFilterArgs 
     lastAccessDateGreaterThanOrEqual? : number;
 }
 
-/** 
-* Report filter
-**/
+
 export class KalturaDeviceReportFilter extends KalturaReportFilter {
 
     lastAccessDateGreaterThanOrEqual : number;

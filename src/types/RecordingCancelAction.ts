@@ -8,10 +8,16 @@ export interface RecordingCancelActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Cancel a previously requested recording. Cancel recording can be called for
-* recording in status Scheduled or Recording Only
-**/
+/**
+ * Build request payload for service 'recording' action 'cancel'.
+ *
+ * Usage: Cancel a previously requested recording. Cancel recording can be called for recording in status Scheduled or Recording Only
+ *
+ * Server response type:         KalturaRecording
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class RecordingCancelAction extends KalturaRequest<KalturaRecording> {
 
     id : number;

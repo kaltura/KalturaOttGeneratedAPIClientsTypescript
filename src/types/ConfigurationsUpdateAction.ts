@@ -9,9 +9,16 @@ export interface ConfigurationsUpdateActionArgs  extends KalturaRequestArgs {
 	configurations : KalturaConfigurations;
 }
 
-/** 
-* Update device configuration
-**/
+/**
+ * Build request payload for service 'configurations' action 'update'.
+ *
+ * Usage: Update device configuration
+ *
+ * Server response type:         KalturaConfigurations
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationsUpdateAction extends KalturaRequest<KalturaConfigurations> {
 
     id : string;

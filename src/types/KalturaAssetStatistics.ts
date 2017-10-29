@@ -13,9 +13,7 @@ export interface KalturaAssetStatisticsArgs  extends KalturaObjectBaseArgs {
 	buzzScore? : KalturaBuzzScore;
 }
 
-/** 
-* Asset statistics
-**/
+
 export class KalturaAssetStatistics extends KalturaObjectBase {
 
     assetId : number;

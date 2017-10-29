@@ -11,9 +11,7 @@ export interface KalturaLanguageArgs  extends KalturaObjectBaseArgs {
 	isDefault? : boolean;
 }
 
-/** 
-* Language details
-**/
+
 export class KalturaLanguage extends KalturaObjectBase {
 
     name : string;

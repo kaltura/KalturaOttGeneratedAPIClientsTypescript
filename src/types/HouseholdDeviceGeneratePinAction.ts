@@ -9,9 +9,16 @@ export interface HouseholdDeviceGeneratePinActionArgs  extends KalturaRequestArg
 	brandId : number;
 }
 
-/** 
-* Generates device pin to use when adding a device to household by pin
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'generatePin'.
+ *
+ * Usage: Generates device pin to use when adding a device to household by pin
+ *
+ * Server response type:         KalturaDevicePin
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceGeneratePinAction extends KalturaRequest<KalturaDevicePin> {
 
     udid : string;

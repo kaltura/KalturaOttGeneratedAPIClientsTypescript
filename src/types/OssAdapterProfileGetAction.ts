@@ -8,9 +8,16 @@ export interface OssAdapterProfileGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Returns all OSS adapters for partner : id + name
-**/
+/**
+ * Build request payload for service 'ossAdapterProfile' action 'get'.
+ *
+ * Usage: Returns all OSS adapters for partner : id + name
+ *
+ * Server response type:         KalturaOSSAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class OssAdapterProfileGetAction extends KalturaRequest<KalturaOSSAdapterProfile> {
 
     id : number;

@@ -9,9 +9,16 @@ export interface PaymentMethodProfileUpdateActionArgs  extends KalturaRequestArg
 	paymentMethod : KalturaPaymentMethodProfile;
 }
 
-/** 
-* Update payment method
-**/
+/**
+ * Build request payload for service 'paymentMethodProfile' action 'update'.
+ *
+ * Usage: Update payment method
+ *
+ * Server response type:         KalturaPaymentMethodProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentMethodProfileUpdateAction extends KalturaRequest<KalturaPaymentMethodProfile> {
 
     paymentMethodId : number;

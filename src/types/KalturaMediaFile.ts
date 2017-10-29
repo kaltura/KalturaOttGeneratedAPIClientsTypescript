@@ -20,9 +20,7 @@ export interface KalturaMediaFileArgs  extends KalturaObjectBaseArgs {
 	productCode? : string;
 }
 
-/** 
-* Media file details
-**/
+
 export class KalturaMediaFile extends KalturaObjectBase {
 
     assetId : number;

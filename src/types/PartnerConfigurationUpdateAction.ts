@@ -9,9 +9,16 @@ export interface PartnerConfigurationUpdateActionArgs  extends KalturaRequestArg
     configuration : KalturaPartnerConfiguration;
 }
 
-/** 
-* Update Partner Configuration
-**/
+/**
+ * Build request payload for service 'partnerConfiguration' action 'update'.
+ *
+ * Usage: Update Partner Configuration
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerConfigurationUpdateAction extends KalturaRequest<boolean> {
 
     configuration : KalturaPartnerConfiguration;

@@ -10,9 +10,16 @@ export interface SocialGetConfigurationActionArgs  extends KalturaRequestArgs {
 	partnerId? : number;
 }
 
-/** 
-* Retrieve the social network’s configuration information
-**/
+/**
+ * Build request payload for service 'social' action 'getConfiguration'.
+ *
+ * Usage: Retrieve the social network’s configuration information
+ *
+ * Server response type:         KalturaSocialConfig
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialGetConfigurationAction extends KalturaRequest<KalturaSocialConfig> {
 
     type : KalturaSocialNetwork;

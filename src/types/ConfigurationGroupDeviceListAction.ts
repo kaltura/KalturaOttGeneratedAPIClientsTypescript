@@ -11,9 +11,16 @@ export interface ConfigurationGroupDeviceListActionArgs  extends KalturaRequestA
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Return the list of associated devices for a given configuration group
-**/
+/**
+ * Build request payload for service 'configurationGroupDevice' action 'list'.
+ *
+ * Usage: Return the list of associated devices for a given configuration group
+ *
+ * Server response type:         KalturaConfigurationGroupDeviceListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupDeviceListAction extends KalturaRequest<KalturaConfigurationGroupDeviceListResponse> {
 
     filter : KalturaConfigurationGroupDeviceFilter;

@@ -8,9 +8,16 @@ export interface CDVRAdapterProfileListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns all C-DVR adapters for partner
-**/
+/**
+ * Build request payload for service 'cDVRAdapterProfile' action 'list'.
+ *
+ * Usage: Returns all C-DVR adapters for partner
+ *
+ * Server response type:         KalturaCDVRAdapterProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CDVRAdapterProfileListAction extends KalturaRequest<KalturaCDVRAdapterProfileListResponse> {
 
     

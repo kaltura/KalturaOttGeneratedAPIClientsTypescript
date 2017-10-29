@@ -11,9 +11,16 @@ export interface TopicListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Get list of topics
-**/
+/**
+ * Build request payload for service 'topic' action 'list'.
+ *
+ * Usage: Get list of topics
+ *
+ * Server response type:         KalturaTopicListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TopicListAction extends KalturaRequest<KalturaTopicListResponse> {
 
     filter : KalturaTopicFilter;

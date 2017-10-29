@@ -11,9 +11,16 @@ export interface InboxMessageListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List inbox messages
-**/
+/**
+ * Build request payload for service 'inboxMessage' action 'list'.
+ *
+ * Usage: List inbox messages
+ *
+ * Server response type:         KalturaInboxMessageListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class InboxMessageListAction extends KalturaRequest<KalturaInboxMessageListResponse> {
 
     filter : KalturaInboxMessageFilter;

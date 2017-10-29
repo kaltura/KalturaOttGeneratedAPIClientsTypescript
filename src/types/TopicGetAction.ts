@@ -8,9 +8,16 @@ export interface TopicGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Gets a topic
-**/
+/**
+ * Build request payload for service 'topic' action 'get'.
+ *
+ * Usage: Gets a topic
+ *
+ * Server response type:         KalturaTopic
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TopicGetAction extends KalturaRequest<KalturaTopic> {
 
     id : number;

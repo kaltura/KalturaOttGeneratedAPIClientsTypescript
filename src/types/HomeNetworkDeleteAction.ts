@@ -8,9 +8,16 @@ export interface HomeNetworkDeleteActionArgs  extends KalturaRequestArgs {
     externalId : string;
 }
 
-/** 
-* Delete household’s existing home network
-**/
+/**
+ * Build request payload for service 'homeNetwork' action 'delete'.
+ *
+ * Usage: Delete household’s existing home network
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HomeNetworkDeleteAction extends KalturaRequest<boolean> {
 
     externalId : string;

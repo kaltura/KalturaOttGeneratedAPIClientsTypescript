@@ -9,9 +9,16 @@ export interface CDVRAdapterProfileUpdateActionArgs  extends KalturaRequestArgs 
 	adapter : KalturaCDVRAdapterProfile;
 }
 
-/** 
-* Update C-DVR adapter details
-**/
+/**
+ * Build request payload for service 'cDVRAdapterProfile' action 'update'.
+ *
+ * Usage: Update C-DVR adapter details
+ *
+ * Server response type:         KalturaCDVRAdapterProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CDVRAdapterProfileUpdateAction extends KalturaRequest<KalturaCDVRAdapterProfile> {
 
     adapterId : number;

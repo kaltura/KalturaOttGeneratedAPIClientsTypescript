@@ -8,9 +8,7 @@ export interface KalturaHouseholdUserListResponseArgs  extends KalturaListRespon
     objects? : KalturaHouseholdUser[];
 }
 
-/** 
-* Household users list
-**/
+
 export class KalturaHouseholdUserListResponse extends KalturaListResponse {
 
     objects : KalturaHouseholdUser[];

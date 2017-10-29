@@ -8,9 +8,16 @@ export interface DeviceBrandListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Return a list of the available device brands.
-**/
+/**
+ * Build request payload for service 'deviceBrand' action 'list'.
+ *
+ * Usage: Return a list of the available device brands
+ *
+ * Server response type:         KalturaDeviceBrandListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeviceBrandListAction extends KalturaRequest<KalturaDeviceBrandListResponse> {
 
     

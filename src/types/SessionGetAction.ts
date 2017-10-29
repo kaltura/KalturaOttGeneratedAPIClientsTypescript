@@ -8,9 +8,16 @@ export interface SessionGetActionArgs  extends KalturaRequestArgs {
     session? : string;
 }
 
-/** 
-* Parses KS
-**/
+/**
+ * Build request payload for service 'session' action 'get'.
+ *
+ * Usage: Parses KS
+ *
+ * Server response type:         KalturaSession
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SessionGetAction extends KalturaRequest<KalturaSession> {
 
     session : string;

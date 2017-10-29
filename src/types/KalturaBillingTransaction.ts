@@ -5,15 +5,14 @@ import { KalturaBillingItemsType } from './KalturaBillingItemsType';
 import { KalturaBillingAction } from './KalturaBillingAction';
 import { KalturaPrice } from './KalturaPrice';
 import { KalturaPaymentMethodType } from './KalturaPaymentMethodType';
+import { KalturaBillingPriceType } from './KalturaBillingPriceType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBillingTransactionArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Billing Transaction
-**/
+
 export class KalturaBillingTransaction extends KalturaObjectBase {
 
     readonly recieptCode : string;
@@ -31,6 +30,7 @@ export class KalturaBillingTransaction extends KalturaObjectBase {
 	readonly billingProviderRef : number;
 	readonly purchaseId : number;
 	readonly remarks : string;
+	readonly billingPriceType : KalturaBillingPriceType;
 
     constructor(data? : KalturaBillingTransactionArgs)
     {
@@ -58,7 +58,8 @@ export class KalturaBillingTransaction extends KalturaObjectBase {
 				isRecurring : { type : 'b', readOnly : true },
 				billingProviderRef : { type : 'n', readOnly : true },
 				purchaseId : { type : 'n', readOnly : true },
-				remarks : { type : 's', readOnly : true }
+				remarks : { type : 's', readOnly : true },
+				billingPriceType : { type : 'es', readOnly : true, subTypeConstructor : KalturaBillingPriceType, subType : 'KalturaBillingPriceType' }
             }
         );
         return result;

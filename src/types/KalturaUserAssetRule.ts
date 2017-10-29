@@ -10,10 +10,7 @@ export interface KalturaUserAssetRuleArgs  extends KalturaObjectBaseArgs {
 	description? : string;
 }
 
-/** 
-* User asset rule - representing different type of rules on an asset(Parental,
-* Geo, User Type, Device)
-**/
+
 export class KalturaUserAssetRule extends KalturaObjectBase {
 
     readonly id : number;

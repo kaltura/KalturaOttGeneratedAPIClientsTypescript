@@ -8,9 +8,16 @@ export interface AnnouncementAddActionArgs  extends KalturaRequestArgs {
     announcement : KalturaAnnouncement;
 }
 
-/** 
-* Add a new future scheduled system announcement push notification
-**/
+/**
+ * Build request payload for service 'announcement' action 'add'.
+ *
+ * Usage: Add a new future scheduled system announcement push notification
+ *
+ * Server response type:         KalturaAnnouncement
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnouncementAddAction extends KalturaRequest<KalturaAnnouncement> {
 
     announcement : KalturaAnnouncement;

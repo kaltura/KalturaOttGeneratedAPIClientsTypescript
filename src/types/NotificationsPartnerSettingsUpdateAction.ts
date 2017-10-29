@@ -9,9 +9,16 @@ export interface NotificationsPartnerSettingsUpdateActionArgs  extends KalturaRe
     settings : KalturaNotificationsPartnerSettings;
 }
 
-/** 
-* Update the account notification settings
-**/
+/**
+ * Build request payload for service 'notificationsPartnerSettings' action 'update'.
+ *
+ * Usage: Update the account notification settings
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationsPartnerSettingsUpdateAction extends KalturaRequest<boolean> {
 
     settings : KalturaNotificationsPartnerSettings;

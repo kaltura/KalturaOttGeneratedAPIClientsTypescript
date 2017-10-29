@@ -11,9 +11,16 @@ export interface TransactionHistoryListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Gets user or household transaction history.
-**/
+/**
+ * Build request payload for service 'transactionHistory' action 'list'.
+ *
+ * Usage: Gets user or household transaction history
+ *
+ * Server response type:         KalturaBillingTransactionListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TransactionHistoryListAction extends KalturaRequest<KalturaBillingTransactionListResponse> {
 
     filter : KalturaTransactionHistoryFilter;

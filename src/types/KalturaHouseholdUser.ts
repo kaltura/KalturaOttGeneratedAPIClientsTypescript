@@ -11,9 +11,7 @@ export interface KalturaHouseholdUserArgs  extends KalturaObjectBaseArgs {
 	householdMasterUsername? : string;
 }
 
-/** 
-* Household user
-**/
+
 export class KalturaHouseholdUser extends KalturaObjectBase {
 
     householdId : number;

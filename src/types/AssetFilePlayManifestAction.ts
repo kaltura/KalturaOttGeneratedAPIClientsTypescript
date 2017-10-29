@@ -15,9 +15,16 @@ export interface AssetFilePlayManifestActionArgs  extends KalturaRequestArgs {
 	ks? : string;
 }
 
-/** 
-* Redirects to play manifest
-**/
+/**
+ * Build request payload for service 'assetFile' action 'playManifest'.
+ *
+ * Usage: Redirects to play manifest
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AssetFilePlayManifestAction extends KalturaRequest<void> {
 
     partnerId : number;

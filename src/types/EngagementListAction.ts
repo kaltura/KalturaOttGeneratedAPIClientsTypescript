@@ -9,9 +9,16 @@ export interface EngagementListActionArgs  extends KalturaRequestArgs {
     filter : KalturaEngagementFilter;
 }
 
-/** 
-* Returns all Engagement for partner
-**/
+/**
+ * Build request payload for service 'engagement' action 'list'.
+ *
+ * Usage: Returns all Engagement for partner
+ *
+ * Server response type:         KalturaEngagementListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EngagementListAction extends KalturaRequest<KalturaEngagementListResponse> {
 
     filter : KalturaEngagementFilter;

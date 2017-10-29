@@ -8,9 +8,16 @@ export interface ExportTaskDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Deletes an existing bulk export task by task identifier
-**/
+/**
+ * Build request payload for service 'exportTask' action 'delete'.
+ *
+ * Usage: Deletes an existing bulk export task by task identifier
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExportTaskDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

@@ -8,9 +8,16 @@ export interface PaymentGatewayProfileDeleteActionArgs  extends KalturaRequestAr
     paymentGatewayId : number;
 }
 
-/** 
-* Delete payment gateway by payment gateway id
-**/
+/**
+ * Build request payload for service 'paymentGatewayProfile' action 'delete'.
+ *
+ * Usage: Delete payment gateway by payment gateway id
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PaymentGatewayProfileDeleteAction extends KalturaRequest<boolean> {
 
     paymentGatewayId : number;

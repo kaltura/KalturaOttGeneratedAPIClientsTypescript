@@ -9,9 +9,16 @@ export interface HouseholdDeviceListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaHouseholdDeviceFilter;
 }
 
-/** 
-* Returns the devices within the household
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'list'.
+ *
+ * Usage: Returns the devices within the household
+ *
+ * Server response type:         KalturaHouseholdDeviceListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceListAction extends KalturaRequest<KalturaHouseholdDeviceListResponse> {
 
     filter : KalturaHouseholdDeviceFilter;

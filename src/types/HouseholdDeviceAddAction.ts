@@ -8,9 +8,16 @@ export interface HouseholdDeviceAddActionArgs  extends KalturaRequestArgs {
     device : KalturaHouseholdDevice;
 }
 
-/** 
-* Add device to household
-**/
+/**
+ * Build request payload for service 'householdDevice' action 'add'.
+ *
+ * Usage: Add device to household
+ *
+ * Server response type:         KalturaHouseholdDevice
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdDeviceAddAction extends KalturaRequest<KalturaHouseholdDevice> {
 
     device : KalturaHouseholdDevice;

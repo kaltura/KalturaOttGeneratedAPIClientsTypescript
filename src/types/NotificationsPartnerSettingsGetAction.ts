@@ -8,9 +8,16 @@ export interface NotificationsPartnerSettingsGetActionArgs  extends KalturaReque
     
 }
 
-/** 
-* Retrieve the partner notification settings.
-**/
+/**
+ * Build request payload for service 'notificationsPartnerSettings' action 'get'.
+ *
+ * Usage: Retrieve the partner notification settings
+ *
+ * Server response type:         KalturaNotificationsPartnerSettings
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationsPartnerSettingsGetAction extends KalturaRequest<KalturaNotificationsPartnerSettings> {
 
     

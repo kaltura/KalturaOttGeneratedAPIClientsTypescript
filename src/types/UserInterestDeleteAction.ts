@@ -8,9 +8,16 @@ export interface UserInterestDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete new user interest for partner user
-**/
+/**
+ * Build request payload for service 'userInterest' action 'delete'.
+ *
+ * Usage: Delete new user interest for partner user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserInterestDeleteAction extends KalturaRequest<boolean> {
 
     id : string;

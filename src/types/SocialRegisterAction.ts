@@ -12,9 +12,16 @@ export interface SocialRegisterActionArgs  extends KalturaRequestArgs {
 	email? : string;
 }
 
-/** 
-* Create a new user in the system using a provided external social token
-**/
+/**
+ * Build request payload for service 'social' action 'register'.
+ *
+ * Usage: Create a new user in the system using a provided external social token
+ *
+ * Server response type:         KalturaSocial
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SocialRegisterAction extends KalturaRequest<KalturaSocial> {
 
     partnerId : number;

@@ -8,9 +8,16 @@ export interface ExternalChannelProfileAddActionArgs  extends KalturaRequestArgs
     externalChannel : KalturaExternalChannelProfile;
 }
 
-/** 
-* Insert new External channel for partner
-**/
+/**
+ * Build request payload for service 'externalChannelProfile' action 'add'.
+ *
+ * Usage: Insert new External channel for partner
+ *
+ * Server response type:         KalturaExternalChannelProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExternalChannelProfileAddAction extends KalturaRequest<KalturaExternalChannelProfile> {
 
     externalChannel : KalturaExternalChannelProfile;

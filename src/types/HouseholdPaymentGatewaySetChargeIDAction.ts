@@ -9,10 +9,16 @@ export interface HouseholdPaymentGatewaySetChargeIDActionArgs  extends KalturaRe
 	chargeId : string;
 }
 
-/** 
-* Set user billing account identifier (charge ID), for a specific household and a
-* specific payment gateway
-**/
+/**
+ * Build request payload for service 'householdPaymentGateway' action 'setChargeID'.
+ *
+ * Usage: Set user billing account identifier (charge ID), for a specific household and a specific payment gateway
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentGatewaySetChargeIDAction extends KalturaRequest<boolean> {
 
     paymentGatewayExternalId : string;

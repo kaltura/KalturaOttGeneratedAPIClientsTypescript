@@ -8,11 +8,16 @@ export interface HouseholdSuspendActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Suspend a given household service. Sets the household status to
-* “suspended&quot;.The household service settings are maintained for later
-* resume
-**/
+/**
+ * Build request payload for service 'household' action 'suspend'.
+ *
+ * Usage: Suspend a given household service. Sets the household status to “suspended&quot;.The household service settings are maintained for later resume
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdSuspendAction extends KalturaRequest<boolean> {
 
     

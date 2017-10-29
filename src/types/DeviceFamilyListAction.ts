@@ -8,9 +8,16 @@ export interface DeviceFamilyListActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Return a list of the available device families.
-**/
+/**
+ * Build request payload for service 'deviceFamily' action 'list'.
+ *
+ * Usage: Return a list of the available device families
+ *
+ * Server response type:         KalturaDeviceFamilyListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeviceFamilyListAction extends KalturaRequest<KalturaDeviceFamilyListResponse> {
 
     

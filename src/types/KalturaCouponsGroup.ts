@@ -15,9 +15,7 @@ export interface KalturaCouponsGroupArgs  extends KalturaObjectBaseArgs {
 	couponGroupType? : KalturaCouponGroupType;
 }
 
-/** 
-* Coupons group details
-**/
+
 export class KalturaCouponsGroup extends KalturaObjectBase {
 
     readonly id : string;

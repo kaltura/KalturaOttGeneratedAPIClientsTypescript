@@ -7,9 +7,7 @@ export interface KalturaConfigurationsFilterArgs  extends KalturaFilterArgs {
     configurationGroupIdEqual? : string;
 }
 
-/** 
-* Configuration filter
-**/
+
 export class KalturaConfigurationsFilter extends KalturaFilter {
 
     configurationGroupIdEqual : string;

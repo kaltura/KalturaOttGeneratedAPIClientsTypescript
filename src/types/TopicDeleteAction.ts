@@ -8,9 +8,16 @@ export interface TopicDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Deleted a topic
-**/
+/**
+ * Build request payload for service 'topic' action 'delete'.
+ *
+ * Usage: Deleted a topic
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TopicDeleteAction extends KalturaRequest<boolean> {
 
     id : number;

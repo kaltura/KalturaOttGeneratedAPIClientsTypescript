@@ -8,9 +8,16 @@ export interface SystemPingActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Returns true
-**/
+/**
+ * Build request payload for service 'system' action 'ping'.
+ *
+ * Usage: Returns true
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SystemPingAction extends KalturaRequest<boolean> {
 
     

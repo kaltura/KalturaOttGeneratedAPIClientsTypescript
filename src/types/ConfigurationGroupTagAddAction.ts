@@ -8,10 +8,16 @@ export interface ConfigurationGroupTagAddActionArgs  extends KalturaRequestArgs 
     configurationGroupTag : KalturaConfigurationGroupTag;
 }
 
-/** 
-* Add a new tag to a configuration group. If this tag is already associated to
-* another group, request fails
-**/
+/**
+ * Build request payload for service 'configurationGroupTag' action 'add'.
+ *
+ * Usage: Add a new tag to a configuration group. If this tag is already associated to another group, request fails
+ *
+ * Server response type:         KalturaConfigurationGroupTag
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConfigurationGroupTagAddAction extends KalturaRequest<KalturaConfigurationGroupTag> {
 
     configurationGroupTag : KalturaConfigurationGroupTag;

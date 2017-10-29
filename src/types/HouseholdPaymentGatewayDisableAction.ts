@@ -8,9 +8,16 @@ export interface HouseholdPaymentGatewayDisableActionArgs  extends KalturaReques
     paymentGatewayId : number;
 }
 
-/** 
-* Disable payment-gateway on the household
-**/
+/**
+ * Build request payload for service 'householdPaymentGateway' action 'disable'.
+ *
+ * Usage: Disable payment-gateway on the household
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class HouseholdPaymentGatewayDisableAction extends KalturaRequest<boolean> {
 
     paymentGatewayId : number;

@@ -8,9 +8,16 @@ export interface UserLoginPinDeleteActionArgs  extends KalturaRequestArgs {
     pinCode : string;
 }
 
-/** 
-* Immediately deletes a given pre set login pin code for the user.
-**/
+/**
+ * Build request payload for service 'userLoginPin' action 'delete'.
+ *
+ * Usage: Immediately deletes a given pre set login pin code for the user
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserLoginPinDeleteAction extends KalturaRequest<boolean> {
 
     pinCode : string;

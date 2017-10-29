@@ -18,9 +18,7 @@ export interface KalturaExportTaskArgs  extends KalturaObjectBaseArgs {
 	isActive? : boolean;
 }
 
-/** 
-* Bulk export task
-**/
+
 export class KalturaExportTask extends KalturaObjectBase {
 
     readonly id : number;

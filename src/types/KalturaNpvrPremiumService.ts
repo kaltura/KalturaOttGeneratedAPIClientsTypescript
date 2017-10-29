@@ -7,9 +7,7 @@ export interface KalturaNpvrPremiumServiceArgs  extends KalturaPremiumServiceArg
     
 }
 
-/** 
-* Npvr Premium Service
-**/
+
 export class KalturaNpvrPremiumService extends KalturaPremiumService {
 
     readonly quotaInMinutes : number;
