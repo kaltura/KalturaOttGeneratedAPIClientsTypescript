@@ -7,7 +7,6 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface AppTokenStartSessionActionArgs  extends KalturaRequestArgs {
     id : string;
 	tokenHash : string;
-	userId? : string;
 	expiry? : number;
 	udid? : string;
 }
@@ -26,7 +25,6 @@ export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInf
 
     id : string;
 	tokenHash : string;
-	userId : string;
 	expiry : number;
 	udid : string;
 
@@ -45,7 +43,6 @@ export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInf
 				action : { type : 'c', default : 'startSession' },
 				id : { type : 's' },
 				tokenHash : { type : 's' },
-				userId : { type : 's' },
 				expiry : { type : 'n' },
 				udid : { type : 's' }
             }
