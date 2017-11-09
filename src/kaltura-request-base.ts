@@ -36,7 +36,7 @@ export class KalturaRequestBase extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                apiVersion : { type : 'c', default : '4.5.58.15575' },
+                apiVersion : { type : 'c', default : '4.5.65.25090' },
 				partnerId : { type : 'n' },
 				userId : { type : 'n' },
 				language : { type : 's' },

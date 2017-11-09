@@ -1,13 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMetaType } from './KalturaMetaType';
+import { KalturaMetaDataType } from './KalturaMetaDataType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaMetaFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
 	assetStructIdEqual? : number;
-	typeEqual? : KalturaMetaType;
+	dataTypeEqual? : KalturaMetaDataType;
+	multipleValue? : boolean;
 }
 
 
@@ -15,7 +16,8 @@ export class KalturaMetaFilter extends KalturaFilter {
 
     idIn : string;
 	assetStructIdEqual : number;
-	typeEqual : KalturaMetaType;
+	dataTypeEqual : KalturaMetaDataType;
+	multipleValue : boolean;
 
     constructor(data? : KalturaMetaFilterArgs)
     {
@@ -31,7 +33,8 @@ export class KalturaMetaFilter extends KalturaFilter {
                 objectType : { type : 'c', default : 'KalturaMetaFilter' },
 				idIn : { type : 's' },
 				assetStructIdEqual : { type : 'n' },
-				typeEqual : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' }
+				dataTypeEqual : { type : 'es', subTypeConstructor : KalturaMetaDataType, subType : 'KalturaMetaDataType' },
+				multipleValue : { type : 'b' }
             }
         );
         return result;

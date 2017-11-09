@@ -2,14 +2,14 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaMultilingualString } from './KalturaMultilingualString';
-import { KalturaMetaType } from './KalturaMetaType';
+import { KalturaMetaDataType } from './KalturaMetaDataType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	multilingualName? : KalturaMultilingualString;
 	systemName? : string;
-	type? : KalturaMetaType;
+	dataType? : KalturaMetaDataType;
 	multipleValue? : boolean;
 	isProtected? : boolean;
 	helpText? : string;
@@ -24,7 +24,7 @@ export class KalturaMeta extends KalturaObjectBase {
 	name : string;
 	multilingualName : KalturaMultilingualString;
 	systemName : string;
-	type : KalturaMetaType;
+	dataType : KalturaMetaDataType;
 	multipleValue : boolean;
 	isProtected : boolean;
 	helpText : string;
@@ -49,7 +49,7 @@ export class KalturaMeta extends KalturaObjectBase {
 				name : { type : 's' },
 				multilingualName : { type : 'o', subTypeConstructor : KalturaMultilingualString, subType : 'KalturaMultilingualString' },
 				systemName : { type : 's' },
-				type : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' },
+				dataType : { type : 'es', subTypeConstructor : KalturaMetaDataType, subType : 'KalturaMetaDataType' },
 				multipleValue : { type : 'b' },
 				isProtected : { type : 'b' },
 				helpText : { type : 's' },
