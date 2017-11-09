@@ -28,10 +28,7 @@
     "test": "karma start",
     "test:watch": "karma start --no-single-run --auto-watch",
     "watch": "gulp watch",
-    "release": "standard-version",
-    "wml": "wml",
-    "wml:sync": "wml once",
-    "wml:watch": "wml start"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -69,6 +66,7 @@
     "yargs": "^5.0.0"
   },
   "engines": {
-    "node": ">= 7.0.0"
+    "node": ">= 7.0.0",
+    "npm": ">= 5.0.0"
   }
 }
