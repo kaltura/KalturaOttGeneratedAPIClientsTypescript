@@ -5,15 +5,13 @@ import { KalturaAssetGroupBy } from './KalturaAssetGroupBy';
 import { KalturaAssetFilter, KalturaAssetFilterArgs } from './KalturaAssetFilter';
 
 export interface KalturaBaseSearchAssetFilterArgs  extends KalturaAssetFilterArgs {
-    kSql? : string;
-	groupBy? : KalturaAssetGroupBy[];
+    groupBy? : KalturaAssetGroupBy[];
 }
 
 
 export class KalturaBaseSearchAssetFilter extends KalturaAssetFilter {
 
-    kSql : string;
-	groupBy : KalturaAssetGroupBy[];
+    groupBy : KalturaAssetGroupBy[];
 
     constructor(data? : KalturaBaseSearchAssetFilterArgs)
     {
@@ -28,7 +26,6 @@ export class KalturaBaseSearchAssetFilter extends KalturaAssetFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBaseSearchAssetFilter' },
-				kSql : { type : 's' },
 				groupBy : { type : 'a', subTypeConstructor : KalturaAssetGroupBy, subType : 'KalturaAssetGroupBy' }
             }
         );

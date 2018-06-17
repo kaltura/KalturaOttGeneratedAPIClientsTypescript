@@ -11,8 +11,7 @@ export interface FollowTvSeriesAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'followTvSeries' action 'add'.
  *
- * Usage: (Deprecated - use personalList.add)
- * Add a user&#39;s tv series follow.
+ * Usage: Add a user&#39;s tv series follow.
  * Possible status codes: UserAlreadyFollowing = 8013, NotFound = 500007, InvalidAssetId = 4024
  *
  * Server response type:         KalturaFollowTvSeries
