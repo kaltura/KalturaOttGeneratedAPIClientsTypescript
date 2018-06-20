@@ -8,7 +8,7 @@ export interface KalturaSSOAdapterProfileArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	isActive? : number;
 	adapterUrl? : string;
-	ssoAdapterSettings? : { [key : string] : KalturaStringValue};
+	settings? : { [key : string] : KalturaStringValue};
 	externalIdentifier? : string;
 	sharedSecret? : string;
 }
@@ -20,7 +20,7 @@ export class KalturaSSOAdapterProfile extends KalturaObjectBase {
 	name : string;
 	isActive : number;
 	adapterUrl : string;
-	ssoAdapterSettings : { [key : string] : KalturaStringValue};
+	settings : { [key : string] : KalturaStringValue};
 	externalIdentifier : string;
 	sharedSecret : string;
 
@@ -40,7 +40,7 @@ export class KalturaSSOAdapterProfile extends KalturaObjectBase {
 				name : { type : 's' },
 				isActive : { type : 'n' },
 				adapterUrl : { type : 's' },
-				ssoAdapterSettings : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				settings : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				externalIdentifier : { type : 's' },
 				sharedSecret : { type : 's' }
             }
