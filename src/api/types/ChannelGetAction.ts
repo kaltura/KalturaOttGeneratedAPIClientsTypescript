@@ -11,7 +11,7 @@ export interface ChannelGetActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'channel' action 'get'.
  *
- * Usage: Returns channel info
+ * Usage: Returns channel
  *
  * Server response type:         KalturaChannel
  * Server failure response type: KalturaAPIException

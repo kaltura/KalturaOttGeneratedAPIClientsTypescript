@@ -1,40 +1,39 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMediaImage } from './KalturaMediaImage';
-import { KalturaIntegerValue } from './KalturaIntegerValue';
-import { KalturaAssetOrderBy } from './KalturaAssetOrderBy';
-import { KalturaAssetGroupBy } from './KalturaAssetGroupBy';
-import { KalturaBaseChannel, KalturaBaseChannelArgs } from './KalturaBaseChannel';
+import { KalturaTranslationToken } from './KalturaTranslationToken';
+import { KalturaChannelOrder } from './KalturaChannelOrder';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
+export interface KalturaChannelArgs  extends KalturaObjectBaseArgs {
     name? : string;
+	multilingualName? : KalturaTranslationToken[];
+	systemName? : string;
 	description? : string;
-	images? : KalturaMediaImage[];
-	assetTypes? : KalturaIntegerValue[];
-	filterExpression? : string;
+	multilingualDescription? : KalturaTranslationToken[];
 	isActive? : boolean;
-	order? : KalturaAssetOrderBy;
-	groupBy? : KalturaAssetGroupBy;
+	orderBy? : KalturaChannelOrder;
 }
 
 
-export class KalturaChannel extends KalturaBaseChannel {
+export class KalturaChannel extends KalturaObjectBase {
 
-    name : string;
+    readonly id : number;
+	name : string;
+	multilingualName : KalturaTranslationToken[];
+	systemName : string;
 	description : string;
-	images : KalturaMediaImage[];
-	assetTypes : KalturaIntegerValue[];
-	filterExpression : string;
+	multilingualDescription : KalturaTranslationToken[];
 	isActive : boolean;
-	order : KalturaAssetOrderBy;
-	groupBy : KalturaAssetGroupBy;
+	orderBy : KalturaChannelOrder;
+	readonly createDate : number;
+	readonly updateDate : number;
 
     constructor(data? : KalturaChannelArgs)
     {
         super(data);
-        if (typeof this.images === 'undefined') this.images = [];
-		if (typeof this.assetTypes === 'undefined') this.assetTypes = [];
+        if (typeof this.multilingualName === 'undefined') this.multilingualName = [];
+		if (typeof this.multilingualDescription === 'undefined') this.multilingualDescription = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -44,14 +43,16 @@ export class KalturaChannel extends KalturaBaseChannel {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaChannel' },
+				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
+				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
+				systemName : { type : 's' },
 				description : { type : 's' },
-				images : { type : 'a', subTypeConstructor : KalturaMediaImage, subType : 'KalturaMediaImage' },
-				assetTypes : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
-				filterExpression : { type : 's' },
+				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				isActive : { type : 'b' },
-				order : { type : 'es', subTypeConstructor : KalturaAssetOrderBy, subType : 'KalturaAssetOrderBy' },
-				groupBy : { type : 'o', subTypeConstructor : KalturaAssetGroupBy, subType : 'KalturaAssetGroupBy' }
+				orderBy : { type : 'o', subTypeConstructor : KalturaChannelOrder, subType : 'KalturaChannelOrder' },
+				createDate : { type : 'n', readOnly : true },
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;

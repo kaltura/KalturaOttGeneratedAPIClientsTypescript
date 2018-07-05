@@ -1,27 +1,23 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMetaFieldName } from './KalturaMetaFieldName';
-import { KalturaMetaType } from './KalturaMetaType';
-import { KalturaAssetType } from './KalturaAssetType';
+import { KalturaMetaDataType } from './KalturaMetaDataType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaMetaFilterArgs  extends KalturaFilterArgs {
-    fieldNameEqual? : KalturaMetaFieldName;
-	fieldNameNotEqual? : KalturaMetaFieldName;
-	typeEqual? : KalturaMetaType;
-	assetTypeEqual? : KalturaAssetType;
-	featuresIn? : string;
+    idIn? : string;
+	assetStructIdEqual? : number;
+	dataTypeEqual? : KalturaMetaDataType;
+	multipleValueEqual? : boolean;
 }
 
 
 export class KalturaMetaFilter extends KalturaFilter {
 
-    fieldNameEqual : KalturaMetaFieldName;
-	fieldNameNotEqual : KalturaMetaFieldName;
-	typeEqual : KalturaMetaType;
-	assetTypeEqual : KalturaAssetType;
-	featuresIn : string;
+    idIn : string;
+	assetStructIdEqual : number;
+	dataTypeEqual : KalturaMetaDataType;
+	multipleValueEqual : boolean;
 
     constructor(data? : KalturaMetaFilterArgs)
     {
@@ -35,11 +31,10 @@ export class KalturaMetaFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMetaFilter' },
-				fieldNameEqual : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
-				fieldNameNotEqual : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
-				typeEqual : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' },
-				assetTypeEqual : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
-				featuresIn : { type : 's' }
+				idIn : { type : 's' },
+				assetStructIdEqual : { type : 'n' },
+				dataTypeEqual : { type : 'es', subTypeConstructor : KalturaMetaDataType, subType : 'KalturaMetaDataType' },
+				multipleValueEqual : { type : 'b' }
             }
         );
         return result;

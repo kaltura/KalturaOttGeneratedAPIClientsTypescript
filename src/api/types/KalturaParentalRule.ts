@@ -16,8 +16,7 @@ export interface KalturaParentalRuleArgs  extends KalturaObjectBaseArgs {
 	ruleType? : KalturaParentalRuleType;
 	mediaTagValues? : KalturaStringValue[];
 	epgTagValues? : KalturaStringValue[];
-	isDefault? : boolean;
-	origin? : KalturaRuleLevel;
+	isActive? : boolean;
 }
 
 
@@ -33,8 +32,11 @@ export class KalturaParentalRule extends KalturaObjectBase {
 	ruleType : KalturaParentalRuleType;
 	mediaTagValues : KalturaStringValue[];
 	epgTagValues : KalturaStringValue[];
-	isDefault : boolean;
-	origin : KalturaRuleLevel;
+	readonly isDefault : boolean;
+	readonly origin : KalturaRuleLevel;
+	isActive : boolean;
+	readonly createDate : number;
+	readonly updateDate : number;
 
     constructor(data? : KalturaParentalRuleArgs)
     {
@@ -60,8 +62,11 @@ export class KalturaParentalRule extends KalturaObjectBase {
 				ruleType : { type : 'es', subTypeConstructor : KalturaParentalRuleType, subType : 'KalturaParentalRuleType' },
 				mediaTagValues : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				epgTagValues : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
-				isDefault : { type : 'b' },
-				origin : { type : 'es', subTypeConstructor : KalturaRuleLevel, subType : 'KalturaRuleLevel' }
+				isDefault : { type : 'b', readOnly : true },
+				origin : { type : 'es', readOnly : true, subTypeConstructor : KalturaRuleLevel, subType : 'KalturaRuleLevel' },
+				isActive : { type : 'b' },
+				createDate : { type : 'n', readOnly : true },
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;

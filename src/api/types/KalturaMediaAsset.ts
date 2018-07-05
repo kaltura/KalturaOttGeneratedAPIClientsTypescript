@@ -5,27 +5,20 @@ import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaMediaAssetArgs  extends KalturaAssetArgs {
     externalIds? : string;
-	catchUpBuffer? : number;
-	trickPlayBuffer? : number;
-	typeDescription? : string;
 	entryId? : string;
-	deviceRule? : string;
-	geoBlockRule? : string;
-	watchPermissionRule? : string;
+	deviceRuleId? : number;
+	geoBlockRuleId? : number;
+	status? : boolean;
 }
 
 
 export class KalturaMediaAsset extends KalturaAsset {
 
     externalIds : string;
-	catchUpBuffer : number;
-	trickPlayBuffer : number;
-	readonly enableRecordingPlaybackNonEntitledChannel : boolean;
-	typeDescription : string;
 	entryId : string;
-	deviceRule : string;
-	geoBlockRule : string;
-	watchPermissionRule : string;
+	deviceRuleId : number;
+	geoBlockRuleId : number;
+	status : boolean;
 
     constructor(data? : KalturaMediaAssetArgs)
     {
@@ -40,14 +33,10 @@ export class KalturaMediaAsset extends KalturaAsset {
             {
                 objectType : { type : 'c', default : 'KalturaMediaAsset' },
 				externalIds : { type : 's' },
-				catchUpBuffer : { type : 'n' },
-				trickPlayBuffer : { type : 'n' },
-				enableRecordingPlaybackNonEntitledChannel : { type : 'b', readOnly : true },
-				typeDescription : { type : 's' },
 				entryId : { type : 's' },
-				deviceRule : { type : 's' },
-				geoBlockRule : { type : 's' },
-				watchPermissionRule : { type : 's' }
+				deviceRuleId : { type : 'n' },
+				geoBlockRuleId : { type : 'n' },
+				status : { type : 'b' }
             }
         );
         return result;

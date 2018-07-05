@@ -12,7 +12,7 @@ export interface MetaListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'meta' action 'list'.
  *
- * Usage: Get the list of meta mappings for the partner
+ * Usage: Return a list of metas for the account with optional filter
  *
  * Server response type:         KalturaMetaListResponse
  * Server failure response type: KalturaAPIException

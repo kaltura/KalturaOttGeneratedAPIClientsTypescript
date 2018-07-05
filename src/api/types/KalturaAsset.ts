@@ -14,16 +14,10 @@ export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
 	multilingualName? : KalturaTranslationToken[];
 	description? : string;
 	multilingualDescription? : KalturaTranslationToken[];
-	images? : KalturaMediaImage[];
-	mediaFiles? : KalturaMediaFile[];
 	metas? : { [key : string] : KalturaValue};
 	tags? : { [key : string] : KalturaMultilingualStringValueArray};
 	startDate? : number;
 	endDate? : number;
-	enableCdvr? : boolean;
-	enableCatchUp? : boolean;
-	enableStartOver? : boolean;
-	enableTrickPlay? : boolean;
 	externalId? : string;
 }
 
@@ -36,16 +30,14 @@ export class KalturaAsset extends KalturaObjectBase {
 	multilingualName : KalturaTranslationToken[];
 	description : string;
 	multilingualDescription : KalturaTranslationToken[];
-	images : KalturaMediaImage[];
-	mediaFiles : KalturaMediaFile[];
+	readonly images : KalturaMediaImage[];
+	readonly mediaFiles : KalturaMediaFile[];
 	metas : { [key : string] : KalturaValue};
 	tags : { [key : string] : KalturaMultilingualStringValueArray};
 	startDate : number;
 	endDate : number;
-	enableCdvr : boolean;
-	enableCatchUp : boolean;
-	enableStartOver : boolean;
-	enableTrickPlay : boolean;
+	readonly createDate : number;
+	readonly updateDate : number;
 	externalId : string;
 
     constructor(data? : KalturaAssetArgs)
@@ -70,16 +62,14 @@ export class KalturaAsset extends KalturaObjectBase {
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				description : { type : 's' },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				images : { type : 'a', subTypeConstructor : KalturaMediaImage, subType : 'KalturaMediaImage' },
-				mediaFiles : { type : 'a', subTypeConstructor : KalturaMediaFile, subType : 'KalturaMediaFile' },
+				images : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaImage, subType : 'KalturaMediaImage' },
+				mediaFiles : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaFile, subType : 'KalturaMediaFile' },
 				metas : { type : 'm', subTypeConstructor : KalturaValue, subType : 'KalturaValue' },
 				tags : { type : 'm', subTypeConstructor : KalturaMultilingualStringValueArray, subType : 'KalturaMultilingualStringValueArray' },
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
-				enableCdvr : { type : 'b' },
-				enableCatchUp : { type : 'b' },
-				enableStartOver : { type : 'b' },
-				enableTrickPlay : { type : 'b' },
+				createDate : { type : 'n', readOnly : true },
+				updateDate : { type : 'n', readOnly : true },
 				externalId : { type : 's' }
             }
         );

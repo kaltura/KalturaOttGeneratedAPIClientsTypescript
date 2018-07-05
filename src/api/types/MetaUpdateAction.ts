@@ -5,14 +5,14 @@ import { KalturaMeta } from './KalturaMeta';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface MetaUpdateActionArgs  extends KalturaRequestArgs {
-    id : string;
+    id : number;
 	meta : KalturaMeta;
 }
 
 /**
  * Build request payload for service 'meta' action 'update'.
  *
- * Usage: Update meta&#39;s user interest
+ * Usage: Update an existing meta
  *
  * Server response type:         KalturaMeta
  * Server failure response type: KalturaAPIException
@@ -21,7 +21,7 @@ export interface MetaUpdateActionArgs  extends KalturaRequestArgs {
  */
 export class MetaUpdateAction extends KalturaRequest<KalturaMeta> {
 
-    id : string;
+    id : number;
 	meta : KalturaMeta;
 
     constructor(data : MetaUpdateActionArgs)
@@ -37,7 +37,7 @@ export class MetaUpdateAction extends KalturaRequest<KalturaMeta> {
             {
                 service : { type : 'c', default : 'meta' },
 				action : { type : 'c', default : 'update' },
-				id : { type : 's' },
+				id : { type : 'n' },
 				meta : { type : 'o', subTypeConstructor : KalturaMeta, subType : 'KalturaMeta' }
             }
         );

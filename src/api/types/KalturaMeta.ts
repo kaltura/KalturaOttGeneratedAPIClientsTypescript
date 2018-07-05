@@ -1,37 +1,42 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMetaFieldName } from './KalturaMetaFieldName';
-import { KalturaMetaType } from './KalturaMetaType';
-import { KalturaAssetType } from './KalturaAssetType';
+import { KalturaTranslationToken } from './KalturaTranslationToken';
+import { KalturaMetaDataType } from './KalturaMetaDataType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
     name? : string;
-	fieldName? : KalturaMetaFieldName;
-	type? : KalturaMetaType;
-	assetType? : KalturaAssetType;
+	multilingualName? : KalturaTranslationToken[];
+	systemName? : string;
+	dataType? : KalturaMetaDataType;
+	multipleValue? : boolean;
+	isProtected? : boolean;
+	helpText? : string;
 	features? : string;
-	id? : string;
 	parentId? : string;
-	partnerId? : number;
 }
 
 
 export class KalturaMeta extends KalturaObjectBase {
 
-    name : string;
-	fieldName : KalturaMetaFieldName;
-	type : KalturaMetaType;
-	assetType : KalturaAssetType;
+    readonly id : string;
+	name : string;
+	multilingualName : KalturaTranslationToken[];
+	systemName : string;
+	dataType : KalturaMetaDataType;
+	multipleValue : boolean;
+	isProtected : boolean;
+	helpText : string;
 	features : string;
-	id : string;
 	parentId : string;
-	partnerId : number;
+	readonly createDate : number;
+	readonly updateDate : number;
 
     constructor(data? : KalturaMetaArgs)
     {
         super(data);
+        if (typeof this.multilingualName === 'undefined') this.multilingualName = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -41,14 +46,18 @@ export class KalturaMeta extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMeta' },
+				id : { type : 's', readOnly : true },
 				name : { type : 's' },
-				fieldName : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
-				type : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' },
-				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
+				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
+				systemName : { type : 's' },
+				dataType : { type : 'es', subTypeConstructor : KalturaMetaDataType, subType : 'KalturaMetaDataType' },
+				multipleValue : { type : 'b' },
+				isProtected : { type : 'b' },
+				helpText : { type : 's' },
 				features : { type : 's' },
-				id : { type : 's' },
 				parentId : { type : 's' },
-				partnerId : { type : 'n' }
+				createDate : { type : 'n', readOnly : true },
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;
