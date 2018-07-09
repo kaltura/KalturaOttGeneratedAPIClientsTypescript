@@ -10,6 +10,11 @@ export interface KalturaAssetStructArgs  extends KalturaObjectBaseArgs {
 	systemName? : string;
 	isProtected? : boolean;
 	metaIds? : string;
+	features? : string;
+	pluralName? : string;
+	parentId? : number;
+	connectingMetaId? : number;
+	connectedParentMetaId? : number;
 }
 
 
@@ -23,6 +28,11 @@ export class KalturaAssetStruct extends KalturaObjectBase {
 	metaIds : string;
 	readonly createDate : number;
 	readonly updateDate : number;
+	features : string;
+	pluralName : string;
+	parentId : number;
+	connectingMetaId : number;
+	connectedParentMetaId : number;
 
     constructor(data? : KalturaAssetStructArgs)
     {
@@ -44,7 +54,12 @@ export class KalturaAssetStruct extends KalturaObjectBase {
 				isProtected : { type : 'b' },
 				metaIds : { type : 's' },
 				createDate : { type : 'n', readOnly : true },
-				updateDate : { type : 'n', readOnly : true }
+				updateDate : { type : 'n', readOnly : true },
+				features : { type : 's' },
+				pluralName : { type : 's' },
+				parentId : { type : 'n' },
+				connectingMetaId : { type : 'n' },
+				connectedParentMetaId : { type : 'n' }
             }
         );
         return result;
