@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaChannelOrder } from './KalturaChannelOrder';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaBaseChannel, KalturaBaseChannelArgs } from './KalturaBaseChannel';
 
-export interface KalturaChannelArgs  extends KalturaObjectBaseArgs {
+export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
     name? : string;
 	multilingualName? : KalturaTranslationToken[];
 	systemName? : string;
@@ -16,10 +16,9 @@ export interface KalturaChannelArgs  extends KalturaObjectBaseArgs {
 }
 
 
-export class KalturaChannel extends KalturaObjectBase {
+export class KalturaChannel extends KalturaBaseChannel {
 
-    readonly id : number;
-	name : string;
+    name : string;
 	multilingualName : KalturaTranslationToken[];
 	systemName : string;
 	description : string;
@@ -43,7 +42,6 @@ export class KalturaChannel extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaChannel' },
-				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				systemName : { type : 's' },
