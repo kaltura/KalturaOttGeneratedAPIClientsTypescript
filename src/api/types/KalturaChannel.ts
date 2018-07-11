@@ -6,10 +6,8 @@ import { KalturaChannelOrder } from './KalturaChannelOrder';
 import { KalturaBaseChannel, KalturaBaseChannelArgs } from './KalturaBaseChannel';
 
 export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
-    name? : string;
-	multilingualName? : KalturaTranslationToken[];
+    multilingualName? : KalturaTranslationToken[];
 	systemName? : string;
-	description? : string;
 	multilingualDescription? : KalturaTranslationToken[];
 	isActive? : boolean;
 	orderBy? : KalturaChannelOrder;
@@ -18,10 +16,10 @@ export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
 
 export class KalturaChannel extends KalturaBaseChannel {
 
-    name : string;
+    readonly name : string;
 	multilingualName : KalturaTranslationToken[];
 	systemName : string;
-	description : string;
+	readonly description : string;
 	multilingualDescription : KalturaTranslationToken[];
 	isActive : boolean;
 	orderBy : KalturaChannelOrder;
@@ -42,10 +40,10 @@ export class KalturaChannel extends KalturaBaseChannel {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaChannel' },
-				name : { type : 's' },
+				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				systemName : { type : 's' },
-				description : { type : 's' },
+				description : { type : 's', readOnly : true },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				isActive : { type : 'b' },
 				orderBy : { type : 'o', subTypeConstructor : KalturaChannelOrder, subType : 'KalturaChannelOrder' },

@@ -25,9 +25,7 @@ export interface KalturaSubscriptionArgs  extends KalturaObjectBaseArgs {
 	isInfiniteRenewal? : boolean;
 	price? : KalturaPriceDetails;
 	discountModule? : KalturaDiscountModule;
-	name? : string;
 	multilingualName? : KalturaTranslationToken[];
-	description? : string;
 	multilingualDescription? : KalturaTranslationToken[];
 	mediaId? : number;
 	prorityInOrder? : number;
@@ -61,9 +59,9 @@ export class KalturaSubscription extends KalturaObjectBase {
 	isInfiniteRenewal : boolean;
 	price : KalturaPriceDetails;
 	discountModule : KalturaDiscountModule;
-	name : string;
+	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
-	description : string;
+	readonly description : string;
 	multilingualDescription : KalturaTranslationToken[];
 	mediaId : number;
 	prorityInOrder : number;
@@ -113,9 +111,9 @@ export class KalturaSubscription extends KalturaObjectBase {
 				isInfiniteRenewal : { type : 'b' },
 				price : { type : 'o', subTypeConstructor : KalturaPriceDetails, subType : 'KalturaPriceDetails' },
 				discountModule : { type : 'o', subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
-				name : { type : 's' },
+				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				description : { type : 's' },
+				description : { type : 's', readOnly : true },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				mediaId : { type : 'n' },
 				prorityInOrder : { type : 'n' },

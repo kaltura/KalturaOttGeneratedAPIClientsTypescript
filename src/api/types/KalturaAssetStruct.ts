@@ -5,8 +5,7 @@ import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAssetStructArgs  extends KalturaObjectBaseArgs {
-    name? : string;
-	multilingualName? : KalturaTranslationToken[];
+    multilingualName? : KalturaTranslationToken[];
 	systemName? : string;
 	isProtected? : boolean;
 	metaIds? : string;
@@ -21,7 +20,7 @@ export interface KalturaAssetStructArgs  extends KalturaObjectBaseArgs {
 export class KalturaAssetStruct extends KalturaObjectBase {
 
     readonly id : number;
-	name : string;
+	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
 	systemName : string;
 	isProtected : boolean;
@@ -48,7 +47,7 @@ export class KalturaAssetStruct extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaAssetStruct' },
 				id : { type : 'n', readOnly : true },
-				name : { type : 's' },
+				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				systemName : { type : 's' },
 				isProtected : { type : 'b' },

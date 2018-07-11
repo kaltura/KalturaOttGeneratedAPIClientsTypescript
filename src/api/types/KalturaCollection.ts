@@ -15,9 +15,7 @@ export interface KalturaCollectionArgs  extends KalturaObjectBaseArgs {
 	startDate? : number;
 	endDate? : number;
 	discountModule? : KalturaDiscountModule;
-	name? : string;
 	multilingualName? : KalturaTranslationToken[];
-	description? : string;
 	multilingualDescription? : KalturaTranslationToken[];
 	usageModule? : KalturaUsageModule;
 	couponsGroups? : KalturaCouponsGroup[];
@@ -34,9 +32,9 @@ export class KalturaCollection extends KalturaObjectBase {
 	startDate : number;
 	endDate : number;
 	discountModule : KalturaDiscountModule;
-	name : string;
+	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
-	description : string;
+	readonly description : string;
 	multilingualDescription : KalturaTranslationToken[];
 	usageModule : KalturaUsageModule;
 	couponsGroups : KalturaCouponsGroup[];
@@ -66,9 +64,9 @@ export class KalturaCollection extends KalturaObjectBase {
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
 				discountModule : { type : 'o', subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
-				name : { type : 's' },
+				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				description : { type : 's' },
+				description : { type : 's', readOnly : true },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				usageModule : { type : 'o', subTypeConstructor : KalturaUsageModule, subType : 'KalturaUsageModule' },
 				couponsGroups : { type : 'a', subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },

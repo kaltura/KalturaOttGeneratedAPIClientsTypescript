@@ -6,8 +6,7 @@ import { KalturaMetaDataType } from './KalturaMetaDataType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
-    name? : string;
-	multilingualName? : KalturaTranslationToken[];
+    multilingualName? : KalturaTranslationToken[];
 	systemName? : string;
 	dataType? : KalturaMetaDataType;
 	multipleValue? : boolean;
@@ -21,7 +20,7 @@ export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
 export class KalturaMeta extends KalturaObjectBase {
 
     readonly id : string;
-	name : string;
+	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
 	systemName : string;
 	dataType : KalturaMetaDataType;
@@ -47,7 +46,7 @@ export class KalturaMeta extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaMeta' },
 				id : { type : 's', readOnly : true },
-				name : { type : 's' },
+				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				systemName : { type : 's' },
 				dataType : { type : 'es', subTypeConstructor : KalturaMetaDataType, subType : 'KalturaMetaDataType' },

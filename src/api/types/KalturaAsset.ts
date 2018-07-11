@@ -10,9 +10,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
     type? : number;
-	name? : string;
 	multilingualName? : KalturaTranslationToken[];
-	description? : string;
 	multilingualDescription? : KalturaTranslationToken[];
 	metas? : { [key : string] : KalturaValue};
 	tags? : { [key : string] : KalturaMultilingualStringValueArray};
@@ -26,9 +24,9 @@ export class KalturaAsset extends KalturaObjectBase {
 
     readonly id : number;
 	type : number;
-	name : string;
+	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
-	description : string;
+	readonly description : string;
 	multilingualDescription : KalturaTranslationToken[];
 	readonly images : KalturaMediaImage[];
 	readonly mediaFiles : KalturaMediaFile[];
@@ -58,9 +56,9 @@ export class KalturaAsset extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaAsset' },
 				id : { type : 'n', readOnly : true },
 				type : { type : 'n' },
-				name : { type : 's' },
+				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				description : { type : 's' },
+				description : { type : 's', readOnly : true },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				images : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaImage, subType : 'KalturaMediaImage' },
 				mediaFiles : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaFile, subType : 'KalturaMediaFile' },

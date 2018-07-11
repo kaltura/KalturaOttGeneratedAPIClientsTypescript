@@ -5,14 +5,13 @@ import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaValue, KalturaValueArgs } from './KalturaValue';
 
 export interface KalturaMultilingualStringValueArgs  extends KalturaValueArgs {
-    value? : string;
-	multilingualValue? : KalturaTranslationToken[];
+    multilingualValue? : KalturaTranslationToken[];
 }
 
 
 export class KalturaMultilingualStringValue extends KalturaValue {
 
-    value : string;
+    readonly value : string;
 	multilingualValue : KalturaTranslationToken[];
 
     constructor(data? : KalturaMultilingualStringValueArgs)
@@ -28,7 +27,7 @@ export class KalturaMultilingualStringValue extends KalturaValue {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMultilingualStringValue' },
-				value : { type : 's' },
+				value : { type : 's', readOnly : true },
 				multilingualValue : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' }
             }
         );
