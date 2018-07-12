@@ -5,6 +5,7 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaRecordingFilterArgs  extends KalturaFilterArgs {
     statusIn? : string;
+	externalRecordingIdIn? : string;
 	kSql? : string;
 }
 
@@ -12,6 +13,7 @@ export interface KalturaRecordingFilterArgs  extends KalturaFilterArgs {
 export class KalturaRecordingFilter extends KalturaFilter {
 
     statusIn : string;
+	externalRecordingIdIn : string;
 	kSql : string;
 
     constructor(data? : KalturaRecordingFilterArgs)
@@ -27,6 +29,7 @@ export class KalturaRecordingFilter extends KalturaFilter {
             {
                 objectType : { type : 'c', default : 'KalturaRecordingFilter' },
 				statusIn : { type : 's' },
+				externalRecordingIdIn : { type : 's' },
 				kSql : { type : 's' }
             }
         );
