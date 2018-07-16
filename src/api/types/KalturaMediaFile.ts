@@ -29,6 +29,7 @@ export class KalturaMediaFile extends KalturaAssetFile {
 
     assetId : number;
 	readonly id : number;
+	readonly type : string;
 	typeId : number;
 	duration : number;
 	externalId : string;
@@ -61,6 +62,7 @@ export class KalturaMediaFile extends KalturaAssetFile {
                 objectType : { type : 'c', default : 'KalturaMediaFile' },
 				assetId : { type : 'n' },
 				id : { type : 'n', readOnly : true },
+				type : { type : 's', readOnly : true },
 				typeId : { type : 'n' },
 				duration : { type : 'n' },
 				externalId : { type : 's' },
