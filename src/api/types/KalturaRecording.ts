@@ -9,7 +9,6 @@ export interface KalturaRecordingArgs  extends KalturaObjectBaseArgs {
     assetId? : number;
 	type? : KalturaRecordingType;
 	isProtected? : boolean;
-	externalId? : string;
 }
 
 
@@ -21,7 +20,6 @@ export class KalturaRecording extends KalturaObjectBase {
 	type : KalturaRecordingType;
 	readonly viewableUntilDate : number;
 	isProtected : boolean;
-	externalId : string;
 	readonly createDate : number;
 	readonly updateDate : number;
 
@@ -43,7 +41,6 @@ export class KalturaRecording extends KalturaObjectBase {
 				type : { type : 'es', subTypeConstructor : KalturaRecordingType, subType : 'KalturaRecordingType' },
 				viewableUntilDate : { type : 'n', readOnly : true },
 				isProtected : { type : 'b' },
-				externalId : { type : 's' },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true }
             }
