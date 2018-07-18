@@ -3,5 +3,6 @@
 export enum KalturaRuleConditionType {
     asset = 'ASSET',
 	concurrency = 'CONCURRENCY',
-	country = 'COUNTRY'
+	country = 'COUNTRY',
+	ipRange = 'IP_RANGE'
 }
