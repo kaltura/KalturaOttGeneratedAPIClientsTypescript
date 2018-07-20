@@ -1,7 +1,7 @@
 {
   "name": "kaltura-typescript-client",
   "private": true,
-  "version": "5.1.87.42000",
+  "version": "5.1.87.42005",
   "description": "Kaltura Typescript client",
   "keywords": [
     "Kaltura"
