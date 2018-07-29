@@ -6,7 +6,6 @@ import { KalturaBaseSearchAssetFilter, KalturaBaseSearchAssetFilterArgs } from '
 export interface KalturaSearchAssetFilterArgs  extends KalturaBaseSearchAssetFilterArgs {
     kSql? : string;
 	typeIn? : string;
-	idIn? : string;
 }
 
 
@@ -14,7 +13,6 @@ export class KalturaSearchAssetFilter extends KalturaBaseSearchAssetFilter {
 
     kSql : string;
 	typeIn : string;
-	idIn : string;
 
     constructor(data? : KalturaSearchAssetFilterArgs)
     {
@@ -29,8 +27,7 @@ export class KalturaSearchAssetFilter extends KalturaBaseSearchAssetFilter {
             {
                 objectType : { type : 'c', default : 'KalturaSearchAssetFilter' },
 				kSql : { type : 's' },
-				typeIn : { type : 's' },
-				idIn : { type : 's' }
+				typeIn : { type : 's' }
             }
         );
         return result;
