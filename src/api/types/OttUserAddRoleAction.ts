@@ -11,7 +11,7 @@ export interface OttUserAddRoleActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'ottUser' action 'addRole'.
  *
- * Usage: Edit user details
+ * Usage: Deprecate - use Register or Update actions instead by setting user.roleIds parameter
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
