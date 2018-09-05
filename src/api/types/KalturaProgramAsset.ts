@@ -19,6 +19,10 @@ export class KalturaProgramAsset extends KalturaAsset {
 	relatedMediaId : number;
 	crid : string;
 	linearAssetId : number;
+	readonly enableCdvr : boolean;
+	readonly enableCatchUp : boolean;
+	readonly enableStartOver : boolean;
+	readonly enableTrickPlay : boolean;
 
     constructor(data? : KalturaProgramAssetArgs)
     {
@@ -36,7 +40,11 @@ export class KalturaProgramAsset extends KalturaAsset {
 				epgId : { type : 's' },
 				relatedMediaId : { type : 'n' },
 				crid : { type : 's' },
-				linearAssetId : { type : 'n' }
+				linearAssetId : { type : 'n' },
+				enableCdvr : { type : 'b', readOnly : true },
+				enableCatchUp : { type : 'b', readOnly : true },
+				enableStartOver : { type : 'b', readOnly : true },
+				enableTrickPlay : { type : 'b', readOnly : true }
             }
         );
         return result;
