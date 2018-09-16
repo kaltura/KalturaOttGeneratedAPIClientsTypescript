@@ -6,6 +6,7 @@ import { KalturaBaseSegmentCondition, KalturaBaseSegmentConditionArgs } from './
 
 export interface KalturaScoredMonetizationConditionArgs  extends KalturaBaseSegmentConditionArgs {
     score? : number;
+	days? : number;
 	actions? : KalturaMonetizationCondition[];
 }
 
@@ -13,6 +14,7 @@ export interface KalturaScoredMonetizationConditionArgs  extends KalturaBaseSegm
 export class KalturaScoredMonetizationCondition extends KalturaBaseSegmentCondition {
 
     score : number;
+	days : number;
 	actions : KalturaMonetizationCondition[];
 
     constructor(data? : KalturaScoredMonetizationConditionArgs)
@@ -29,6 +31,7 @@ export class KalturaScoredMonetizationCondition extends KalturaBaseSegmentCondit
             {
                 objectType : { type : 'c', default : 'KalturaScoredMonetizationCondition' },
 				score : { type : 'n' },
+				days : { type : 'n' },
 				actions : { type : 'a', subTypeConstructor : KalturaMonetizationCondition, subType : 'KalturaMonetizationCondition' }
             }
         );

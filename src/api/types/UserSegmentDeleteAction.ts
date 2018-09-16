@@ -4,25 +4,27 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface SegmentationTypeDeleteActionArgs  extends KalturaRequestArgs {
-    id : number;
+export interface UserSegmentDeleteActionArgs  extends KalturaRequestArgs {
+    userId : string;
+	segmentId : number;
 }
 
 /**
- * Build request payload for service 'segmentationType' action 'delete'.
+ * Build request payload for service 'userSegment' action 'delete'.
  *
- * Usage: Delete a segmentation type from the system
+ * Usage: Deletes a segment from a user
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class SegmentationTypeDeleteAction extends KalturaRequest<boolean> {
+export class UserSegmentDeleteAction extends KalturaRequest<boolean> {
 
-    id : number;
+    userId : string;
+	segmentId : number;
 
-    constructor(data : SegmentationTypeDeleteActionArgs)
+    constructor(data : UserSegmentDeleteActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,9 +35,10 @@ export class SegmentationTypeDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'segmentationtype' },
+                service : { type : 'c', default : 'usersegment' },
 				action : { type : 'c', default : 'delete' },
-				id : { type : 'n' }
+				userId : { type : 's' },
+				segmentId : { type : 'n' }
             }
         );
         return result;

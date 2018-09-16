@@ -5,22 +5,27 @@ import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSegmentRangeArgs  extends KalturaObjectBaseArgs {
-    multilingualName? : KalturaTranslationToken[];
+    systematicName? : string;
+	multilingualName? : KalturaTranslationToken[];
 	gte? : number;
 	gt? : number;
 	lte? : number;
 	lt? : number;
+	equals? : number;
 }
 
 
 export class KalturaSegmentRange extends KalturaObjectBase {
 
-    readonly name : string;
+    readonly id : number;
+	systematicName : string;
+	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
 	gte : number;
 	gt : number;
 	lte : number;
 	lt : number;
+	equals : number;
 
     constructor(data? : KalturaSegmentRangeArgs)
     {
@@ -35,12 +40,15 @@ export class KalturaSegmentRange extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSegmentRange' },
+				id : { type : 'n', readOnly : true },
+				systematicName : { type : 's' },
 				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				gte : { type : 'n' },
 				gt : { type : 'n' },
 				lte : { type : 'n' },
-				lt : { type : 'n' }
+				lt : { type : 'n' },
+				equals : { type : 'n' }
             }
         );
         return result;

@@ -1,19 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaContentFieldType } from './KalturaContentFieldType';
 import { KalturaSegmentSource, KalturaSegmentSourceArgs } from './KalturaSegmentSource';
 
 export interface KalturaContentSourceArgs  extends KalturaSegmentSourceArgs {
-    type? : KalturaContentFieldType;
-	field? : string;
+    field? : string;
 }
 
 
 export class KalturaContentSource extends KalturaSegmentSource {
 
-    type : KalturaContentFieldType;
-	field : string;
+    field : string;
 
     constructor(data? : KalturaContentSourceArgs)
     {
@@ -27,7 +24,6 @@ export class KalturaContentSource extends KalturaSegmentSource {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaContentSource' },
-				type : { type : 'es', subTypeConstructor : KalturaContentFieldType, subType : 'KalturaContentFieldType' },
 				field : { type : 's' }
             }
         );

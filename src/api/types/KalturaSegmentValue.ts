@@ -5,7 +5,7 @@ import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSegmentValueArgs  extends KalturaObjectBaseArgs {
-    id? : number;
+    systematicName? : string;
 	multilingualName? : KalturaTranslationToken[];
 	value? : string;
 	threshold? : number;
@@ -14,7 +14,8 @@ export interface KalturaSegmentValueArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaSegmentValue extends KalturaObjectBase {
 
-    id : number;
+    readonly id : number;
+	systematicName : string;
 	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
 	value : string;
@@ -33,7 +34,8 @@ export class KalturaSegmentValue extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSegmentValue' },
-				id : { type : 'n' },
+				id : { type : 'n', readOnly : true },
+				systematicName : { type : 's' },
 				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				value : { type : 's' },
