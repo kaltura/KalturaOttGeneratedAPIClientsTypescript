@@ -1,6 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaAssetInheritancePolicy } from './KalturaAssetInheritancePolicy';
 import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaMediaAssetArgs  extends KalturaAssetArgs {
@@ -9,6 +10,7 @@ export interface KalturaMediaAssetArgs  extends KalturaAssetArgs {
 	deviceRuleId? : number;
 	geoBlockRuleId? : number;
 	status? : boolean;
+	inheritancePolicy? : KalturaAssetInheritancePolicy;
 }
 
 
@@ -19,6 +21,7 @@ export class KalturaMediaAsset extends KalturaAsset {
 	deviceRuleId : number;
 	geoBlockRuleId : number;
 	status : boolean;
+	inheritancePolicy : KalturaAssetInheritancePolicy;
 
     constructor(data? : KalturaMediaAssetArgs)
     {
@@ -36,7 +39,8 @@ export class KalturaMediaAsset extends KalturaAsset {
 				entryId : { type : 's' },
 				deviceRuleId : { type : 'n' },
 				geoBlockRuleId : { type : 'n' },
-				status : { type : 'b' }
+				status : { type : 'b' },
+				inheritancePolicy : { type : 'es', subTypeConstructor : KalturaAssetInheritancePolicy, subType : 'KalturaAssetInheritancePolicy' }
             }
         );
         return result;
