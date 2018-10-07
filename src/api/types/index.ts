@@ -465,6 +465,7 @@ export { KalturaConfigurationGroupDeviceOrderBy } from './KalturaConfigurationGr
 export { KalturaConfigurationGroupTagOrderBy } from './KalturaConfigurationGroupTagOrderBy'
 export { KalturaConfigurationsOrderBy } from './KalturaConfigurationsOrderBy'
 export { KalturaContentAction } from './KalturaContentAction'
+export { KalturaContentActionConditionLengthType } from './KalturaContentActionConditionLengthType'
 export { KalturaContextType } from './KalturaContextType'
 export { KalturaCountryOrderBy } from './KalturaCountryOrderBy'
 export { KalturaCouponGroupType } from './KalturaCouponGroupType'
