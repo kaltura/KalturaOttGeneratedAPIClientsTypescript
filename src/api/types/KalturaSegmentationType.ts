@@ -6,8 +6,7 @@ import { KalturaBaseSegmentValue } from './KalturaBaseSegmentValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
-    id? : number;
-	name? : string;
+    name? : string;
 	description? : string;
 	conditions? : KalturaBaseSegmentCondition[];
 	value? : KalturaBaseSegmentValue;
@@ -16,7 +15,7 @@ export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaSegmentationType extends KalturaObjectBase {
 
-    id : number;
+    readonly id : number;
 	name : string;
 	description : string;
 	conditions : KalturaBaseSegmentCondition[];
@@ -35,7 +34,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSegmentationType' },
-				id : { type : 'n' },
+				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
 				description : { type : 's' },
 				conditions : { type : 'a', subTypeConstructor : KalturaBaseSegmentCondition, subType : 'KalturaBaseSegmentCondition' },

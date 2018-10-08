@@ -12,7 +12,7 @@ export interface SegmentationTypeUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'segmentationType' action 'update'.
  *
- * Usage:
+ * Usage: Updates an existing segmentation type
  *
  * Server response type:         KalturaSegmentationType
  * Server failure response type: KalturaAPIException
