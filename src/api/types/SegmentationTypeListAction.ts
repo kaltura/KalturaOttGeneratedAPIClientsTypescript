@@ -14,7 +14,7 @@ export interface SegmentationTypeListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'segmentationType' action 'list'.
  *
- * Usage: Lists all segmentation types in group
+ * Usage:
  *
  * Server response type:         KalturaSegmentationTypeListResponse
  * Server failure response type: KalturaAPIException
