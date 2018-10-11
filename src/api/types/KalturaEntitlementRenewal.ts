@@ -9,7 +9,6 @@ export interface KalturaEntitlementRenewalArgs  extends KalturaObjectBaseArgs {
 	date? : number;
 	purchaseId? : number;
 	subscriptionId? : number;
-	userId? : number;
 }
 
 
@@ -19,7 +18,6 @@ export class KalturaEntitlementRenewal extends KalturaObjectBase {
 	date : number;
 	purchaseId : number;
 	subscriptionId : number;
-	userId : number;
 
     constructor(data? : KalturaEntitlementRenewalArgs)
     {
@@ -36,8 +34,7 @@ export class KalturaEntitlementRenewal extends KalturaObjectBase {
 				price : { type : 'o', subTypeConstructor : KalturaPrice, subType : 'KalturaPrice' },
 				date : { type : 'n' },
 				purchaseId : { type : 'n' },
-				subscriptionId : { type : 'n' },
-				userId : { type : 'n' }
+				subscriptionId : { type : 'n' }
             }
         );
         return result;
