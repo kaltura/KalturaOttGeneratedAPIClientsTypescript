@@ -1,5 +1,6 @@
 
 
 export enum KalturaPpvOrderBy {
-    none = 'NONE'
+    nameAsc = 'NAME_ASC',
+	nameDesc = 'NAME_DESC'
 }
