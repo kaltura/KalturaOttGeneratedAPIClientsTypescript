@@ -1,27 +1,31 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaAssetInheritancePolicy } from './KalturaAssetInheritancePolicy';
 import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaMediaAssetArgs  extends KalturaAssetArgs {
     externalIds? : string;
+	catchUpBuffer? : number;
+	trickPlayBuffer? : number;
+	typeDescription? : string;
 	entryId? : string;
-	deviceRuleId? : number;
-	geoBlockRuleId? : number;
-	status? : boolean;
-	inheritancePolicy? : KalturaAssetInheritancePolicy;
+	deviceRule? : string;
+	geoBlockRule? : string;
+	watchPermissionRule? : string;
 }
 
 
 export class KalturaMediaAsset extends KalturaAsset {
 
     externalIds : string;
+	catchUpBuffer : number;
+	trickPlayBuffer : number;
+	readonly enableRecordingPlaybackNonEntitledChannel : boolean;
+	typeDescription : string;
 	entryId : string;
-	deviceRuleId : number;
-	geoBlockRuleId : number;
-	status : boolean;
-	inheritancePolicy : KalturaAssetInheritancePolicy;
+	deviceRule : string;
+	geoBlockRule : string;
+	watchPermissionRule : string;
 
     constructor(data? : KalturaMediaAssetArgs)
     {
@@ -36,11 +40,14 @@ export class KalturaMediaAsset extends KalturaAsset {
             {
                 objectType : { type : 'c', default : 'KalturaMediaAsset' },
 				externalIds : { type : 's' },
+				catchUpBuffer : { type : 'n' },
+				trickPlayBuffer : { type : 'n' },
+				enableRecordingPlaybackNonEntitledChannel : { type : 'b', readOnly : true },
+				typeDescription : { type : 's' },
 				entryId : { type : 's' },
-				deviceRuleId : { type : 'n' },
-				geoBlockRuleId : { type : 'n' },
-				status : { type : 'b' },
-				inheritancePolicy : { type : 'es', subTypeConstructor : KalturaAssetInheritancePolicy, subType : 'KalturaAssetInheritancePolicy' }
+				deviceRule : { type : 's' },
+				geoBlockRule : { type : 's' },
+				watchPermissionRule : { type : 's' }
             }
         );
         return result;

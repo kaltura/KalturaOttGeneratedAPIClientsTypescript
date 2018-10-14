@@ -10,12 +10,20 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
     type? : number;
+	name? : string;
 	multilingualName? : KalturaTranslationToken[];
+	description? : string;
 	multilingualDescription? : KalturaTranslationToken[];
+	images? : KalturaMediaImage[];
+	mediaFiles? : KalturaMediaFile[];
 	metas? : { [key : string] : KalturaValue};
 	tags? : { [key : string] : KalturaMultilingualStringValueArray};
 	startDate? : number;
 	endDate? : number;
+	enableCdvr? : boolean;
+	enableCatchUp? : boolean;
+	enableStartOver? : boolean;
+	enableTrickPlay? : boolean;
 	externalId? : string;
 }
 
@@ -24,18 +32,20 @@ export class KalturaAsset extends KalturaObjectBase {
 
     readonly id : number;
 	type : number;
-	readonly name : string;
+	name : string;
 	multilingualName : KalturaTranslationToken[];
-	readonly description : string;
+	description : string;
 	multilingualDescription : KalturaTranslationToken[];
-	readonly images : KalturaMediaImage[];
-	readonly mediaFiles : KalturaMediaFile[];
+	images : KalturaMediaImage[];
+	mediaFiles : KalturaMediaFile[];
 	metas : { [key : string] : KalturaValue};
 	tags : { [key : string] : KalturaMultilingualStringValueArray};
 	startDate : number;
 	endDate : number;
-	readonly createDate : number;
-	readonly updateDate : number;
+	enableCdvr : boolean;
+	enableCatchUp : boolean;
+	enableStartOver : boolean;
+	enableTrickPlay : boolean;
 	externalId : string;
 
     constructor(data? : KalturaAssetArgs)
@@ -56,18 +66,20 @@ export class KalturaAsset extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaAsset' },
 				id : { type : 'n', readOnly : true },
 				type : { type : 'n' },
-				name : { type : 's', readOnly : true },
+				name : { type : 's' },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				description : { type : 's', readOnly : true },
+				description : { type : 's' },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				images : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaImage, subType : 'KalturaMediaImage' },
-				mediaFiles : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaFile, subType : 'KalturaMediaFile' },
+				images : { type : 'a', subTypeConstructor : KalturaMediaImage, subType : 'KalturaMediaImage' },
+				mediaFiles : { type : 'a', subTypeConstructor : KalturaMediaFile, subType : 'KalturaMediaFile' },
 				metas : { type : 'm', subTypeConstructor : KalturaValue, subType : 'KalturaValue' },
 				tags : { type : 'm', subTypeConstructor : KalturaMultilingualStringValueArray, subType : 'KalturaMultilingualStringValueArray' },
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
-				createDate : { type : 'n', readOnly : true },
-				updateDate : { type : 'n', readOnly : true },
+				enableCdvr : { type : 'b' },
+				enableCatchUp : { type : 'b' },
+				enableStartOver : { type : 'b' },
+				enableTrickPlay : { type : 'b' },
 				externalId : { type : 's' }
             }
         );

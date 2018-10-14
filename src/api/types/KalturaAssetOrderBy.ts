@@ -1,9 +1,7 @@
 
 
 export enum KalturaAssetOrderBy {
-    createDateAsc = 'CREATE_DATE_ASC',
-	createDateDesc = 'CREATE_DATE_DESC',
-	likesDesc = 'LIKES_DESC',
+    likesDesc = 'LIKES_DESC',
 	nameAsc = 'NAME_ASC',
 	nameDesc = 'NAME_DESC',
 	ratingsDesc = 'RATINGS_DESC',

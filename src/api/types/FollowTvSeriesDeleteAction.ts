@@ -11,7 +11,8 @@ export interface FollowTvSeriesDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'followTvSeries' action 'delete'.
  *
- * Usage: Delete a user&#39;s tv series follow.
+ * Usage: (Deprecated - use personalList.delete)
+ * Delete a user&#39;s tv series follow.
  * Possible status codes: UserNotFollowing = 8012, NotFound = 500007, InvalidAssetId = 4024, AnnouncementNotFound = 8006
  *
  * Server response type:         boolean

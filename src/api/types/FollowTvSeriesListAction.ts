@@ -14,7 +14,8 @@ export interface FollowTvSeriesListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'followTvSeries' action 'list'.
  *
- * Usage: List user&#39;s tv series follows.
+ * Usage: (Deprecated - use personalList.list)
+ * List user&#39;s tv series follows.
  * Possible status codes:
  *
  * Server response type:         KalturaFollowTvSeriesListResponse

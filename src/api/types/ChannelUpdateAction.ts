@@ -5,14 +5,14 @@ import { KalturaChannel } from './KalturaChannel';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ChannelUpdateActionArgs  extends KalturaRequestArgs {
-    id : number;
+    channelId : number;
 	channel : KalturaChannel;
 }
 
 /**
  * Build request payload for service 'channel' action 'update'.
  *
- * Usage: Update channel details. Supports KalturaDynamicChannel or KalturaManualChannel
+ * Usage: Update channel details. Currently supports only KSQL channel
  *
  * Server response type:         KalturaChannel
  * Server failure response type: KalturaAPIException
@@ -21,7 +21,7 @@ export interface ChannelUpdateActionArgs  extends KalturaRequestArgs {
  */
 export class ChannelUpdateAction extends KalturaRequest<KalturaChannel> {
 
-    id : number;
+    channelId : number;
 	channel : KalturaChannel;
 
     constructor(data : ChannelUpdateActionArgs)
@@ -37,7 +37,7 @@ export class ChannelUpdateAction extends KalturaRequest<KalturaChannel> {
             {
                 service : { type : 'c', default : 'channel' },
 				action : { type : 'c', default : 'update' },
-				id : { type : 'n' },
+				channelId : { type : 'n' },
 				channel : { type : 'o', subTypeConstructor : KalturaChannel, subType : 'KalturaChannel' }
             }
         );

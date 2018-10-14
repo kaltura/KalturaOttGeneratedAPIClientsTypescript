@@ -1,23 +1,27 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaMetaDataType } from './KalturaMetaDataType';
+import { KalturaMetaFieldName } from './KalturaMetaFieldName';
+import { KalturaMetaType } from './KalturaMetaType';
+import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaMetaFilterArgs  extends KalturaFilterArgs {
-    idIn? : string;
-	assetStructIdEqual? : number;
-	dataTypeEqual? : KalturaMetaDataType;
-	multipleValueEqual? : boolean;
+    fieldNameEqual? : KalturaMetaFieldName;
+	fieldNameNotEqual? : KalturaMetaFieldName;
+	typeEqual? : KalturaMetaType;
+	assetTypeEqual? : KalturaAssetType;
+	featuresIn? : string;
 }
 
 
 export class KalturaMetaFilter extends KalturaFilter {
 
-    idIn : string;
-	assetStructIdEqual : number;
-	dataTypeEqual : KalturaMetaDataType;
-	multipleValueEqual : boolean;
+    fieldNameEqual : KalturaMetaFieldName;
+	fieldNameNotEqual : KalturaMetaFieldName;
+	typeEqual : KalturaMetaType;
+	assetTypeEqual : KalturaAssetType;
+	featuresIn : string;
 
     constructor(data? : KalturaMetaFilterArgs)
     {
@@ -31,10 +35,11 @@ export class KalturaMetaFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMetaFilter' },
-				idIn : { type : 's' },
-				assetStructIdEqual : { type : 'n' },
-				dataTypeEqual : { type : 'es', subTypeConstructor : KalturaMetaDataType, subType : 'KalturaMetaDataType' },
-				multipleValueEqual : { type : 'b' }
+				fieldNameEqual : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
+				fieldNameNotEqual : { type : 'es', subTypeConstructor : KalturaMetaFieldName, subType : 'KalturaMetaFieldName' },
+				typeEqual : { type : 'es', subTypeConstructor : KalturaMetaType, subType : 'KalturaMetaType' },
+				assetTypeEqual : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
+				featuresIn : { type : 's' }
             }
         );
         return result;
