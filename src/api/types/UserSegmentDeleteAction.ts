@@ -6,6 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserSegmentDeleteActionArgs  extends KalturaRequestArgs {
     userId : string;
+	segmentationTypeId : number;
 	segmentId : number;
 }
 
@@ -22,6 +23,7 @@ export interface UserSegmentDeleteActionArgs  extends KalturaRequestArgs {
 export class UserSegmentDeleteAction extends KalturaRequest<boolean> {
 
     userId : string;
+	segmentationTypeId : number;
 	segmentId : number;
 
     constructor(data : UserSegmentDeleteActionArgs)
@@ -38,6 +40,7 @@ export class UserSegmentDeleteAction extends KalturaRequest<boolean> {
                 service : { type : 'c', default : 'usersegment' },
 				action : { type : 'c', default : 'delete' },
 				userId : { type : 's' },
+				segmentationTypeId : { type : 'n' },
 				segmentId : { type : 'n' }
             }
         );
