@@ -14,7 +14,7 @@ export interface UserSegmentListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'userSegment' action 'list'.
  *
- * Usage: Retrieve all the segments that apply for this user
+ * Usage: Retrieve all the segments that apply for given user
  *
  * Server response type:         KalturaUserSegmentListResponse
  * Server failure response type: KalturaAPIException
