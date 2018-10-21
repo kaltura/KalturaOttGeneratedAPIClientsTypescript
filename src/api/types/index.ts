@@ -112,6 +112,7 @@ export { KalturaScoredMonetizationCondition, KalturaScoredMonetizationConditionA
 export { KalturaContentActionCondition, KalturaContentActionConditionArgs } from './KalturaContentActionCondition'
 export { KalturaContentScoreCondition, KalturaContentScoreConditionArgs } from './KalturaContentScoreCondition'
 export { KalturaUserDataCondition, KalturaUserDataConditionArgs } from './KalturaUserDataCondition'
+export { KalturaDummyValue, KalturaDummyValueArgs } from './KalturaDummyValue'
 export { KalturaSegmentSource, KalturaSegmentSourceArgs } from './KalturaSegmentSource'
 export { KalturaSegmentValue, KalturaSegmentValueArgs } from './KalturaSegmentValue'
 export { KalturaSegmentValues, KalturaSegmentValuesArgs } from './KalturaSegmentValues'

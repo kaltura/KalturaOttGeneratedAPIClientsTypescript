@@ -7,7 +7,7 @@ import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SegmentationTypeListActionArgs  extends KalturaRequestArgs {
-    filter : KalturaSegmentationTypeFilter;
+    filter? : KalturaSegmentationTypeFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -26,7 +26,7 @@ export class SegmentationTypeListAction extends KalturaRequest<KalturaSegmentati
     filter : KalturaSegmentationTypeFilter;
 	pager : KalturaFilterPager;
 
-    constructor(data : SegmentationTypeListActionArgs)
+    constructor(data? : SegmentationTypeListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaSegmentationTypeListResponse', responseConstructor : KalturaSegmentationTypeListResponse  });
     }
