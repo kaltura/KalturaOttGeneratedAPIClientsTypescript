@@ -2,20 +2,25 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaMonetizationType } from './KalturaMonetizationType';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaMathemticalOperatorType } from './KalturaMathemticalOperatorType';
+import { KalturaBaseSegmentCondition, KalturaBaseSegmentConditionArgs } from './KalturaBaseSegmentCondition';
 
-export interface KalturaMonetizationConditionArgs  extends KalturaObjectBaseArgs {
-    type? : KalturaMonetizationType;
-	minimumPrice? : number;
-	multiplier? : number;
+export interface KalturaMonetizationConditionArgs  extends KalturaBaseSegmentConditionArgs {
+    minValue? : number;
+	maxValue? : number;
+	days? : number;
+	type? : KalturaMonetizationType;
+	operator? : KalturaMathemticalOperatorType;
 }
 
 
-export class KalturaMonetizationCondition extends KalturaObjectBase {
+export class KalturaMonetizationCondition extends KalturaBaseSegmentCondition {
 
-    type : KalturaMonetizationType;
-	minimumPrice : number;
-	multiplier : number;
+    minValue : number;
+	maxValue : number;
+	days : number;
+	type : KalturaMonetizationType;
+	operator : KalturaMathemticalOperatorType;
 
     constructor(data? : KalturaMonetizationConditionArgs)
     {
@@ -29,9 +34,11 @@ export class KalturaMonetizationCondition extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMonetizationCondition' },
+				minValue : { type : 'n' },
+				maxValue : { type : 'n' },
+				days : { type : 'n' },
 				type : { type : 'es', subTypeConstructor : KalturaMonetizationType, subType : 'KalturaMonetizationType' },
-				minimumPrice : { type : 'n' },
-				multiplier : { type : 'n' }
+				operator : { type : 'es', subTypeConstructor : KalturaMathemticalOperatorType, subType : 'KalturaMathemticalOperatorType' }
             }
         );
         return result;

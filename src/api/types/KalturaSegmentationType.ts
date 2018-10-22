@@ -10,6 +10,7 @@ export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
 	description? : string;
 	conditions? : KalturaBaseSegmentCondition[];
 	value? : KalturaBaseSegmentValue;
+	affectsContentOrdering? : boolean;
 }
 
 
@@ -20,6 +21,8 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 	description : string;
 	conditions : KalturaBaseSegmentCondition[];
 	value : KalturaBaseSegmentValue;
+	readonly createDate : number;
+	affectsContentOrdering : boolean;
 
     constructor(data? : KalturaSegmentationTypeArgs)
     {
@@ -38,7 +41,9 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 				name : { type : 's' },
 				description : { type : 's' },
 				conditions : { type : 'a', subTypeConstructor : KalturaBaseSegmentCondition, subType : 'KalturaBaseSegmentCondition' },
-				value : { type : 'o', subTypeConstructor : KalturaBaseSegmentValue, subType : 'KalturaBaseSegmentValue' }
+				value : { type : 'o', subTypeConstructor : KalturaBaseSegmentValue, subType : 'KalturaBaseSegmentValue' },
+				createDate : { type : 'n', readOnly : true },
+				affectsContentOrdering : { type : 'b' }
             }
         );
         return result;
