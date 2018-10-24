@@ -22,6 +22,7 @@ export interface KalturaMediaFileArgs  extends KalturaAssetFileArgs {
 	outputProtecationLevel? : string;
 	cdnAdapaterProfileId? : number;
 	status? : boolean;
+	catalogEndDate? : number;
 }
 
 
@@ -47,6 +48,7 @@ export class KalturaMediaFile extends KalturaAssetFile {
 	outputProtecationLevel : string;
 	cdnAdapaterProfileId : number;
 	status : boolean;
+	catalogEndDate : number;
 
     constructor(data? : KalturaMediaFileArgs)
     {
@@ -79,7 +81,8 @@ export class KalturaMediaFile extends KalturaAssetFile {
 				orderNum : { type : 'n' },
 				outputProtecationLevel : { type : 's' },
 				cdnAdapaterProfileId : { type : 'n' },
-				status : { type : 'b' }
+				status : { type : 'b' },
+				catalogEndDate : { type : 'n' }
             }
         );
         return result;
