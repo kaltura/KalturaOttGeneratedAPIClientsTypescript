@@ -558,6 +558,7 @@ export { KalturaScheduledRecordingAssetType } from './KalturaScheduledRecordingA
 export { KalturaSearchHistoryOrderBy } from './KalturaSearchHistoryOrderBy'
 export { KalturaSeriesRecordingOrderBy } from './KalturaSeriesRecordingOrderBy'
 export { KalturaSeriesReminderOrderBy } from './KalturaSeriesReminderOrderBy'
+export { KalturaSkipOptions } from './KalturaSkipOptions'
 export { KalturaSocialActionOrderBy } from './KalturaSocialActionOrderBy'
 export { KalturaSocialActionPrivacy } from './KalturaSocialActionPrivacy'
 export { KalturaSocialActionType } from './KalturaSocialActionType'
