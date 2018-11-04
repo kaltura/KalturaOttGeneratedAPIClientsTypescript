@@ -15,6 +15,8 @@ export class KalturaBusinessModuleRule extends KalturaRule {
 
     conditions : KalturaCondition[];
 	actions : KalturaApplyDiscountModuleAction[];
+	readonly createDate : number;
+	readonly updateDate : number;
 
     constructor(data? : KalturaBusinessModuleRuleArgs)
     {
@@ -31,7 +33,9 @@ export class KalturaBusinessModuleRule extends KalturaRule {
             {
                 objectType : { type : 'c', default : 'KalturaBusinessModuleRule' },
 				conditions : { type : 'a', subTypeConstructor : KalturaCondition, subType : 'KalturaCondition' },
-				actions : { type : 'a', subTypeConstructor : KalturaApplyDiscountModuleAction, subType : 'KalturaApplyDiscountModuleAction' }
+				actions : { type : 'a', subTypeConstructor : KalturaApplyDiscountModuleAction, subType : 'KalturaApplyDiscountModuleAction' },
+				createDate : { type : 'n', readOnly : true },
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;
