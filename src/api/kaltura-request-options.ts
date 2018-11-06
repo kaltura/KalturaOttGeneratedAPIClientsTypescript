@@ -13,7 +13,7 @@ export interface KalturaRequestOptionsArgs  extends KalturaObjectBaseArgs {
 	ks? : string;
 	responseProfile? : KalturaBaseResponseProfile;
 	abortAllOnError? : boolean;
-	skipOnOrror? : KalturaSkipOptions;
+	skipOnError? : KalturaSkipOptions;
 }
 
 
@@ -27,7 +27,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
 	ks : string;
 	responseProfile : KalturaBaseResponseProfile;
 	abortAllOnError : boolean;
-	skipOnOrror : KalturaSkipOptions;
+	skipOnError : KalturaSkipOptions;
 
     constructor(data? : KalturaRequestOptionsArgs)
     {
@@ -48,7 +48,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
 				ks : { type : 's' },
 				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' },
 				abortAllOnError : { type : 'b' },
-				skipOnOrror : { type : 'es', subTypeConstructor : KalturaSkipOptions, subType : 'KalturaSkipOptions' }
+				skipOnError : { type : 'es', subTypeConstructor : KalturaSkipOptions, subType : 'KalturaSkipOptions' }
             }
         );
         return result;
