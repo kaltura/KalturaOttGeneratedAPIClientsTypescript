@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaSubscriptionListResponse } from './KalturaSubscriptionListResponse';
 
 import { KalturaSubscriptionFilter } from './KalturaSubscriptionFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SubscriptionListActionArgs  extends KalturaRequestArgs {
-    filter : KalturaSubscriptionFilter;
+    filter? : KalturaSubscriptionFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,8 +24,9 @@ export interface SubscriptionListActionArgs  extends KalturaRequestArgs {
 export class SubscriptionListAction extends KalturaRequest<KalturaSubscriptionListResponse> {
 
     filter : KalturaSubscriptionFilter;
+	pager : KalturaFilterPager;
 
-    constructor(data : SubscriptionListActionArgs)
+    constructor(data? : SubscriptionListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaSubscriptionListResponse', responseConstructor : KalturaSubscriptionListResponse  });
     }
@@ -36,7 +39,8 @@ export class SubscriptionListAction extends KalturaRequest<KalturaSubscriptionLi
             {
                 service : { type : 'c', default : 'subscription' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaSubscriptionFilter, subType : 'KalturaSubscriptionFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaSubscriptionFilter, subType : 'KalturaSubscriptionFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;
