@@ -7,7 +7,6 @@ export interface KalturaSegmentValueArgs  extends KalturaObjectBaseArgs {
     systematicName? : string;
 	name? : string;
 	value? : string;
-	threshold? : number;
 }
 
 
@@ -17,7 +16,6 @@ export class KalturaSegmentValue extends KalturaObjectBase {
 	systematicName : string;
 	name : string;
 	value : string;
-	threshold : number;
 
     constructor(data? : KalturaSegmentValueArgs)
     {
@@ -34,8 +32,7 @@ export class KalturaSegmentValue extends KalturaObjectBase {
 				id : { type : 'n', readOnly : true },
 				systematicName : { type : 's' },
 				name : { type : 's' },
-				value : { type : 's' },
-				threshold : { type : 'n' }
+				value : { type : 's' }
             }
         );
         return result;
