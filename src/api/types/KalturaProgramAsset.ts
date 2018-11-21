@@ -5,24 +5,26 @@ import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaProgramAssetArgs  extends KalturaAssetArgs {
     epgChannelId? : number;
-	epgId? : string;
 	relatedMediaId? : number;
 	crid? : string;
-	linearAssetId? : number;
+	enableCdvr? : boolean;
+	enableCatchUp? : boolean;
+	enableStartOver? : boolean;
+	enableTrickPlay? : boolean;
 }
 
 
 export class KalturaProgramAsset extends KalturaAsset {
 
     epgChannelId : number;
-	epgId : string;
+	readonly epgId : string;
 	relatedMediaId : number;
 	crid : string;
-	linearAssetId : number;
-	readonly enableCdvr : boolean;
-	readonly enableCatchUp : boolean;
-	readonly enableStartOver : boolean;
-	readonly enableTrickPlay : boolean;
+	readonly linearAssetId : number;
+	enableCdvr : boolean;
+	enableCatchUp : boolean;
+	enableStartOver : boolean;
+	enableTrickPlay : boolean;
 
     constructor(data? : KalturaProgramAssetArgs)
     {
@@ -37,14 +39,14 @@ export class KalturaProgramAsset extends KalturaAsset {
             {
                 objectType : { type : 'c', default : 'KalturaProgramAsset' },
 				epgChannelId : { type : 'n' },
-				epgId : { type : 's' },
+				epgId : { type : 's', readOnly : true },
 				relatedMediaId : { type : 'n' },
 				crid : { type : 's' },
-				linearAssetId : { type : 'n' },
-				enableCdvr : { type : 'b', readOnly : true },
-				enableCatchUp : { type : 'b', readOnly : true },
-				enableStartOver : { type : 'b', readOnly : true },
-				enableTrickPlay : { type : 'b', readOnly : true }
+				linearAssetId : { type : 'n', readOnly : true },
+				enableCdvr : { type : 'b' },
+				enableCatchUp : { type : 'b' },
+				enableStartOver : { type : 'b' },
+				enableTrickPlay : { type : 'b' }
             }
         );
         return result;
