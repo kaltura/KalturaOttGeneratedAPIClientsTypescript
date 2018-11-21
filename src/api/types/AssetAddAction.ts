@@ -11,7 +11,8 @@ export interface AssetAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'asset' action 'add'.
  *
- * Usage: Add a new asset
+ * Usage: Add a new asset.
+ * For metas of type bool-&gt; use kalturaBoolValue, type number-&gt; KalturaDoubleValue, type date -&gt; KalturaLongValue, type string -&gt; KalturaStringValue
  *
  * Server response type:         KalturaAsset
  * Server failure response type: KalturaAPIException
