@@ -4,9 +4,9 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaProgramAssetArgs  extends KalturaAssetArgs {
-    epgChannelId? : number;
-	relatedMediaId? : number;
+    relatedMediaId? : number;
 	crid? : string;
+	linearAssetId? : number;
 	enableCdvr? : boolean;
 	enableCatchUp? : boolean;
 	enableStartOver? : boolean;
@@ -16,11 +16,11 @@ export interface KalturaProgramAssetArgs  extends KalturaAssetArgs {
 
 export class KalturaProgramAsset extends KalturaAsset {
 
-    epgChannelId : number;
+    readonly epgChannelId : number;
 	readonly epgId : string;
 	relatedMediaId : number;
 	crid : string;
-	readonly linearAssetId : number;
+	linearAssetId : number;
 	enableCdvr : boolean;
 	enableCatchUp : boolean;
 	enableStartOver : boolean;
@@ -38,11 +38,11 @@ export class KalturaProgramAsset extends KalturaAsset {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaProgramAsset' },
-				epgChannelId : { type : 'n' },
+				epgChannelId : { type : 'n', readOnly : true },
 				epgId : { type : 's', readOnly : true },
 				relatedMediaId : { type : 'n' },
 				crid : { type : 's' },
-				linearAssetId : { type : 'n', readOnly : true },
+				linearAssetId : { type : 'n' },
 				enableCdvr : { type : 'b' },
 				enableCatchUp : { type : 'b' },
 				enableStartOver : { type : 'b' },
