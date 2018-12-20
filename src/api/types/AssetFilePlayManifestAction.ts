@@ -13,6 +13,7 @@ export interface AssetFilePlayManifestActionArgs  extends KalturaRequestArgs {
 	assetFileId : number;
 	contextType : KalturaPlaybackContextType;
 	ks? : string;
+	tokenizedUrl? : string;
 }
 
 /**
@@ -33,6 +34,7 @@ export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile
 	assetFileId : number;
 	contextType : KalturaPlaybackContextType;
 	ks : string;
+	tokenizedUrl : string;
 
     constructor(data : AssetFilePlayManifestActionArgs)
     {
@@ -52,7 +54,8 @@ export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile
 				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
 				assetFileId : { type : 'n' },
 				contextType : { type : 'es', subTypeConstructor : KalturaPlaybackContextType, subType : 'KalturaPlaybackContextType' },
-				ks : { type : 's' }
+				ks : { type : 's' },
+				tokenizedUrl : { type : 's' }
             }
         );
         return result;
