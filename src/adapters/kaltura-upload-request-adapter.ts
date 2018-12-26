@@ -1,11 +1,10 @@
 import { KalturaUploadRequest } from '../api/kaltura-upload-request';
-import { buildUrl, createEndpoint, prepareParameters } from './utils';
+import { buildQuerystring, createEndpoint, prepareParameters } from './utils';
 import { KalturaClientException } from '../api/kaltura-client-exception';
 import { KalturaRequestOptions } from '../api/kaltura-request-options';
 import { KalturaClientOptions } from '../kaltura-client-options';
 import { KalturaAPIException } from '../api/kaltura-api-exception';
 import { CancelableAction } from '../cancelable-action';
-import { environment } from '../environment';
 
 interface UploadByChunksData {
     enabled: boolean;
@@ -101,26 +100,10 @@ export class KalturaUploadRequestAdapter {
 
     private _getFormData(filePropertyName: string, fileName: string, fileChunk: File | Blob): FormData {
         const result = new FormData();
-        result.append("Filename", fileName);
-        result.append(filePropertyName, fileChunk, fileName);
+        result.append("fileName", fileName);
+        result.append(filePropertyName, fileChunk);
         return result;
     }
-
-	private _unwrapResponse(response: any): any {
-		if (environment.response.nestedResponse) {
-			if (response && response.hasOwnProperty('result')) {
-				if (response.result.hasOwnProperty('error')) {
-					return response.result.error;
-				} else {
-					return response.result;
-				}
-			} else if (response && response.hasOwnProperty('error')) {
-				return response.error;
-			}
-		}
-
-		return response;
-	}
 
     private _chunkUpload(request: KalturaUploadRequest<any>, uploadChunkData: UploadByChunksData): CancelableAction<any> {
         return new CancelableAction((resolve, reject) => {
@@ -163,10 +146,11 @@ export class KalturaUploadRequestAdapter {
                 console.log(`chunk upload not supported by browser or by request. Uploading the file as-is`);
             }
 
-	        let endpointUrl = createEndpoint(request, this.clientOptions, parameters['service'], parameters['action']);
-	        delete parameters['service'];
-	        delete parameters['action'];
-	        endpointUrl = buildUrl(endpointUrl, parameters);
+            let endpointUrl = createEndpoint(request, this.clientOptions, parameters['service'], parameters['action']);
+            delete parameters['service'];
+            delete parameters['action'];
+            const querystring = buildQuerystring(parameters);
+            endpointUrl = `${endpointUrl}?${querystring}`;
 
             const xhr = new XMLHttpRequest();
 
@@ -180,15 +164,7 @@ export class KalturaUploadRequestAdapter {
 
                     try {
                         if (xhr.status === 200) {
-	                        resp = this._unwrapResponse(JSON.parse(xhr.response));
-
-	                        if (resp && resp.objectType === 'KalturaAPIException') {
-		                        resp = new KalturaAPIException(
-			                        resp.message,
-			                        resp.code,
-			                        resp.args
-		                        );
-	                        }
+                            resp = JSON.parse(xhr.response);
                         } else {
                             resp = new KalturaClientException('client::upload-failure', xhr.responseText || 'failed to upload file');
                         }

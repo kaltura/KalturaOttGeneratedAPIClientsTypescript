@@ -903,7 +903,7 @@ export { RecordingCancelAction, RecordingCancelActionArgs } from './RecordingCan
 export { RecordingDeleteAction, RecordingDeleteActionArgs } from './RecordingDeleteAction'
 export { RecordingGetAction, RecordingGetActionArgs } from './RecordingGetAction'
 export { RecordingListAction, RecordingListActionArgs } from './RecordingListAction'
-export { RecordingProtectAction, RecordingProtectActionArgs } from './RecordingProtectAction'
+export { RecordingUpdateAction, RecordingUpdateActionArgs } from './RecordingUpdateAction'
 export { RegionListAction, RegionListActionArgs } from './RegionListAction'
 export { RegistrySettingsListAction, RegistrySettingsListActionArgs } from './RegistrySettingsListAction'
 export { ReminderAddAction, ReminderAddActionArgs } from './ReminderAddAction'
