@@ -143,6 +143,7 @@ export { KalturaEntitlementListResponse, KalturaEntitlementListResponseArgs } fr
 export { KalturaCollectionEntitlement, KalturaCollectionEntitlementArgs } from './KalturaCollectionEntitlement'
 export { KalturaPpvEntitlement, KalturaPpvEntitlementArgs } from './KalturaPpvEntitlement'
 export { KalturaSubscriptionEntitlement, KalturaSubscriptionEntitlementArgs } from './KalturaSubscriptionEntitlement'
+export { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable'
 export { KalturaAssetFilePpv, KalturaAssetFilePpvArgs } from './KalturaAssetFilePpv'
 export { KalturaAssetFilePpvListResponse, KalturaAssetFilePpvListResponseArgs } from './KalturaAssetFilePpvListResponse'
 export { KalturaPriceDetails, KalturaPriceDetailsArgs } from './KalturaPriceDetails'
