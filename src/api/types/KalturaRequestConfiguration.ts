@@ -12,6 +12,7 @@ export interface KalturaRequestConfigurationArgs  extends KalturaObjectBaseArgs 
 	currency? : string;
 	ks? : string;
 	responseProfile? : KalturaBaseResponseProfile;
+	abortOnError? : boolean;
 	abortAllOnError? : boolean;
 	skipCondition? : KalturaSkipCondition;
 }
@@ -25,6 +26,7 @@ export class KalturaRequestConfiguration extends KalturaObjectBase {
 	currency : string;
 	ks : string;
 	responseProfile : KalturaBaseResponseProfile;
+	abortOnError : boolean;
 	abortAllOnError : boolean;
 	skipCondition : KalturaSkipCondition;
 
@@ -46,6 +48,7 @@ export class KalturaRequestConfiguration extends KalturaObjectBase {
 				currency : { type : 's' },
 				ks : { type : 's' },
 				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' },
+				abortOnError : { type : 'b' },
 				abortAllOnError : { type : 'b' },
 				skipCondition : { type : 'o', subTypeConstructor : KalturaSkipCondition, subType : 'KalturaSkipCondition' }
             }
