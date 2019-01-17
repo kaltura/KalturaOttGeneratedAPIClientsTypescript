@@ -6,7 +6,7 @@ import { KalturaImageFilter } from './KalturaImageFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ImageListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaImageFilter;
+    filter : KalturaImageFilter;
 }
 
 /**
@@ -23,7 +23,7 @@ export class ImageListAction extends KalturaRequest<KalturaImageListResponse> {
 
     filter : KalturaImageFilter;
 
-    constructor(data? : ImageListActionArgs)
+    constructor(data : ImageListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaImageListResponse', responseConstructor : KalturaImageListResponse  });
     }

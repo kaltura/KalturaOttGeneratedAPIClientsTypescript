@@ -6,5 +6,6 @@ export enum KalturaImageObjectType {
 	imageType = 'IMAGE_TYPE',
 	mediaAsset = 'MEDIA_ASSET',
 	partner = 'PARTNER',
-	programAsset = 'PROGRAM_ASSET'
+	programAsset = 'PROGRAM_ASSET',
+	programGroup = 'PROGRAM_GROUP'
 }
