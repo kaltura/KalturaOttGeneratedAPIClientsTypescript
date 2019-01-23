@@ -12,7 +12,8 @@ export interface AssetUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'asset' action 'update'.
  *
- * Usage: update an existing asset
+ * Usage: update an existing asset.
+ * For metas of type bool-&gt; use kalturaBoolValue, type number-&gt; KalturaDoubleValue, type date -&gt; KalturaLongValue, type string -&gt; KalturaStringValue
  *
  * Server response type:         KalturaAsset
  * Server failure response type: KalturaAPIException
