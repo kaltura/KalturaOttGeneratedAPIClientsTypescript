@@ -7,7 +7,6 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface OttUserResetPasswordActionArgs  extends KalturaRequestArgs {
     partnerId : number;
 	username : string;
-	templateName? : string;
 }
 
 /**
@@ -24,7 +23,6 @@ export class OttUserResetPasswordAction extends KalturaRequest<boolean> {
 
     partnerId : number;
 	username : string;
-	templateName : string;
 
     constructor(data : OttUserResetPasswordActionArgs)
     {
@@ -40,8 +38,7 @@ export class OttUserResetPasswordAction extends KalturaRequest<boolean> {
                 service : { type : 'c', default : 'ottuser' },
 				action : { type : 'c', default : 'resetPassword' },
 				partnerId : { type : 'n' },
-				username : { type : 's' },
-				templateName : { type : 's' }
+				username : { type : 's' }
             }
         );
         return result;

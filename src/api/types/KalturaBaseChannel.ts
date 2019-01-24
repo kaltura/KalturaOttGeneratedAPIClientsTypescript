@@ -4,13 +4,14 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBaseChannelArgs  extends KalturaObjectBaseArgs {
-    
+    name? : string;
 }
 
 
 export class KalturaBaseChannel extends KalturaObjectBase {
 
     readonly id : number;
+	name : string;
 
     constructor(data? : KalturaBaseChannelArgs)
     {
@@ -24,7 +25,8 @@ export class KalturaBaseChannel extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBaseChannel' },
-				id : { type : 'n', readOnly : true }
+				id : { type : 'n', readOnly : true },
+				name : { type : 's' }
             }
         );
         return result;

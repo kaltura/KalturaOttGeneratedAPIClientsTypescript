@@ -11,8 +11,7 @@ export interface RecordingProtectActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'recording' action 'protect'.
  *
- * Usage: Deprecated, please use recording.update instead
- * Protects an existing recording from the cleanup process for the defined protection period
+ * Usage: Protects an existing recording from the cleanup process for the defined protection period
  *
  * Server response type:         KalturaRecording
  * Server failure response type: KalturaAPIException

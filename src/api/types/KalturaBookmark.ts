@@ -8,8 +8,6 @@ import { KalturaSlimAsset, KalturaSlimAssetArgs } from './KalturaSlimAsset';
 export interface KalturaBookmarkArgs  extends KalturaSlimAssetArgs {
     position? : number;
 	playerData? : KalturaBookmarkPlayerData;
-	programId? : number;
-	isReportingMode? : boolean;
 }
 
 
@@ -20,8 +18,6 @@ export class KalturaBookmark extends KalturaSlimAsset {
 	readonly positionOwner : KalturaPositionOwner;
 	readonly finishedWatching : boolean;
 	playerData : KalturaBookmarkPlayerData;
-	programId : number;
-	isReportingMode : boolean;
 
     constructor(data? : KalturaBookmarkArgs)
     {
@@ -39,9 +35,7 @@ export class KalturaBookmark extends KalturaSlimAsset {
 				position : { type : 'n' },
 				positionOwner : { type : 'es', readOnly : true, subTypeConstructor : KalturaPositionOwner, subType : 'KalturaPositionOwner' },
 				finishedWatching : { type : 'b', readOnly : true },
-				playerData : { type : 'o', subTypeConstructor : KalturaBookmarkPlayerData, subType : 'KalturaBookmarkPlayerData' },
-				programId : { type : 'n' },
-				isReportingMode : { type : 'b' }
+				playerData : { type : 'o', subTypeConstructor : KalturaBookmarkPlayerData, subType : 'KalturaBookmarkPlayerData' }
             }
         );
         return result;

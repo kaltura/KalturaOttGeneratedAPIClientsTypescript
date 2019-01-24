@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaAssetFile } from './KalturaAssetFile';
+
 
 import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaPlaybackContextType } from './KalturaPlaybackContextType';
@@ -13,7 +13,6 @@ export interface AssetFilePlayManifestActionArgs  extends KalturaRequestArgs {
 	assetFileId : number;
 	contextType : KalturaPlaybackContextType;
 	ks? : string;
-	tokenizedUrl? : string;
 }
 
 /**
@@ -21,12 +20,12 @@ export interface AssetFilePlayManifestActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Redirects to play manifest
  *
- * Server response type:         KalturaAssetFile
+ * Server response type:         void
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile> {
+export class AssetFilePlayManifestAction extends KalturaRequest<void> {
 
     partnerId : number;
 	assetId : string;
@@ -34,11 +33,10 @@ export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile
 	assetFileId : number;
 	contextType : KalturaPlaybackContextType;
 	ks : string;
-	tokenizedUrl : string;
 
     constructor(data : AssetFilePlayManifestActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaAssetFile', responseConstructor : KalturaAssetFile  });
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -54,8 +52,7 @@ export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile
 				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
 				assetFileId : { type : 'n' },
 				contextType : { type : 'es', subTypeConstructor : KalturaPlaybackContextType, subType : 'KalturaPlaybackContextType' },
-				ks : { type : 's' },
-				tokenizedUrl : { type : 's' }
+				ks : { type : 's' }
             }
         );
         return result;

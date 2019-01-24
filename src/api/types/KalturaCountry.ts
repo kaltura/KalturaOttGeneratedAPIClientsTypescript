@@ -11,7 +11,6 @@ export interface KalturaCountryArgs  extends KalturaObjectBaseArgs {
 	currency? : string;
 	currencySign? : string;
 	vatPercent? : number;
-	timeZoneId? : string;
 }
 
 
@@ -25,7 +24,6 @@ export class KalturaCountry extends KalturaObjectBase {
 	currency : string;
 	currencySign : string;
 	vatPercent : number;
-	timeZoneId : string;
 
     constructor(data? : KalturaCountryArgs)
     {
@@ -46,8 +44,7 @@ export class KalturaCountry extends KalturaObjectBase {
 				languagesCode : { type : 's' },
 				currency : { type : 's' },
 				currencySign : { type : 's' },
-				vatPercent : { type : 'n' },
-				timeZoneId : { type : 's' }
+				vatPercent : { type : 'n' }
             }
         );
         return result;

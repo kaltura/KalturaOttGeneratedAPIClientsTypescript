@@ -5,14 +5,13 @@ import { KalturaRuleActionType } from './KalturaRuleActionType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaRuleActionArgs  extends KalturaObjectBaseArgs {
-    description? : string;
+    type? : KalturaRuleActionType;
 }
 
 
 export class KalturaRuleAction extends KalturaObjectBase {
 
-    readonly type : KalturaRuleActionType;
-	description : string;
+    type : KalturaRuleActionType;
 
     constructor(data? : KalturaRuleActionArgs)
     {
@@ -26,8 +25,7 @@ export class KalturaRuleAction extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaRuleAction' },
-				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaRuleActionType, subType : 'KalturaRuleActionType' },
-				description : { type : 's' }
+				type : { type : 'es', subTypeConstructor : KalturaRuleActionType, subType : 'KalturaRuleActionType' }
             }
         );
         return result;

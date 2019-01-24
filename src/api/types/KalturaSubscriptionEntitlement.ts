@@ -6,6 +6,8 @@ import { KalturaEntitlement, KalturaEntitlementArgs } from './KalturaEntitlement
 export interface KalturaSubscriptionEntitlementArgs  extends KalturaEntitlementArgs {
     paymentGatewayId? : number;
 	paymentMethodId? : number;
+	scheduledSubscriptionId? : number;
+	unifiedPaymentId? : number;
 }
 
 
@@ -17,8 +19,8 @@ export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
 	readonly isInGracePeriod : boolean;
 	paymentGatewayId : number;
 	paymentMethodId : number;
-	readonly scheduledSubscriptionId : number;
-	readonly unifiedPaymentId : number;
+	scheduledSubscriptionId : number;
+	unifiedPaymentId : number;
 	readonly isSuspended : boolean;
 
     constructor(data? : KalturaSubscriptionEntitlementArgs)
@@ -39,8 +41,8 @@ export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
 				isInGracePeriod : { type : 'b', readOnly : true },
 				paymentGatewayId : { type : 'n' },
 				paymentMethodId : { type : 'n' },
-				scheduledSubscriptionId : { type : 'n', readOnly : true },
-				unifiedPaymentId : { type : 'n', readOnly : true },
+				scheduledSubscriptionId : { type : 'n' },
+				unifiedPaymentId : { type : 'n' },
 				isSuspended : { type : 'b', readOnly : true }
             }
         );

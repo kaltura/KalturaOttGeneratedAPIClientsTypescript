@@ -1,8 +1,7 @@
 
 
 export enum KalturaPartnerConfigurationType {
-    concurrency = 'Concurrency',
-	defaultpaymentgateway = 'DefaultPaymentGateway',
+    defaultpaymentgateway = 'DefaultPaymentGateway',
 	enablepaymentgatewayselection = 'EnablePaymentGatewaySelection',
 	ossadapter = 'OSSAdapter'
 }

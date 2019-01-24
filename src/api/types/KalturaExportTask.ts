@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaExportDataType } from './KalturaExportDataType';
 import { KalturaExportType } from './KalturaExportType';
+import { KalturaIntegerValue } from './KalturaIntegerValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaExportTaskArgs  extends KalturaObjectBaseArgs {
@@ -13,6 +14,7 @@ export interface KalturaExportTaskArgs  extends KalturaObjectBaseArgs {
 	exportType? : KalturaExportType;
 	frequency? : number;
 	notificationUrl? : string;
+	vodTypes? : KalturaIntegerValue[];
 	isActive? : boolean;
 }
 
@@ -27,11 +29,13 @@ export class KalturaExportTask extends KalturaObjectBase {
 	exportType : KalturaExportType;
 	frequency : number;
 	notificationUrl : string;
+	vodTypes : KalturaIntegerValue[];
 	isActive : boolean;
 
     constructor(data? : KalturaExportTaskArgs)
     {
         super(data);
+        if (typeof this.vodTypes === 'undefined') this.vodTypes = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -49,6 +53,7 @@ export class KalturaExportTask extends KalturaObjectBase {
 				exportType : { type : 'es', subTypeConstructor : KalturaExportType, subType : 'KalturaExportType' },
 				frequency : { type : 'n' },
 				notificationUrl : { type : 's' },
+				vodTypes : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
 				isActive : { type : 'b' }
             }
         );

@@ -1,27 +1,23 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaAssetInheritancePolicy } from './KalturaAssetInheritancePolicy';
 import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaMediaAssetArgs  extends KalturaAssetArgs {
     externalIds? : string;
+	catchUpBuffer? : number;
+	trickPlayBuffer? : number;
 	entryId? : string;
-	deviceRuleId? : number;
-	geoBlockRuleId? : number;
-	status? : boolean;
-	inheritancePolicy? : KalturaAssetInheritancePolicy;
 }
 
 
 export class KalturaMediaAsset extends KalturaAsset {
 
     externalIds : string;
+	catchUpBuffer : number;
+	trickPlayBuffer : number;
+	readonly enableRecordingPlaybackNonEntitledChannel : boolean;
 	entryId : string;
-	deviceRuleId : number;
-	geoBlockRuleId : number;
-	status : boolean;
-	inheritancePolicy : KalturaAssetInheritancePolicy;
 
     constructor(data? : KalturaMediaAssetArgs)
     {
@@ -36,11 +32,10 @@ export class KalturaMediaAsset extends KalturaAsset {
             {
                 objectType : { type : 'c', default : 'KalturaMediaAsset' },
 				externalIds : { type : 's' },
-				entryId : { type : 's' },
-				deviceRuleId : { type : 'n' },
-				geoBlockRuleId : { type : 'n' },
-				status : { type : 'b' },
-				inheritancePolicy : { type : 'es', subTypeConstructor : KalturaAssetInheritancePolicy, subType : 'KalturaAssetInheritancePolicy' }
+				catchUpBuffer : { type : 'n' },
+				trickPlayBuffer : { type : 'n' },
+				enableRecordingPlaybackNonEntitledChannel : { type : 'b', readOnly : true },
+				entryId : { type : 's' }
             }
         );
         return result;

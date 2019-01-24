@@ -1,54 +1,27 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaAssetFile, KalturaAssetFileArgs } from './KalturaAssetFile';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaMediaFileArgs  extends KalturaAssetFileArgs {
+export interface KalturaMediaFileArgs  extends KalturaObjectBaseArgs {
     assetId? : number;
-	typeId? : number;
+	type? : string;
+	url? : string;
 	duration? : number;
 	externalId? : string;
-	altExternalId? : string;
 	fileSize? : number;
-	additionalData? : string;
-	altStreamingCode? : string;
-	alternativeCdnAdapaterProfileId? : number;
-	endDate? : number;
-	startDate? : number;
-	externalStoreId? : string;
-	isDefaultLanguage? : boolean;
-	language? : string;
-	orderNum? : number;
-	outputProtecationLevel? : string;
-	cdnAdapaterProfileId? : number;
-	status? : boolean;
-	catalogEndDate? : number;
 }
 
 
-export class KalturaMediaFile extends KalturaAssetFile {
+export class KalturaMediaFile extends KalturaObjectBase {
 
     assetId : number;
 	readonly id : number;
-	readonly type : string;
-	typeId : number;
+	type : string;
+	url : string;
 	duration : number;
 	externalId : string;
-	altExternalId : string;
 	fileSize : number;
-	additionalData : string;
-	altStreamingCode : string;
-	alternativeCdnAdapaterProfileId : number;
-	endDate : number;
-	startDate : number;
-	externalStoreId : string;
-	isDefaultLanguage : boolean;
-	language : string;
-	orderNum : number;
-	outputProtecationLevel : string;
-	cdnAdapaterProfileId : number;
-	status : boolean;
-	catalogEndDate : number;
 
     constructor(data? : KalturaMediaFileArgs)
     {
@@ -64,25 +37,11 @@ export class KalturaMediaFile extends KalturaAssetFile {
                 objectType : { type : 'c', default : 'KalturaMediaFile' },
 				assetId : { type : 'n' },
 				id : { type : 'n', readOnly : true },
-				type : { type : 's', readOnly : true },
-				typeId : { type : 'n' },
+				type : { type : 's' },
+				url : { type : 's' },
 				duration : { type : 'n' },
 				externalId : { type : 's' },
-				altExternalId : { type : 's' },
-				fileSize : { type : 'n' },
-				additionalData : { type : 's' },
-				altStreamingCode : { type : 's' },
-				alternativeCdnAdapaterProfileId : { type : 'n' },
-				endDate : { type : 'n' },
-				startDate : { type : 'n' },
-				externalStoreId : { type : 's' },
-				isDefaultLanguage : { type : 'b' },
-				language : { type : 's' },
-				orderNum : { type : 'n' },
-				outputProtecationLevel : { type : 's' },
-				cdnAdapaterProfileId : { type : 'n' },
-				status : { type : 'b' },
-				catalogEndDate : { type : 'n' }
+				fileSize : { type : 'n' }
             }
         );
         return result;

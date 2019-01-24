@@ -4,13 +4,17 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaBaseSearchAssetFilter, KalturaBaseSearchAssetFilterArgs } from './KalturaBaseSearchAssetFilter';
 
 export interface KalturaSearchAssetFilterArgs  extends KalturaBaseSearchAssetFilterArgs {
-    typeIn? : string;
+    kSql? : string;
+	typeIn? : string;
+	idIn? : string;
 }
 
 
 export class KalturaSearchAssetFilter extends KalturaBaseSearchAssetFilter {
 
-    typeIn : string;
+    kSql : string;
+	typeIn : string;
+	idIn : string;
 
     constructor(data? : KalturaSearchAssetFilterArgs)
     {
@@ -24,7 +28,9 @@ export class KalturaSearchAssetFilter extends KalturaBaseSearchAssetFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSearchAssetFilter' },
-				typeIn : { type : 's' }
+				kSql : { type : 's' },
+				typeIn : { type : 's' },
+				idIn : { type : 's' }
             }
         );
         return result;
