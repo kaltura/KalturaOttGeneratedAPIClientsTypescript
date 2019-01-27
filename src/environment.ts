@@ -9,7 +9,7 @@ export interface Environment {
 
 export const environment: Environment = {
     request: {
-        apiVersion: '5.1.1.23111'
+        apiVersion: '5.1.1.23429'
     },
     response: {
         nestedResponse: true
