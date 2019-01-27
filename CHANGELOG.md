@@ -4,22 +4,22 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## 7.0.0 (2019-01-24)
 
-### Breaking Change
+ ### Breaking Change
 
-* change type of property `relatedObjects` from array to map
+ * change type of property `relatedObjects` from array to map
 
-before
+ before
 
-``
+ ``
 export interface KalturaObjectBaseArgs
 {
   relatedObjects? : KalturaObjectBase[];
 }
 ``
 
-after
+ after
 
-``
+ ``
 export interface KalturaObjectBaseArgs
 {
   relatedObjects? : { [key: string] : KalturaObjectBase };
