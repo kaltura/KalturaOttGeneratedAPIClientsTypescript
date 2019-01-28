@@ -1,18 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaRuleType } from './KalturaRuleType';
+import { KalturaTvmRuleType } from './KalturaTvmRuleType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaTvmRuleFilterArgs  extends KalturaFilterArgs {
-    ruleTypeEqual? : KalturaRuleType;
+    ruleTypeEqual? : KalturaTvmRuleType;
 	nameEqual? : string;
 }
 
 
 export class KalturaTvmRuleFilter extends KalturaFilter {
 
-    ruleTypeEqual : KalturaRuleType;
+    ruleTypeEqual : KalturaTvmRuleType;
 	nameEqual : string;
 
     constructor(data? : KalturaTvmRuleFilterArgs)
@@ -27,7 +27,7 @@ export class KalturaTvmRuleFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaTvmRuleFilter' },
-				ruleTypeEqual : { type : 'es', subTypeConstructor : KalturaRuleType, subType : 'KalturaRuleType' },
+				ruleTypeEqual : { type : 'es', subTypeConstructor : KalturaTvmRuleType, subType : 'KalturaTvmRuleType' },
 				nameEqual : { type : 's' }
             }
         );

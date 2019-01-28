@@ -1,7 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaRuleType } from './KalturaRuleType';
+import { KalturaTvmRuleType } from './KalturaTvmRuleType';
 import { KalturaRule, KalturaRuleArgs } from './KalturaRule';
 
 export interface KalturaTvmRuleArgs  extends KalturaRuleArgs {
@@ -12,7 +12,7 @@ export interface KalturaTvmRuleArgs  extends KalturaRuleArgs {
 export class KalturaTvmRule extends KalturaRule {
 
     readonly createDate : number;
-	readonly ruleType : KalturaRuleType;
+	readonly ruleType : KalturaTvmRuleType;
 
     constructor(data? : KalturaTvmRuleArgs)
     {
@@ -27,7 +27,7 @@ export class KalturaTvmRule extends KalturaRule {
             {
                 objectType : { type : 'c', default : 'KalturaTvmRule' },
 				createDate : { type : 'n', readOnly : true },
-				ruleType : { type : 'es', readOnly : true, subTypeConstructor : KalturaRuleType, subType : 'KalturaRuleType' }
+				ruleType : { type : 'es', readOnly : true, subTypeConstructor : KalturaTvmRuleType, subType : 'KalturaTvmRuleType' }
             }
         );
         return result;

@@ -8,6 +8,7 @@ export interface KalturaPurchaseBaseArgs  extends KalturaObjectBaseArgs {
     productId? : number;
 	contentId? : number;
 	productType? : KalturaTransactionType;
+	adapterData? : string;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaPurchaseBase extends KalturaObjectBase {
     productId : number;
 	contentId : number;
 	productType : KalturaTransactionType;
+	adapterData : string;
 
     constructor(data? : KalturaPurchaseBaseArgs)
     {
@@ -31,7 +33,8 @@ export class KalturaPurchaseBase extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaPurchaseBase' },
 				productId : { type : 'n' },
 				contentId : { type : 'n' },
-				productType : { type : 'es', subTypeConstructor : KalturaTransactionType, subType : 'KalturaTransactionType' }
+				productType : { type : 'es', subTypeConstructor : KalturaTransactionType, subType : 'KalturaTransactionType' },
+				adapterData : { type : 's' }
             }
         );
         return result;

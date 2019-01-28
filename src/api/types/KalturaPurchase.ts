@@ -9,7 +9,6 @@ export interface KalturaPurchaseArgs  extends KalturaPurchaseBaseArgs {
 	paymentMethodId? : number;
 	paymentGatewayId? : number;
 	coupon? : string;
-	adapterData? : string;
 }
 
 
@@ -20,7 +19,6 @@ export class KalturaPurchase extends KalturaPurchaseBase {
 	paymentMethodId : number;
 	paymentGatewayId : number;
 	coupon : string;
-	adapterData : string;
 
     constructor(data? : KalturaPurchaseArgs)
     {
@@ -38,8 +36,7 @@ export class KalturaPurchase extends KalturaPurchaseBase {
 				price : { type : 'n' },
 				paymentMethodId : { type : 'n' },
 				paymentGatewayId : { type : 'n' },
-				coupon : { type : 's' },
-				adapterData : { type : 's' }
+				coupon : { type : 's' }
             }
         );
         return result;

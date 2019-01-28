@@ -603,6 +603,7 @@ export { KalturaTransactionAdapterStatus } from './KalturaTransactionAdapterStat
 export { KalturaTransactionHistoryOrderBy } from './KalturaTransactionHistoryOrderBy'
 export { KalturaTransactionType } from './KalturaTransactionType'
 export { KalturaTvmRuleOrderBy } from './KalturaTvmRuleOrderBy'
+export { KalturaTvmRuleType } from './KalturaTvmRuleType'
 export { KalturaUploadTokenStatus } from './KalturaUploadTokenStatus'
 export { KalturaUrlType } from './KalturaUrlType'
 export { KalturaUserAssetRuleOrderBy } from './KalturaUserAssetRuleOrderBy'
