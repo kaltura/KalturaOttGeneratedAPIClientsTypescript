@@ -12,7 +12,7 @@ export interface OttUserListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'ottUser' action 'list'.
  *
- * Usage: Retrieve user by external identifier or username or if filter is null all user in the master or the user itself
+ * Usage: Returns list of OTTUser (limited to 500 items). Filters by username/external identifier/idIn or roleIdIn
  *
  * Server response type:         KalturaOTTUserListResponse
  * Server failure response type: KalturaAPIException

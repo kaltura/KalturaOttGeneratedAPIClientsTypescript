@@ -3,14 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaRecordingStatus } from './KalturaRecordingStatus';
 import { KalturaRecordingType } from './KalturaRecordingType';
-import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaRecordingArgs  extends KalturaObjectBaseArgs {
     assetId? : number;
 	type? : KalturaRecordingType;
 	isProtected? : boolean;
-	metaData? : { [key : string] : KalturaStringValue};
 }
 
 
@@ -24,7 +22,6 @@ export class KalturaRecording extends KalturaObjectBase {
 	isProtected : boolean;
 	readonly createDate : number;
 	readonly updateDate : number;
-	metaData : { [key : string] : KalturaStringValue};
 
     constructor(data? : KalturaRecordingArgs)
     {
@@ -45,8 +42,7 @@ export class KalturaRecording extends KalturaObjectBase {
 				viewableUntilDate : { type : 'n', readOnly : true },
 				isProtected : { type : 'b' },
 				createDate : { type : 'n', readOnly : true },
-				updateDate : { type : 'n', readOnly : true },
-				metaData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;

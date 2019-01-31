@@ -1,6 +1,8 @@
 export interface Environment {
     request: {
-        apiVersion: string
+        apiVersion: string,
+        avoidQueryString: boolean,
+        fileFormatValue: number
     }
     response: {
         nestedResponse: boolean
@@ -9,7 +11,9 @@ export interface Environment {
 
 export const environment: Environment = {
     request: {
-        apiVersion: '5.1.1.42810'
+        apiVersion: '5.1.1.16693',
+        avoidQueryString: true,
+        fileFormatValue: 20
     },
     response: {
         nestedResponse: true
