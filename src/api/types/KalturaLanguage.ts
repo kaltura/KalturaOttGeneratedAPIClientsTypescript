@@ -4,7 +4,8 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaLanguageArgs  extends KalturaObjectBaseArgs {
-    name? : string;
+    id? : number;
+	name? : string;
 	systemName? : string;
 	code? : string;
 	direction? : string;
@@ -14,7 +15,8 @@ export interface KalturaLanguageArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaLanguage extends KalturaObjectBase {
 
-    name : string;
+    id : number;
+	name : string;
 	systemName : string;
 	code : string;
 	direction : string;
@@ -32,6 +34,7 @@ export class KalturaLanguage extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaLanguage' },
+				id : { type : 'n' },
 				name : { type : 's' },
 				systemName : { type : 's' },
 				code : { type : 's' },

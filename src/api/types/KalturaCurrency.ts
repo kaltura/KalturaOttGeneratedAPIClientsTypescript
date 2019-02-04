@@ -4,7 +4,8 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaCurrencyArgs  extends KalturaObjectBaseArgs {
-    name? : string;
+    id? : number;
+	name? : string;
 	code? : string;
 	sign? : string;
 	isDefault? : boolean;
@@ -13,7 +14,8 @@ export interface KalturaCurrencyArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaCurrency extends KalturaObjectBase {
 
-    name : string;
+    id : number;
+	name : string;
 	code : string;
 	sign : string;
 	isDefault : boolean;
@@ -30,6 +32,7 @@ export class KalturaCurrency extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCurrency' },
+				id : { type : 'n' },
 				name : { type : 's' },
 				code : { type : 's' },
 				sign : { type : 's' },
