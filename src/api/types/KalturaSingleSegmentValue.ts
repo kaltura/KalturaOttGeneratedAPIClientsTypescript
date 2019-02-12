@@ -11,6 +11,7 @@ export interface KalturaSingleSegmentValueArgs  extends KalturaBaseSegmentValueA
 export class KalturaSingleSegmentValue extends KalturaBaseSegmentValue {
 
     readonly id : number;
+	readonly affectedUsers : number;
 
     constructor(data? : KalturaSingleSegmentValueArgs)
     {
@@ -24,7 +25,8 @@ export class KalturaSingleSegmentValue extends KalturaBaseSegmentValue {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSingleSegmentValue' },
-				id : { type : 'n', readOnly : true }
+				id : { type : 'n', readOnly : true },
+				affectedUsers : { type : 'n', readOnly : true }
             }
         );
         return result;
