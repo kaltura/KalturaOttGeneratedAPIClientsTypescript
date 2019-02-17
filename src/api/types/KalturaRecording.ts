@@ -8,6 +8,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaRecordingArgs  extends KalturaObjectBaseArgs {
     assetId? : number;
 	type? : KalturaRecordingType;
+	viewableUntilDate? : number;
 	isProtected? : boolean;
 }
 
@@ -18,7 +19,7 @@ export class KalturaRecording extends KalturaObjectBase {
 	readonly status : KalturaRecordingStatus;
 	assetId : number;
 	type : KalturaRecordingType;
-	readonly viewableUntilDate : number;
+	viewableUntilDate : number;
 	isProtected : boolean;
 	readonly createDate : number;
 	readonly updateDate : number;
@@ -39,7 +40,7 @@ export class KalturaRecording extends KalturaObjectBase {
 				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaRecordingStatus, subType : 'KalturaRecordingStatus' },
 				assetId : { type : 'n' },
 				type : { type : 'es', subTypeConstructor : KalturaRecordingType, subType : 'KalturaRecordingType' },
-				viewableUntilDate : { type : 'n', readOnly : true },
+				viewableUntilDate : { type : 'n' },
 				isProtected : { type : 'b' },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true }
