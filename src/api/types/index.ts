@@ -251,6 +251,7 @@ export { KalturaBlockPlaybackAction, KalturaBlockPlaybackActionArgs } from './Ka
 export { KalturaApplyPlaybackAdapterAction, KalturaApplyPlaybackAdapterActionArgs } from './KalturaApplyPlaybackAdapterAction'
 export { KalturaAssetUserRuleAction, KalturaAssetUserRuleActionArgs } from './KalturaAssetUserRuleAction'
 export { KalturaAssetUserRuleBlockAction, KalturaAssetUserRuleBlockActionArgs } from './KalturaAssetUserRuleBlockAction'
+export { KalturaAssetUserRuleFilterAction, KalturaAssetUserRuleFilterActionArgs } from './KalturaAssetUserRuleFilterAction'
 export { KalturaAssetRuleBase, KalturaAssetRuleBaseArgs } from './KalturaAssetRuleBase'
 export { KalturaAssetUserRule, KalturaAssetUserRuleArgs } from './KalturaAssetUserRule'
 export { KalturaAssetRule, KalturaAssetRuleArgs } from './KalturaAssetRule'
