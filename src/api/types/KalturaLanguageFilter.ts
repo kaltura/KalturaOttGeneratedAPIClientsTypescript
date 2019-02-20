@@ -5,12 +5,14 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaLanguageFilterArgs  extends KalturaFilterArgs {
     codeIn? : string;
+	excludePartner? : boolean;
 }
 
 
 export class KalturaLanguageFilter extends KalturaFilter {
 
     codeIn : string;
+	excludePartner : boolean;
 
     constructor(data? : KalturaLanguageFilterArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaLanguageFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaLanguageFilter' },
-				codeIn : { type : 's' }
+				codeIn : { type : 's' },
+				excludePartner : { type : 'b' }
             }
         );
         return result;
