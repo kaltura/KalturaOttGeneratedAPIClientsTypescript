@@ -1,8 +1,7 @@
 
 
-export enum KalturaBatchJobStatus {
+export enum KalturaBatchUploadJobStatus {
     aborted = 'ABORTED',
-	almostDone = 'ALMOST_DONE',
 	dontProcess = 'DONT_PROCESS',
 	failed = 'FAILED',
 	fatal = 'FATAL',
