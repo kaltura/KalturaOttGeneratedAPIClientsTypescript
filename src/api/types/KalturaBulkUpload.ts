@@ -1,8 +1,8 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaBatchUploadJobStatus } from './KalturaBatchUploadJobStatus';
-import { KalturaBatchUploadJobAction } from './KalturaBatchUploadJobAction';
+import { KalturaBulkUploadJobStatus } from './KalturaBulkUploadJobStatus';
+import { KalturaBulkUploadJobAction } from './KalturaBulkUploadJobAction';
 import { KalturaBulkUploadResult } from './KalturaBulkUploadResult';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
@@ -14,11 +14,12 @@ export interface KalturaBulkUploadArgs  extends KalturaObjectBaseArgs {
 export class KalturaBulkUpload extends KalturaObjectBase {
 
     readonly id : number;
-	readonly status : KalturaBatchUploadJobStatus;
+	readonly fileName : string;
+	readonly status : KalturaBulkUploadJobStatus;
+	readonly action : KalturaBulkUploadJobAction;
+	readonly numOfObjects : number;
 	readonly createDate : number;
 	readonly updateDate : number;
-	readonly uploadTokenId : string;
-	readonly action : KalturaBatchUploadJobAction;
 	readonly results : KalturaBulkUploadResult[];
 
     constructor(data? : KalturaBulkUploadArgs)
@@ -35,11 +36,12 @@ export class KalturaBulkUpload extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaBulkUpload' },
 				id : { type : 'n', readOnly : true },
-				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaBatchUploadJobStatus, subType : 'KalturaBatchUploadJobStatus' },
+				fileName : { type : 's', readOnly : true },
+				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaBulkUploadJobStatus, subType : 'KalturaBulkUploadJobStatus' },
+				action : { type : 'es', readOnly : true, subTypeConstructor : KalturaBulkUploadJobAction, subType : 'KalturaBulkUploadJobAction' },
+				numOfObjects : { type : 'n', readOnly : true },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
-				uploadTokenId : { type : 's', readOnly : true },
-				action : { type : 'es', readOnly : true, subTypeConstructor : KalturaBatchUploadJobAction, subType : 'KalturaBatchUploadJobAction' },
 				results : { type : 'a', readOnly : true, subTypeConstructor : KalturaBulkUploadResult, subType : 'KalturaBulkUploadResult' }
             }
         );

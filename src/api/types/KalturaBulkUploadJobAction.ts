@@ -1,6 +1,6 @@
 
 
-export enum KalturaBatchUploadJobAction {
+export enum KalturaBulkUploadJobAction {
     delete = 'Delete',
 	upsert = 'Upsert'
 }

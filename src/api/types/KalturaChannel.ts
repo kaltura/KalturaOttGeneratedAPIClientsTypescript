@@ -14,6 +14,7 @@ export interface KalturaChannelArgs  extends KalturaBaseChannelArgs {
 	isActive? : boolean;
 	orderBy? : KalturaChannelOrder;
 	supportSegmentBasedOrdering? : boolean;
+	assetUserRuleId? : number;
 }
 
 
@@ -31,6 +32,7 @@ export class KalturaChannel extends KalturaBaseChannel {
 	readonly createDate : number;
 	readonly updateDate : number;
 	supportSegmentBasedOrdering : boolean;
+	assetUserRuleId : number;
 
     constructor(data? : KalturaChannelArgs)
     {
@@ -57,7 +59,8 @@ export class KalturaChannel extends KalturaBaseChannel {
 				orderBy : { type : 'o', subTypeConstructor : KalturaChannelOrder, subType : 'KalturaChannelOrder' },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
-				supportSegmentBasedOrdering : { type : 'b' }
+				supportSegmentBasedOrdering : { type : 'b' },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;
