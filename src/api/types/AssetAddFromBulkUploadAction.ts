@@ -2,14 +2,14 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaBulkUpload } from './KalturaBulkUpload';
 
-import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaBulkUploadJobData } from './KalturaBulkUploadJobData';
+import { KalturaBulkUploadAssetData } from './KalturaBulkUploadAssetData';
 import { KalturaUploadRequest, KalturaUploadRequestArgs } from '../kaltura-upload-request';
 
 export interface AssetAddFromBulkUploadActionArgs  extends KalturaUploadRequestArgs {
     fileData : File;
-	assetType : KalturaAssetType;
 	bulkUploadJobData : KalturaBulkUploadJobData;
+	bulkUploadAssetData : KalturaBulkUploadAssetData;
 }
 
 /**
@@ -25,8 +25,8 @@ export interface AssetAddFromBulkUploadActionArgs  extends KalturaUploadRequestA
 export class AssetAddFromBulkUploadAction extends KalturaUploadRequest<KalturaBulkUpload> {
 
     fileData : File;
-	assetType : KalturaAssetType;
 	bulkUploadJobData : KalturaBulkUploadJobData;
+	bulkUploadAssetData : KalturaBulkUploadAssetData;
 
     constructor(data : AssetAddFromBulkUploadActionArgs)
     {
@@ -42,8 +42,8 @@ export class AssetAddFromBulkUploadAction extends KalturaUploadRequest<KalturaBu
                 service : { type : 'c', default : 'asset' },
 				action : { type : 'c', default : 'addFromBulkUpload' },
 				fileData : { type : 'f' },
-				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
-				bulkUploadJobData : { type : 'o', subTypeConstructor : KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData' }
+				bulkUploadJobData : { type : 'o', subTypeConstructor : KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData' },
+				bulkUploadAssetData : { type : 'o', subTypeConstructor : KalturaBulkUploadAssetData, subType : 'KalturaBulkUploadAssetData' }
             }
         );
         return result;

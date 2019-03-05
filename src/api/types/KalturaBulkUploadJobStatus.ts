@@ -1,7 +1,14 @@
 
 
 export enum KalturaBulkUploadJobStatus {
-    pending = 'PENDING',
-	queued = 'QUEUED',
-	uploaded = 'UPLOADED'
+    failed = 'Failed',
+	fatal = 'Fatal',
+	parsing = 'Parsing',
+	partial = 'Partial',
+	pending = 'Pending',
+	processed = 'Processed',
+	processing = 'Processing',
+	queued = 'Queued',
+	success = 'Success',
+	uploaded = 'Uploaded'
 }
