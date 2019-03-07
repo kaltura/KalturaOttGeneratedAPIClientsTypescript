@@ -11,6 +11,7 @@ export interface KalturaExternalChannelProfileArgs  extends KalturaObjectBaseArg
 	filterExpression? : string;
 	recommendationEngineId? : number;
 	enrichments? : KalturaChannelEnrichmentHolder[];
+	assetUserRuleId? : number;
 }
 
 
@@ -23,6 +24,7 @@ export class KalturaExternalChannelProfile extends KalturaObjectBase {
 	filterExpression : string;
 	recommendationEngineId : number;
 	enrichments : KalturaChannelEnrichmentHolder[];
+	assetUserRuleId : number;
 
     constructor(data? : KalturaExternalChannelProfileArgs)
     {
@@ -43,7 +45,8 @@ export class KalturaExternalChannelProfile extends KalturaObjectBase {
 				externalIdentifier : { type : 's' },
 				filterExpression : { type : 's' },
 				recommendationEngineId : { type : 'n' },
-				enrichments : { type : 'a', subTypeConstructor : KalturaChannelEnrichmentHolder, subType : 'KalturaChannelEnrichmentHolder' }
+				enrichments : { type : 'a', subTypeConstructor : KalturaChannelEnrichmentHolder, subType : 'KalturaChannelEnrichmentHolder' },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;

@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaBulkUploadListResponse } from './KalturaBulkUploadListResponse';
 
 import { KalturaBulkUploadFilter } from './KalturaBulkUploadFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface BulkUploadListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaBulkUploadFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,6 +24,7 @@ export interface BulkUploadListActionArgs  extends KalturaRequestArgs {
 export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListResponse> {
 
     filter : KalturaBulkUploadFilter;
+	pager : KalturaFilterPager;
 
     constructor(data? : BulkUploadListActionArgs)
     {
@@ -36,7 +39,8 @@ export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListRe
             {
                 service : { type : 'c', default : 'bulkupload' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaBulkUploadFilter, subType : 'KalturaBulkUploadFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaBulkUploadFilter, subType : 'KalturaBulkUploadFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

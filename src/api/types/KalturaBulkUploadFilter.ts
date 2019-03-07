@@ -1,17 +1,23 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaBulkUploadJobStatus } from './KalturaBulkUploadJobStatus';
-import { KalturaPersistedFilter, KalturaPersistedFilterArgs } from './KalturaPersistedFilter';
+import { KalturaDateComparisonType } from './KalturaDateComparisonType';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaBulkUploadFilterArgs  extends KalturaPersistedFilterArgs {
-    statusEqual? : KalturaBulkUploadJobStatus;
+export interface KalturaBulkUploadFilterArgs  extends KalturaFilterArgs {
+    uploadedOnEqual? : number;
+	dateComparisonType? : KalturaDateComparisonType;
+	statusIn? : string;
+	userIdEqualCurrent? : boolean;
 }
 
 
-export class KalturaBulkUploadFilter extends KalturaPersistedFilter {
+export class KalturaBulkUploadFilter extends KalturaFilter {
 
-    statusEqual : KalturaBulkUploadJobStatus;
+    uploadedOnEqual : number;
+	dateComparisonType : KalturaDateComparisonType;
+	statusIn : string;
+	userIdEqualCurrent : boolean;
 
     constructor(data? : KalturaBulkUploadFilterArgs)
     {
@@ -25,7 +31,10 @@ export class KalturaBulkUploadFilter extends KalturaPersistedFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBulkUploadFilter' },
-				statusEqual : { type : 'es', subTypeConstructor : KalturaBulkUploadJobStatus, subType : 'KalturaBulkUploadJobStatus' }
+				uploadedOnEqual : { type : 'n' },
+				dateComparisonType : { type : 'es', subTypeConstructor : KalturaDateComparisonType, subType : 'KalturaDateComparisonType' },
+				statusIn : { type : 's' },
+				userIdEqualCurrent : { type : 'b' }
             }
         );
         return result;
