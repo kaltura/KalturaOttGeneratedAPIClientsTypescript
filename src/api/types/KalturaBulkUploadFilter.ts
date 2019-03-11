@@ -1,23 +1,22 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDateComparisonType } from './KalturaDateComparisonType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaBulkUploadFilterArgs  extends KalturaFilterArgs {
-    uploadedOnEqual? : number;
-	dateComparisonType? : KalturaDateComparisonType;
-	statusIn? : string;
+    fileObjectNameEqual? : string;
+	createDateGreaterThanOrEqual? : number;
 	userIdEqualCurrent? : boolean;
+	shouldGetOnGoingBulkUploads? : boolean;
 }
 
 
 export class KalturaBulkUploadFilter extends KalturaFilter {
 
-    uploadedOnEqual : number;
-	dateComparisonType : KalturaDateComparisonType;
-	statusIn : string;
+    fileObjectNameEqual : string;
+	createDateGreaterThanOrEqual : number;
 	userIdEqualCurrent : boolean;
+	shouldGetOnGoingBulkUploads : boolean;
 
     constructor(data? : KalturaBulkUploadFilterArgs)
     {
@@ -31,10 +30,10 @@ export class KalturaBulkUploadFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBulkUploadFilter' },
-				uploadedOnEqual : { type : 'n' },
-				dateComparisonType : { type : 'es', subTypeConstructor : KalturaDateComparisonType, subType : 'KalturaDateComparisonType' },
-				statusIn : { type : 's' },
-				userIdEqualCurrent : { type : 'b' }
+				fileObjectNameEqual : { type : 's' },
+				createDateGreaterThanOrEqual : { type : 'n' },
+				userIdEqualCurrent : { type : 'b' },
+				shouldGetOnGoingBulkUploads : { type : 'b' }
             }
         );
         return result;

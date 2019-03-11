@@ -2,5 +2,6 @@
 
 export enum KalturaBulkUploadOrderBy {
     none = 'NONE',
-	updateDate = 'UPDATE_DATE'
+	updateDateAsc = 'UPDATE_DATE_ASC',
+	updateDateDesc = 'UPDATE_DATE_DESC'
 }

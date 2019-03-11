@@ -7,7 +7,7 @@ import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface BulkUploadListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaBulkUploadFilter;
+    filter : KalturaBulkUploadFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -26,7 +26,7 @@ export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListRe
     filter : KalturaBulkUploadFilter;
 	pager : KalturaFilterPager;
 
-    constructor(data? : BulkUploadListActionArgs)
+    constructor(data : BulkUploadListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaBulkUploadListResponse', responseConstructor : KalturaBulkUploadListResponse  });
     }

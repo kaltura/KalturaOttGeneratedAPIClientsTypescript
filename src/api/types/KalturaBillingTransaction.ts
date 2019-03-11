@@ -31,6 +31,7 @@ export class KalturaBillingTransaction extends KalturaObjectBase {
 	readonly purchaseId : number;
 	readonly remarks : string;
 	readonly billingPriceType : KalturaBillingPriceType;
+	readonly externalTransactionId : string;
 
     constructor(data? : KalturaBillingTransactionArgs)
     {
@@ -59,7 +60,8 @@ export class KalturaBillingTransaction extends KalturaObjectBase {
 				billingProviderRef : { type : 'n', readOnly : true },
 				purchaseId : { type : 'n', readOnly : true },
 				remarks : { type : 's', readOnly : true },
-				billingPriceType : { type : 'es', readOnly : true, subTypeConstructor : KalturaBillingPriceType, subType : 'KalturaBillingPriceType' }
+				billingPriceType : { type : 'es', readOnly : true, subTypeConstructor : KalturaBillingPriceType, subType : 'KalturaBillingPriceType' },
+				externalTransactionId : { type : 's', readOnly : true }
             }
         );
         return result;
