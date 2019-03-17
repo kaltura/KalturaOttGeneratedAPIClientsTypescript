@@ -16,8 +16,7 @@ export class KalturaBulkUploadResult extends KalturaObjectBase {
 	readonly index : number;
 	readonly bulkUploadId : number;
 	readonly status : KalturaBulkUploadResultStatus;
-	readonly errorCode : number;
-	readonly errorMessage : string;
+	readonly error : KalturaMessage;
 	readonly warnings : KalturaMessage[];
 
     constructor(data? : KalturaBulkUploadResultArgs)
@@ -37,8 +36,7 @@ export class KalturaBulkUploadResult extends KalturaObjectBase {
 				index : { type : 'n', readOnly : true },
 				bulkUploadId : { type : 'n', readOnly : true },
 				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaBulkUploadResultStatus, subType : 'KalturaBulkUploadResultStatus' },
-				errorCode : { type : 'n', readOnly : true },
-				errorMessage : { type : 's', readOnly : true },
+				error : { type : 'o', readOnly : true, subTypeConstructor : KalturaMessage, subType : 'KalturaMessage' },
 				warnings : { type : 'a', readOnly : true, subTypeConstructor : KalturaMessage, subType : 'KalturaMessage' }
             }
         );

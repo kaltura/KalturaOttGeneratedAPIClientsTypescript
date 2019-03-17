@@ -4,7 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaBulkUploadFilterArgs  extends KalturaFilterArgs {
-    bulkObjectNameEqual? : string;
+    bulkObjectTypeEqual? : string;
 	createDateGreaterThanOrEqual? : number;
 	uploadedByUserIdEqualCurrent? : boolean;
 	statusIn? : string;
@@ -13,7 +13,7 @@ export interface KalturaBulkUploadFilterArgs  extends KalturaFilterArgs {
 
 export class KalturaBulkUploadFilter extends KalturaFilter {
 
-    bulkObjectNameEqual : string;
+    bulkObjectTypeEqual : string;
 	createDateGreaterThanOrEqual : number;
 	uploadedByUserIdEqualCurrent : boolean;
 	statusIn : string;
@@ -30,7 +30,7 @@ export class KalturaBulkUploadFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBulkUploadFilter' },
-				bulkObjectNameEqual : { type : 's' },
+				bulkObjectTypeEqual : { type : 's' },
 				createDateGreaterThanOrEqual : { type : 'n' },
 				uploadedByUserIdEqualCurrent : { type : 'b' },
 				statusIn : { type : 's' }
