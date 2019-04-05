@@ -419,7 +419,7 @@ export { KalturaBulkUploadIngestJobData, KalturaBulkUploadIngestJobDataArgs } fr
 export { KalturaBulkUploadObjectData, KalturaBulkUploadObjectDataArgs } from './KalturaBulkUploadObjectData'
 export { KalturaBulkUploadAssetData, KalturaBulkUploadAssetDataArgs } from './KalturaBulkUploadAssetData'
 export { KalturaBulkUploadMediaAssetData, KalturaBulkUploadMediaAssetDataArgs } from './KalturaBulkUploadMediaAssetData'
-export { KalturaBulkUploadEpgAssetData, KalturaBulkUploadEpgAssetDataArgs } from './KalturaBulkUploadEpgAssetData'
+export { KalturaBulkUploadProgramAssetData, KalturaBulkUploadProgramAssetDataArgs } from './KalturaBulkUploadProgramAssetData'
 export { KalturaAssetFileContext, KalturaAssetFileContextArgs } from './KalturaAssetFileContext'
 export { KalturaAssetStatisticsQuery, KalturaAssetStatisticsQueryArgs } from './KalturaAssetStatisticsQuery'
 export { KalturaUploadToken, KalturaUploadTokenArgs } from './KalturaUploadToken'
