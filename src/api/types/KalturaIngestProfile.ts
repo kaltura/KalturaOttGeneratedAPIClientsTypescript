@@ -2,6 +2,8 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaStringValue } from './KalturaStringValue';
+import { KalturaIngestProfileAutofillPolicy } from './KalturaIngestProfileAutofillPolicy';
+import { KalturaIngestProfileOverlapPolicy } from './KalturaIngestProfileOverlapPolicy';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaIngestProfileArgs  extends KalturaObjectBaseArgs {
@@ -11,8 +13,8 @@ export interface KalturaIngestProfileArgs  extends KalturaObjectBaseArgs {
 	transformationAdapterUrl? : string;
 	transformationAdapterSettings? : { [key : string] : KalturaStringValue};
 	transformationAdapterSharedSecret? : string;
-	defaultAutoFillPolicy? : number;
-	defaultOverlapPolicy? : number;
+	defaultAutoFillPolicy? : KalturaIngestProfileAutofillPolicy;
+	defaultOverlapPolicy? : KalturaIngestProfileOverlapPolicy;
 }
 
 
@@ -25,8 +27,8 @@ export class KalturaIngestProfile extends KalturaObjectBase {
 	transformationAdapterUrl : string;
 	transformationAdapterSettings : { [key : string] : KalturaStringValue};
 	transformationAdapterSharedSecret : string;
-	defaultAutoFillPolicy : number;
-	defaultOverlapPolicy : number;
+	defaultAutoFillPolicy : KalturaIngestProfileAutofillPolicy;
+	defaultOverlapPolicy : KalturaIngestProfileOverlapPolicy;
 
     constructor(data? : KalturaIngestProfileArgs)
     {
@@ -47,8 +49,8 @@ export class KalturaIngestProfile extends KalturaObjectBase {
 				transformationAdapterUrl : { type : 's' },
 				transformationAdapterSettings : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				transformationAdapterSharedSecret : { type : 's' },
-				defaultAutoFillPolicy : { type : 'n' },
-				defaultOverlapPolicy : { type : 'n' }
+				defaultAutoFillPolicy : { type : 'es', subTypeConstructor : KalturaIngestProfileAutofillPolicy, subType : 'KalturaIngestProfileAutofillPolicy' },
+				defaultOverlapPolicy : { type : 'es', subTypeConstructor : KalturaIngestProfileOverlapPolicy, subType : 'KalturaIngestProfileOverlapPolicy' }
             }
         );
         return result;
