@@ -5,17 +5,19 @@ export interface Environment {
         fileFormatValue: number
     }
     response: {
-        nestedResponse: boolean
+        nestedResponse: boolean,
+        customErrorInHttp500: boolean
     };
 }
 
 export const environment: Environment = {
     request: {
-        apiVersion: '5.2.0.17383',
+        apiVersion: '5.2.0.16296',
         avoidQueryString: true,
         fileFormatValue: 20
     },
     response: {
-        nestedResponse: true
+        nestedResponse: true,
+        customErrorInHttp500: true
     }
 }
