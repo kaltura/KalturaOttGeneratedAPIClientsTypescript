@@ -5,12 +5,14 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaPermissionFilterArgs  extends KalturaFilterArgs {
     currentUserPermissionsContains? : boolean;
+	roleIdIn? : number;
 }
 
 
 export class KalturaPermissionFilter extends KalturaFilter {
 
     currentUserPermissionsContains : boolean;
+	roleIdIn : number;
 
     constructor(data? : KalturaPermissionFilterArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaPermissionFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaPermissionFilter' },
-				currentUserPermissionsContains : { type : 'b' }
+				currentUserPermissionsContains : { type : 'b' },
+				roleIdIn : { type : 'n' }
             }
         );
         return result;
