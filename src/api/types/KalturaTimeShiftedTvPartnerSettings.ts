@@ -27,6 +27,7 @@ export interface KalturaTimeShiftedTvPartnerSettingsArgs  extends KalturaObjectB
 	quotaOveragePolicy? : KalturaQuotaOveragePolicy;
 	protectionPolicy? : KalturaProtectionPolicy;
 	recoveryGracePeriod? : number;
+	privateCopyEnabled? : boolean;
 }
 
 
@@ -53,6 +54,7 @@ export class KalturaTimeShiftedTvPartnerSettings extends KalturaObjectBase {
 	quotaOveragePolicy : KalturaQuotaOveragePolicy;
 	protectionPolicy : KalturaProtectionPolicy;
 	recoveryGracePeriod : number;
+	privateCopyEnabled : boolean;
 
     constructor(data? : KalturaTimeShiftedTvPartnerSettingsArgs)
     {
@@ -86,7 +88,8 @@ export class KalturaTimeShiftedTvPartnerSettings extends KalturaObjectBase {
 				nonExistingChannelPlaybackEnabled : { type : 'b' },
 				quotaOveragePolicy : { type : 'es', subTypeConstructor : KalturaQuotaOveragePolicy, subType : 'KalturaQuotaOveragePolicy' },
 				protectionPolicy : { type : 'es', subTypeConstructor : KalturaProtectionPolicy, subType : 'KalturaProtectionPolicy' },
-				recoveryGracePeriod : { type : 'n' }
+				recoveryGracePeriod : { type : 'n' },
+				privateCopyEnabled : { type : 'b' }
             }
         );
         return result;
