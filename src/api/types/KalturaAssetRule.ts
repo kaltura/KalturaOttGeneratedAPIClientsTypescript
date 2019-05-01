@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaCondition } from './KalturaCondition';
 import { KalturaAssetRuleAction } from './KalturaAssetRuleAction';
+import { KalturaAssetRuleStatus } from './KalturaAssetRuleStatus';
 import { KalturaAssetRuleBase, KalturaAssetRuleBaseArgs } from './KalturaAssetRuleBase';
 
 export interface KalturaAssetRuleArgs  extends KalturaAssetRuleBaseArgs {
@@ -15,6 +16,7 @@ export class KalturaAssetRule extends KalturaAssetRuleBase {
 
     conditions : KalturaCondition[];
 	actions : KalturaAssetRuleAction[];
+	readonly status : KalturaAssetRuleStatus;
 
     constructor(data? : KalturaAssetRuleArgs)
     {
@@ -31,7 +33,8 @@ export class KalturaAssetRule extends KalturaAssetRuleBase {
             {
                 objectType : { type : 'c', default : 'KalturaAssetRule' },
 				conditions : { type : 'a', subTypeConstructor : KalturaCondition, subType : 'KalturaCondition' },
-				actions : { type : 'a', subTypeConstructor : KalturaAssetRuleAction, subType : 'KalturaAssetRuleAction' }
+				actions : { type : 'a', subTypeConstructor : KalturaAssetRuleAction, subType : 'KalturaAssetRuleAction' },
+				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaAssetRuleStatus, subType : 'KalturaAssetRuleStatus' }
             }
         );
         return result;
