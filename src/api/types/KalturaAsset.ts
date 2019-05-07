@@ -6,6 +6,7 @@ import { KalturaMediaImage } from './KalturaMediaImage';
 import { KalturaMediaFile } from './KalturaMediaFile';
 import { KalturaValue } from './KalturaValue';
 import { KalturaMultilingualStringValueArray } from './KalturaMultilingualStringValueArray';
+import { KalturaRelatedEntityArray } from './KalturaRelatedEntityArray';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
@@ -14,6 +15,7 @@ export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
 	multilingualDescription? : KalturaTranslationToken[];
 	metas? : { [key : string] : KalturaValue};
 	tags? : { [key : string] : KalturaMultilingualStringValueArray};
+	relatedEntities? : { [key : string] : KalturaRelatedEntityArray};
 	startDate? : number;
 	endDate? : number;
 	externalId? : string;
@@ -32,6 +34,7 @@ export class KalturaAsset extends KalturaObjectBase {
 	readonly mediaFiles : KalturaMediaFile[];
 	metas : { [key : string] : KalturaValue};
 	tags : { [key : string] : KalturaMultilingualStringValueArray};
+	relatedEntities : { [key : string] : KalturaRelatedEntityArray};
 	startDate : number;
 	endDate : number;
 	readonly createDate : number;
@@ -64,6 +67,7 @@ export class KalturaAsset extends KalturaObjectBase {
 				mediaFiles : { type : 'a', readOnly : true, subTypeConstructor : KalturaMediaFile, subType : 'KalturaMediaFile' },
 				metas : { type : 'm', subTypeConstructor : KalturaValue, subType : 'KalturaValue' },
 				tags : { type : 'm', subTypeConstructor : KalturaMultilingualStringValueArray, subType : 'KalturaMultilingualStringValueArray' },
+				relatedEntities : { type : 'm', subTypeConstructor : KalturaRelatedEntityArray, subType : 'KalturaRelatedEntityArray' },
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
 				createDate : { type : 'n', readOnly : true },
