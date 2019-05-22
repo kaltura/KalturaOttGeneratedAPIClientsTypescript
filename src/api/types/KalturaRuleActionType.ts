@@ -4,6 +4,7 @@ export enum KalturaRuleActionType {
     allowPlayback = 'ALLOW_PLAYBACK',
 	applyDiscountModule = 'APPLY_DISCOUNT_MODULE',
 	applyPlaybackAdapter = 'APPLY_PLAYBACK_ADAPTER',
+	assetLifeCycleTransition = 'ASSET_LIFE_CYCLE_TRANSITION',
 	block = 'BLOCK',
 	blockPlayback = 'BLOCK_PLAYBACK',
 	endDateOffset = 'END_DATE_OFFSET',
