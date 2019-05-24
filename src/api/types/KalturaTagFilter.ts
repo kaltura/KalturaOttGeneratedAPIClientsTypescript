@@ -8,6 +8,7 @@ export interface KalturaTagFilterArgs  extends KalturaFilterArgs {
 	tagStartsWith? : string;
 	typeEqual? : number;
 	languageEqual? : string;
+	idIn? : string;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaTagFilter extends KalturaFilter {
 	tagStartsWith : string;
 	typeEqual : number;
 	languageEqual : string;
+	idIn : string;
 
     constructor(data? : KalturaTagFilterArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaTagFilter extends KalturaFilter {
 				tagEqual : { type : 's' },
 				tagStartsWith : { type : 's' },
 				typeEqual : { type : 'n' },
-				languageEqual : { type : 's' }
+				languageEqual : { type : 's' },
+				idIn : { type : 's' }
             }
         );
         return result;
