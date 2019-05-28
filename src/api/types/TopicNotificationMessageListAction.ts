@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTopicNotificationMessageListResponse } from './KalturaTopicNotificationMessageListResponse';
 
 import { KalturaTopicNotificationMessageFilter } from './KalturaTopicNotificationMessageFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface TopicNotificationMessageListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaTopicNotificationMessageFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,6 +24,7 @@ export interface TopicNotificationMessageListActionArgs  extends KalturaRequestA
 export class TopicNotificationMessageListAction extends KalturaRequest<KalturaTopicNotificationMessageListResponse> {
 
     filter : KalturaTopicNotificationMessageFilter;
+	pager : KalturaFilterPager;
 
     constructor(data? : TopicNotificationMessageListActionArgs)
     {
@@ -36,7 +39,8 @@ export class TopicNotificationMessageListAction extends KalturaRequest<KalturaTo
             {
                 service : { type : 'c', default : 'topicnotificationmessage' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaTopicNotificationMessageFilter, subType : 'KalturaTopicNotificationMessageFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaTopicNotificationMessageFilter, subType : 'KalturaTopicNotificationMessageFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;
