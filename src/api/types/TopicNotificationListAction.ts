@@ -6,7 +6,7 @@ import { KalturaTopicNotificationFilter } from './KalturaTopicNotificationFilter
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface TopicNotificationListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaTopicNotificationFilter;
+    filter : KalturaTopicNotificationFilter;
 }
 
 /**
@@ -23,7 +23,7 @@ export class TopicNotificationListAction extends KalturaRequest<KalturaTopicNoti
 
     filter : KalturaTopicNotificationFilter;
 
-    constructor(data? : TopicNotificationListActionArgs)
+    constructor(data : TopicNotificationListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaTopicNotificationListResponse', responseConstructor : KalturaTopicNotificationListResponse  });
     }
