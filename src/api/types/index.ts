@@ -393,7 +393,7 @@ export { KalturaReportFilter, KalturaReportFilterArgs } from './KalturaReportFil
 export { KalturaDeviceReportFilter, KalturaDeviceReportFilterArgs } from './KalturaDeviceReportFilter'
 export { KalturaHouseholdDeviceFilter, KalturaHouseholdDeviceFilterArgs } from './KalturaHouseholdDeviceFilter'
 export { KalturaHouseholdUserFilter, KalturaHouseholdUserFilterArgs } from './KalturaHouseholdUserFilter'
-export { KalturaHouseoldCouponCodeFilter, KalturaHouseoldCouponCodeFilterArgs } from './KalturaHouseoldCouponCodeFilter'
+export { KalturaHouseholdCouponCodeFilter, KalturaHouseholdCouponCodeFilterArgs } from './KalturaHouseholdCouponCodeFilter'
 export { KalturaConfigurationGroupDeviceFilter, KalturaConfigurationGroupDeviceFilterArgs } from './KalturaConfigurationGroupDeviceFilter'
 export { KalturaConfigurationGroupTagFilter, KalturaConfigurationGroupTagFilterArgs } from './KalturaConfigurationGroupTagFilter'
 export { KalturaConfigurationsFilter, KalturaConfigurationsFilterArgs } from './KalturaConfigurationsFilter'

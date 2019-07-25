@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaRelatedObjectFilter, KalturaRelatedObjectFilterArgs } from './KalturaRelatedObjectFilter';
 
-export interface KalturaHouseoldCouponCodeFilterArgs  extends KalturaRelatedObjectFilterArgs {
+export interface KalturaHouseholdCouponCodeFilterArgs  extends KalturaRelatedObjectFilterArgs {
     
 }
 
 
-export class KalturaHouseoldCouponCodeFilter extends KalturaRelatedObjectFilter {
+export class KalturaHouseholdCouponCodeFilter extends KalturaRelatedObjectFilter {
 
     
 
-    constructor(data? : KalturaHouseoldCouponCodeFilterArgs)
+    constructor(data? : KalturaHouseholdCouponCodeFilterArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaHouseoldCouponCodeFilter extends KalturaRelatedObjectFilter 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaHouseoldCouponCodeFilter' }
+                objectType : { type : 'c', default : 'KalturaHouseholdCouponCodeFilter' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaHouseoldCouponCodeFilter',KalturaHouseoldCouponCodeFilter);
+KalturaTypesFactory.registerType('KalturaHouseholdCouponCodeFilter',KalturaHouseholdCouponCodeFilter);
