@@ -1,16 +1,17 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaExternalRecordingFilter, KalturaExternalRecordingFilterArgs } from './KalturaExternalRecordingFilter';
 
 export interface KalturaCloudRecordingFilterArgs  extends KalturaExternalRecordingFilterArgs {
-    adapterData? : string;
+    adapterData? : { [key : string] : KalturaStringValue};
 }
 
 
 export class KalturaCloudRecordingFilter extends KalturaExternalRecordingFilter {
 
-    adapterData : string;
+    adapterData : { [key : string] : KalturaStringValue};
 
     constructor(data? : KalturaCloudRecordingFilterArgs)
     {
@@ -24,7 +25,7 @@ export class KalturaCloudRecordingFilter extends KalturaExternalRecordingFilter 
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCloudRecordingFilter' },
-				adapterData : { type : 's' }
+				adapterData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
