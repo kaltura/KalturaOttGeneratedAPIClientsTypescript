@@ -15,7 +15,6 @@ export interface KalturaIngestProfileArgs  extends KalturaObjectBaseArgs {
 	transformationAdapterSharedSecret? : string;
 	defaultAutoFillPolicy? : KalturaIngestProfileAutofillPolicy;
 	defaultOverlapPolicy? : KalturaIngestProfileOverlapPolicy;
-	overlapChannels? : string;
 }
 
 
@@ -30,7 +29,6 @@ export class KalturaIngestProfile extends KalturaObjectBase {
 	transformationAdapterSharedSecret : string;
 	defaultAutoFillPolicy : KalturaIngestProfileAutofillPolicy;
 	defaultOverlapPolicy : KalturaIngestProfileOverlapPolicy;
-	overlapChannels : string;
 
     constructor(data? : KalturaIngestProfileArgs)
     {
@@ -52,8 +50,7 @@ export class KalturaIngestProfile extends KalturaObjectBase {
 				transformationAdapterSettings : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				transformationAdapterSharedSecret : { type : 's' },
 				defaultAutoFillPolicy : { type : 'es', subTypeConstructor : KalturaIngestProfileAutofillPolicy, subType : 'KalturaIngestProfileAutofillPolicy' },
-				defaultOverlapPolicy : { type : 'es', subTypeConstructor : KalturaIngestProfileOverlapPolicy, subType : 'KalturaIngestProfileOverlapPolicy' },
-				overlapChannels : { type : 's' }
+				defaultOverlapPolicy : { type : 'es', subTypeConstructor : KalturaIngestProfileOverlapPolicy, subType : 'KalturaIngestProfileOverlapPolicy' }
             }
         );
         return result;
