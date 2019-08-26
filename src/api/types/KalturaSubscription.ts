@@ -44,7 +44,6 @@ export interface KalturaSubscriptionArgs  extends KalturaObjectBaseArgs {
 	dependencyType? : KalturaSubscriptionDependencyType;
 	externalId? : string;
 	isCancellationBlocked? : boolean;
-	preSaleDate? : number;
 }
 
 
@@ -81,7 +80,6 @@ export class KalturaSubscription extends KalturaObjectBase {
 	dependencyType : KalturaSubscriptionDependencyType;
 	externalId : string;
 	isCancellationBlocked : boolean;
-	preSaleDate : number;
 
     constructor(data? : KalturaSubscriptionArgs)
     {
@@ -133,8 +131,7 @@ export class KalturaSubscription extends KalturaObjectBase {
 				productCodes : { type : 'a', subTypeConstructor : KalturaProductCode, subType : 'KalturaProductCode' },
 				dependencyType : { type : 'es', subTypeConstructor : KalturaSubscriptionDependencyType, subType : 'KalturaSubscriptionDependencyType' },
 				externalId : { type : 's' },
-				isCancellationBlocked : { type : 'b' },
-				preSaleDate : { type : 'n' }
+				isCancellationBlocked : { type : 'b' }
             }
         );
         return result;
