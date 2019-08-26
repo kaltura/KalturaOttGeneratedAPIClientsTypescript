@@ -7,7 +7,6 @@ import { KalturaMediaFile } from './KalturaMediaFile';
 import { KalturaValue } from './KalturaValue';
 import { KalturaMultilingualStringValueArray } from './KalturaMultilingualStringValueArray';
 import { KalturaRelatedEntityArray } from './KalturaRelatedEntityArray';
-import { KalturaAssetIndexStatus } from './KalturaAssetIndexStatus';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAssetArgs  extends KalturaObjectBaseArgs {
@@ -41,7 +40,6 @@ export class KalturaAsset extends KalturaObjectBase {
 	readonly createDate : number;
 	readonly updateDate : number;
 	externalId : string;
-	readonly indexStatus : KalturaAssetIndexStatus;
 
     constructor(data? : KalturaAssetArgs)
     {
@@ -74,8 +72,7 @@ export class KalturaAsset extends KalturaObjectBase {
 				endDate : { type : 'n' },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
-				externalId : { type : 's' },
-				indexStatus : { type : 'es', readOnly : true, subTypeConstructor : KalturaAssetIndexStatus, subType : 'KalturaAssetIndexStatus' }
+				externalId : { type : 's' }
             }
         );
         return result;
