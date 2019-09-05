@@ -6,7 +6,7 @@ import { KalturaCrudFilter, KalturaCrudFilterArgs } from './KalturaCrudFilter';
 export interface KalturaEventNotificationFilterArgs  extends KalturaCrudFilterArgs {
     idEqual? : string;
 	objectIdEqual? : number;
-	objectTypeEqual? : string;
+	eventObjectTypeEqual? : string;
 }
 
 
@@ -14,7 +14,7 @@ export class KalturaEventNotificationFilter extends KalturaCrudFilter {
 
     idEqual : string;
 	objectIdEqual : number;
-	objectTypeEqual : string;
+	eventObjectTypeEqual : string;
 
     constructor(data? : KalturaEventNotificationFilterArgs)
     {
@@ -30,7 +30,7 @@ export class KalturaEventNotificationFilter extends KalturaCrudFilter {
                 objectType : { type : 'c', default : 'KalturaEventNotificationFilter' },
 				idEqual : { type : 's' },
 				objectIdEqual : { type : 'n' },
-				objectTypeEqual : { type : 's' }
+				eventObjectTypeEqual : { type : 's' }
             }
         );
         return result;
