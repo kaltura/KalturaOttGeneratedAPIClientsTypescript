@@ -5,12 +5,18 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaRegionFilterArgs  extends KalturaFilterArgs {
     externalIdIn? : string;
+	idIn? : string;
+	parentIdEqual? : number;
+	liveAssetIdEqual? : number;
 }
 
 
 export class KalturaRegionFilter extends KalturaFilter {
 
     externalIdIn : string;
+	idIn : string;
+	parentIdEqual : number;
+	liveAssetIdEqual : number;
 
     constructor(data? : KalturaRegionFilterArgs)
     {
@@ -24,7 +30,10 @@ export class KalturaRegionFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaRegionFilter' },
-				externalIdIn : { type : 's' }
+				externalIdIn : { type : 's' },
+				idIn : { type : 's' },
+				parentIdEqual : { type : 'n' },
+				liveAssetIdEqual : { type : 'n' }
             }
         );
         return result;
