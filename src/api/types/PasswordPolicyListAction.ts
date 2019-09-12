@@ -6,7 +6,7 @@ import { KalturaPasswordPolicyFilter } from './KalturaPasswordPolicyFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface PasswordPolicyListActionArgs  extends KalturaRequestArgs {
-    filter : KalturaPasswordPolicyFilter;
+    filter? : KalturaPasswordPolicyFilter;
 }
 
 /**
@@ -23,7 +23,7 @@ export class PasswordPolicyListAction extends KalturaRequest<KalturaPasswordPoli
 
     filter : KalturaPasswordPolicyFilter;
 
-    constructor(data : PasswordPolicyListActionArgs)
+    constructor(data? : PasswordPolicyListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaPasswordPolicyListResponse', responseConstructor : KalturaPasswordPolicyListResponse  });
     }
