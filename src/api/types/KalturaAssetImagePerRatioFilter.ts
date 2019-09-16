@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaRelatedObjectFilter, KalturaRelatedObjectFilterArgs } from './KalturaRelatedObjectFilter';
 
-export interface KalturaAssetFirstImagePerRatioFilterArgs  extends KalturaRelatedObjectFilterArgs {
+export interface KalturaAssetImagePerRatioFilterArgs  extends KalturaRelatedObjectFilterArgs {
     
 }
 
 
-export class KalturaAssetFirstImagePerRatioFilter extends KalturaRelatedObjectFilter {
+export class KalturaAssetImagePerRatioFilter extends KalturaRelatedObjectFilter {
 
     
 
-    constructor(data? : KalturaAssetFirstImagePerRatioFilterArgs)
+    constructor(data? : KalturaAssetImagePerRatioFilterArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaAssetFirstImagePerRatioFilter extends KalturaRelatedObjectFi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaAssetFirstImagePerRatioFilter' }
+                objectType : { type : 'c', default : 'KalturaAssetImagePerRatioFilter' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaAssetFirstImagePerRatioFilter',KalturaAssetFirstImagePerRatioFilter);
+KalturaTypesFactory.registerType('KalturaAssetImagePerRatioFilter',KalturaAssetImagePerRatioFilter);
