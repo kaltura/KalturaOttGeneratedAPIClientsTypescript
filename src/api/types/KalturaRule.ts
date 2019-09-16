@@ -1,16 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaRuleArgs  extends KalturaObjectBaseArgs {
+export interface KalturaRuleArgs  extends KalturaOTTObjectSupportNullableArgs {
     name? : string;
 	description? : string;
 	label? : string;
 }
 
 
-export class KalturaRule extends KalturaObjectBase {
+export class KalturaRule extends KalturaOTTObjectSupportNullable {
 
     readonly id : number;
 	name : string;
