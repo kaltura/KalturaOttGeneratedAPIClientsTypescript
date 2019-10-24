@@ -1,7 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaRegex } from './KalturaRegex';
+import { KalturaRegexExpression } from './KalturaRegexExpression';
 import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
 export interface KalturaPasswordPolicyArgs  extends KalturaCrudObjectArgs {
@@ -9,7 +9,7 @@ export interface KalturaPasswordPolicyArgs  extends KalturaCrudObjectArgs {
 	userRoleIds? : string;
 	historyCount? : number;
 	expiration? : number;
-	complexities? : KalturaRegex[];
+	complexities? : KalturaRegexExpression[];
 	lockoutFailuresCount? : number;
 }
 
@@ -21,7 +21,7 @@ export class KalturaPasswordPolicy extends KalturaCrudObject {
 	userRoleIds : string;
 	historyCount : number;
 	expiration : number;
-	complexities : KalturaRegex[];
+	complexities : KalturaRegexExpression[];
 	lockoutFailuresCount : number;
 
     constructor(data? : KalturaPasswordPolicyArgs)
@@ -42,7 +42,7 @@ export class KalturaPasswordPolicy extends KalturaCrudObject {
 				userRoleIds : { type : 's' },
 				historyCount : { type : 'n' },
 				expiration : { type : 'n' },
-				complexities : { type : 'a', subTypeConstructor : KalturaRegex, subType : 'KalturaRegex' },
+				complexities : { type : 'a', subTypeConstructor : KalturaRegexExpression, subType : 'KalturaRegexExpression' },
 				lockoutFailuresCount : { type : 'n' }
             }
         );

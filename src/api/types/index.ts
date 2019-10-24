@@ -472,7 +472,7 @@ export { KalturaEmailMessage, KalturaEmailMessageArgs } from './KalturaEmailMess
 export { KalturaEntitlementRenewal, KalturaEntitlementRenewalArgs } from './KalturaEntitlementRenewal'
 export { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject'
 export { KalturaEventNotification, KalturaEventNotificationArgs } from './KalturaEventNotification'
-export { KalturaRegex, KalturaRegexArgs } from './KalturaRegex'
+export { KalturaRegexExpression, KalturaRegexExpressionArgs } from './KalturaRegexExpression'
 export { KalturaPasswordPolicy, KalturaPasswordPolicyArgs } from './KalturaPasswordPolicy'
 export { KalturaHouseholdCoupon, KalturaHouseholdCouponArgs } from './KalturaHouseholdCoupon'
 export { KalturaEventNotificationListResponse, KalturaEventNotificationListResponseArgs } from './KalturaEventNotificationListResponse'
