@@ -5,12 +5,14 @@ import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
 export interface KalturaHouseholdCouponArgs  extends KalturaCrudObjectArgs {
     code? : string;
+	lastUsageDate? : number;
 }
 
 
 export class KalturaHouseholdCoupon extends KalturaCrudObject {
 
     code : string;
+	lastUsageDate : number;
 
     constructor(data? : KalturaHouseholdCouponArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaHouseholdCoupon extends KalturaCrudObject {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaHouseholdCoupon' },
-				code : { type : 's' }
+				code : { type : 's' },
+				lastUsageDate : { type : 'n' }
             }
         );
         return result;

@@ -3,18 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaRegexArgs  extends KalturaObjectBaseArgs {
-    expression? : string;
-	description? : string;
+export interface KalturaEventNotificationScopeArgs  extends KalturaObjectBaseArgs {
+    
 }
 
 
-export class KalturaRegex extends KalturaObjectBase {
+export class KalturaEventNotificationScope extends KalturaObjectBase {
 
-    expression : string;
-	description : string;
+    
 
-    constructor(data? : KalturaRegexArgs)
+    constructor(data? : KalturaEventNotificationScopeArgs)
     {
         super(data);
     }
@@ -25,13 +23,11 @@ export class KalturaRegex extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaRegex' },
-				expression : { type : 's' },
-				description : { type : 's' }
+                objectType : { type : 'c', default : 'KalturaEventNotificationScope' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaRegex',KalturaRegex);
+KalturaTypesFactory.registerType('KalturaEventNotificationScope',KalturaEventNotificationScope);
