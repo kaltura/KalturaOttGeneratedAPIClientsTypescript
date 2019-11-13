@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaBaseSegmentCondition } from './KalturaBaseSegmentCondition';
+import { KalturaBaseSegmentAction } from './KalturaBaseSegmentAction';
 import { KalturaBaseSegmentValue } from './KalturaBaseSegmentValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
@@ -9,6 +10,7 @@ export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	description? : string;
 	conditions? : KalturaBaseSegmentCondition[];
+	actions? : KalturaBaseSegmentAction[];
 	value? : KalturaBaseSegmentValue;
 }
 
@@ -19,6 +21,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 	name : string;
 	description : string;
 	conditions : KalturaBaseSegmentCondition[];
+	actions : KalturaBaseSegmentAction[];
 	value : KalturaBaseSegmentValue;
 	readonly createDate : number;
 	readonly version : number;
@@ -27,6 +30,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
     {
         super(data);
         if (typeof this.conditions === 'undefined') this.conditions = [];
+		if (typeof this.actions === 'undefined') this.actions = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -40,6 +44,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 				name : { type : 's' },
 				description : { type : 's' },
 				conditions : { type : 'a', subTypeConstructor : KalturaBaseSegmentCondition, subType : 'KalturaBaseSegmentCondition' },
+				actions : { type : 'a', subTypeConstructor : KalturaBaseSegmentAction, subType : 'KalturaBaseSegmentAction' },
 				value : { type : 'o', subTypeConstructor : KalturaBaseSegmentValue, subType : 'KalturaBaseSegmentValue' },
 				createDate : { type : 'n', readOnly : true },
 				version : { type : 'n', readOnly : true }

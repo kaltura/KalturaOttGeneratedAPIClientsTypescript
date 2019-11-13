@@ -2,6 +2,7 @@
 
 export enum KalturaRuleConditionType {
     asset = 'ASSET',
+	assetSubscription = 'ASSET_SUBSCRIPTION',
 	businessModule = 'BUSINESS_MODULE',
 	concurrency = 'CONCURRENCY',
 	country = 'COUNTRY',
@@ -9,5 +10,7 @@ export enum KalturaRuleConditionType {
 	header = 'HEADER',
 	ipRange = 'IP_RANGE',
 	or = 'OR',
-	segments = 'SEGMENTS'
+	segments = 'SEGMENTS',
+	userRole = 'USER_ROLE',
+	userSubscription = 'USER_SUBSCRIPTION'
 }
