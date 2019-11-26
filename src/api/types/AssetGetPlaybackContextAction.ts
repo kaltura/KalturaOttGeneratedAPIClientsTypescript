@@ -10,6 +10,7 @@ export interface AssetGetPlaybackContextActionArgs  extends KalturaRequestArgs {
     assetId : string;
 	assetType : KalturaAssetType;
 	contextDataParams : KalturaPlaybackContextOptions;
+	sourceType? : string;
 }
 
 /**
@@ -27,6 +28,7 @@ export class AssetGetPlaybackContextAction extends KalturaRequest<KalturaPlaybac
     assetId : string;
 	assetType : KalturaAssetType;
 	contextDataParams : KalturaPlaybackContextOptions;
+	sourceType : string;
 
     constructor(data : AssetGetPlaybackContextActionArgs)
     {
@@ -43,7 +45,8 @@ export class AssetGetPlaybackContextAction extends KalturaRequest<KalturaPlaybac
 				action : { type : 'c', default : 'getPlaybackContext' },
 				assetId : { type : 's' },
 				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
-				contextDataParams : { type : 'o', subTypeConstructor : KalturaPlaybackContextOptions, subType : 'KalturaPlaybackContextOptions' }
+				contextDataParams : { type : 'o', subTypeConstructor : KalturaPlaybackContextOptions, subType : 'KalturaPlaybackContextOptions' },
+				sourceType : { type : 's' }
             }
         );
         return result;
