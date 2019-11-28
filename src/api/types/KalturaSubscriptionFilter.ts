@@ -8,6 +8,7 @@ export interface KalturaSubscriptionFilterArgs  extends KalturaFilterArgs {
 	mediaFileIdEqual? : number;
 	externalIdIn? : string;
 	couponGroupIdEqual? : number;
+	kSql? : string;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 	mediaFileIdEqual : number;
 	externalIdIn : string;
 	couponGroupIdEqual : number;
+	kSql : string;
 
     constructor(data? : KalturaSubscriptionFilterArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 				subscriptionIdIn : { type : 's' },
 				mediaFileIdEqual : { type : 'n' },
 				externalIdIn : { type : 's' },
-				couponGroupIdEqual : { type : 'n' }
+				couponGroupIdEqual : { type : 'n' },
+				kSql : { type : 's' }
             }
         );
         return result;

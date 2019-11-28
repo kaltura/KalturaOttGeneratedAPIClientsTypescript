@@ -5,5 +5,6 @@ export enum KalturaPartnerConfigurationType {
 	defaultpaymentgateway = 'DefaultPaymentGateway',
 	enablepaymentgatewayselection = 'EnablePaymentGatewaySelection',
 	general = 'General',
+	objectvirtualasset = 'ObjectVirtualAsset',
 	ossadapter = 'OSSAdapter'
 }
