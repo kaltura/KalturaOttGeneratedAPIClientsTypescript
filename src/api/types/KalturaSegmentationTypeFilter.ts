@@ -5,12 +5,14 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaSegmentationTypeFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
+	kSql? : string;
 }
 
 
 export class KalturaSegmentationTypeFilter extends KalturaFilter {
 
     idIn : string;
+	kSql : string;
 
     constructor(data? : KalturaSegmentationTypeFilterArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaSegmentationTypeFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSegmentationTypeFilter' },
-				idIn : { type : 's' }
+				idIn : { type : 's' },
+				kSql : { type : 's' }
             }
         );
         return result;
