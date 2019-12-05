@@ -3,18 +3,19 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDeviceStatus } from './KalturaDeviceStatus';
 import { KalturaCustomDrmPlaybackPluginData } from './KalturaCustomDrmPlaybackPluginData';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaHouseholdDeviceArgs  extends KalturaObjectBaseArgs {
+export interface KalturaHouseholdDeviceArgs  extends KalturaOTTObjectSupportNullableArgs {
     householdId? : number;
 	udid? : string;
 	name? : string;
 	brandId? : number;
 	activatedOn? : number;
+	externalId? : string;
 }
 
 
-export class KalturaHouseholdDevice extends KalturaObjectBase {
+export class KalturaHouseholdDevice extends KalturaOTTObjectSupportNullable {
 
     householdId : number;
 	udid : string;
@@ -24,6 +25,7 @@ export class KalturaHouseholdDevice extends KalturaObjectBase {
 	readonly status : KalturaDeviceStatus;
 	readonly deviceFamilyId : number;
 	readonly drm : KalturaCustomDrmPlaybackPluginData;
+	externalId : string;
 
     constructor(data? : KalturaHouseholdDeviceArgs)
     {
@@ -44,7 +46,8 @@ export class KalturaHouseholdDevice extends KalturaObjectBase {
 				activatedOn : { type : 'n' },
 				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaDeviceStatus, subType : 'KalturaDeviceStatus' },
 				deviceFamilyId : { type : 'n', readOnly : true },
-				drm : { type : 'o', readOnly : true, subTypeConstructor : KalturaCustomDrmPlaybackPluginData, subType : 'KalturaCustomDrmPlaybackPluginData' }
+				drm : { type : 'o', readOnly : true, subTypeConstructor : KalturaCustomDrmPlaybackPluginData, subType : 'KalturaCustomDrmPlaybackPluginData' },
+				externalId : { type : 's' }
             }
         );
         return result;
