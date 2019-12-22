@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaSegmentAssetFilterAction, KalturaSegmentAssetFilterActionArgs } from './KalturaSegmentAssetFilterAction';
 
-export interface KalturaSegementAssetFilterSubscriptionActionArgs  extends KalturaSegmentAssetFilterActionArgs {
+export interface KalturaSegmentAssetFilterSegmentActionArgs  extends KalturaSegmentAssetFilterActionArgs {
     
 }
 
 
-export class KalturaSegementAssetFilterSubscriptionAction extends KalturaSegmentAssetFilterAction {
+export class KalturaSegmentAssetFilterSegmentAction extends KalturaSegmentAssetFilterAction {
 
     
 
-    constructor(data? : KalturaSegementAssetFilterSubscriptionActionArgs)
+    constructor(data? : KalturaSegmentAssetFilterSegmentActionArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaSegementAssetFilterSubscriptionAction extends KalturaSegment
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaSegementAssetFilterSubscriptionAction' }
+                objectType : { type : 'c', default : 'KalturaSegmentAssetFilterSegmentAction' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaSegementAssetFilterSubscriptionAction',KalturaSegementAssetFilterSubscriptionAction);
+KalturaTypesFactory.registerType('KalturaSegmentAssetFilterSegmentAction',KalturaSegmentAssetFilterSegmentAction);
