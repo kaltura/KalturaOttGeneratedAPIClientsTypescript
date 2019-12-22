@@ -1,20 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
-export interface KalturaHouseholdSegmentArgs  extends KalturaObjectBaseArgs {
-    householdId? : number;
+export interface KalturaHouseholdSegmentArgs  extends KalturaCrudObjectArgs {
+    segmentId? : number;
 	householdId? : number;
-	blockingSegmentIds? : string;
 }
 
 
-export class KalturaHouseholdSegment extends KalturaObjectBase {
+export class KalturaHouseholdSegment extends KalturaCrudObject {
 
-    householdId : number;
+    segmentId : number;
 	householdId : number;
-	blockingSegmentIds : string;
 
     constructor(data? : KalturaHouseholdSegmentArgs)
     {
@@ -28,9 +26,8 @@ export class KalturaHouseholdSegment extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaHouseholdSegment' },
-				householdId : { type : 'n' },
-				householdId : { type : 'n' },
-				blockingSegmentIds : { type : 's' }
+				segmentId : { type : 'n' },
+				householdId : { type : 'n' }
             }
         );
         return result;

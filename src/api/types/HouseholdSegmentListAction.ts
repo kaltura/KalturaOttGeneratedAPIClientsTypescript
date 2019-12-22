@@ -2,16 +2,17 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaHouseholdSegmentListResponse } from './KalturaHouseholdSegmentListResponse';
 
+import { KalturaHouseholdSegmentFilter } from './KalturaHouseholdSegmentFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface HouseholdSegmentListActionArgs  extends KalturaRequestArgs {
-    
+    filter? : KalturaHouseholdSegmentFilter;
 }
 
 /**
  * Build request payload for service 'householdSegment' action 'list'.
  *
- * Usage: Retrieve all the segments that apply for given household
+ * Usage: Gets all HouseholdSegment items for a household
  *
  * Server response type:         KalturaHouseholdSegmentListResponse
  * Server failure response type: KalturaAPIException
@@ -20,7 +21,7 @@ export interface HouseholdSegmentListActionArgs  extends KalturaRequestArgs {
  */
 export class HouseholdSegmentListAction extends KalturaRequest<KalturaHouseholdSegmentListResponse> {
 
-    
+    filter : KalturaHouseholdSegmentFilter;
 
     constructor(data? : HouseholdSegmentListActionArgs)
     {
@@ -34,7 +35,8 @@ export class HouseholdSegmentListAction extends KalturaRequest<KalturaHouseholdS
             result.properties,
             {
                 service : { type : 'c', default : 'householdsegment' },
-				action : { type : 'c', default : 'list' }
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaHouseholdSegmentFilter, subType : 'KalturaHouseholdSegmentFilter' }
             }
         );
         return result;

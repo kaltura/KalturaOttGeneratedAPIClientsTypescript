@@ -5,13 +5,13 @@ import { KalturaHouseholdSegment } from './KalturaHouseholdSegment';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface HouseholdSegmentAddActionArgs  extends KalturaRequestArgs {
-    householdSegment : KalturaHouseholdSegment;
+    objectToAdd : KalturaHouseholdSegment;
 }
 
 /**
  * Build request payload for service 'householdSegment' action 'add'.
  *
- * Usage: Adds a segment to a household
+ * Usage: householdSegment add
  *
  * Server response type:         KalturaHouseholdSegment
  * Server failure response type: KalturaAPIException
@@ -20,7 +20,7 @@ export interface HouseholdSegmentAddActionArgs  extends KalturaRequestArgs {
  */
 export class HouseholdSegmentAddAction extends KalturaRequest<KalturaHouseholdSegment> {
 
-    householdSegment : KalturaHouseholdSegment;
+    objectToAdd : KalturaHouseholdSegment;
 
     constructor(data : HouseholdSegmentAddActionArgs)
     {
@@ -35,7 +35,7 @@ export class HouseholdSegmentAddAction extends KalturaRequest<KalturaHouseholdSe
             {
                 service : { type : 'c', default : 'householdsegment' },
 				action : { type : 'c', default : 'add' },
-				householdSegment : { type : 'o', subTypeConstructor : KalturaHouseholdSegment, subType : 'KalturaHouseholdSegment' }
+				objectToAdd : { type : 'o', subTypeConstructor : KalturaHouseholdSegment, subType : 'KalturaHouseholdSegment' }
             }
         );
         return result;
