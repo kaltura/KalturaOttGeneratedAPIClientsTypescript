@@ -181,7 +181,7 @@ export { KalturaAssetOrderSegmentAction, KalturaAssetOrderSegmentActionArgs } fr
 export { KalturaKsqlSegmentAction, KalturaKsqlSegmentActionArgs } from './KalturaKsqlSegmentAction'
 export { KalturaSegmentAssetFilterAction, KalturaSegmentAssetFilterActionArgs } from './KalturaSegmentAssetFilterAction'
 export { KalturaSegmentAssetFilterSegmentAction, KalturaSegmentAssetFilterSegmentActionArgs } from './KalturaSegmentAssetFilterSegmentAction'
-export { KalturaSegementAssetFilterSubscriptionAction, KalturaSegementAssetFilterSubscriptionActionArgs } from './KalturaSegementAssetFilterSubscriptionAction'
+export { KalturaSegmentAssetFilterSubscriptionAction, KalturaSegmentAssetFilterSubscriptionActionArgs } from './KalturaSegmentAssetFilterSubscriptionAction'
 export { KalturaBlockSubscriptionSegmentAction, KalturaBlockSubscriptionSegmentActionArgs } from './KalturaBlockSubscriptionSegmentAction'
 export { KalturaSegmentBlockPlaybackSubscriptionAction, KalturaSegmentBlockPlaybackSubscriptionActionArgs } from './KalturaSegmentBlockPlaybackSubscriptionAction'
 export { KalturaSegmentBlockCancelSubscriptionAction, KalturaSegmentBlockCancelSubscriptionActionArgs } from './KalturaSegmentBlockCancelSubscriptionAction'
