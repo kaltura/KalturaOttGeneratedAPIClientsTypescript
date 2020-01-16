@@ -12,7 +12,7 @@ export interface PartnerConfigurationUpdateActionArgs  extends KalturaRequestArg
 /**
  * Build request payload for service 'partnerConfiguration' action 'update'.
  *
- * Usage: Update Partner Configuration
+ * Usage: Update/set Partner Configuration
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
