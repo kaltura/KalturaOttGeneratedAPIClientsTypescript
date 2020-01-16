@@ -1,6 +1,6 @@
 # Kaltura OTT Typescript Client
 
-Compatible with Kaltura OTT server version 5.3.1.14558 and above.
+Compatible with Kaltura OTT server version 5.3.0.14532 and above.
 
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![Gitter chat](https://badges.gitter.im/kaltura-ng/kaltura-ng.png)](https://gitter.im/kaltura-ng/kaltura-ng) [![Build Status](https://travis-ci.org/kaltura/KalturaOttGeneratedAPIClientsTypescript.svg?branch=master)](https://travis-ci.org/kaltura/KalturaOttGeneratedAPIClientsTypescript)
@@ -16,7 +16,7 @@ To keep being update review the [changelog](CHANGELOG.md) frequently.
 
 You can install this client library using npm with:
 ```
-npm install kaltura-ott-typescript-client@5.3.1-14558
+npm install kaltura-ott-typescript-client@5.3.0-14532
 ```
 
  **Found a bug?** create [kaltura/clients-generator issue](https://github.com/kaltura/clients-generator/issues)
