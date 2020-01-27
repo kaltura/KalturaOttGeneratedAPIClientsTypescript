@@ -2,12 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaSegmentationTypeListResponse } from './KalturaSegmentationTypeListResponse';
 
-import { KalturaSegmentationTypeFilter } from './KalturaSegmentationTypeFilter';
+import { KalturaBaseSegmentationTypeFilter } from './KalturaBaseSegmentationTypeFilter';
 import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SegmentationTypeListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaSegmentationTypeFilter;
+    filter? : KalturaBaseSegmentationTypeFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -23,7 +23,7 @@ export interface SegmentationTypeListActionArgs  extends KalturaRequestArgs {
  */
 export class SegmentationTypeListAction extends KalturaRequest<KalturaSegmentationTypeListResponse> {
 
-    filter : KalturaSegmentationTypeFilter;
+    filter : KalturaBaseSegmentationTypeFilter;
 	pager : KalturaFilterPager;
 
     constructor(data? : SegmentationTypeListActionArgs)
@@ -39,7 +39,7 @@ export class SegmentationTypeListAction extends KalturaRequest<KalturaSegmentati
             {
                 service : { type : 'c', default : 'segmentationtype' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaSegmentationTypeFilter, subType : 'KalturaSegmentationTypeFilter' },
+				filter : { type : 'o', subTypeConstructor : KalturaBaseSegmentationTypeFilter, subType : 'KalturaBaseSegmentationTypeFilter' },
 				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
