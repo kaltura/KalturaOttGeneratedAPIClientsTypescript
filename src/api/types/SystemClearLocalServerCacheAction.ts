@@ -5,7 +5,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SystemClearLocalServerCacheActionArgs  extends KalturaRequestArgs {
-    clearCacheAction? : string;
+    action? : string;
 	key? : string;
 }
 
@@ -21,7 +21,7 @@ export interface SystemClearLocalServerCacheActionArgs  extends KalturaRequestAr
  */
 export class SystemClearLocalServerCacheAction extends KalturaRequest<boolean> {
 
-    clearCacheAction : string;
+    action : string;
 	key : string;
 
     constructor(data? : SystemClearLocalServerCacheActionArgs)
@@ -37,7 +37,7 @@ export class SystemClearLocalServerCacheAction extends KalturaRequest<boolean> {
             {
                 service : { type : 'c', default : 'system' },
 				action : { type : 'c', default : 'clearLocalServerCache' },
-				clearCacheAction : { type : 's' },
+				action : { type : 's' },
 				key : { type : 's' }
             }
         );
