@@ -1,6 +1,7 @@
 
 
 export enum KalturaObjectVirtualAssetInfoType {
-    segment = 'Segment',
+    category = 'Category',
+	segment = 'Segment',
 	subscription = 'Subscription'
 }
