@@ -3,16 +3,18 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaCategoryItemFilter, KalturaCategoryItemFilterArgs } from './KalturaCategoryItemFilter';
 
-export interface KalturaCategoryItemByKsqlFilterArgs  extends KalturaCategoryItemFilterArgs {
+export interface KalturaCategoryItemSearchFilterArgs  extends KalturaCategoryItemFilterArgs {
     kSql? : string;
+	rootOnly? : boolean;
 }
 
 
-export class KalturaCategoryItemByKsqlFilter extends KalturaCategoryItemFilter {
+export class KalturaCategoryItemSearchFilter extends KalturaCategoryItemFilter {
 
     kSql : string;
+	rootOnly : boolean;
 
-    constructor(data? : KalturaCategoryItemByKsqlFilterArgs)
+    constructor(data? : KalturaCategoryItemSearchFilterArgs)
     {
         super(data);
     }
@@ -23,12 +25,13 @@ export class KalturaCategoryItemByKsqlFilter extends KalturaCategoryItemFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaCategoryItemByKsqlFilter' },
-				kSql : { type : 's' }
+                objectType : { type : 'c', default : 'KalturaCategoryItemSearchFilter' },
+				kSql : { type : 's' },
+				rootOnly : { type : 'b' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaCategoryItemByKsqlFilter',KalturaCategoryItemByKsqlFilter);
+KalturaTypesFactory.registerType('KalturaCategoryItemSearchFilter',KalturaCategoryItemSearchFilter);
