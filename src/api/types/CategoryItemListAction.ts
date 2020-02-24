@@ -8,7 +8,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface CategoryItemListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaCategoryItemFilter;
-	pager : KalturaFilterPager;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -26,7 +26,7 @@ export class CategoryItemListAction extends KalturaRequest<KalturaCategoryItemLi
     filter : KalturaCategoryItemFilter;
 	pager : KalturaFilterPager;
 
-    constructor(data : CategoryItemListActionArgs)
+    constructor(data? : CategoryItemListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaCategoryItemListResponse', responseConstructor : KalturaCategoryItemListResponse  });
     }

@@ -6,6 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface CategoryTreeDuplicateActionArgs  extends KalturaRequestArgs {
     categoryItemId : number;
+	name : string;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface CategoryTreeDuplicateActionArgs  extends KalturaRequestArgs {
 export class CategoryTreeDuplicateAction extends KalturaRequest<KalturaCategoryTree> {
 
     categoryItemId : number;
+	name : string;
 
     constructor(data : CategoryTreeDuplicateActionArgs)
     {
@@ -35,7 +37,8 @@ export class CategoryTreeDuplicateAction extends KalturaRequest<KalturaCategoryT
             {
                 service : { type : 'c', default : 'categorytree' },
 				action : { type : 'c', default : 'duplicate' },
-				categoryItemId : { type : 'n' }
+				categoryItemId : { type : 'n' },
+				name : { type : 's' }
             }
         );
         return result;
