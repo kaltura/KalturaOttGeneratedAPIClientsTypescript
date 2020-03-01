@@ -7,7 +7,7 @@ import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
 export interface KalturaCategoryItemArgs  extends KalturaCrudObjectArgs {
     name? : string;
-	childCategoriesIds? : string;
+	childrenIds? : string;
 	unifiedChannels? : KalturaUnifiedChannel[];
 	dynamicData? : { [key : string] : KalturaStringValue};
 }
@@ -17,8 +17,8 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 
     readonly id : number;
 	name : string;
-	readonly parentCategoryId : number;
-	childCategoriesIds : string;
+	readonly parentId : number;
+	childrenIds : string;
 	unifiedChannels : KalturaUnifiedChannel[];
 	dynamicData : { [key : string] : KalturaStringValue};
 
@@ -37,8 +37,8 @@ export class KalturaCategoryItem extends KalturaCrudObject {
                 objectType : { type : 'c', default : 'KalturaCategoryItem' },
 				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
-				parentCategoryId : { type : 'n', readOnly : true },
-				childCategoriesIds : { type : 's' },
+				parentId : { type : 'n', readOnly : true },
+				childrenIds : { type : 's' },
 				unifiedChannels : { type : 'a', subTypeConstructor : KalturaUnifiedChannel, subType : 'KalturaUnifiedChannel' },
 				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
