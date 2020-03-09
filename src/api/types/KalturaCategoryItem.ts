@@ -23,6 +23,7 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 	childrenIds : string;
 	unifiedChannels : KalturaUnifiedChannel[];
 	dynamicData : { [key : string] : KalturaStringValue};
+	readonly updateDate : number;
 
     constructor(data? : KalturaCategoryItemArgs)
     {
@@ -44,7 +45,8 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 				parentId : { type : 'n', readOnly : true },
 				childrenIds : { type : 's' },
 				unifiedChannels : { type : 'a', subTypeConstructor : KalturaUnifiedChannel, subType : 'KalturaUnifiedChannel' },
-				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
+				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;
