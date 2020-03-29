@@ -11,7 +11,6 @@ export interface KalturaIotProfileAwsArgs  extends KalturaCrudObjectArgs {
 	brokerPort? : number;
 	accessKeyId? : string;
 	secretAccessKey? : string;
-	tTL? : string;
 	iotPolicyName? : string;
 	userPoolId? : string;
 	clientId? : string;
@@ -30,7 +29,6 @@ export class KalturaIotProfileAws extends KalturaCrudObject {
 	brokerPort : number;
 	accessKeyId : string;
 	secretAccessKey : string;
-	tTL : string;
 	iotPolicyName : string;
 	userPoolId : string;
 	clientId : string;
@@ -57,7 +55,6 @@ export class KalturaIotProfileAws extends KalturaCrudObject {
 				brokerPort : { type : 'n' },
 				accessKeyId : { type : 's' },
 				secretAccessKey : { type : 's' },
-				tTL : { type : 's' },
 				iotPolicyName : { type : 's' },
 				userPoolId : { type : 's' },
 				clientId : { type : 's' },
