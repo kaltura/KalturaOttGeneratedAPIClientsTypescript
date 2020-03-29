@@ -21,6 +21,8 @@ export interface KalturaNotificationsPartnerSettingsArgs  extends KalturaObjectB
 	mailSenderName? : string;
 	mailNotificationAdapterId? : number;
 	smsEnabled? : boolean;
+	iotEnabled? : boolean;
+	iotAdapterUrl? : string;
 }
 
 
@@ -43,6 +45,8 @@ export class KalturaNotificationsPartnerSettings extends KalturaObjectBase {
 	mailSenderName : string;
 	mailNotificationAdapterId : number;
 	smsEnabled : boolean;
+	iotEnabled : boolean;
+	iotAdapterUrl : string;
 
     constructor(data? : KalturaNotificationsPartnerSettingsArgs)
     {
@@ -72,7 +76,9 @@ export class KalturaNotificationsPartnerSettings extends KalturaObjectBase {
 				senderEmail : { type : 's' },
 				mailSenderName : { type : 's' },
 				mailNotificationAdapterId : { type : 'n' },
-				smsEnabled : { type : 'b' }
+				smsEnabled : { type : 'b' },
+				iotEnabled : { type : 'b' },
+				iotAdapterUrl : { type : 's' }
             }
         );
         return result;
