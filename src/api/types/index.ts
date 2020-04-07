@@ -530,7 +530,7 @@ export { KalturaHouseholdSegmentListResponse, KalturaHouseholdSegmentListRespons
 export { KalturaContentResource, KalturaContentResourceArgs } from './KalturaContentResource'
 export { KalturaUploadedFileTokenResource, KalturaUploadedFileTokenResourceArgs } from './KalturaUploadedFileTokenResource'
 export { KalturaUrlResource, KalturaUrlResourceArgs } from './KalturaUrlResource'
-export { KalturaDefault, KalturaDefaultArgs } from './KalturaDefault'
+export { KalturaIotDefault, KalturaIotDefaultArgs } from './KalturaIotDefault'
 export { KalturaCognitoIdentity, KalturaCognitoIdentityArgs } from './KalturaCognitoIdentity'
 export { KalturaCredentialsProvider, KalturaCredentialsProviderArgs } from './KalturaCredentialsProvider'
 export { KalturaCognitoUserPool, KalturaCognitoUserPoolArgs } from './KalturaCognitoUserPool'
