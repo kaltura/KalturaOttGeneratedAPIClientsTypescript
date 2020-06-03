@@ -11,6 +11,9 @@ export interface KalturaCategoryItemArgs  extends KalturaCrudObjectArgs {
 	childrenIds? : string;
 	unifiedChannels? : KalturaUnifiedChannel[];
 	dynamicData? : { [key : string] : KalturaStringValue};
+	isActive? : boolean;
+	startDateInSeconds? : number;
+	endDateInSeconds? : number;
 }
 
 
@@ -24,6 +27,9 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 	unifiedChannels : KalturaUnifiedChannel[];
 	dynamicData : { [key : string] : KalturaStringValue};
 	readonly updateDate : number;
+	isActive : boolean;
+	startDateInSeconds : number;
+	endDateInSeconds : number;
 
     constructor(data? : KalturaCategoryItemArgs)
     {
@@ -46,7 +52,10 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 				childrenIds : { type : 's' },
 				unifiedChannels : { type : 'a', subTypeConstructor : KalturaUnifiedChannel, subType : 'KalturaUnifiedChannel' },
 				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
-				updateDate : { type : 'n', readOnly : true }
+				updateDate : { type : 'n', readOnly : true },
+				isActive : { type : 'b' },
+				startDateInSeconds : { type : 'n' },
+				endDateInSeconds : { type : 'n' }
             }
         );
         return result;

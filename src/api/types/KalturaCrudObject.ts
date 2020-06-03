@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaCrudObjectArgs  extends KalturaObjectBaseArgs {
+export interface KalturaCrudObjectArgs  extends KalturaOTTObjectSupportNullableArgs {
     
 }
 
 
-export class KalturaCrudObject extends KalturaObjectBase {
+export class KalturaCrudObject extends KalturaOTTObjectSupportNullable {
 
     
 

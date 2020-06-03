@@ -5,12 +5,16 @@ import { KalturaUnifiedChannel, KalturaUnifiedChannelArgs } from './KalturaUnifi
 
 export interface KalturaUnifiedChannelInfoArgs  extends KalturaUnifiedChannelArgs {
     name? : string;
+	startDateInSeconds? : number;
+	endDateInSeconds? : number;
 }
 
 
 export class KalturaUnifiedChannelInfo extends KalturaUnifiedChannel {
 
     name : string;
+	startDateInSeconds : number;
+	endDateInSeconds : number;
 
     constructor(data? : KalturaUnifiedChannelInfoArgs)
     {
@@ -24,7 +28,9 @@ export class KalturaUnifiedChannelInfo extends KalturaUnifiedChannel {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaUnifiedChannelInfo' },
-				name : { type : 's' }
+				name : { type : 's' },
+				startDateInSeconds : { type : 'n' },
+				endDateInSeconds : { type : 'n' }
             }
         );
         return result;

@@ -12,6 +12,9 @@ export interface KalturaCategoryTreeArgs  extends KalturaObjectBaseArgs {
 	unifiedChannels? : KalturaUnifiedChannelInfo[];
 	dynamicData? : { [key : string] : KalturaStringValue};
 	images? : KalturaImage[];
+	isActive? : boolean;
+	startDateInSeconds? : number;
+	endDateInSeconds? : number;
 }
 
 
@@ -24,6 +27,9 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 	unifiedChannels : KalturaUnifiedChannelInfo[];
 	dynamicData : { [key : string] : KalturaStringValue};
 	images : KalturaImage[];
+	isActive : boolean;
+	startDateInSeconds : number;
+	endDateInSeconds : number;
 
     constructor(data? : KalturaCategoryTreeArgs)
     {
@@ -47,7 +53,10 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 				children : { type : 'a', readOnly : true, subTypeConstructor : KalturaCategoryTree, subType : 'KalturaCategoryTree' },
 				unifiedChannels : { type : 'a', subTypeConstructor : KalturaUnifiedChannelInfo, subType : 'KalturaUnifiedChannelInfo' },
 				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
-				images : { type : 'a', subTypeConstructor : KalturaImage, subType : 'KalturaImage' }
+				images : { type : 'a', subTypeConstructor : KalturaImage, subType : 'KalturaImage' },
+				isActive : { type : 'b' },
+				startDateInSeconds : { type : 'n' },
+				endDateInSeconds : { type : 'n' }
             }
         );
         return result;

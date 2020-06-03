@@ -5,13 +5,8 @@ import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
 export interface KalturaIotProfileAwsArgs  extends KalturaCrudObjectArgs {
     iotEndPoint? : string;
-	pfxPath? : string;
-	pfxPassword? : string;
-	certificatePath? : string;
-	brokerPort? : number;
 	accessKeyId? : string;
 	secretAccessKey? : string;
-	iotPolicyName? : string;
 	userPoolId? : string;
 	clientId? : string;
 	identityPoolId? : string;
@@ -23,13 +18,8 @@ export interface KalturaIotProfileAwsArgs  extends KalturaCrudObjectArgs {
 export class KalturaIotProfileAws extends KalturaCrudObject {
 
     iotEndPoint : string;
-	pfxPath : string;
-	pfxPassword : string;
-	certificatePath : string;
-	brokerPort : number;
 	accessKeyId : string;
 	secretAccessKey : string;
-	iotPolicyName : string;
 	userPoolId : string;
 	clientId : string;
 	identityPoolId : string;
@@ -49,13 +39,8 @@ export class KalturaIotProfileAws extends KalturaCrudObject {
             {
                 objectType : { type : 'c', default : 'KalturaIotProfileAws' },
 				iotEndPoint : { type : 's' },
-				pfxPath : { type : 's' },
-				pfxPassword : { type : 's' },
-				certificatePath : { type : 's' },
-				brokerPort : { type : 'n' },
 				accessKeyId : { type : 's' },
 				secretAccessKey : { type : 's' },
-				iotPolicyName : { type : 's' },
 				userPoolId : { type : 's' },
 				clientId : { type : 's' },
 				identityPoolId : { type : 's' },
