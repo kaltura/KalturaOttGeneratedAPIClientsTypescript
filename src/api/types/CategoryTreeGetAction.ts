@@ -6,6 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface CategoryTreeGetActionArgs  extends KalturaRequestArgs {
     categoryItemId : number;
+	filter : boolean;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface CategoryTreeGetActionArgs  extends KalturaRequestArgs {
 export class CategoryTreeGetAction extends KalturaRequest<KalturaCategoryTree> {
 
     categoryItemId : number;
+	filter : boolean;
 
     constructor(data : CategoryTreeGetActionArgs)
     {
@@ -35,7 +37,8 @@ export class CategoryTreeGetAction extends KalturaRequest<KalturaCategoryTree> {
             {
                 service : { type : 'c', default : 'categorytree' },
 				action : { type : 'c', default : 'get' },
-				categoryItemId : { type : 'n' }
+				categoryItemId : { type : 'n' },
+				filter : { type : 'b' }
             }
         );
         return result;
