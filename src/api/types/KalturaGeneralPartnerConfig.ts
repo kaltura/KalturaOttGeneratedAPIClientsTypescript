@@ -20,6 +20,7 @@ export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigur
 	enableRegionFiltering? : boolean;
 	defaultRegion? : number;
 	rollingDeviceData? : KalturaRollingDeviceRemovalData;
+	finishedPercentThreshold? : number;
 }
 
 
@@ -38,6 +39,7 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 	enableRegionFiltering : boolean;
 	defaultRegion : number;
 	rollingDeviceData : KalturaRollingDeviceRemovalData;
+	finishedPercentThreshold : number;
 
     constructor(data? : KalturaGeneralPartnerConfigArgs)
     {
@@ -63,7 +65,8 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 				householdLimitationModule : { type : 'n' },
 				enableRegionFiltering : { type : 'b' },
 				defaultRegion : { type : 'n' },
-				rollingDeviceData : { type : 'o', subTypeConstructor : KalturaRollingDeviceRemovalData, subType : 'KalturaRollingDeviceRemovalData' }
+				rollingDeviceData : { type : 'o', subTypeConstructor : KalturaRollingDeviceRemovalData, subType : 'KalturaRollingDeviceRemovalData' },
+				finishedPercentThreshold : { type : 'n' }
             }
         );
         return result;
