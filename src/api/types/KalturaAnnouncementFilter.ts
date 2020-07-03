@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaAnnouncementFilterArgs  extends KalturaFilterArgs {
-    idIn? : string;
+    
 }
 
 
 export class KalturaAnnouncementFilter extends KalturaFilter {
 
-    idIn : string;
+    
 
     constructor(data? : KalturaAnnouncementFilterArgs)
     {
@@ -23,8 +23,7 @@ export class KalturaAnnouncementFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaAnnouncementFilter' },
-				idIn : { type : 's' }
+                objectType : { type : 'c', default : 'KalturaAnnouncementFilter' }
             }
         );
         return result;

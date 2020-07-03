@@ -1,8 +1,7 @@
 
 
 export enum KalturaRecordingType {
-    originalbroadcast = 'OriginalBroadcast',
-	season = 'SEASON',
+    season = 'SEASON',
 	series = 'SERIES',
 	single = 'SINGLE'
 }
