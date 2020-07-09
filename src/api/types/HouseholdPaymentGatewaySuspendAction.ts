@@ -2,10 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
+import { KalturaSuspendSettings } from './KalturaSuspendSettings';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface HouseholdPaymentGatewaySuspendActionArgs  extends KalturaRequestArgs {
     paymentGatewayId : number;
+	suspendSettings? : KalturaSuspendSettings;
 }
 
 /**
@@ -21,6 +23,7 @@ export interface HouseholdPaymentGatewaySuspendActionArgs  extends KalturaReques
 export class HouseholdPaymentGatewaySuspendAction extends KalturaRequest<void> {
 
     paymentGatewayId : number;
+	suspendSettings : KalturaSuspendSettings;
 
     constructor(data : HouseholdPaymentGatewaySuspendActionArgs)
     {
@@ -35,7 +38,8 @@ export class HouseholdPaymentGatewaySuspendAction extends KalturaRequest<void> {
             {
                 service : { type : 'c', default : 'householdpaymentgateway' },
 				action : { type : 'c', default : 'suspend' },
-				paymentGatewayId : { type : 'n' }
+				paymentGatewayId : { type : 'n' },
+				suspendSettings : { type : 'o', subTypeConstructor : KalturaSuspendSettings, subType : 'KalturaSuspendSettings' }
             }
         );
         return result;
