@@ -8,7 +8,6 @@ export interface KalturaAssetStructMetaArgs  extends KalturaObjectBaseArgs {
 	protectFromIngest? : boolean;
 	defaultIngestValue? : string;
 	isInherited? : boolean;
-	isLocationTag? : boolean;
 }
 
 
@@ -22,7 +21,6 @@ export class KalturaAssetStructMeta extends KalturaObjectBase {
 	readonly createDate : number;
 	readonly updateDate : number;
 	isInherited : boolean;
-	isLocationTag : boolean;
 
     constructor(data? : KalturaAssetStructMetaArgs)
     {
@@ -43,8 +41,7 @@ export class KalturaAssetStructMeta extends KalturaObjectBase {
 				defaultIngestValue : { type : 's' },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
-				isInherited : { type : 'b' },
-				isLocationTag : { type : 'b' }
+				isInherited : { type : 'b' }
             }
         );
         return result;
