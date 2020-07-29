@@ -1,12 +1,15 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaUserRoleType } from './KalturaUserRoleType';
+import { KalturaUserRoleProfile } from './KalturaUserRoleProfile';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUserRoleArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	permissionNames? : string;
 	excludedPermissionNames? : string;
+	profile? : KalturaUserRoleProfile;
 }
 
 
@@ -16,6 +19,8 @@ export class KalturaUserRole extends KalturaObjectBase {
 	name : string;
 	permissionNames : string;
 	excludedPermissionNames : string;
+	readonly type : KalturaUserRoleType;
+	profile : KalturaUserRoleProfile;
 
     constructor(data? : KalturaUserRoleArgs)
     {
@@ -32,7 +37,9 @@ export class KalturaUserRole extends KalturaObjectBase {
 				id : { type : 'n', readOnly : true },
 				name : { type : 's' },
 				permissionNames : { type : 's' },
-				excludedPermissionNames : { type : 's' }
+				excludedPermissionNames : { type : 's' },
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaUserRoleType, subType : 'KalturaUserRoleType' },
+				profile : { type : 'es', subTypeConstructor : KalturaUserRoleProfile, subType : 'KalturaUserRoleProfile' }
             }
         );
         return result;
