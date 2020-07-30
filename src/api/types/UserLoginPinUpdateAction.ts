@@ -7,6 +7,8 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface UserLoginPinUpdateActionArgs  extends KalturaRequestArgs {
     pinCode : string;
 	secret? : string;
+	pinUsages? : number;
+	pinDuration? : number;
 }
 
 /**
@@ -23,6 +25,8 @@ export class UserLoginPinUpdateAction extends KalturaRequest<KalturaUserLoginPin
 
     pinCode : string;
 	secret : string;
+	pinUsages : number;
+	pinDuration : number;
 
     constructor(data : UserLoginPinUpdateActionArgs)
     {
@@ -38,7 +42,9 @@ export class UserLoginPinUpdateAction extends KalturaRequest<KalturaUserLoginPin
                 service : { type : 'c', default : 'userloginpin' },
 				action : { type : 'c', default : 'update' },
 				pinCode : { type : 's' },
-				secret : { type : 's' }
+				secret : { type : 's' },
+				pinUsages : { type : 'n' },
+				pinDuration : { type : 'n' }
             }
         );
         return result;

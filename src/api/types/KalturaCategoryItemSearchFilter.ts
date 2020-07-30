@@ -6,6 +6,7 @@ import { KalturaCategoryItemFilter, KalturaCategoryItemFilterArgs } from './Kalt
 export interface KalturaCategoryItemSearchFilterArgs  extends KalturaCategoryItemFilterArgs {
     kSql? : string;
 	rootOnly? : boolean;
+	typeEqual? : string;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaCategoryItemSearchFilter extends KalturaCategoryItemFilter {
 
     kSql : string;
 	rootOnly : boolean;
+	typeEqual : string;
 
     constructor(data? : KalturaCategoryItemSearchFilterArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaCategoryItemSearchFilter extends KalturaCategoryItemFilter {
             {
                 objectType : { type : 'c', default : 'KalturaCategoryItemSearchFilter' },
 				kSql : { type : 's' },
-				rootOnly : { type : 'b' }
+				rootOnly : { type : 'b' },
+				typeEqual : { type : 's' }
             }
         );
         return result;
