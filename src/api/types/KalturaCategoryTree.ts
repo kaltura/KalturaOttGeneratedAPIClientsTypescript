@@ -15,6 +15,7 @@ export interface KalturaCategoryTreeArgs  extends KalturaObjectBaseArgs {
 	isActive? : boolean;
 	startDateInSeconds? : number;
 	endDateInSeconds? : number;
+	type? : string;
 }
 
 
@@ -30,6 +31,7 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 	isActive : boolean;
 	startDateInSeconds : number;
 	endDateInSeconds : number;
+	type : string;
 
     constructor(data? : KalturaCategoryTreeArgs)
     {
@@ -56,7 +58,8 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 				images : { type : 'a', subTypeConstructor : KalturaImage, subType : 'KalturaImage' },
 				isActive : { type : 'b' },
 				startDateInSeconds : { type : 'n' },
-				endDateInSeconds : { type : 'n' }
+				endDateInSeconds : { type : 'n' },
+				type : { type : 's' }
             }
         );
         return result;
