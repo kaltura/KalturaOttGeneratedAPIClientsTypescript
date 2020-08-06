@@ -18,6 +18,7 @@ export class KalturaPermission extends KalturaObjectBase {
 	friendlyName : string;
 	readonly dependsOnPermissionNames : string;
 	type : KalturaPermissionType;
+	readonly permissionItemsIds : string;
 
     constructor(data? : KalturaPermissionArgs)
     {
@@ -35,7 +36,8 @@ export class KalturaPermission extends KalturaObjectBase {
 				name : { type : 's' },
 				friendlyName : { type : 's' },
 				dependsOnPermissionNames : { type : 's', readOnly : true },
-				type : { type : 'es', subTypeConstructor : KalturaPermissionType, subType : 'KalturaPermissionType' }
+				type : { type : 'es', subTypeConstructor : KalturaPermissionType, subType : 'KalturaPermissionType' },
+				permissionItemsIds : { type : 's', readOnly : true }
             }
         );
         return result;
