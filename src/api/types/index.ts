@@ -4,6 +4,7 @@ export { KalturaSkipCondition, KalturaSkipConditionArgs } from './KalturaSkipCon
 export { KalturaRequestConfiguration, KalturaRequestConfigurationArgs } from './KalturaRequestConfiguration'
 export { KalturaFilter, KalturaFilterArgs } from './KalturaFilter'
 export { KalturaDetachedResponseProfile, KalturaDetachedResponseProfileArgs } from './KalturaDetachedResponseProfile'
+export { KalturaOnDemandResponseProfile, KalturaOnDemandResponseProfileArgs } from './KalturaOnDemandResponseProfile'
 export { KalturaRelatedObjectFilter, KalturaRelatedObjectFilterArgs } from './KalturaRelatedObjectFilter'
 export { KalturaValue, KalturaValueArgs } from './KalturaValue'
 export { KalturaIntegerValue, KalturaIntegerValueArgs } from './KalturaIntegerValue'
