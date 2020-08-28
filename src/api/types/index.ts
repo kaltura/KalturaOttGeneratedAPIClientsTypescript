@@ -1167,3 +1167,6 @@ export { UserRoleUpdateAction, UserRoleUpdateActionArgs } from './UserRoleUpdate
 export { UserSegmentAddAction, UserSegmentAddActionArgs } from './UserSegmentAddAction'
 export { UserSegmentDeleteAction, UserSegmentDeleteActionArgs } from './UserSegmentDeleteAction'
 export { UserSegmentListAction, UserSegmentListActionArgs } from './UserSegmentListAction'
+
+
+console.warn('Notice! Your application bundle the whole package of kaltura-xxx-client (either rxjs/ngx/typescript), please refer to the library `readme.md` to reduce app bundle size.')
