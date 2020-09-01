@@ -2,10 +2,13 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface NotificationSendSmsActionArgs  extends KalturaRequestArgs {
     message : string;
+	phoneNumber? : string;
+	adapterData? : { [key : string] : KalturaStringValue};
 }
 
 /**
@@ -21,6 +24,8 @@ export interface NotificationSendSmsActionArgs  extends KalturaRequestArgs {
 export class NotificationSendSmsAction extends KalturaRequest<boolean> {
 
     message : string;
+	phoneNumber : string;
+	adapterData : { [key : string] : KalturaStringValue};
 
     constructor(data : NotificationSendSmsActionArgs)
     {
@@ -35,7 +40,9 @@ export class NotificationSendSmsAction extends KalturaRequest<boolean> {
             {
                 service : { type : 'c', default : 'notification' },
 				action : { type : 'c', default : 'sendSms' },
-				message : { type : 's' }
+				message : { type : 's' },
+				phoneNumber : { type : 's' },
+				adapterData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
