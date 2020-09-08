@@ -4,12 +4,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface SmsAdapterProfileDeleteActionArgs  extends KalturaRequestArgs {
+export interface DeviceReferenceDataDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
 /**
- * Build request payload for service 'smsAdapterProfile' action 'delete'.
+ * Build request payload for service 'deviceReferenceData' action 'delete'.
  *
  * Usage: Delete an object
  *
@@ -18,11 +18,11 @@ export interface SmsAdapterProfileDeleteActionArgs  extends KalturaRequestArgs {
  * @class
  * @extends KalturaRequest
  */
-export class SmsAdapterProfileDeleteAction extends KalturaRequest<void> {
+export class DeviceReferenceDataDeleteAction extends KalturaRequest<void> {
 
     id : number;
 
-    constructor(data : SmsAdapterProfileDeleteActionArgs)
+    constructor(data : DeviceReferenceDataDeleteActionArgs)
     {
         super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
@@ -33,7 +33,7 @@ export class SmsAdapterProfileDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'smsadapterprofile' },
+                service : { type : 'c', default : 'devicereferencedata' },
 				action : { type : 'c', default : 'delete' },
 				id : { type : 'n' }
             }
