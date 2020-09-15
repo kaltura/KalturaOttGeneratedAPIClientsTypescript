@@ -12,7 +12,6 @@ export interface KalturaHouseholdDeviceArgs  extends KalturaOTTObjectSupportNull
 	brandId? : number;
 	activatedOn? : number;
 	externalId? : string;
-	macAddress? : string;
 }
 
 
@@ -27,7 +26,6 @@ export class KalturaHouseholdDevice extends KalturaOTTObjectSupportNullable {
 	readonly deviceFamilyId : number;
 	readonly drm : KalturaCustomDrmPlaybackPluginData;
 	externalId : string;
-	macAddress : string;
 
     constructor(data? : KalturaHouseholdDeviceArgs)
     {
@@ -49,8 +47,7 @@ export class KalturaHouseholdDevice extends KalturaOTTObjectSupportNullable {
 				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaDeviceStatus, subType : 'KalturaDeviceStatus' },
 				deviceFamilyId : { type : 'n', readOnly : true },
 				drm : { type : 'o', readOnly : true, subTypeConstructor : KalturaCustomDrmPlaybackPluginData, subType : 'KalturaCustomDrmPlaybackPluginData' },
-				externalId : { type : 's' },
-				macAddress : { type : 's' }
+				externalId : { type : 's' }
             }
         );
         return result;

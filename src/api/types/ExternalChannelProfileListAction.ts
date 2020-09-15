@@ -2,11 +2,10 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaExternalChannelProfileListResponse } from './KalturaExternalChannelProfileListResponse';
 
-import { KalturaExternalChannelProfileFilter } from './KalturaExternalChannelProfileFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ExternalChannelProfileListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaExternalChannelProfileFilter;
+    
 }
 
 /**
@@ -21,7 +20,7 @@ export interface ExternalChannelProfileListActionArgs  extends KalturaRequestArg
  */
 export class ExternalChannelProfileListAction extends KalturaRequest<KalturaExternalChannelProfileListResponse> {
 
-    filter : KalturaExternalChannelProfileFilter;
+    
 
     constructor(data? : ExternalChannelProfileListActionArgs)
     {
@@ -35,8 +34,7 @@ export class ExternalChannelProfileListAction extends KalturaRequest<KalturaExte
             result.properties,
             {
                 service : { type : 'c', default : 'externalchannelprofile' },
-				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaExternalChannelProfileFilter, subType : 'KalturaExternalChannelProfileFilter' }
+				action : { type : 'c', default : 'list' }
             }
         );
         return result;

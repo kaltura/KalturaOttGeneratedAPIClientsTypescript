@@ -3,7 +3,6 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDeleteMediaPolicy } from './KalturaDeleteMediaPolicy';
 import { KalturaDowngradePolicy } from './KalturaDowngradePolicy';
-import { KalturaRollingDeviceRemovalData } from './KalturaRollingDeviceRemovalData';
 import { KalturaPartnerConfiguration, KalturaPartnerConfigurationArgs } from './KalturaPartnerConfiguration';
 
 export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigurationArgs {
@@ -19,8 +18,6 @@ export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigur
 	householdLimitationModule? : number;
 	enableRegionFiltering? : boolean;
 	defaultRegion? : number;
-	rollingDeviceData? : KalturaRollingDeviceRemovalData;
-	finishedPercentThreshold? : number;
 }
 
 
@@ -38,8 +35,6 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 	householdLimitationModule : number;
 	enableRegionFiltering : boolean;
 	defaultRegion : number;
-	rollingDeviceData : KalturaRollingDeviceRemovalData;
-	finishedPercentThreshold : number;
 
     constructor(data? : KalturaGeneralPartnerConfigArgs)
     {
@@ -64,9 +59,7 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 				dateFormat : { type : 's' },
 				householdLimitationModule : { type : 'n' },
 				enableRegionFiltering : { type : 'b' },
-				defaultRegion : { type : 'n' },
-				rollingDeviceData : { type : 'o', subTypeConstructor : KalturaRollingDeviceRemovalData, subType : 'KalturaRollingDeviceRemovalData' },
-				finishedPercentThreshold : { type : 'n' }
+				defaultRegion : { type : 'n' }
             }
         );
         return result;

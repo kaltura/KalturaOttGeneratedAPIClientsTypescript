@@ -30,8 +30,6 @@ export class KalturaHousehold extends KalturaObjectBase {
 	readonly frequencyNextUserAction : number;
 	readonly restriction : KalturaHouseholdRestriction;
 	readonly roleId : number;
-	readonly createDate : number;
-	readonly updateDate : number;
 
     constructor(data? : KalturaHouseholdArgs)
     {
@@ -59,9 +57,7 @@ export class KalturaHousehold extends KalturaObjectBase {
 				frequencyNextDeviceAction : { type : 'n', readOnly : true },
 				frequencyNextUserAction : { type : 'n', readOnly : true },
 				restriction : { type : 'es', readOnly : true, subTypeConstructor : KalturaHouseholdRestriction, subType : 'KalturaHouseholdRestriction' },
-				roleId : { type : 'n', readOnly : true },
-				createDate : { type : 'n', readOnly : true },
-				updateDate : { type : 'n', readOnly : true }
+				roleId : { type : 'n', readOnly : true }
             }
         );
         return result;

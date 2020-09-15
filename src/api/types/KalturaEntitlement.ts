@@ -5,7 +5,7 @@ import { KalturaPaymentMethodType } from './KalturaPaymentMethodType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaEntitlementArgs  extends KalturaObjectBaseArgs {
-    endDate? : number;
+    
 }
 
 
@@ -14,7 +14,7 @@ export class KalturaEntitlement extends KalturaObjectBase {
     readonly id : number;
 	readonly productId : string;
 	readonly currentUses : number;
-	endDate : number;
+	readonly endDate : number;
 	readonly currentDate : number;
 	readonly lastViewDate : number;
 	readonly purchaseDate : number;
@@ -41,7 +41,7 @@ export class KalturaEntitlement extends KalturaObjectBase {
 				id : { type : 'n', readOnly : true },
 				productId : { type : 's', readOnly : true },
 				currentUses : { type : 'n', readOnly : true },
-				endDate : { type : 'n' },
+				endDate : { type : 'n', readOnly : true },
 				currentDate : { type : 'n', readOnly : true },
 				lastViewDate : { type : 'n', readOnly : true },
 				purchaseDate : { type : 'n', readOnly : true },
