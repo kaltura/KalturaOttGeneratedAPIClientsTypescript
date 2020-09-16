@@ -954,6 +954,7 @@ export { DynamicListAddAction, DynamicListAddActionArgs } from './DynamicListAdd
 export { DynamicListUpdateAction, DynamicListUpdateActionArgs } from './DynamicListUpdateAction'
 export { DynamicListDeleteAction, DynamicListDeleteActionArgs } from './DynamicListDeleteAction'
 export { DynamicListListAction, DynamicListListActionArgs } from './DynamicListListAction'
+export { DynamicListAddFromBulkUploadAction, DynamicListAddFromBulkUploadActionArgs } from './DynamicListAddFromBulkUploadAction'
 export { EmailSendAction, EmailSendActionArgs } from './EmailSendAction'
 export { EngagementAdapterAddAction, EngagementAdapterAddActionArgs } from './EngagementAdapterAddAction'
 export { EngagementAdapterDeleteAction, EngagementAdapterDeleteActionArgs } from './EngagementAdapterDeleteAction'
