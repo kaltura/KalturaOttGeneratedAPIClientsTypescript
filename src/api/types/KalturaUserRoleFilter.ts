@@ -1,15 +1,11 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaUserRoleType } from './KalturaUserRoleType';
-import { KalturaUserRoleProfile } from './KalturaUserRoleProfile';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaUserRoleFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
 	currentUserRoleIdsContains? : boolean;
-	typeEqual? : KalturaUserRoleType;
-	profileEqual? : KalturaUserRoleProfile;
 }
 
 
@@ -17,8 +13,6 @@ export class KalturaUserRoleFilter extends KalturaFilter {
 
     idIn : string;
 	currentUserRoleIdsContains : boolean;
-	typeEqual : KalturaUserRoleType;
-	profileEqual : KalturaUserRoleProfile;
 
     constructor(data? : KalturaUserRoleFilterArgs)
     {
@@ -33,9 +27,7 @@ export class KalturaUserRoleFilter extends KalturaFilter {
             {
                 objectType : { type : 'c', default : 'KalturaUserRoleFilter' },
 				idIn : { type : 's' },
-				currentUserRoleIdsContains : { type : 'b' },
-				typeEqual : { type : 'es', subTypeConstructor : KalturaUserRoleType, subType : 'KalturaUserRoleType' },
-				profileEqual : { type : 'es', subTypeConstructor : KalturaUserRoleProfile, subType : 'KalturaUserRoleProfile' }
+				currentUserRoleIdsContains : { type : 'b' }
             }
         );
         return result;

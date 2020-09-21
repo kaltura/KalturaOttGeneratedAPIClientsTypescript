@@ -2,11 +2,10 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface OttUserLogoutActionArgs  extends KalturaRequestArgs {
-    adapterData? : { [key : string] : KalturaStringValue};
+    
 }
 
 /**
@@ -21,7 +20,7 @@ export interface OttUserLogoutActionArgs  extends KalturaRequestArgs {
  */
 export class OttUserLogoutAction extends KalturaRequest<boolean> {
 
-    adapterData : { [key : string] : KalturaStringValue};
+    
 
     constructor(data? : OttUserLogoutActionArgs)
     {
@@ -35,8 +34,7 @@ export class OttUserLogoutAction extends KalturaRequest<boolean> {
             result.properties,
             {
                 service : { type : 'c', default : 'ottuser' },
-				action : { type : 'c', default : 'logout' },
-				adapterData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
+				action : { type : 'c', default : 'logout' }
             }
         );
         return result;

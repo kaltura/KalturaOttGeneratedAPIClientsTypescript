@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaBaseChannelArgs  extends KalturaOTTObjectSupportNullableArgs {
+export interface KalturaBaseChannelArgs  extends KalturaObjectBaseArgs {
     
 }
 
 
-export class KalturaBaseChannel extends KalturaOTTObjectSupportNullable {
+export class KalturaBaseChannel extends KalturaObjectBase {
 
     readonly id : number;
 
