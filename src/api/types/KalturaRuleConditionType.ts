@@ -11,7 +11,7 @@ export enum KalturaRuleConditionType {
 	deviceFamily = 'DEVICE_FAMILY',
 	deviceManufacturer = 'DEVICE_MANUFACTURER',
 	deviceModel = 'DEVICE_MODEL',
-	deviceUdid = 'DEVICE_UDID',
+	deviceUdidDynamicList = 'DEVICE_UDID_DYNAMIC_LIST',
 	header = 'HEADER',
 	ipRange = 'IP_RANGE',
 	or = 'OR',

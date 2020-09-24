@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDynamicListFilter, KalturaDynamicListFilterArgs } from './KalturaDynamicListFilter';
+import { KalturaDynamicListSearchFilter, KalturaDynamicListSearchFilterArgs } from './KalturaDynamicListSearchFilter';
 
-export interface KalturaUdidDynamicListSearchFilterArgs  extends KalturaDynamicListFilterArgs {
+export interface KalturaUdidDynamicListSearchFilterArgs  extends KalturaDynamicListSearchFilterArgs {
     
 }
 
 
-export class KalturaUdidDynamicListSearchFilter extends KalturaDynamicListFilter {
+export class KalturaUdidDynamicListSearchFilter extends KalturaDynamicListSearchFilter {
 
     
 

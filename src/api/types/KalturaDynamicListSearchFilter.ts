@@ -4,13 +4,15 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDynamicListFilter, KalturaDynamicListFilterArgs } from './KalturaDynamicListFilter';
 
 export interface KalturaDynamicListSearchFilterArgs  extends KalturaDynamicListFilterArgs {
-    valueIn? : string;
+    idEqual? : number;
+	valueEqual? : string;
 }
 
 
 export class KalturaDynamicListSearchFilter extends KalturaDynamicListFilter {
 
-    valueIn : string;
+    idEqual : number;
+	valueEqual : string;
 
     constructor(data? : KalturaDynamicListSearchFilterArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaDynamicListSearchFilter extends KalturaDynamicListFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDynamicListSearchFilter' },
-				valueIn : { type : 's' }
+				idEqual : { type : 'n' },
+				valueEqual : { type : 's' }
             }
         );
         return result;

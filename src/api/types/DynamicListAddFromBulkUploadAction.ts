@@ -3,13 +3,13 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaBulkUpload } from './KalturaBulkUpload';
 
 import { KalturaBulkUploadExcelJobData } from './KalturaBulkUploadExcelJobData';
-import { KalturaBulkUploadAssetData } from './KalturaBulkUploadAssetData';
+import { KalturaBulkUploadDynamicListData } from './KalturaBulkUploadDynamicListData';
 import { KalturaUploadRequest, KalturaUploadRequestArgs } from '../kaltura-upload-request';
 
 export interface DynamicListAddFromBulkUploadActionArgs  extends KalturaUploadRequestArgs {
     fileData : File;
 	jobData : KalturaBulkUploadExcelJobData;
-	bulkUploadAssetData : KalturaBulkUploadAssetData;
+	bulkUploadData : KalturaBulkUploadDynamicListData;
 }
 
 /**
@@ -26,7 +26,7 @@ export class DynamicListAddFromBulkUploadAction extends KalturaUploadRequest<Kal
 
     fileData : File;
 	jobData : KalturaBulkUploadExcelJobData;
-	bulkUploadAssetData : KalturaBulkUploadAssetData;
+	bulkUploadData : KalturaBulkUploadDynamicListData;
 
     constructor(data : DynamicListAddFromBulkUploadActionArgs)
     {
@@ -43,7 +43,7 @@ export class DynamicListAddFromBulkUploadAction extends KalturaUploadRequest<Kal
 				action : { type : 'c', default : 'addFromBulkUpload' },
 				fileData : { type : 'f' },
 				jobData : { type : 'o', subTypeConstructor : KalturaBulkUploadExcelJobData, subType : 'KalturaBulkUploadExcelJobData' },
-				bulkUploadAssetData : { type : 'o', subTypeConstructor : KalturaBulkUploadAssetData, subType : 'KalturaBulkUploadAssetData' }
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadDynamicListData, subType : 'KalturaBulkUploadDynamicListData' }
             }
         );
         return result;

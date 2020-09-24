@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaCondition, KalturaConditionArgs } from './KalturaCondition';
 
-export interface KalturaDeviceUdidConditionArgs  extends KalturaConditionArgs {
-    udidIn? : string;
+export interface KalturaUdidDynamicListConditionArgs  extends KalturaConditionArgs {
+    id? : number;
 }
 
 
-export class KalturaDeviceUdidCondition extends KalturaCondition {
+export class KalturaUdidDynamicListCondition extends KalturaCondition {
 
-    udidIn : string;
+    id : number;
 
-    constructor(data? : KalturaDeviceUdidConditionArgs)
+    constructor(data? : KalturaUdidDynamicListConditionArgs)
     {
         super(data);
     }
@@ -23,12 +23,12 @@ export class KalturaDeviceUdidCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaDeviceUdidCondition' },
-				udidIn : { type : 's' }
+                objectType : { type : 'c', default : 'KalturaUdidDynamicListCondition' },
+				id : { type : 'n' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaDeviceUdidCondition',KalturaDeviceUdidCondition);
+KalturaTypesFactory.registerType('KalturaUdidDynamicListCondition',KalturaUdidDynamicListCondition);

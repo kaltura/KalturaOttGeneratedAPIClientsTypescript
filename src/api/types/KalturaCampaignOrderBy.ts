@@ -1,5 +1,5 @@
 
 
 export enum KalturaCampaignOrderBy {
-    none = 'NONE'
+    startDateDesc = 'START_DATE_DESC'
 }
