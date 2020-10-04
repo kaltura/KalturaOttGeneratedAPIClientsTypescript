@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaDeviceReferenceDataListResponse } from './KalturaDeviceReferenceDataListResponse';
 
 import { KalturaDeviceReferenceDataFilter } from './KalturaDeviceReferenceDataFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface DeviceReferenceDataListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaDeviceReferenceDataFilter;
+    filter : KalturaDeviceReferenceDataFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,8 +24,9 @@ export interface DeviceReferenceDataListActionArgs  extends KalturaRequestArgs {
 export class DeviceReferenceDataListAction extends KalturaRequest<KalturaDeviceReferenceDataListResponse> {
 
     filter : KalturaDeviceReferenceDataFilter;
+	pager : KalturaFilterPager;
 
-    constructor(data? : DeviceReferenceDataListActionArgs)
+    constructor(data : DeviceReferenceDataListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaDeviceReferenceDataListResponse', responseConstructor : KalturaDeviceReferenceDataListResponse  });
     }
@@ -36,7 +39,8 @@ export class DeviceReferenceDataListAction extends KalturaRequest<KalturaDeviceR
             {
                 service : { type : 'c', default : 'devicereferencedata' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaDeviceReferenceDataFilter, subType : 'KalturaDeviceReferenceDataFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaDeviceReferenceDataFilter, subType : 'KalturaDeviceReferenceDataFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

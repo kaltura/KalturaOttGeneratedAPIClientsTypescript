@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaCampaignListResponse } from './KalturaCampaignListResponse';
 
 import { KalturaCampaignFilter } from './KalturaCampaignFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface CampaignListActionArgs  extends KalturaRequestArgs {
     filter : KalturaCampaignFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,6 +24,7 @@ export interface CampaignListActionArgs  extends KalturaRequestArgs {
 export class CampaignListAction extends KalturaRequest<KalturaCampaignListResponse> {
 
     filter : KalturaCampaignFilter;
+	pager : KalturaFilterPager;
 
     constructor(data : CampaignListActionArgs)
     {
@@ -36,7 +39,8 @@ export class CampaignListAction extends KalturaRequest<KalturaCampaignListRespon
             {
                 service : { type : 'c', default : 'campaign' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaCampaignFilter, subType : 'KalturaCampaignFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaCampaignFilter, subType : 'KalturaCampaignFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDeviceReferenceDataFilter, KalturaDeviceReferenceDataFilterArgs } from './KalturaDeviceReferenceDataFilter';
 
 export interface KalturaDeviceManufacturersReferenceDataFilterArgs  extends KalturaDeviceReferenceDataFilterArgs {
-    
+    nameEqual? : string;
 }
 
 
 export class KalturaDeviceManufacturersReferenceDataFilter extends KalturaDeviceReferenceDataFilter {
 
-    
+    nameEqual : string;
 
     constructor(data? : KalturaDeviceManufacturersReferenceDataFilterArgs)
     {
@@ -23,7 +23,8 @@ export class KalturaDeviceManufacturersReferenceDataFilter extends KalturaDevice
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaDeviceManufacturersReferenceDataFilter' }
+                objectType : { type : 'c', default : 'KalturaDeviceManufacturersReferenceDataFilter' },
+				nameEqual : { type : 's' }
             }
         );
         return result;
