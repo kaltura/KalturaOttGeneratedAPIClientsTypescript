@@ -6,6 +6,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaEntitlementArgs  extends KalturaObjectBaseArgs {
     endDate? : number;
+	isPending? : boolean;
 }
 
 
@@ -25,6 +26,7 @@ export class KalturaEntitlement extends KalturaObjectBase {
 	readonly maxUses : number;
 	readonly userId : string;
 	readonly householdId : number;
+	isPending : boolean;
 
     constructor(data? : KalturaEntitlementArgs)
     {
@@ -51,7 +53,8 @@ export class KalturaEntitlement extends KalturaObjectBase {
 				isCancelationWindowEnabled : { type : 'b', readOnly : true },
 				maxUses : { type : 'n', readOnly : true },
 				userId : { type : 's', readOnly : true },
-				householdId : { type : 'n', readOnly : true }
+				householdId : { type : 'n', readOnly : true },
+				isPending : { type : 'b' }
             }
         );
         return result;
