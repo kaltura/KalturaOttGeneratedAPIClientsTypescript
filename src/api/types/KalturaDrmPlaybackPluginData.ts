@@ -2,11 +2,13 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDrmSchemeName } from './KalturaDrmSchemeName';
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaPluginData, KalturaPluginDataArgs } from './KalturaPluginData';
 
 export interface KalturaDrmPlaybackPluginDataArgs  extends KalturaPluginDataArgs {
     scheme? : KalturaDrmSchemeName;
 	licenseURL? : string;
+	dynamicData? : { [key : string] : KalturaStringValue};
 }
 
 
@@ -14,6 +16,7 @@ export class KalturaDrmPlaybackPluginData extends KalturaPluginData {
 
     scheme : KalturaDrmSchemeName;
 	licenseURL : string;
+	dynamicData : { [key : string] : KalturaStringValue};
 
     constructor(data? : KalturaDrmPlaybackPluginDataArgs)
     {
@@ -28,7 +31,8 @@ export class KalturaDrmPlaybackPluginData extends KalturaPluginData {
             {
                 objectType : { type : 'c', default : 'KalturaDrmPlaybackPluginData' },
 				scheme : { type : 'es', subTypeConstructor : KalturaDrmSchemeName, subType : 'KalturaDrmSchemeName' },
-				licenseURL : { type : 's' }
+				licenseURL : { type : 's' },
+				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
