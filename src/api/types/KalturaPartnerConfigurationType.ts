@@ -10,5 +10,6 @@ export enum KalturaPartnerConfigurationType {
 	objectvirtualasset = 'ObjectVirtualAsset',
 	ossadapter = 'OSSAdapter',
 	payment = 'Payment',
-	playback = 'Playback'
+	playback = 'Playback',
+	security = 'Security'
 }
