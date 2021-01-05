@@ -5,8 +5,7 @@ import { KalturaPaymentMethodType } from './KalturaPaymentMethodType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaEntitlementArgs  extends KalturaObjectBaseArgs {
-    endDate? : number;
-	isPending? : boolean;
+    
 }
 
 
@@ -15,7 +14,7 @@ export class KalturaEntitlement extends KalturaObjectBase {
     readonly id : number;
 	readonly productId : string;
 	readonly currentUses : number;
-	endDate : number;
+	readonly endDate : number;
 	readonly currentDate : number;
 	readonly lastViewDate : number;
 	readonly purchaseDate : number;
@@ -26,7 +25,6 @@ export class KalturaEntitlement extends KalturaObjectBase {
 	readonly maxUses : number;
 	readonly userId : string;
 	readonly householdId : number;
-	isPending : boolean;
 
     constructor(data? : KalturaEntitlementArgs)
     {
@@ -43,7 +41,7 @@ export class KalturaEntitlement extends KalturaObjectBase {
 				id : { type : 'n', readOnly : true },
 				productId : { type : 's', readOnly : true },
 				currentUses : { type : 'n', readOnly : true },
-				endDate : { type : 'n' },
+				endDate : { type : 'n', readOnly : true },
 				currentDate : { type : 'n', readOnly : true },
 				lastViewDate : { type : 'n', readOnly : true },
 				purchaseDate : { type : 'n', readOnly : true },
@@ -53,8 +51,7 @@ export class KalturaEntitlement extends KalturaObjectBase {
 				isCancelationWindowEnabled : { type : 'b', readOnly : true },
 				maxUses : { type : 'n', readOnly : true },
 				userId : { type : 's', readOnly : true },
-				householdId : { type : 'n', readOnly : true },
-				isPending : { type : 'b' }
+				householdId : { type : 'n', readOnly : true }
             }
         );
         return result;

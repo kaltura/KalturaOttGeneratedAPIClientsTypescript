@@ -11,7 +11,6 @@ export enum KalturaPurchaseStatus {
 	geoCommerceBlocked = 'geo_commerce_blocked',
 	invalidCurrency = 'invalid_currency',
 	notForPurchase = 'not_for_purchase',
-	pendingEntitlement = 'pending_entitlement',
 	ppvPurchased = 'ppv_purchased',
 	prePaidPurchased = 'pre_paid_purchased',
 	subscriptionPurchased = 'subscription_purchased',
