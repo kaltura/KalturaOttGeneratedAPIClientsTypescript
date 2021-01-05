@@ -10,6 +10,7 @@ export interface KalturaMediaImageArgs  extends KalturaObjectBaseArgs {
 	url? : string;
 	version? : number;
 	isDefault? : boolean;
+	imageTypeId? : number;
 }
 
 
@@ -22,6 +23,7 @@ export class KalturaMediaImage extends KalturaObjectBase {
 	version : number;
 	readonly id : string;
 	isDefault : boolean;
+	imageTypeId : number;
 
     constructor(data? : KalturaMediaImageArgs)
     {
@@ -41,7 +43,8 @@ export class KalturaMediaImage extends KalturaObjectBase {
 				url : { type : 's' },
 				version : { type : 'n' },
 				id : { type : 's', readOnly : true },
-				isDefault : { type : 'b' }
+				isDefault : { type : 'b' },
+				imageTypeId : { type : 'n' }
             }
         );
         return result;

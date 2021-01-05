@@ -611,6 +611,7 @@ export { KalturaLicensedUrlRecordingRequest, KalturaLicensedUrlRecordingRequestA
 export { KalturaMessageTemplate, KalturaMessageTemplateArgs } from './KalturaMessageTemplate'
 export { KalturaRegistryResponse, KalturaRegistryResponseArgs } from './KalturaRegistryResponse'
 export { KalturaPushMessage, KalturaPushMessageArgs } from './KalturaPushMessage'
+export { KalturaEpgNotificationSettings, KalturaEpgNotificationSettingsArgs } from './KalturaEpgNotificationSettings'
 export { KalturaNotificationsPartnerSettings, KalturaNotificationsPartnerSettingsArgs } from './KalturaNotificationsPartnerSettings'
 export { KalturaNotificationsSettings, KalturaNotificationsSettingsArgs } from './KalturaNotificationsSettings'
 export { KalturaOTTUserDynamicData, KalturaOTTUserDynamicDataArgs } from './KalturaOTTUserDynamicData'
