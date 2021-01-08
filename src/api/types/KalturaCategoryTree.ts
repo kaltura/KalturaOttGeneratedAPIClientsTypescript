@@ -32,7 +32,6 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 	startDateInSeconds : number;
 	endDateInSeconds : number;
 	type : string;
-	readonly versionId : number;
 
     constructor(data? : KalturaCategoryTreeArgs)
     {
@@ -60,8 +59,7 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 				isActive : { type : 'b' },
 				startDateInSeconds : { type : 'n' },
 				endDateInSeconds : { type : 'n' },
-				type : { type : 's' },
-				versionId : { type : 'n', readOnly : true }
+				type : { type : 's' }
             }
         );
         return result;
