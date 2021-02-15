@@ -1,15 +1,15 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
+import { KalturaBasePermissionFilter, KalturaBasePermissionFilterArgs } from './KalturaBasePermissionFilter';
 
-export interface KalturaPermissionFilterArgs  extends KalturaFilterArgs {
+export interface KalturaPermissionFilterArgs  extends KalturaBasePermissionFilterArgs {
     currentUserPermissionsContains? : boolean;
 	roleIdIn? : number;
 }
 
 
-export class KalturaPermissionFilter extends KalturaFilter {
+export class KalturaPermissionFilter extends KalturaBasePermissionFilter {
 
     currentUserPermissionsContains : boolean;
 	roleIdIn : number;
