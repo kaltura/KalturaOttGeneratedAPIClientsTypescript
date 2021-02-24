@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
+import { KalturaProgramAsset, KalturaProgramAssetArgs } from './KalturaProgramAsset';
 
-export interface KalturaEpgArgs  extends KalturaAssetArgs {
+export interface KalturaEpgArgs  extends KalturaProgramAssetArgs {
     
 }
 
 
-export class KalturaEpg extends KalturaAsset {
+export class KalturaEpg extends KalturaProgramAsset {
 
     
 
