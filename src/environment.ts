@@ -12,7 +12,7 @@ export interface Environment {
 
 export const environment: Environment = {
     request: {
-        apiVersion: '6.1.0.28871',
+        apiVersion: '6.1.0.28875',
         avoidQueryString: true,
         fileFormatValue: 20
     },
