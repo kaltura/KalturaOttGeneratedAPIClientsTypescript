@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaMetaDataType } from './KalturaMetaDataType';
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
@@ -14,6 +15,7 @@ export interface KalturaMetaArgs  extends KalturaObjectBaseArgs {
 	helpText? : string;
 	features? : string;
 	parentId? : string;
+	dynamicData? : { [key : string] : KalturaStringValue};
 }
 
 
@@ -31,6 +33,7 @@ export class KalturaMeta extends KalturaObjectBase {
 	parentId : string;
 	readonly createDate : number;
 	readonly updateDate : number;
+	dynamicData : { [key : string] : KalturaStringValue};
 
     constructor(data? : KalturaMetaArgs)
     {
@@ -56,7 +59,8 @@ export class KalturaMeta extends KalturaObjectBase {
 				features : { type : 's' },
 				parentId : { type : 's' },
 				createDate : { type : 'n', readOnly : true },
-				updateDate : { type : 'n', readOnly : true }
+				updateDate : { type : 'n', readOnly : true },
+				dynamicData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
