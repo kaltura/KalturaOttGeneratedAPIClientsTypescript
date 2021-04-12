@@ -7,6 +7,7 @@ import { KalturaAssetFile, KalturaAssetFileArgs } from './KalturaAssetFile';
 export interface KalturaMediaFileArgs  extends KalturaAssetFileArgs {
     assetId? : number;
 	typeId? : number;
+	altUrl? : string;
 	duration? : number;
 	externalId? : string;
 	altExternalId? : string;
@@ -35,6 +36,7 @@ export class KalturaMediaFile extends KalturaAssetFile {
 	readonly id : number;
 	readonly type : string;
 	typeId : number;
+	altUrl : string;
 	duration : number;
 	externalId : string;
 	altExternalId : string;
@@ -71,6 +73,7 @@ export class KalturaMediaFile extends KalturaAssetFile {
 				id : { type : 'n', readOnly : true },
 				type : { type : 's', readOnly : true },
 				typeId : { type : 'n' },
+				altUrl : { type : 's' },
 				duration : { type : 'n' },
 				externalId : { type : 's' },
 				altExternalId : { type : 's' },

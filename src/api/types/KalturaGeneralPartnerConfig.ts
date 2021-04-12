@@ -4,6 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDeleteMediaPolicy } from './KalturaDeleteMediaPolicy';
 import { KalturaDowngradePolicy } from './KalturaDowngradePolicy';
 import { KalturaRollingDeviceRemovalData } from './KalturaRollingDeviceRemovalData';
+import { KalturaSuspensionProfileInheritanceType } from './KalturaSuspensionProfileInheritanceType';
 import { KalturaPartnerConfiguration, KalturaPartnerConfigurationArgs } from './KalturaPartnerConfiguration';
 
 export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigurationArgs {
@@ -21,6 +22,7 @@ export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigur
 	defaultRegion? : number;
 	rollingDeviceData? : KalturaRollingDeviceRemovalData;
 	finishedPercentThreshold? : number;
+	suspensionProfileInheritanceType? : KalturaSuspensionProfileInheritanceType;
 }
 
 
@@ -40,6 +42,7 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 	defaultRegion : number;
 	rollingDeviceData : KalturaRollingDeviceRemovalData;
 	finishedPercentThreshold : number;
+	suspensionProfileInheritanceType : KalturaSuspensionProfileInheritanceType;
 
     constructor(data? : KalturaGeneralPartnerConfigArgs)
     {
@@ -66,7 +69,8 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 				enableRegionFiltering : { type : 'b' },
 				defaultRegion : { type : 'n' },
 				rollingDeviceData : { type : 'o', subTypeConstructor : KalturaRollingDeviceRemovalData, subType : 'KalturaRollingDeviceRemovalData' },
-				finishedPercentThreshold : { type : 'n' }
+				finishedPercentThreshold : { type : 'n' },
+				suspensionProfileInheritanceType : { type : 'es', subTypeConstructor : KalturaSuspensionProfileInheritanceType, subType : 'KalturaSuspensionProfileInheritanceType' }
             }
         );
         return result;
