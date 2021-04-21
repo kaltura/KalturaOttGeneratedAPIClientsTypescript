@@ -2,11 +2,11 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaPermissionListResponse } from './KalturaPermissionListResponse';
 
-import { KalturaBasePermissionFilter } from './KalturaBasePermissionFilter';
+import { KalturaPermissionFilter } from './KalturaPermissionFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface PermissionListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaBasePermissionFilter;
+    filter? : KalturaPermissionFilter;
 }
 
 /**
@@ -21,7 +21,7 @@ export interface PermissionListActionArgs  extends KalturaRequestArgs {
  */
 export class PermissionListAction extends KalturaRequest<KalturaPermissionListResponse> {
 
-    filter : KalturaBasePermissionFilter;
+    filter : KalturaPermissionFilter;
 
     constructor(data? : PermissionListActionArgs)
     {
@@ -36,7 +36,7 @@ export class PermissionListAction extends KalturaRequest<KalturaPermissionListRe
             {
                 service : { type : 'c', default : 'permission' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaBasePermissionFilter, subType : 'KalturaBasePermissionFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaPermissionFilter, subType : 'KalturaPermissionFilter' }
             }
         );
         return result;
