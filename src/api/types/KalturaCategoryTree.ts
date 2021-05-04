@@ -34,6 +34,7 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 	type : string;
 	readonly versionId : number;
 	readonly virtualAssetId : number;
+	readonly referenceId : string;
 
     constructor(data? : KalturaCategoryTreeArgs)
     {
@@ -63,7 +64,8 @@ export class KalturaCategoryTree extends KalturaObjectBase {
 				endDateInSeconds : { type : 'n' },
 				type : { type : 's' },
 				versionId : { type : 'n', readOnly : true },
-				virtualAssetId : { type : 'n', readOnly : true }
+				virtualAssetId : { type : 'n', readOnly : true },
+				referenceId : { type : 's', readOnly : true }
             }
         );
         return result;
