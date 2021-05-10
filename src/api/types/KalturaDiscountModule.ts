@@ -4,7 +4,8 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaDiscountModuleArgs  extends KalturaObjectBaseArgs {
-    percent? : number;
+    id? : number;
+	percent? : number;
 	startDate? : number;
 	endDate? : number;
 }
@@ -12,7 +13,8 @@ export interface KalturaDiscountModuleArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaDiscountModule extends KalturaObjectBase {
 
-    percent : number;
+    id : number;
+	percent : number;
 	startDate : number;
 	endDate : number;
 
@@ -28,6 +30,7 @@ export class KalturaDiscountModule extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDiscountModule' },
+				id : { type : 'n' },
 				percent : { type : 'n' },
 				startDate : { type : 'n' },
 				endDate : { type : 'n' }
