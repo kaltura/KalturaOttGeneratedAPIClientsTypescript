@@ -14,7 +14,6 @@ export interface AssetFilePlayManifestActionArgs  extends KalturaRequestArgs {
 	contextType : KalturaPlaybackContextType;
 	ks? : string;
 	tokenizedUrl? : string;
-	isAltUrl? : boolean;
 }
 
 /**
@@ -36,12 +35,10 @@ export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile
 	contextType : KalturaPlaybackContextType;
 	ks : string;
 	tokenizedUrl : string;
-	isAltUrl : boolean;
 
     constructor(data : AssetFilePlayManifestActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaAssetFile', responseConstructor : KalturaAssetFile  });
-        if (typeof this.isAltUrl === 'undefined') this.isAltUrl = false;
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -58,8 +55,7 @@ export class AssetFilePlayManifestAction extends KalturaRequest<KalturaAssetFile
 				assetFileId : { type : 'n' },
 				contextType : { type : 'es', subTypeConstructor : KalturaPlaybackContextType, subType : 'KalturaPlaybackContextType' },
 				ks : { type : 's' },
-				tokenizedUrl : { type : 's' },
-				isAltUrl : { type : 'b' }
+				tokenizedUrl : { type : 's' }
             }
         );
         return result;
