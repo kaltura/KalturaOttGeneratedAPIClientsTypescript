@@ -1,8 +1,7 @@
 
 
 export enum KalturaPartnerConfigurationType {
-    base = 'Base',
-	catalog = 'Catalog',
+    catalog = 'Catalog',
 	commerce = 'Commerce',
 	concurrency = 'Concurrency',
 	defaultpaymentgateway = 'DefaultPaymentGateway',
