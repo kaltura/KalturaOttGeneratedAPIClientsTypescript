@@ -1076,6 +1076,8 @@ export { HouseholdDeviceListAction, HouseholdDeviceListActionArgs } from './Hous
 export { HouseholdDeviceLoginWithPinAction, HouseholdDeviceLoginWithPinActionArgs } from './HouseholdDeviceLoginWithPinAction'
 export { HouseholdDeviceUpdateAction, HouseholdDeviceUpdateActionArgs } from './HouseholdDeviceUpdateAction'
 export { HouseholdDeviceUpdateStatusAction, HouseholdDeviceUpdateStatusActionArgs } from './HouseholdDeviceUpdateStatusAction'
+export { HouseholdLimitationsAddAction, HouseholdLimitationsAddActionArgs } from './HouseholdLimitationsAddAction'
+export { HouseholdLimitationsDeleteAction, HouseholdLimitationsDeleteActionArgs } from './HouseholdLimitationsDeleteAction'
 export { HouseholdLimitationsGetAction, HouseholdLimitationsGetActionArgs } from './HouseholdLimitationsGetAction'
 export { HouseholdLimitationsListAction, HouseholdLimitationsListActionArgs } from './HouseholdLimitationsListAction'
 export { HouseholdPaymentGatewayDisableAction, HouseholdPaymentGatewayDisableActionArgs } from './HouseholdPaymentGatewayDisableAction'
