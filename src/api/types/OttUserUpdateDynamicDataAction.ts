@@ -13,7 +13,8 @@ export interface OttUserUpdateDynamicDataActionArgs  extends KalturaRequestArgs 
 /**
  * Build request payload for service 'ottUser' action 'updateDynamicData'.
  *
- * Usage: Update user dynamic data
+ * Usage: Update user dynamic data. If it is needed to update several items, use a multi-request to avoid race conditions.
+ * This API endpoint will deprecated soon. Please use UpsertDynamicData instead of it
  *
  * Server response type:         KalturaOTTUserDynamicData
  * Server failure response type: KalturaAPIException
