@@ -5,23 +5,29 @@ import { KalturaHouseholdDeviceFamilyLimitations } from './KalturaHouseholdDevic
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaHouseholdLimitationsArgs  extends KalturaObjectBaseArgs {
-    
+    name? : string;
+	concurrentLimit? : number;
+	deviceLimit? : number;
+	deviceFrequency? : number;
+	userFrequency? : number;
+	usersLimit? : number;
+	deviceFamiliesLimitations? : KalturaHouseholdDeviceFamilyLimitations[];
 }
 
 
 export class KalturaHouseholdLimitations extends KalturaObjectBase {
 
     readonly id : number;
-	readonly name : string;
-	readonly concurrentLimit : number;
-	readonly deviceLimit : number;
-	readonly deviceFrequency : number;
+	name : string;
+	concurrentLimit : number;
+	deviceLimit : number;
+	deviceFrequency : number;
 	readonly deviceFrequencyDescription : string;
-	readonly userFrequency : number;
+	userFrequency : number;
 	readonly userFrequencyDescription : string;
 	readonly npvrQuotaInSeconds : number;
-	readonly usersLimit : number;
-	readonly deviceFamiliesLimitations : KalturaHouseholdDeviceFamilyLimitations[];
+	usersLimit : number;
+	deviceFamiliesLimitations : KalturaHouseholdDeviceFamilyLimitations[];
 
     constructor(data? : KalturaHouseholdLimitationsArgs)
     {
@@ -37,16 +43,16 @@ export class KalturaHouseholdLimitations extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaHouseholdLimitations' },
 				id : { type : 'n', readOnly : true },
-				name : { type : 's', readOnly : true },
-				concurrentLimit : { type : 'n', readOnly : true },
-				deviceLimit : { type : 'n', readOnly : true },
-				deviceFrequency : { type : 'n', readOnly : true },
+				name : { type : 's' },
+				concurrentLimit : { type : 'n' },
+				deviceLimit : { type : 'n' },
+				deviceFrequency : { type : 'n' },
 				deviceFrequencyDescription : { type : 's', readOnly : true },
-				userFrequency : { type : 'n', readOnly : true },
+				userFrequency : { type : 'n' },
 				userFrequencyDescription : { type : 's', readOnly : true },
 				npvrQuotaInSeconds : { type : 'n', readOnly : true },
-				usersLimit : { type : 'n', readOnly : true },
-				deviceFamiliesLimitations : { type : 'a', readOnly : true, subTypeConstructor : KalturaHouseholdDeviceFamilyLimitations, subType : 'KalturaHouseholdDeviceFamilyLimitations' }
+				usersLimit : { type : 'n' },
+				deviceFamiliesLimitations : { type : 'a', subTypeConstructor : KalturaHouseholdDeviceFamilyLimitations, subType : 'KalturaHouseholdDeviceFamilyLimitations' }
             }
         );
         return result;
