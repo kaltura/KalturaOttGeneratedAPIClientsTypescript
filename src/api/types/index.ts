@@ -1292,6 +1292,7 @@ export { SeriesRecordingCancelBySeasonNumberAction, SeriesRecordingCancelBySeaso
 export { SeriesRecordingDeleteAction, SeriesRecordingDeleteActionArgs } from './SeriesRecordingDeleteAction'
 export { SeriesRecordingDeleteBySeasonNumberAction, SeriesRecordingDeleteBySeasonNumberActionArgs } from './SeriesRecordingDeleteBySeasonNumberAction'
 export { SeriesRecordingListAction, SeriesRecordingListActionArgs } from './SeriesRecordingListAction'
+export { SeriesRecordingRebookCanceledByEpgIdAction, SeriesRecordingRebookCanceledByEpgIdActionArgs } from './SeriesRecordingRebookCanceledByEpgIdAction'
 export { SessionGetAction, SessionGetActionArgs } from './SessionGetAction'
 export { SessionRevokeAction, SessionRevokeActionArgs } from './SessionRevokeAction'
 export { SessionSwitchUserAction, SessionSwitchUserActionArgs } from './SessionSwitchUserAction'
