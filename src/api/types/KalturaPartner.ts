@@ -3,17 +3,22 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaDeviceFamilyBaseArgs  extends KalturaObjectBaseArgs {
+export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
     id? : number;
+	name? : string;
+	createDate? : number;
+	updateDate? : number;
 }
 
 
-export class KalturaDeviceFamilyBase extends KalturaObjectBase {
+export class KalturaPartner extends KalturaObjectBase {
 
     id : number;
-	readonly name : string;
+	name : string;
+	createDate : number;
+	updateDate : number;
 
-    constructor(data? : KalturaDeviceFamilyBaseArgs)
+    constructor(data? : KalturaPartnerArgs)
     {
         super(data);
     }
@@ -24,13 +29,15 @@ export class KalturaDeviceFamilyBase extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaDeviceFamilyBase' },
+                objectType : { type : 'c', default : 'KalturaPartner' },
 				id : { type : 'n' },
-				name : { type : 's', readOnly : true }
+				name : { type : 's' },
+				createDate : { type : 'n' },
+				updateDate : { type : 'n' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaDeviceFamilyBase',KalturaDeviceFamilyBase);
+KalturaTypesFactory.registerType('KalturaPartner',KalturaPartner);

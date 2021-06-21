@@ -5,7 +5,8 @@ import { KalturaCouponGroupType } from './KalturaCouponGroupType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaCouponsGroupArgs  extends KalturaObjectBaseArgs {
-    name? : string;
+    id? : string;
+	name? : string;
 	startDate? : number;
 	endDate? : number;
 	maxUsesNumber? : number;
@@ -18,7 +19,7 @@ export interface KalturaCouponsGroupArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaCouponsGroup extends KalturaObjectBase {
 
-    readonly id : string;
+    id : string;
 	name : string;
 	startDate : number;
 	endDate : number;
@@ -40,7 +41,7 @@ export class KalturaCouponsGroup extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCouponsGroup' },
-				id : { type : 's', readOnly : true },
+				id : { type : 's' },
 				name : { type : 's' },
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
