@@ -1322,6 +1322,8 @@ export { SsoAdapterProfileInvokeAction, SsoAdapterProfileInvokeActionArgs } from
 export { SsoAdapterProfileListAction, SsoAdapterProfileListActionArgs } from './SsoAdapterProfileListAction'
 export { SsoAdapterProfileUpdateAction, SsoAdapterProfileUpdateActionArgs } from './SsoAdapterProfileUpdateAction'
 export { StreamingDeviceListAction, StreamingDeviceListActionArgs } from './StreamingDeviceListAction'
+export { SubscriptionAddAction, SubscriptionAddActionArgs } from './SubscriptionAddAction'
+export { SubscriptionDeleteAction, SubscriptionDeleteActionArgs } from './SubscriptionDeleteAction'
 export { SubscriptionListAction, SubscriptionListActionArgs } from './SubscriptionListAction'
 export { SubscriptionValidateCouponAction, SubscriptionValidateCouponActionArgs } from './SubscriptionValidateCouponAction'
 export { SubscriptionSetAddAction, SubscriptionSetAddActionArgs } from './SubscriptionSetAddAction'
