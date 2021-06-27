@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface SubscriptionDeleteActionArgs  extends KalturaRequestArgs {
-    id : number;
+export interface PartnerCreateIndexesActionArgs  extends KalturaRequestArgs {
+    
 }
 
 /**
- * Build request payload for service 'subscription' action 'delete'.
+ * Build request payload for service 'partner' action 'createIndexes'.
  *
- * Usage: Internal API !!! Delete subscription
+ * Usage: Internal API !!! create ElasticSearch indexes for partner
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class SubscriptionDeleteAction extends KalturaRequest<boolean> {
+export class PartnerCreateIndexesAction extends KalturaRequest<boolean> {
 
-    id : number;
+    
 
-    constructor(data : SubscriptionDeleteActionArgs)
+    constructor(data? : PartnerCreateIndexesActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,9 +33,8 @@ export class SubscriptionDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'subscription' },
-				action : { type : 'c', default : 'delete' },
-				id : { type : 'n' }
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'createIndexes' }
             }
         );
         return result;
