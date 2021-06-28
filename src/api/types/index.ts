@@ -1198,6 +1198,7 @@ export { ParentalRuleUpdateAction, ParentalRuleUpdateActionArgs } from './Parent
 export { PartnerConfigurationListAction, PartnerConfigurationListActionArgs } from './PartnerConfigurationListAction'
 export { PartnerConfigurationUpdateAction, PartnerConfigurationUpdateActionArgs } from './PartnerConfigurationUpdateAction'
 export { PartnerAddAction, PartnerAddActionArgs } from './PartnerAddAction'
+export { PartnerCreateIndexesAction, PartnerCreateIndexesActionArgs } from './PartnerCreateIndexesAction'
 export { PartnerDeleteAction, PartnerDeleteActionArgs } from './PartnerDeleteAction'
 export { PartnerExternalLoginAction, PartnerExternalLoginActionArgs } from './PartnerExternalLoginAction'
 export { PartnerListAction, PartnerListActionArgs } from './PartnerListAction'
