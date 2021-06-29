@@ -23,10 +23,6 @@ export interface KalturaSubscriptionInternalArgs  extends KalturaObjectBaseArgs 
 	householdLimitationsId? : number;
 	gracePeriodMinutes? : number;
 	premiumServices? : KalturaPremiumService[];
-	maxViewsNumber? : number;
-	viewLifeCycle? : number;
-	waiverPeriod? : number;
-	isWaiverEnabled? : boolean;
 	couponsGroups? : KalturaSubscriptionCouponGroup[];
 	productCodes? : KalturaProductCode[];
 	dependencyType? : KalturaSubscriptionDependencyType;
@@ -35,6 +31,7 @@ export interface KalturaSubscriptionInternalArgs  extends KalturaObjectBaseArgs 
 	preSaleDate? : number;
 	adsPolicy? : KalturaAdsPolicy;
 	adsParam? : string;
+	isActive? : boolean;
 }
 
 
@@ -55,10 +52,6 @@ export class KalturaSubscriptionInternal extends KalturaObjectBase {
 	householdLimitationsId : number;
 	gracePeriodMinutes : number;
 	premiumServices : KalturaPremiumService[];
-	maxViewsNumber : number;
-	viewLifeCycle : number;
-	waiverPeriod : number;
-	isWaiverEnabled : boolean;
 	couponsGroups : KalturaSubscriptionCouponGroup[];
 	productCodes : KalturaProductCode[];
 	dependencyType : KalturaSubscriptionDependencyType;
@@ -67,6 +60,7 @@ export class KalturaSubscriptionInternal extends KalturaObjectBase {
 	preSaleDate : number;
 	adsPolicy : KalturaAdsPolicy;
 	adsParam : string;
+	isActive : boolean;
 
     constructor(data? : KalturaSubscriptionInternalArgs)
     {
@@ -100,10 +94,6 @@ export class KalturaSubscriptionInternal extends KalturaObjectBase {
 				householdLimitationsId : { type : 'n' },
 				gracePeriodMinutes : { type : 'n' },
 				premiumServices : { type : 'a', subTypeConstructor : KalturaPremiumService, subType : 'KalturaPremiumService' },
-				maxViewsNumber : { type : 'n' },
-				viewLifeCycle : { type : 'n' },
-				waiverPeriod : { type : 'n' },
-				isWaiverEnabled : { type : 'b' },
 				couponsGroups : { type : 'a', subTypeConstructor : KalturaSubscriptionCouponGroup, subType : 'KalturaSubscriptionCouponGroup' },
 				productCodes : { type : 'a', subTypeConstructor : KalturaProductCode, subType : 'KalturaProductCode' },
 				dependencyType : { type : 'es', subTypeConstructor : KalturaSubscriptionDependencyType, subType : 'KalturaSubscriptionDependencyType' },
@@ -111,7 +101,8 @@ export class KalturaSubscriptionInternal extends KalturaObjectBase {
 				isCancellationBlocked : { type : 'b' },
 				preSaleDate : { type : 'n' },
 				adsPolicy : { type : 'es', subTypeConstructor : KalturaAdsPolicy, subType : 'KalturaAdsPolicy' },
-				adsParam : { type : 's' }
+				adsParam : { type : 's' },
+				isActive : { type : 'b' }
             }
         );
         return result;
