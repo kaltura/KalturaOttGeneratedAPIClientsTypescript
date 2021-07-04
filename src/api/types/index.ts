@@ -459,6 +459,7 @@ export { KalturaHouseholdPremiumServiceListResponse, KalturaHouseholdPremiumServ
 export { KalturaRecording, KalturaRecordingArgs } from './KalturaRecording'
 export { KalturaExternalRecording, KalturaExternalRecordingArgs } from './KalturaExternalRecording'
 export { KalturaRecordingListResponse, KalturaRecordingListResponseArgs } from './KalturaRecordingListResponse'
+export { KalturaSeriesRecordingOption, KalturaSeriesRecordingOptionArgs } from './KalturaSeriesRecordingOption'
 export { KalturaSeriesRecording, KalturaSeriesRecordingArgs } from './KalturaSeriesRecording'
 export { KalturaSeriesRecordingListResponse, KalturaSeriesRecordingListResponseArgs } from './KalturaSeriesRecordingListResponse'
 export { KalturaExternalSeriesRecording, KalturaExternalSeriesRecordingArgs } from './KalturaExternalSeriesRecording'
