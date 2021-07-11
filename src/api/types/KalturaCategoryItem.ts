@@ -15,7 +15,6 @@ export interface KalturaCategoryItemArgs  extends KalturaCrudObjectArgs {
 	startDateInSeconds? : number;
 	endDateInSeconds? : number;
 	type? : string;
-	referenceId? : string;
 }
 
 
@@ -35,7 +34,6 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 	type : string;
 	readonly versionId : number;
 	readonly virtualAssetId : number;
-	referenceId : string;
 
     constructor(data? : KalturaCategoryItemArgs)
     {
@@ -64,8 +62,7 @@ export class KalturaCategoryItem extends KalturaCrudObject {
 				endDateInSeconds : { type : 'n' },
 				type : { type : 's' },
 				versionId : { type : 'n', readOnly : true },
-				virtualAssetId : { type : 'n', readOnly : true },
-				referenceId : { type : 's' }
+				virtualAssetId : { type : 'n', readOnly : true }
             }
         );
         return result;
