@@ -10,78 +10,81 @@ import { KalturaPreviewModule } from './KalturaPreviewModule';
 import { KalturaPremiumService } from './KalturaPremiumService';
 import { KalturaOTTUserType } from './KalturaOTTUserType';
 import { KalturaCouponsGroup } from './KalturaCouponsGroup';
+import { KalturaSubscriptionCouponGroup } from './KalturaSubscriptionCouponGroup';
 import { KalturaProductCode } from './KalturaProductCode';
 import { KalturaSubscriptionDependencyType } from './KalturaSubscriptionDependencyType';
+import { KalturaAdsPolicy } from './KalturaAdsPolicy';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSubscriptionArgs  extends KalturaObjectBaseArgs {
     id? : string;
-	channels? : KalturaBaseChannel[];
+	channelsIds? : string;
 	startDate? : number;
 	endDate? : number;
-	fileTypes? : KalturaIntegerValue[];
-	isRenewable? : boolean;
-	renewalsNumber? : number;
-	isInfiniteRenewal? : boolean;
-	price? : KalturaPriceDetails;
-	discountModule? : KalturaDiscountModule;
+	fileTypesIds? : string;
+	internalDiscountModuleId? : number;
 	multilingualName? : KalturaTranslationToken[];
 	multilingualDescription? : KalturaTranslationToken[];
-	mediaId? : number;
 	prorityInOrder? : number;
 	pricePlanIds? : string;
-	previewModule? : KalturaPreviewModule;
+	previewModuleId? : number;
 	householdLimitationsId? : number;
 	gracePeriodMinutes? : number;
 	premiumServices? : KalturaPremiumService[];
-	maxViewsNumber? : number;
-	viewLifeCycle? : number;
-	waiverPeriod? : number;
-	isWaiverEnabled? : boolean;
-	userTypes? : KalturaOTTUserType[];
-	couponsGroups? : KalturaCouponsGroup[];
+	subscriptionCouponGroup? : KalturaSubscriptionCouponGroup[];
 	productCodes? : KalturaProductCode[];
 	dependencyType? : KalturaSubscriptionDependencyType;
 	externalId? : string;
 	isCancellationBlocked? : boolean;
 	preSaleDate? : number;
+	adsPolicy? : KalturaAdsPolicy;
+	adsParam? : string;
+	isActive? : boolean;
 }
 
 
 export class KalturaSubscription extends KalturaObjectBase {
 
     id : string;
-	channels : KalturaBaseChannel[];
+	readonly channels : KalturaBaseChannel[];
+	channelsIds : string;
 	startDate : number;
 	endDate : number;
-	fileTypes : KalturaIntegerValue[];
-	isRenewable : boolean;
-	renewalsNumber : number;
-	isInfiniteRenewal : boolean;
-	price : KalturaPriceDetails;
-	discountModule : KalturaDiscountModule;
+	readonly fileTypes : KalturaIntegerValue[];
+	fileTypesIds : string;
+	readonly isRenewable : boolean;
+	readonly renewalsNumber : number;
+	readonly isInfiniteRenewal : boolean;
+	readonly price : KalturaPriceDetails;
+	readonly discountModule : KalturaDiscountModule;
+	internalDiscountModuleId : number;
 	readonly name : string;
 	multilingualName : KalturaTranslationToken[];
 	readonly description : string;
 	multilingualDescription : KalturaTranslationToken[];
-	mediaId : number;
+	readonly mediaId : number;
 	prorityInOrder : number;
 	pricePlanIds : string;
-	previewModule : KalturaPreviewModule;
+	readonly previewModule : KalturaPreviewModule;
+	previewModuleId : number;
 	householdLimitationsId : number;
 	gracePeriodMinutes : number;
 	premiumServices : KalturaPremiumService[];
-	maxViewsNumber : number;
-	viewLifeCycle : number;
-	waiverPeriod : number;
-	isWaiverEnabled : boolean;
-	userTypes : KalturaOTTUserType[];
-	couponsGroups : KalturaCouponsGroup[];
+	readonly maxViewsNumber : number;
+	readonly viewLifeCycle : number;
+	readonly waiverPeriod : number;
+	readonly isWaiverEnabled : boolean;
+	readonly userTypes : KalturaOTTUserType[];
+	readonly couponsGroups : KalturaCouponsGroup[];
+	subscriptionCouponGroup : KalturaSubscriptionCouponGroup[];
 	productCodes : KalturaProductCode[];
 	dependencyType : KalturaSubscriptionDependencyType;
 	externalId : string;
 	isCancellationBlocked : boolean;
 	preSaleDate : number;
+	adsPolicy : KalturaAdsPolicy;
+	adsParam : string;
+	isActive : boolean;
 
     constructor(data? : KalturaSubscriptionArgs)
     {
@@ -93,6 +96,7 @@ export class KalturaSubscription extends KalturaObjectBase {
 		if (typeof this.premiumServices === 'undefined') this.premiumServices = [];
 		if (typeof this.userTypes === 'undefined') this.userTypes = [];
 		if (typeof this.couponsGroups === 'undefined') this.couponsGroups = [];
+		if (typeof this.subscriptionCouponGroup === 'undefined') this.subscriptionCouponGroup = [];
 		if (typeof this.productCodes === 'undefined') this.productCodes = [];
     }
 
@@ -104,37 +108,45 @@ export class KalturaSubscription extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaSubscription' },
 				id : { type : 's' },
-				channels : { type : 'a', subTypeConstructor : KalturaBaseChannel, subType : 'KalturaBaseChannel' },
+				channels : { type : 'a', readOnly : true, subTypeConstructor : KalturaBaseChannel, subType : 'KalturaBaseChannel' },
+				channelsIds : { type : 's' },
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
-				fileTypes : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
-				isRenewable : { type : 'b' },
-				renewalsNumber : { type : 'n' },
-				isInfiniteRenewal : { type : 'b' },
-				price : { type : 'o', subTypeConstructor : KalturaPriceDetails, subType : 'KalturaPriceDetails' },
-				discountModule : { type : 'o', subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
+				fileTypes : { type : 'a', readOnly : true, subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
+				fileTypesIds : { type : 's' },
+				isRenewable : { type : 'b', readOnly : true },
+				renewalsNumber : { type : 'n', readOnly : true },
+				isInfiniteRenewal : { type : 'b', readOnly : true },
+				price : { type : 'o', readOnly : true, subTypeConstructor : KalturaPriceDetails, subType : 'KalturaPriceDetails' },
+				discountModule : { type : 'o', readOnly : true, subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
+				internalDiscountModuleId : { type : 'n' },
 				name : { type : 's', readOnly : true },
 				multilingualName : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				description : { type : 's', readOnly : true },
 				multilingualDescription : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				mediaId : { type : 'n' },
+				mediaId : { type : 'n', readOnly : true },
 				prorityInOrder : { type : 'n' },
 				pricePlanIds : { type : 's' },
-				previewModule : { type : 'o', subTypeConstructor : KalturaPreviewModule, subType : 'KalturaPreviewModule' },
+				previewModule : { type : 'o', readOnly : true, subTypeConstructor : KalturaPreviewModule, subType : 'KalturaPreviewModule' },
+				previewModuleId : { type : 'n' },
 				householdLimitationsId : { type : 'n' },
 				gracePeriodMinutes : { type : 'n' },
 				premiumServices : { type : 'a', subTypeConstructor : KalturaPremiumService, subType : 'KalturaPremiumService' },
-				maxViewsNumber : { type : 'n' },
-				viewLifeCycle : { type : 'n' },
-				waiverPeriod : { type : 'n' },
-				isWaiverEnabled : { type : 'b' },
-				userTypes : { type : 'a', subTypeConstructor : KalturaOTTUserType, subType : 'KalturaOTTUserType' },
-				couponsGroups : { type : 'a', subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },
+				maxViewsNumber : { type : 'n', readOnly : true },
+				viewLifeCycle : { type : 'n', readOnly : true },
+				waiverPeriod : { type : 'n', readOnly : true },
+				isWaiverEnabled : { type : 'b', readOnly : true },
+				userTypes : { type : 'a', readOnly : true, subTypeConstructor : KalturaOTTUserType, subType : 'KalturaOTTUserType' },
+				couponsGroups : { type : 'a', readOnly : true, subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },
+				subscriptionCouponGroup : { type : 'a', subTypeConstructor : KalturaSubscriptionCouponGroup, subType : 'KalturaSubscriptionCouponGroup' },
 				productCodes : { type : 'a', subTypeConstructor : KalturaProductCode, subType : 'KalturaProductCode' },
 				dependencyType : { type : 'es', subTypeConstructor : KalturaSubscriptionDependencyType, subType : 'KalturaSubscriptionDependencyType' },
 				externalId : { type : 's' },
 				isCancellationBlocked : { type : 'b' },
-				preSaleDate : { type : 'n' }
+				preSaleDate : { type : 'n' },
+				adsPolicy : { type : 'es', subTypeConstructor : KalturaAdsPolicy, subType : 'KalturaAdsPolicy' },
+				adsParam : { type : 's' },
+				isActive : { type : 'b' }
             }
         );
         return result;
