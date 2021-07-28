@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface PricePlanDeleteActionArgs  extends KalturaRequestArgs {
+export interface SubscriptionDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
 /**
- * Build request payload for service 'pricePlan' action 'delete'.
+ * Build request payload for service 'subscription' action 'delete'.
  *
- * Usage: Delete PricePlan
+ * Usage: Internal API !!! Delete subscription
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class PricePlanDeleteAction extends KalturaRequest<boolean> {
+export class SubscriptionDeleteAction extends KalturaRequest<boolean> {
 
     id : number;
 
-    constructor(data : PricePlanDeleteActionArgs)
+    constructor(data : SubscriptionDeleteActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,7 +33,7 @@ export class PricePlanDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'priceplan' },
+                service : { type : 'c', default : 'subscription' },
 				action : { type : 'c', default : 'delete' },
 				id : { type : 'n' }
             }
