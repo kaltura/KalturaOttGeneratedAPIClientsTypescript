@@ -3,18 +3,20 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaPremiumServiceArgs  extends KalturaObjectBaseArgs {
+export interface KalturaPartnerPremiumServiceArgs  extends KalturaObjectBaseArgs {
     id? : number;
 	name? : string;
+	isApplied? : boolean;
 }
 
 
-export class KalturaPremiumService extends KalturaObjectBase {
+export class KalturaPartnerPremiumService extends KalturaObjectBase {
 
     id : number;
 	name : string;
+	isApplied : boolean;
 
-    constructor(data? : KalturaPremiumServiceArgs)
+    constructor(data? : KalturaPartnerPremiumServiceArgs)
     {
         super(data);
     }
@@ -25,13 +27,14 @@ export class KalturaPremiumService extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaPremiumService' },
+                objectType : { type : 'c', default : 'KalturaPartnerPremiumService' },
 				id : { type : 'n' },
-				name : { type : 's' }
+				name : { type : 's' },
+				isApplied : { type : 'b' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaPremiumService',KalturaPremiumService);
+KalturaTypesFactory.registerType('KalturaPartnerPremiumService',KalturaPartnerPremiumService);
