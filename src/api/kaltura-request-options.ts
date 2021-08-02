@@ -10,6 +10,7 @@ export interface KalturaRequestOptionsArgs  extends KalturaObjectBaseArgs {
 	userId? : number;
 	language? : string;
 	currency? : string;
+	useNginxCache? : string;
 	ks? : string;
 	responseProfile? : KalturaBaseResponseProfile;
 	abortOnError? : boolean;
@@ -25,6 +26,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
 	userId : number;
 	language : string;
 	currency : string;
+	useNginxCache : string;
 	ks : string;
 	responseProfile : KalturaBaseResponseProfile;
 	abortOnError : boolean;
@@ -47,6 +49,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
 				userId : { type : 'n' },
 				language : { type : 's' },
 				currency : { type : 's' },
+				useNginxCache : { type : 's' },		    
 				ks : { type : 's' },
 				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' },
 				abortOnError : { type : 'b' },
