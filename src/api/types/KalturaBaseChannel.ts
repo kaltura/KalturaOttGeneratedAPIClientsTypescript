@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
 export interface KalturaBaseChannelArgs  extends KalturaOTTObjectSupportNullableArgs {
-    id? : number;
+    
 }
 
 
 export class KalturaBaseChannel extends KalturaOTTObjectSupportNullable {
 
-    id : number;
+    readonly id : number;
 
     constructor(data? : KalturaBaseChannelArgs)
     {
@@ -24,7 +24,7 @@ export class KalturaBaseChannel extends KalturaOTTObjectSupportNullable {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBaseChannel' },
-				id : { type : 'n' }
+				id : { type : 'n', readOnly : true }
             }
         );
         return result;
