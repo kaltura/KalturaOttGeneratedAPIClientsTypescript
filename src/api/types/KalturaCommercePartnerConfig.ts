@@ -6,12 +6,14 @@ import { KalturaPartnerConfiguration, KalturaPartnerConfigurationArgs } from './
 
 export interface KalturaCommercePartnerConfigArgs  extends KalturaPartnerConfigurationArgs {
     bookmarkEventThresholds? : KalturaBookmarkEventThreshold[];
+	keepSubscriptionAddOns? : boolean;
 }
 
 
 export class KalturaCommercePartnerConfig extends KalturaPartnerConfiguration {
 
     bookmarkEventThresholds : KalturaBookmarkEventThreshold[];
+	keepSubscriptionAddOns : boolean;
 
     constructor(data? : KalturaCommercePartnerConfigArgs)
     {
@@ -26,7 +28,8 @@ export class KalturaCommercePartnerConfig extends KalturaPartnerConfiguration {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCommercePartnerConfig' },
-				bookmarkEventThresholds : { type : 'a', subTypeConstructor : KalturaBookmarkEventThreshold, subType : 'KalturaBookmarkEventThreshold' }
+				bookmarkEventThresholds : { type : 'a', subTypeConstructor : KalturaBookmarkEventThreshold, subType : 'KalturaBookmarkEventThreshold' },
+				keepSubscriptionAddOns : { type : 'b' }
             }
         );
         return result;

@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface FollowTvSeriesDeleteActionArgs  extends KalturaRequestArgs {
-    assetId : number;
+export interface HouseholdLimitationsIsUsedActionArgs  extends KalturaRequestArgs {
+    dlmId : number;
 }
 
 /**
- * Build request payload for service 'followTvSeries' action 'delete'.
+ * Build request payload for service 'householdLimitations' action 'isUsed'.
  *
- * Usage: Delete a user&#39;s tv series follow
+ * Usage: Checks if the DLM is used
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class FollowTvSeriesDeleteAction extends KalturaRequest<boolean> {
+export class HouseholdLimitationsIsUsedAction extends KalturaRequest<boolean> {
 
-    assetId : number;
+    dlmId : number;
 
-    constructor(data : FollowTvSeriesDeleteActionArgs)
+    constructor(data : HouseholdLimitationsIsUsedActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,9 +33,9 @@ export class FollowTvSeriesDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'followtvseries' },
-				action : { type : 'c', default : 'delete' },
-				assetId : { type : 'n' }
+                service : { type : 'c', default : 'householdlimitations' },
+				action : { type : 'c', default : 'isUsed' },
+				dlmId : { type : 'n' }
             }
         );
         return result;
