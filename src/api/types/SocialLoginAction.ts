@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaLoginResponse } from './KalturaLoginResponse';
 
 import { KalturaSocialNetwork } from './KalturaSocialNetwork';
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SocialLoginActionArgs  extends KalturaRequestArgs {
@@ -10,6 +11,7 @@ export interface SocialLoginActionArgs  extends KalturaRequestArgs {
 	token : string;
 	type : KalturaSocialNetwork;
 	udid? : string;
+	extraParams? : { [key : string] : KalturaStringValue};
 }
 
 /**
@@ -28,6 +30,7 @@ export class SocialLoginAction extends KalturaRequest<KalturaLoginResponse> {
 	token : string;
 	type : KalturaSocialNetwork;
 	udid : string;
+	extraParams : { [key : string] : KalturaStringValue};
 
     constructor(data : SocialLoginActionArgs)
     {
@@ -45,7 +48,8 @@ export class SocialLoginAction extends KalturaRequest<KalturaLoginResponse> {
 				partnerId : { type : 'n' },
 				token : { type : 's' },
 				type : { type : 'es', subTypeConstructor : KalturaSocialNetwork, subType : 'KalturaSocialNetwork' },
-				udid : { type : 's' }
+				udid : { type : 's' },
+				extraParams : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;

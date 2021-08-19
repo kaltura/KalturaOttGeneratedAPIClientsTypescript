@@ -2,12 +2,14 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaLoginResponse } from './KalturaLoginResponse';
 
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface HouseholdDeviceLoginWithPinActionArgs  extends KalturaRequestArgs {
     partnerId : number;
 	pin : string;
 	udid? : string;
+	extraParams? : { [key : string] : KalturaStringValue};
 }
 
 /**
@@ -25,6 +27,7 @@ export class HouseholdDeviceLoginWithPinAction extends KalturaRequest<KalturaLog
     partnerId : number;
 	pin : string;
 	udid : string;
+	extraParams : { [key : string] : KalturaStringValue};
 
     constructor(data : HouseholdDeviceLoginWithPinActionArgs)
     {
@@ -41,7 +44,8 @@ export class HouseholdDeviceLoginWithPinAction extends KalturaRequest<KalturaLog
 				action : { type : 'c', default : 'loginWithPin' },
 				partnerId : { type : 'n' },
 				pin : { type : 's' },
-				udid : { type : 's' }
+				udid : { type : 's' },
+				extraParams : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
