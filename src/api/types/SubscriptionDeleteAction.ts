@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface FollowTvSeriesDeleteActionArgs  extends KalturaRequestArgs {
-    assetId : number;
+export interface SubscriptionDeleteActionArgs  extends KalturaRequestArgs {
+    id : number;
 }
 
 /**
- * Build request payload for service 'followTvSeries' action 'delete'.
+ * Build request payload for service 'subscription' action 'delete'.
  *
- * Usage: Delete a user&#39;s tv series follow
+ * Usage: Internal API !!! Delete subscription
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class FollowTvSeriesDeleteAction extends KalturaRequest<boolean> {
+export class SubscriptionDeleteAction extends KalturaRequest<boolean> {
 
-    assetId : number;
+    id : number;
 
-    constructor(data : FollowTvSeriesDeleteActionArgs)
+    constructor(data : SubscriptionDeleteActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,9 +33,9 @@ export class FollowTvSeriesDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'followtvseries' },
+                service : { type : 'c', default : 'subscription' },
 				action : { type : 'c', default : 'delete' },
-				assetId : { type : 'n' }
+				id : { type : 'n' }
             }
         );
         return result;
