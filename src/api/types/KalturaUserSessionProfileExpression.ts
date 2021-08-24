@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCondition, KalturaConditionArgs } from './KalturaCondition';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaUserSessionProfileExpressionArgs  extends KalturaConditionArgs {
+export interface KalturaUserSessionProfileExpressionArgs  extends KalturaObjectBaseArgs {
     
 }
 
 
-export class KalturaUserSessionProfileExpression extends KalturaCondition {
+export class KalturaUserSessionProfileExpression extends KalturaObjectBase {
 
     
 
