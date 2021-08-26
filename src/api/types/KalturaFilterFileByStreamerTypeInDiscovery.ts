@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaFilterFileByStreamerType, KalturaFilterFileByStreamerTypeArgs } from './KalturaFilterFileByStreamerType';
+import { KalturaFilterFileByStreamerTypeAction, KalturaFilterFileByStreamerTypeActionArgs } from './KalturaFilterFileByStreamerTypeAction';
 
-export interface KalturaFilterFileByStreamerTypeInDiscoveryArgs  extends KalturaFilterFileByStreamerTypeArgs {
+export interface KalturaFilterFileByStreamerTypeInDiscoveryArgs  extends KalturaFilterFileByStreamerTypeActionArgs {
     
 }
 
 
-export class KalturaFilterFileByStreamerTypeInDiscovery extends KalturaFilterFileByStreamerType {
+export class KalturaFilterFileByStreamerTypeInDiscovery extends KalturaFilterFileByStreamerTypeAction {
 
     
 

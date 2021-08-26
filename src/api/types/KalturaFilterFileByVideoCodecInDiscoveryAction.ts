@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaFilterFileByVideoCodecAction, KalturaFilterFileByVideoCodecActionArgs } from './KalturaFilterFileByVideoCodecAction';
 
-export interface KalturaFilterFileByVideoCodecInPlaybackArgs  extends KalturaFilterFileByVideoCodecActionArgs {
+export interface KalturaFilterFileByVideoCodecInDiscoveryActionArgs  extends KalturaFilterFileByVideoCodecActionArgs {
     
 }
 
 
-export class KalturaFilterFileByVideoCodecInPlayback extends KalturaFilterFileByVideoCodecAction {
+export class KalturaFilterFileByVideoCodecInDiscoveryAction extends KalturaFilterFileByVideoCodecAction {
 
     
 
-    constructor(data? : KalturaFilterFileByVideoCodecInPlaybackArgs)
+    constructor(data? : KalturaFilterFileByVideoCodecInDiscoveryActionArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaFilterFileByVideoCodecInPlayback extends KalturaFilterFileBy
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaFilterFileByVideoCodecInPlayback' }
+                objectType : { type : 'c', default : 'KalturaFilterFileByVideoCodecInDiscoveryAction' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaFilterFileByVideoCodecInPlayback',KalturaFilterFileByVideoCodecInPlayback);
+KalturaTypesFactory.registerType('KalturaFilterFileByVideoCodecInDiscoveryAction',KalturaFilterFileByVideoCodecInDiscoveryAction);

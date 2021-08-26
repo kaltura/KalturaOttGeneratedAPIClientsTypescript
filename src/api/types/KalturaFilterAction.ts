@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaAssetRuleAction, KalturaAssetRuleActionArgs } from './KalturaAssetRuleAction';
 
-export interface KalturaFilterFileByLabelArgs  extends KalturaAssetRuleActionArgs {
-    labels? : string;
+export interface KalturaFilterActionArgs  extends KalturaAssetRuleActionArgs {
+    
 }
 
 
-export class KalturaFilterFileByLabel extends KalturaAssetRuleAction {
+export class KalturaFilterAction extends KalturaAssetRuleAction {
 
-    labels : string;
+    
 
-    constructor(data? : KalturaFilterFileByLabelArgs)
+    constructor(data? : KalturaFilterActionArgs)
     {
         super(data);
     }
@@ -23,12 +23,11 @@ export class KalturaFilterFileByLabel extends KalturaAssetRuleAction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaFilterFileByLabel' },
-				labels : { type : 's' }
+                objectType : { type : 'c', default : 'KalturaFilterAction' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaFilterFileByLabel',KalturaFilterFileByLabel);
+KalturaTypesFactory.registerType('KalturaFilterAction',KalturaFilterAction);
