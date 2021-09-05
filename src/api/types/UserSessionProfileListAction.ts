@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaUserSessionProfileListResponse } from './KalturaUserSessionProfileListResponse';
 
 import { KalturaUserSessionProfileFilter } from './KalturaUserSessionProfileFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserSessionProfileListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaUserSessionProfileFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,6 +24,7 @@ export interface UserSessionProfileListActionArgs  extends KalturaRequestArgs {
 export class UserSessionProfileListAction extends KalturaRequest<KalturaUserSessionProfileListResponse> {
 
     filter : KalturaUserSessionProfileFilter;
+	pager : KalturaFilterPager;
 
     constructor(data? : UserSessionProfileListActionArgs)
     {
@@ -36,7 +39,8 @@ export class UserSessionProfileListAction extends KalturaRequest<KalturaUserSess
             {
                 service : { type : 'c', default : 'usersessionprofile' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaUserSessionProfileFilter, subType : 'KalturaUserSessionProfileFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaUserSessionProfileFilter, subType : 'KalturaUserSessionProfileFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;
