@@ -11,7 +11,7 @@ export interface PreviewModuleAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'previewModule' action 'add'.
  *
- * Usage: Internal API !!! Insert new PreviewModule for partner
+ * Usage: Insert new PreviewModule for partner
  *
  * Server response type:         KalturaPreviewModule
  * Server failure response type: KalturaAPIException
