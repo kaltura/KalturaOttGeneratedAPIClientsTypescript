@@ -11,7 +11,7 @@ export interface PricePlanDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'pricePlan' action 'delete'.
  *
- * Usage: Internal API !!! Delete PricePlan
+ * Usage: Delete PricePlan
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
