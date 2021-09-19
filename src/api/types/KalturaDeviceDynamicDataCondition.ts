@@ -3,18 +3,18 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaCondition, KalturaConditionArgs } from './KalturaCondition';
 
-export interface KalturaDynamicKeysConditionArgs  extends KalturaConditionArgs {
+export interface KalturaDeviceDynamicDataConditionArgs  extends KalturaConditionArgs {
     key? : string;
-	values? : string;
+	value? : string;
 }
 
 
-export class KalturaDynamicKeysCondition extends KalturaCondition {
+export class KalturaDeviceDynamicDataCondition extends KalturaCondition {
 
     key : string;
-	values : string;
+	value : string;
 
-    constructor(data? : KalturaDynamicKeysConditionArgs)
+    constructor(data? : KalturaDeviceDynamicDataConditionArgs)
     {
         super(data);
     }
@@ -25,13 +25,13 @@ export class KalturaDynamicKeysCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaDynamicKeysCondition' },
+                objectType : { type : 'c', default : 'KalturaDeviceDynamicDataCondition' },
 				key : { type : 's' },
-				values : { type : 's' }
+				value : { type : 's' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaDynamicKeysCondition',KalturaDynamicKeysCondition);
+KalturaTypesFactory.registerType('KalturaDeviceDynamicDataCondition',KalturaDeviceDynamicDataCondition);

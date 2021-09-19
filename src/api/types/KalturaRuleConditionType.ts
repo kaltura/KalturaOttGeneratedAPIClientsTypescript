@@ -8,6 +8,7 @@ export enum KalturaRuleConditionType {
 	country = 'COUNTRY',
 	date = 'DATE',
 	deviceBrand = 'DEVICE_BRAND',
+	deviceDynamicData = 'DEVICE_DYNAMIC_DATA',
 	deviceFamily = 'DEVICE_FAMILY',
 	deviceManufacturer = 'DEVICE_MANUFACTURER',
 	deviceModel = 'DEVICE_MODEL',
