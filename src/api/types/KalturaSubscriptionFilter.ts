@@ -8,7 +8,11 @@ export interface KalturaSubscriptionFilterArgs  extends KalturaFilterArgs {
 	mediaFileIdEqual? : number;
 	externalIdIn? : string;
 	couponGroupIdEqual? : number;
+	previewModuleIdEqual? : number;
+	pricePlanIdEqual? : number;
+	channelIdEqual? : number;
 	kSql? : string;
+	alsoInactive? : boolean;
 }
 
 
@@ -18,7 +22,11 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 	mediaFileIdEqual : number;
 	externalIdIn : string;
 	couponGroupIdEqual : number;
+	previewModuleIdEqual : number;
+	pricePlanIdEqual : number;
+	channelIdEqual : number;
 	kSql : string;
+	alsoInactive : boolean;
 
     constructor(data? : KalturaSubscriptionFilterArgs)
     {
@@ -36,7 +44,11 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 				mediaFileIdEqual : { type : 'n' },
 				externalIdIn : { type : 's' },
 				couponGroupIdEqual : { type : 'n' },
-				kSql : { type : 's' }
+				previewModuleIdEqual : { type : 'n' },
+				pricePlanIdEqual : { type : 'n' },
+				channelIdEqual : { type : 'n' },
+				kSql : { type : 's' },
+				alsoInactive : { type : 'b' }
             }
         );
         return result;

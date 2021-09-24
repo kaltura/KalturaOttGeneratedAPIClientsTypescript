@@ -2,16 +2,17 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaPreviewModuleListResponse } from './KalturaPreviewModuleListResponse';
 
+import { KalturaPreviewModuleFilter } from './KalturaPreviewModuleFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface PreviewModuleListActionArgs  extends KalturaRequestArgs {
-    
+    filter? : KalturaPreviewModuleFilter;
 }
 
 /**
  * Build request payload for service 'previewModule' action 'list'.
  *
- * Usage: Internal API !!! Returns all PreviewModule
+ * Usage: Returns all PreviewModule
  *
  * Server response type:         KalturaPreviewModuleListResponse
  * Server failure response type: KalturaAPIException
@@ -20,7 +21,7 @@ export interface PreviewModuleListActionArgs  extends KalturaRequestArgs {
  */
 export class PreviewModuleListAction extends KalturaRequest<KalturaPreviewModuleListResponse> {
 
-    
+    filter : KalturaPreviewModuleFilter;
 
     constructor(data? : PreviewModuleListActionArgs)
     {
@@ -34,7 +35,8 @@ export class PreviewModuleListAction extends KalturaRequest<KalturaPreviewModule
             result.properties,
             {
                 service : { type : 'c', default : 'previewmodule' },
-				action : { type : 'c', default : 'list' }
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaPreviewModuleFilter, subType : 'KalturaPreviewModuleFilter' }
             }
         );
         return result;

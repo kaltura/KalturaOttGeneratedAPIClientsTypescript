@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface PricePlanDeleteActionArgs  extends KalturaRequestArgs {
-    id : number;
+export interface HouseholdLimitationsIsUsedActionArgs  extends KalturaRequestArgs {
+    dlmId : number;
 }
 
 /**
- * Build request payload for service 'pricePlan' action 'delete'.
+ * Build request payload for service 'householdLimitations' action 'isUsed'.
  *
- * Usage: Delete PricePlan
+ * Usage: Checks if the DLM is used
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class PricePlanDeleteAction extends KalturaRequest<boolean> {
+export class HouseholdLimitationsIsUsedAction extends KalturaRequest<boolean> {
 
-    id : number;
+    dlmId : number;
 
-    constructor(data : PricePlanDeleteActionArgs)
+    constructor(data : HouseholdLimitationsIsUsedActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,9 +33,9 @@ export class PricePlanDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'priceplan' },
-				action : { type : 'c', default : 'delete' },
-				id : { type : 'n' }
+                service : { type : 'c', default : 'householdlimitations' },
+				action : { type : 'c', default : 'isUsed' },
+				dlmId : { type : 'n' }
             }
         );
         return result;
