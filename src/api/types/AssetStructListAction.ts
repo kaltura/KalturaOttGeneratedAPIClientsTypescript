@@ -2,11 +2,11 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaAssetStructListResponse } from './KalturaAssetStructListResponse';
 
-import { KalturaAssetStructFilter } from './KalturaAssetStructFilter';
+import { KalturaBaseAssetStructFilter } from './KalturaBaseAssetStructFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AssetStructListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaAssetStructFilter;
+    filter? : KalturaBaseAssetStructFilter;
 }
 
 /**
@@ -21,7 +21,7 @@ export interface AssetStructListActionArgs  extends KalturaRequestArgs {
  */
 export class AssetStructListAction extends KalturaRequest<KalturaAssetStructListResponse> {
 
-    filter : KalturaAssetStructFilter;
+    filter : KalturaBaseAssetStructFilter;
 
     constructor(data? : AssetStructListActionArgs)
     {
@@ -36,7 +36,7 @@ export class AssetStructListAction extends KalturaRequest<KalturaAssetStructList
             {
                 service : { type : 'c', default : 'assetstruct' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaAssetStructFilter, subType : 'KalturaAssetStructFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaBaseAssetStructFilter, subType : 'KalturaBaseAssetStructFilter' }
             }
         );
         return result;

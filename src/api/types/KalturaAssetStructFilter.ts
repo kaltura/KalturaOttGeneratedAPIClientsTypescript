@@ -1,20 +1,23 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
+import { KalturaObjectVirtualAssetInfoType } from './KalturaObjectVirtualAssetInfoType';
+import { KalturaBaseAssetStructFilter, KalturaBaseAssetStructFilterArgs } from './KalturaBaseAssetStructFilter';
 
-export interface KalturaAssetStructFilterArgs  extends KalturaFilterArgs {
+export interface KalturaAssetStructFilterArgs  extends KalturaBaseAssetStructFilterArgs {
     idIn? : string;
 	metaIdEqual? : number;
 	isProtectedEqual? : boolean;
+	objectVirtualAssetInfoTypeEqual? : KalturaObjectVirtualAssetInfoType;
 }
 
 
-export class KalturaAssetStructFilter extends KalturaFilter {
+export class KalturaAssetStructFilter extends KalturaBaseAssetStructFilter {
 
     idIn : string;
 	metaIdEqual : number;
 	isProtectedEqual : boolean;
+	objectVirtualAssetInfoTypeEqual : KalturaObjectVirtualAssetInfoType;
 
     constructor(data? : KalturaAssetStructFilterArgs)
     {
@@ -30,7 +33,8 @@ export class KalturaAssetStructFilter extends KalturaFilter {
                 objectType : { type : 'c', default : 'KalturaAssetStructFilter' },
 				idIn : { type : 's' },
 				metaIdEqual : { type : 'n' },
-				isProtectedEqual : { type : 'b' }
+				isProtectedEqual : { type : 'b' },
+				objectVirtualAssetInfoTypeEqual : { type : 'es', subTypeConstructor : KalturaObjectVirtualAssetInfoType, subType : 'KalturaObjectVirtualAssetInfoType' }
             }
         );
         return result;
