@@ -9,7 +9,6 @@ export interface KalturaBasePartnerConfigurationArgs  extends KalturaPartnerConf
 	anonymousKSExpirationSeconds? : number;
 	refreshExpirationForPinLoginSeconds? : number;
 	appTokenMaxExpirySeconds? : number;
-	autoRefreshAppToken? : boolean;
 	uploadTokenExpirySeconds? : number;
 	apptokenUserValidationDisabled? : boolean;
 }
@@ -22,7 +21,6 @@ export class KalturaBasePartnerConfiguration extends KalturaPartnerConfiguration
 	anonymousKSExpirationSeconds : number;
 	refreshExpirationForPinLoginSeconds : number;
 	appTokenMaxExpirySeconds : number;
-	autoRefreshAppToken : boolean;
 	uploadTokenExpirySeconds : number;
 	apptokenUserValidationDisabled : boolean;
 
@@ -43,7 +41,6 @@ export class KalturaBasePartnerConfiguration extends KalturaPartnerConfiguration
 				anonymousKSExpirationSeconds : { type : 'n' },
 				refreshExpirationForPinLoginSeconds : { type : 'n' },
 				appTokenMaxExpirySeconds : { type : 'n' },
-				autoRefreshAppToken : { type : 'b' },
 				uploadTokenExpirySeconds : { type : 'n' },
 				apptokenUserValidationDisabled : { type : 'b' }
             }
