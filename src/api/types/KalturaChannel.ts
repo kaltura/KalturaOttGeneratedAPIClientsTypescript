@@ -36,7 +36,6 @@ export class KalturaChannel extends KalturaBaseChannel {
 	supportSegmentBasedOrdering : boolean;
 	assetUserRuleId : number;
 	metaData : { [key : string] : KalturaStringValue};
-	readonly virtualAssetId : number;
 
     constructor(data? : KalturaChannelArgs)
     {
@@ -65,8 +64,7 @@ export class KalturaChannel extends KalturaBaseChannel {
 				updateDate : { type : 'n', readOnly : true },
 				supportSegmentBasedOrdering : { type : 'b' },
 				assetUserRuleId : { type : 'n' },
-				metaData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
-				virtualAssetId : { type : 'n', readOnly : true }
+				metaData : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;

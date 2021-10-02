@@ -4,7 +4,6 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDeleteMediaPolicy } from './KalturaDeleteMediaPolicy';
 import { KalturaDowngradePolicy } from './KalturaDowngradePolicy';
 import { KalturaRollingDeviceRemovalData } from './KalturaRollingDeviceRemovalData';
-import { KalturaSuspensionProfileInheritanceType } from './KalturaSuspensionProfileInheritanceType';
 import { KalturaPartnerConfiguration, KalturaPartnerConfigurationArgs } from './KalturaPartnerConfiguration';
 
 export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigurationArgs {
@@ -21,10 +20,7 @@ export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigur
 	enableRegionFiltering? : boolean;
 	defaultRegion? : number;
 	rollingDeviceData? : KalturaRollingDeviceRemovalData;
-	linearWatchHistoryThreshold? : number;
 	finishedPercentThreshold? : number;
-	suspensionProfileInheritanceType? : KalturaSuspensionProfileInheritanceType;
-	allowDeviceMobility? : boolean;
 }
 
 
@@ -43,10 +39,7 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 	enableRegionFiltering : boolean;
 	defaultRegion : number;
 	rollingDeviceData : KalturaRollingDeviceRemovalData;
-	linearWatchHistoryThreshold : number;
 	finishedPercentThreshold : number;
-	suspensionProfileInheritanceType : KalturaSuspensionProfileInheritanceType;
-	allowDeviceMobility : boolean;
 
     constructor(data? : KalturaGeneralPartnerConfigArgs)
     {
@@ -73,10 +66,7 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 				enableRegionFiltering : { type : 'b' },
 				defaultRegion : { type : 'n' },
 				rollingDeviceData : { type : 'o', subTypeConstructor : KalturaRollingDeviceRemovalData, subType : 'KalturaRollingDeviceRemovalData' },
-				linearWatchHistoryThreshold : { type : 'n' },
-				finishedPercentThreshold : { type : 'n' },
-				suspensionProfileInheritanceType : { type : 'es', subTypeConstructor : KalturaSuspensionProfileInheritanceType, subType : 'KalturaSuspensionProfileInheritanceType' },
-				allowDeviceMobility : { type : 'b' }
+				finishedPercentThreshold : { type : 'n' }
             }
         );
         return result;

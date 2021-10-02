@@ -6,7 +6,6 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface CategoryTreeGetByVersionActionArgs  extends KalturaRequestArgs {
     versionId? : number;
-	deviceFamilyId? : number;
 }
 
 /**
@@ -22,7 +21,6 @@ export interface CategoryTreeGetByVersionActionArgs  extends KalturaRequestArgs 
 export class CategoryTreeGetByVersionAction extends KalturaRequest<KalturaCategoryTree> {
 
     versionId : number;
-	deviceFamilyId : number;
 
     constructor(data? : CategoryTreeGetByVersionActionArgs)
     {
@@ -37,8 +35,7 @@ export class CategoryTreeGetByVersionAction extends KalturaRequest<KalturaCatego
             {
                 service : { type : 'c', default : 'categorytree' },
 				action : { type : 'c', default : 'getByVersion' },
-				versionId : { type : 'n' },
-				deviceFamilyId : { type : 'n' }
+				versionId : { type : 'n' }
             }
         );
         return result;
