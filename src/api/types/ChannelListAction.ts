@@ -2,12 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaChannelListResponse } from './KalturaChannelListResponse';
 
-import { KalturaChannelsBaseFilter } from './KalturaChannelsBaseFilter';
+import { KalturaChannelsFilter } from './KalturaChannelsFilter';
 import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ChannelListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaChannelsBaseFilter;
+    filter? : KalturaChannelsFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -23,7 +23,7 @@ export interface ChannelListActionArgs  extends KalturaRequestArgs {
  */
 export class ChannelListAction extends KalturaRequest<KalturaChannelListResponse> {
 
-    filter : KalturaChannelsBaseFilter;
+    filter : KalturaChannelsFilter;
 	pager : KalturaFilterPager;
 
     constructor(data? : ChannelListActionArgs)
@@ -39,7 +39,7 @@ export class ChannelListAction extends KalturaRequest<KalturaChannelListResponse
             {
                 service : { type : 'c', default : 'channel' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaChannelsBaseFilter, subType : 'KalturaChannelsBaseFilter' },
+				filter : { type : 'o', subTypeConstructor : KalturaChannelsFilter, subType : 'KalturaChannelsFilter' },
 				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );

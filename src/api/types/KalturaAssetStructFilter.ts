@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectVirtualAssetInfoType } from './KalturaObjectVirtualAssetInfoType';
-import { KalturaBaseAssetStructFilter, KalturaBaseAssetStructFilterArgs } from './KalturaBaseAssetStructFilter';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaAssetStructFilterArgs  extends KalturaBaseAssetStructFilterArgs {
+export interface KalturaAssetStructFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
 	metaIdEqual? : number;
 	isProtectedEqual? : boolean;
@@ -12,7 +12,7 @@ export interface KalturaAssetStructFilterArgs  extends KalturaBaseAssetStructFil
 }
 
 
-export class KalturaAssetStructFilter extends KalturaBaseAssetStructFilter {
+export class KalturaAssetStructFilter extends KalturaFilter {
 
     idIn : string;
 	metaIdEqual : number;
