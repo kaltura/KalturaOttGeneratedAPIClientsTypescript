@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaLoginResponse } from './KalturaLoginResponse';
 
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface OttUserLoginWithPinActionArgs  extends KalturaRequestArgs {
@@ -9,6 +10,7 @@ export interface OttUserLoginWithPinActionArgs  extends KalturaRequestArgs {
 	pin : string;
 	udid? : string;
 	secret? : string;
+	extraParams? : { [key : string] : KalturaStringValue};
 }
 
 /**
@@ -27,6 +29,7 @@ export class OttUserLoginWithPinAction extends KalturaRequest<KalturaLoginRespon
 	pin : string;
 	udid : string;
 	secret : string;
+	extraParams : { [key : string] : KalturaStringValue};
 
     constructor(data : OttUserLoginWithPinActionArgs)
     {
@@ -44,7 +47,8 @@ export class OttUserLoginWithPinAction extends KalturaRequest<KalturaLoginRespon
 				partnerId : { type : 'n' },
 				pin : { type : 's' },
 				udid : { type : 's' },
-				secret : { type : 's' }
+				secret : { type : 's' },
+				extraParams : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
