@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface UsageModuleDeleteActionArgs  extends KalturaRequestArgs {
+export interface PpvDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
 /**
- * Build request payload for service 'usageModule' action 'delete'.
+ * Build request payload for service 'ppv' action 'delete'.
  *
- * Usage: Delete UsageModule
+ * Usage: Delete Ppv
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class UsageModuleDeleteAction extends KalturaRequest<boolean> {
+export class PpvDeleteAction extends KalturaRequest<boolean> {
 
     id : number;
 
-    constructor(data : UsageModuleDeleteActionArgs)
+    constructor(data : PpvDeleteActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,7 +33,7 @@ export class UsageModuleDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'usagemodule' },
+                service : { type : 'c', default : 'ppv' },
 				action : { type : 'c', default : 'delete' },
 				id : { type : 'n' }
             }

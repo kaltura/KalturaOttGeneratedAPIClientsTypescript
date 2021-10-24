@@ -4,25 +4,27 @@ import { KalturaUsageModule } from './KalturaUsageModule';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface UsageModuleAddActionArgs  extends KalturaRequestArgs {
-    usageModule : KalturaUsageModule;
+export interface UsageModuleUpdateActionArgs  extends KalturaRequestArgs {
+    id : number;
+	usageModule : KalturaUsageModule;
 }
 
 /**
- * Build request payload for service 'usageModule' action 'add'.
+ * Build request payload for service 'usageModule' action 'update'.
  *
- * Usage: Insert new UsageModule
+ * Usage: Update usage module
  *
  * Server response type:         KalturaUsageModule
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class UsageModuleAddAction extends KalturaRequest<KalturaUsageModule> {
+export class UsageModuleUpdateAction extends KalturaRequest<KalturaUsageModule> {
 
-    usageModule : KalturaUsageModule;
+    id : number;
+	usageModule : KalturaUsageModule;
 
-    constructor(data : UsageModuleAddActionArgs)
+    constructor(data : UsageModuleUpdateActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaUsageModule', responseConstructor : KalturaUsageModule  });
     }
@@ -34,7 +36,8 @@ export class UsageModuleAddAction extends KalturaRequest<KalturaUsageModule> {
             result.properties,
             {
                 service : { type : 'c', default : 'usagemodule' },
-				action : { type : 'c', default : 'add' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
 				usageModule : { type : 'o', subTypeConstructor : KalturaUsageModule, subType : 'KalturaUsageModule' }
             }
         );

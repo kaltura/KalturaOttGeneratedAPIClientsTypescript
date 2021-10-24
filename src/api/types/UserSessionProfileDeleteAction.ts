@@ -4,27 +4,27 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface UsageModuleDeleteActionArgs  extends KalturaRequestArgs {
+export interface UserSessionProfileDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
 /**
- * Build request payload for service 'usageModule' action 'delete'.
+ * Build request payload for service 'userSessionProfile' action 'delete'.
  *
- * Usage: Delete UsageModule
+ * Usage: Delete existing UserSessionProfile
  *
- * Server response type:         boolean
+ * Server response type:         void
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class UsageModuleDeleteAction extends KalturaRequest<boolean> {
+export class UserSessionProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;
 
-    constructor(data : UsageModuleDeleteActionArgs)
+    constructor(data : UserSessionProfileDeleteActionArgs)
     {
-        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -33,7 +33,7 @@ export class UsageModuleDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'usagemodule' },
+                service : { type : 'c', default : 'usersessionprofile' },
 				action : { type : 'c', default : 'delete' },
 				id : { type : 'n' }
             }
