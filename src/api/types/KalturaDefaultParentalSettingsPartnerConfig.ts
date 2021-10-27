@@ -6,8 +6,8 @@ import { KalturaPartnerConfiguration, KalturaPartnerConfigurationArgs } from './
 export interface KalturaDefaultParentalSettingsPartnerConfigArgs  extends KalturaPartnerConfigurationArgs {
     defaultMoviesParentalRuleId? : number;
 	defaultTvSeriesParentalRuleId? : number;
-	defaultParentalPin? : number;
-	defaultPurchasePin? : number;
+	defaultParentalPin? : string;
+	defaultPurchasePin? : string;
 	defaultPurchaseSettings? : number;
 }
 
@@ -16,8 +16,8 @@ export class KalturaDefaultParentalSettingsPartnerConfig extends KalturaPartnerC
 
     defaultMoviesParentalRuleId : number;
 	defaultTvSeriesParentalRuleId : number;
-	defaultParentalPin : number;
-	defaultPurchasePin : number;
+	defaultParentalPin : string;
+	defaultPurchasePin : string;
 	defaultPurchaseSettings : number;
 
     constructor(data? : KalturaDefaultParentalSettingsPartnerConfigArgs)
@@ -34,8 +34,8 @@ export class KalturaDefaultParentalSettingsPartnerConfig extends KalturaPartnerC
                 objectType : { type : 'c', default : 'KalturaDefaultParentalSettingsPartnerConfig' },
 				defaultMoviesParentalRuleId : { type : 'n' },
 				defaultTvSeriesParentalRuleId : { type : 'n' },
-				defaultParentalPin : { type : 'n' },
-				defaultPurchasePin : { type : 'n' },
+				defaultParentalPin : { type : 's' },
+				defaultPurchasePin : { type : 's' },
 				defaultPurchaseSettings : { type : 'n' }
             }
         );
