@@ -7,7 +7,6 @@ import { KalturaDiscountModule } from './KalturaDiscountModule';
 import { KalturaCouponsGroup } from './KalturaCouponsGroup';
 import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaUsageModule } from './KalturaUsageModule';
-import { KalturaAdsPolicy } from './KalturaAdsPolicy';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPpvArgs  extends KalturaObjectBaseArgs {
@@ -15,16 +14,13 @@ export interface KalturaPpvArgs  extends KalturaObjectBaseArgs {
 	name? : string;
 	price? : KalturaPriceDetails;
 	fileTypes? : KalturaIntegerValue[];
-	fileTypesIds? : string;
 	discountModule? : KalturaDiscountModule;
 	couponsGroup? : KalturaCouponsGroup;
 	descriptions? : KalturaTranslationToken[];
+	productCode? : string;
 	isSubscriptionOnly? : boolean;
 	firstDeviceLimitation? : boolean;
 	usageModule? : KalturaUsageModule;
-	externalId? : string;
-	adsPolicy? : KalturaAdsPolicy;
-	isActive? : boolean;
 }
 
 
@@ -34,20 +30,13 @@ export class KalturaPpv extends KalturaObjectBase {
 	name : string;
 	price : KalturaPriceDetails;
 	fileTypes : KalturaIntegerValue[];
-	fileTypesIds : string;
 	discountModule : KalturaDiscountModule;
 	couponsGroup : KalturaCouponsGroup;
 	descriptions : KalturaTranslationToken[];
-	readonly productCode : string;
+	productCode : string;
 	isSubscriptionOnly : boolean;
 	firstDeviceLimitation : boolean;
 	usageModule : KalturaUsageModule;
-	externalId : string;
-	adsPolicy : KalturaAdsPolicy;
-	isActive : boolean;
-	readonly updateDate : number;
-	readonly createDate : number;
-	readonly virtualAssetId : number;
 
     constructor(data? : KalturaPpvArgs)
     {
@@ -67,20 +56,13 @@ export class KalturaPpv extends KalturaObjectBase {
 				name : { type : 's' },
 				price : { type : 'o', subTypeConstructor : KalturaPriceDetails, subType : 'KalturaPriceDetails' },
 				fileTypes : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
-				fileTypesIds : { type : 's' },
 				discountModule : { type : 'o', subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
 				couponsGroup : { type : 'o', subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },
 				descriptions : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
-				productCode : { type : 's', readOnly : true },
+				productCode : { type : 's' },
 				isSubscriptionOnly : { type : 'b' },
 				firstDeviceLimitation : { type : 'b' },
-				usageModule : { type : 'o', subTypeConstructor : KalturaUsageModule, subType : 'KalturaUsageModule' },
-				externalId : { type : 's' },
-				adsPolicy : { type : 'es', subTypeConstructor : KalturaAdsPolicy, subType : 'KalturaAdsPolicy' },
-				isActive : { type : 'b' },
-				updateDate : { type : 'n', readOnly : true },
-				createDate : { type : 'n', readOnly : true },
-				virtualAssetId : { type : 'n', readOnly : true }
+				usageModule : { type : 'o', subTypeConstructor : KalturaUsageModule, subType : 'KalturaUsageModule' }
             }
         );
         return result;
