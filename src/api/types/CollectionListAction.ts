@@ -14,7 +14,7 @@ export interface CollectionListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'collection' action 'list'.
  *
- * Usage: Returns a list of subscriptions requested by Subscription ID or file ID
+ * Usage: Returns a list of collections requested by Collection IDs or file identifier or coupon group identifier
  *
  * Server response type:         KalturaCollectionListResponse
  * Server failure response type: KalturaAPIException

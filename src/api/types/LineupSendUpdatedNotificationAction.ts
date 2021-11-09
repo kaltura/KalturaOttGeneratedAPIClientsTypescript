@@ -4,25 +4,25 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface SubscriptionDeleteActionArgs  extends KalturaRequestArgs {
-    id : number;
+export interface LineupSendUpdatedNotificationActionArgs  extends KalturaRequestArgs {
+    regionIds : string;
 }
 
 /**
- * Build request payload for service 'subscription' action 'delete'.
+ * Build request payload for service 'lineup' action 'sendUpdatedNotification'.
  *
- * Usage: Delete subscription
+ * Usage: Sends lineup update requested notification
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class SubscriptionDeleteAction extends KalturaRequest<boolean> {
+export class LineupSendUpdatedNotificationAction extends KalturaRequest<boolean> {
 
-    id : number;
+    regionIds : string;
 
-    constructor(data : SubscriptionDeleteActionArgs)
+    constructor(data : LineupSendUpdatedNotificationActionArgs)
     {
         super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
@@ -33,9 +33,9 @@ export class SubscriptionDeleteAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'subscription' },
-				action : { type : 'c', default : 'delete' },
-				id : { type : 'n' }
+                service : { type : 'c', default : 'lineup' },
+				action : { type : 'c', default : 'sendUpdatedNotification' },
+				regionIds : { type : 's' }
             }
         );
         return result;
