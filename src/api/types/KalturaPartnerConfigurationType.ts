@@ -6,7 +6,6 @@ export enum KalturaPartnerConfigurationType {
 	commerce = 'Commerce',
 	concurrency = 'Concurrency',
 	customfields = 'CustomFields',
-	defaultparentalsettings = 'DefaultParentalSettings',
 	defaultpaymentgateway = 'DefaultPaymentGateway',
 	enablepaymentgatewayselection = 'EnablePaymentGatewaySelection',
 	general = 'General',
