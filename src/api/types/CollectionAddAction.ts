@@ -11,7 +11,7 @@ export interface CollectionAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'collection' action 'add'.
  *
- * Usage: Insert new collection for partner
+ * Usage: Internal API !!! Insert new collection for partner
  *
  * Server response type:         KalturaCollection
  * Server failure response type: KalturaAPIException
