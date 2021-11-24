@@ -4,25 +4,27 @@ import { KalturaCollection } from './KalturaCollection';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface CollectionAddActionArgs  extends KalturaRequestArgs {
-    collection : KalturaCollection;
+export interface CollectionUpdateActionArgs  extends KalturaRequestArgs {
+    id : number;
+	collection : KalturaCollection;
 }
 
 /**
- * Build request payload for service 'collection' action 'add'.
+ * Build request payload for service 'collection' action 'update'.
  *
- * Usage: Insert new collection for partner
+ * Usage: Update Collection
  *
  * Server response type:         KalturaCollection
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class CollectionAddAction extends KalturaRequest<KalturaCollection> {
+export class CollectionUpdateAction extends KalturaRequest<KalturaCollection> {
 
-    collection : KalturaCollection;
+    id : number;
+	collection : KalturaCollection;
 
-    constructor(data : CollectionAddActionArgs)
+    constructor(data : CollectionUpdateActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaCollection', responseConstructor : KalturaCollection  });
     }
@@ -34,7 +36,8 @@ export class CollectionAddAction extends KalturaRequest<KalturaCollection> {
             result.properties,
             {
                 service : { type : 'c', default : 'collection' },
-				action : { type : 'c', default : 'add' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
 				collection : { type : 'o', subTypeConstructor : KalturaCollection, subType : 'KalturaCollection' }
             }
         );

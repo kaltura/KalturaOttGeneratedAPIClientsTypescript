@@ -11,7 +11,7 @@ export interface UsageModuleDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'usageModule' action 'delete'.
  *
- * Usage: Internal API !!! Delete UsageModule
+ * Usage: Delete UsageModule
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
