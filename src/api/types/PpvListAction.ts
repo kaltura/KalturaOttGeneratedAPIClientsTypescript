@@ -3,10 +3,12 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaPpvListResponse } from './KalturaPpvListResponse';
 
 import { KalturaPpvFilter } from './KalturaPpvFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface PpvListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaPpvFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -22,6 +24,7 @@ export interface PpvListActionArgs  extends KalturaRequestArgs {
 export class PpvListAction extends KalturaRequest<KalturaPpvListResponse> {
 
     filter : KalturaPpvFilter;
+	pager : KalturaFilterPager;
 
     constructor(data? : PpvListActionArgs)
     {
@@ -36,7 +39,8 @@ export class PpvListAction extends KalturaRequest<KalturaPpvListResponse> {
             {
                 service : { type : 'c', default : 'ppv' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaPpvFilter, subType : 'KalturaPpvFilter' }
+				filter : { type : 'o', subTypeConstructor : KalturaPpvFilter, subType : 'KalturaPpvFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;
