@@ -11,7 +11,7 @@ export interface UsageModuleAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'usageModule' action 'add'.
  *
- * Usage: Insert new UsageModule
+ * Usage: Internal API !!! Insert new UsageModule
  *
  * Server response type:         KalturaUsageModule
  * Server failure response type: KalturaAPIException
