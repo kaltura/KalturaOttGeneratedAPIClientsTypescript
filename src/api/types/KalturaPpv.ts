@@ -7,23 +7,20 @@ import { KalturaDiscountModule } from './KalturaDiscountModule';
 import { KalturaCouponsGroup } from './KalturaCouponsGroup';
 import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaUsageModule } from './KalturaUsageModule';
-import { KalturaAdsPolicy } from './KalturaAdsPolicy';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPpvArgs  extends KalturaObjectBaseArgs {
     id? : string;
 	name? : string;
-	priceDetailsId? : number;
-	fileTypesIds? : string;
-	discountId? : number;
-	couponsGroupId? : number;
+	price? : KalturaPriceDetails;
+	fileTypes? : KalturaIntegerValue[];
+	discountModule? : KalturaDiscountModule;
+	couponsGroup? : KalturaCouponsGroup;
 	descriptions? : KalturaTranslationToken[];
 	productCode? : string;
 	isSubscriptionOnly? : boolean;
 	firstDeviceLimitation? : boolean;
-	usageModuleId? : number;
-	adsPolicy? : KalturaAdsPolicy;
-	isActive? : boolean;
+	usageModule? : KalturaUsageModule;
 }
 
 
@@ -31,25 +28,15 @@ export class KalturaPpv extends KalturaObjectBase {
 
     id : string;
 	name : string;
-	readonly price : KalturaPriceDetails;
-	priceDetailsId : number;
-	readonly fileTypes : KalturaIntegerValue[];
-	fileTypesIds : string;
-	readonly discountModule : KalturaDiscountModule;
-	discountId : number;
-	readonly couponsGroup : KalturaCouponsGroup;
-	couponsGroupId : number;
+	price : KalturaPriceDetails;
+	fileTypes : KalturaIntegerValue[];
+	discountModule : KalturaDiscountModule;
+	couponsGroup : KalturaCouponsGroup;
 	descriptions : KalturaTranslationToken[];
 	productCode : string;
 	isSubscriptionOnly : boolean;
 	firstDeviceLimitation : boolean;
-	readonly usageModule : KalturaUsageModule;
-	usageModuleId : number;
-	adsPolicy : KalturaAdsPolicy;
-	isActive : boolean;
-	readonly updateDate : number;
-	readonly createDate : number;
-	readonly virtualAssetId : number;
+	usageModule : KalturaUsageModule;
 
     constructor(data? : KalturaPpvArgs)
     {
@@ -67,25 +54,15 @@ export class KalturaPpv extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaPpv' },
 				id : { type : 's' },
 				name : { type : 's' },
-				price : { type : 'o', readOnly : true, subTypeConstructor : KalturaPriceDetails, subType : 'KalturaPriceDetails' },
-				priceDetailsId : { type : 'n' },
-				fileTypes : { type : 'a', readOnly : true, subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
-				fileTypesIds : { type : 's' },
-				discountModule : { type : 'o', readOnly : true, subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
-				discountId : { type : 'n' },
-				couponsGroup : { type : 'o', readOnly : true, subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },
-				couponsGroupId : { type : 'n' },
+				price : { type : 'o', subTypeConstructor : KalturaPriceDetails, subType : 'KalturaPriceDetails' },
+				fileTypes : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
+				discountModule : { type : 'o', subTypeConstructor : KalturaDiscountModule, subType : 'KalturaDiscountModule' },
+				couponsGroup : { type : 'o', subTypeConstructor : KalturaCouponsGroup, subType : 'KalturaCouponsGroup' },
 				descriptions : { type : 'a', subTypeConstructor : KalturaTranslationToken, subType : 'KalturaTranslationToken' },
 				productCode : { type : 's' },
 				isSubscriptionOnly : { type : 'b' },
 				firstDeviceLimitation : { type : 'b' },
-				usageModule : { type : 'o', readOnly : true, subTypeConstructor : KalturaUsageModule, subType : 'KalturaUsageModule' },
-				usageModuleId : { type : 'n' },
-				adsPolicy : { type : 'es', subTypeConstructor : KalturaAdsPolicy, subType : 'KalturaAdsPolicy' },
-				isActive : { type : 'b' },
-				updateDate : { type : 'n', readOnly : true },
-				createDate : { type : 'n', readOnly : true },
-				virtualAssetId : { type : 'n', readOnly : true }
+				usageModule : { type : 'o', subTypeConstructor : KalturaUsageModule, subType : 'KalturaUsageModule' }
             }
         );
         return result;

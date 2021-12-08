@@ -4,28 +4,21 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUsageModuleArgs  extends KalturaObjectBaseArgs {
-    id? : number;
-	name? : string;
-	maxViewsNumber? : number;
-	viewLifeCycle? : number;
-	fullLifeCycle? : number;
-	waiverPeriod? : number;
-	isWaiverEnabled? : boolean;
-	isOfflinePlayback? : boolean;
+    
 }
 
 
 export class KalturaUsageModule extends KalturaObjectBase {
 
-    id : number;
-	name : string;
-	maxViewsNumber : number;
-	viewLifeCycle : number;
-	fullLifeCycle : number;
+    readonly id : number;
+	readonly name : string;
+	readonly maxViewsNumber : number;
+	readonly viewLifeCycle : number;
+	readonly fullLifeCycle : number;
 	readonly couponId : number;
-	waiverPeriod : number;
-	isWaiverEnabled : boolean;
-	isOfflinePlayback : boolean;
+	readonly waiverPeriod : number;
+	readonly isWaiverEnabled : boolean;
+	readonly isOfflinePlayback : boolean;
 
     constructor(data? : KalturaUsageModuleArgs)
     {
@@ -39,15 +32,15 @@ export class KalturaUsageModule extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaUsageModule' },
-				id : { type : 'n' },
-				name : { type : 's' },
-				maxViewsNumber : { type : 'n' },
-				viewLifeCycle : { type : 'n' },
-				fullLifeCycle : { type : 'n' },
+				id : { type : 'n', readOnly : true },
+				name : { type : 's', readOnly : true },
+				maxViewsNumber : { type : 'n', readOnly : true },
+				viewLifeCycle : { type : 'n', readOnly : true },
+				fullLifeCycle : { type : 'n', readOnly : true },
 				couponId : { type : 'n', readOnly : true },
-				waiverPeriod : { type : 'n' },
-				isWaiverEnabled : { type : 'b' },
-				isOfflinePlayback : { type : 'b' }
+				waiverPeriod : { type : 'n', readOnly : true },
+				isWaiverEnabled : { type : 'b', readOnly : true },
+				isOfflinePlayback : { type : 'b', readOnly : true }
             }
         );
         return result;

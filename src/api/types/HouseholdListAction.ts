@@ -14,7 +14,7 @@ export interface HouseholdListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'household' action 'list'.
  *
- * Usage: Retrive household for the partner filter by external identifier
+ * Usage: Get recently watched media for user, ordered by recently watched first
  *
  * Server response type:         KalturaHouseholdListResponse
  * Server failure response type: KalturaAPIException

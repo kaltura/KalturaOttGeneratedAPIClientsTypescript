@@ -6,14 +6,12 @@ import { KalturaPersistedFilter, KalturaPersistedFilterArgs } from './KalturaPer
 
 export interface KalturaAssetFilterArgs  extends KalturaPersistedFilterArgs {
     dynamicOrderBy? : KalturaDynamicOrderBy;
-	trendingDaysEqual? : number;
 }
 
 
 export class KalturaAssetFilter extends KalturaPersistedFilter {
 
     dynamicOrderBy : KalturaDynamicOrderBy;
-	trendingDaysEqual : number;
 
     constructor(data? : KalturaAssetFilterArgs)
     {
@@ -27,8 +25,7 @@ export class KalturaAssetFilter extends KalturaPersistedFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaAssetFilter' },
-				dynamicOrderBy : { type : 'o', subTypeConstructor : KalturaDynamicOrderBy, subType : 'KalturaDynamicOrderBy' },
-				trendingDaysEqual : { type : 'n' }
+				dynamicOrderBy : { type : 'o', subTypeConstructor : KalturaDynamicOrderBy, subType : 'KalturaDynamicOrderBy' }
             }
         );
         return result;
