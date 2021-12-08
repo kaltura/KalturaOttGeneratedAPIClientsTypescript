@@ -11,7 +11,7 @@ export interface PriceDetailsAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'priceDetails' action 'add'.
  *
- * Usage: Internal API !!! Insert new PriceDetails for partner
+ * Usage: Insert new PriceDetails for partner
  *
  * Server response type:         KalturaPriceDetails
  * Server failure response type: KalturaAPIException
