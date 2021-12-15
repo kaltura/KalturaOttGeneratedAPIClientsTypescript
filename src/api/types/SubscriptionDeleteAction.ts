@@ -11,7 +11,7 @@ export interface SubscriptionDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'subscription' action 'delete'.
  *
- * Usage: Delete subscription
+ * Usage: Internal API !!! Delete subscription
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException

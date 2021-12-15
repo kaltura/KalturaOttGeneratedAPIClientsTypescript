@@ -11,7 +11,7 @@ export interface SubscriptionAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'subscription' action 'add'.
  *
- * Usage: Insert new subscription for partner
+ * Usage: Internal API !!! Insert new subscription for partner
  *
  * Server response type:         KalturaSubscription
  * Server failure response type: KalturaAPIException

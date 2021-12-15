@@ -11,7 +11,7 @@ export interface CollectionDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'collection' action 'delete'.
  *
- * Usage: Delete collection
+ * Usage: Internal API !!! Delete collection
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
