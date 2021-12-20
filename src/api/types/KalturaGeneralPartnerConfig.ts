@@ -25,6 +25,7 @@ export interface KalturaGeneralPartnerConfigArgs  extends KalturaPartnerConfigur
 	finishedPercentThreshold? : number;
 	suspensionProfileInheritanceType? : KalturaSuspensionProfileInheritanceType;
 	allowDeviceMobility? : boolean;
+	enableMultiLcns? : boolean;
 }
 
 
@@ -47,6 +48,7 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 	finishedPercentThreshold : number;
 	suspensionProfileInheritanceType : KalturaSuspensionProfileInheritanceType;
 	allowDeviceMobility : boolean;
+	enableMultiLcns : boolean;
 
     constructor(data? : KalturaGeneralPartnerConfigArgs)
     {
@@ -76,7 +78,8 @@ export class KalturaGeneralPartnerConfig extends KalturaPartnerConfiguration {
 				linearWatchHistoryThreshold : { type : 'n' },
 				finishedPercentThreshold : { type : 'n' },
 				suspensionProfileInheritanceType : { type : 'es', subTypeConstructor : KalturaSuspensionProfileInheritanceType, subType : 'KalturaSuspensionProfileInheritanceType' },
-				allowDeviceMobility : { type : 'b' }
+				allowDeviceMobility : { type : 'b' },
+				enableMultiLcns : { type : 'b' }
             }
         );
         return result;
