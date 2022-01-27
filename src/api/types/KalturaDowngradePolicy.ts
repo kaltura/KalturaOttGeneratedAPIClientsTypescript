@@ -1,6 +1,7 @@
 
 
 export enum KalturaDowngradePolicy {
-    fifo = 'FIFO',
+    activeDate = 'ACTIVE_DATE',
+	fifo = 'FIFO',
 	lifo = 'LIFO'
 }
