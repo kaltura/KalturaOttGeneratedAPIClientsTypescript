@@ -12,7 +12,7 @@ export interface Environment {
 
 export const environment: Environment = {
     request: {
-        apiVersion: '7.3.0.29786',
+        apiVersion: '7.3.0.29787',
         ottMode: true,
         fileFormatValue: 20
     },
