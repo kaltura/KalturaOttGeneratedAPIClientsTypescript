@@ -13,7 +13,8 @@ export interface KalturaPriceArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaPrice extends KalturaObjectBase {
 
-    amount : number;
+    readonly currencyId : number;
+	amount : number;
 	currency : string;
 	currencySign : string;
 	countryId : number;
@@ -30,6 +31,7 @@ export class KalturaPrice extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaPrice' },
+				currencyId : { type : 'n', readOnly : true },
 				amount : { type : 'n' },
 				currency : { type : 's' },
 				currencySign : { type : 's' },
