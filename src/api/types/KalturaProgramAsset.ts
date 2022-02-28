@@ -11,7 +11,6 @@ export interface KalturaProgramAssetArgs  extends KalturaAssetArgs {
 	enableCatchUp? : boolean;
 	enableStartOver? : boolean;
 	enableTrickPlay? : boolean;
-	externalOfferIds? : string;
 }
 
 
@@ -26,7 +25,6 @@ export class KalturaProgramAsset extends KalturaAsset {
 	enableCatchUp : boolean;
 	enableStartOver : boolean;
 	enableTrickPlay : boolean;
-	externalOfferIds : string;
 
     constructor(data? : KalturaProgramAssetArgs)
     {
@@ -48,8 +46,7 @@ export class KalturaProgramAsset extends KalturaAsset {
 				enableCdvr : { type : 'b' },
 				enableCatchUp : { type : 'b' },
 				enableStartOver : { type : 'b' },
-				enableTrickPlay : { type : 'b' },
-				externalOfferIds : { type : 's' }
+				enableTrickPlay : { type : 'b' }
             }
         );
         return result;
