@@ -9,6 +9,7 @@ export interface KalturaProductPriceFilterArgs  extends KalturaFilterArgs {
 	collectionIdIn? : string;
 	isLowest? : boolean;
 	couponCodeEqual? : string;
+	programAssetGroupOfferIdIn? : string;
 }
 
 
@@ -19,6 +20,7 @@ export class KalturaProductPriceFilter extends KalturaFilter {
 	collectionIdIn : string;
 	isLowest : boolean;
 	couponCodeEqual : string;
+	programAssetGroupOfferIdIn : string;
 
     constructor(data? : KalturaProductPriceFilterArgs)
     {
@@ -36,7 +38,8 @@ export class KalturaProductPriceFilter extends KalturaFilter {
 				fileIdIn : { type : 's' },
 				collectionIdIn : { type : 's' },
 				isLowest : { type : 'b' },
-				couponCodeEqual : { type : 's' }
+				couponCodeEqual : { type : 's' },
+				programAssetGroupOfferIdIn : { type : 's' }
             }
         );
         return result;
