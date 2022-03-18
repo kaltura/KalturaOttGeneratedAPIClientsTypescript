@@ -240,6 +240,7 @@ export { KalturaUdidDynamicListCondition, KalturaUdidDynamicListConditionArgs } 
 export { KalturaDynamicKeysCondition, KalturaDynamicKeysConditionArgs } from './KalturaDynamicKeysCondition'
 export { KalturaDeviceDynamicDataCondition, KalturaDeviceDynamicDataConditionArgs } from './KalturaDeviceDynamicDataCondition'
 export { KalturaUserSessionProfileCondition, KalturaUserSessionProfileConditionArgs } from './KalturaUserSessionProfileCondition'
+export { KalturaIpV6RangeCondition, KalturaIpV6RangeConditionArgs } from './KalturaIpV6RangeCondition'
 export { KalturaMessage, KalturaMessageArgs } from './KalturaMessage'
 export { KalturaBulkUploadResult, KalturaBulkUploadResultArgs } from './KalturaBulkUploadResult'
 export { KalturaBulkUpload, KalturaBulkUploadArgs } from './KalturaBulkUpload'
