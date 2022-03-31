@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectState } from './KalturaObjectState';
 import { KalturaPromotion } from './KalturaPromotion';
-import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaCampaignArgs  extends KalturaCrudObjectArgs {
+export interface KalturaCampaignArgs  extends KalturaOTTObjectSupportNullableArgs {
     startDate? : number;
 	endDate? : number;
 	name? : string;
@@ -17,7 +17,7 @@ export interface KalturaCampaignArgs  extends KalturaCrudObjectArgs {
 }
 
 
-export class KalturaCampaign extends KalturaCrudObject {
+export class KalturaCampaign extends KalturaOTTObjectSupportNullable {
 
     readonly id : number;
 	readonly createDate : number;

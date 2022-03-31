@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaDynamicListArgs  extends KalturaCrudObjectArgs {
+export interface KalturaDynamicListArgs  extends KalturaOTTObjectSupportNullableArgs {
     name? : string;
 }
 
 
-export class KalturaDynamicList extends KalturaCrudObject {
+export class KalturaDynamicList extends KalturaOTTObjectSupportNullable {
 
     readonly id : number;
 	readonly createDate : number;

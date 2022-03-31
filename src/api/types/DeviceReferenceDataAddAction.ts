@@ -11,7 +11,7 @@ export interface DeviceReferenceDataAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'deviceReferenceData' action 'add'.
  *
- * Usage: Add an object
+ * Usage: add DeviceReferenceData
  *
  * Server response type:         KalturaDeviceReferenceData
  * Server failure response type: KalturaAPIException
