@@ -1,7 +1,7 @@
 export interface Environment {
     request: {
         apiVersion: string,
-        avoidQueryString: boolean,
+        ottMode: boolean,
         fileFormatValue: number
     }
     response: {
@@ -12,8 +12,8 @@ export interface Environment {
 
 export const environment: Environment = {
     request: {
-        apiVersion: '6.9.0.29563',
-        avoidQueryString: true,
+        apiVersion: '6.9.0.29565',
+        ottMode: true,
         fileFormatValue: 20
     },
     response: {
