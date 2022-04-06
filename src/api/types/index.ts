@@ -1277,7 +1277,7 @@ export { IngestStatusUpdatePartnerConfigurationAction, IngestStatusUpdatePartner
 export { IotGetClientConfigurationAction, IotGetClientConfigurationActionArgs } from './IotGetClientConfigurationAction'
 export { IotRegisterAction, IotRegisterActionArgs } from './IotRegisterAction'
 export { IotProfileAddAction, IotProfileAddActionArgs } from './IotProfileAddAction'
-export { IotProfileDeleteAction, IotProfileDeleteActionArgs } from './IotProfileDeleteAction'
+export { IotProfileGetAction, IotProfileGetActionArgs } from './IotProfileGetAction'
 export { IotProfileUpdateAction, IotProfileUpdateActionArgs } from './IotProfileUpdateAction'
 export { LabelAddAction, LabelAddActionArgs } from './LabelAddAction'
 export { LabelDeleteAction, LabelDeleteActionArgs } from './LabelDeleteAction'
