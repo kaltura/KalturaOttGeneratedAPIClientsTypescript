@@ -12,7 +12,7 @@ export interface DynamicListUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'dynamicList' action 'update'.
  *
- * Usage: Update an object
+ * Usage: Update existing KalturaDynamicList
  *
  * Server response type:         KalturaDynamicList
  * Server failure response type: KalturaAPIException
