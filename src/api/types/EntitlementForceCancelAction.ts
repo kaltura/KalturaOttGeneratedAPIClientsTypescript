@@ -13,7 +13,7 @@ export interface EntitlementForceCancelActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'entitlement' action 'forceCancel'.
  *
- * Usage: Immediately cancel a subscription, PPV or collection. Cancel applies regardless of cancellation window and content consumption status
+ * Usage: Immediately cancel a subscription, PPV, collection or programAssetGroupOffer. Cancel applies regardless of cancellation window and content consumption status
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException

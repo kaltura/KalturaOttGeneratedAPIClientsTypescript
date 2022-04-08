@@ -14,6 +14,7 @@ export enum KalturaPurchaseStatus {
 	pendingEntitlement = 'pending_entitlement',
 	ppvPurchased = 'ppv_purchased',
 	prePaidPurchased = 'pre_paid_purchased',
+	programAssetGroupOfferPurchased = 'program_asset_group_offer_purchased',
 	subscriptionPurchased = 'subscription_purchased',
 	subscriptionPurchasedWrongCurrency = 'subscription_purchased_wrong_currency',
 	userSuspended = 'user_suspended'

@@ -11,7 +11,7 @@ export interface CampaignAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'campaign' action 'add'.
  *
- * Usage: Add an object
+ * Usage: Add new Campaign
  *
  * Server response type:         KalturaCampaign
  * Server failure response type: KalturaAPIException

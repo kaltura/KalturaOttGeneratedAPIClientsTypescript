@@ -12,7 +12,7 @@ export interface SmsAdapterProfileUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'smsAdapterProfile' action 'update'.
  *
- * Usage: Update an object
+ * Usage: SmsAdapterProfile update
  *
  * Server response type:         KalturaSmsAdapterProfile
  * Server failure response type: KalturaAPIException

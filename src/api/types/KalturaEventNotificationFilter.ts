@@ -1,16 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCrudFilter, KalturaCrudFilterArgs } from './KalturaCrudFilter';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaEventNotificationFilterArgs  extends KalturaCrudFilterArgs {
+export interface KalturaEventNotificationFilterArgs  extends KalturaFilterArgs {
     idEqual? : string;
 	objectIdEqual? : number;
 	eventObjectTypeEqual? : string;
 }
 
 
-export class KalturaEventNotificationFilter extends KalturaCrudFilter {
+export class KalturaEventNotificationFilter extends KalturaFilter {
 
     idEqual : string;
 	objectIdEqual : number;

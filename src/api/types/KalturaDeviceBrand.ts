@@ -1,18 +1,22 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaDeviceBrandType } from './KalturaDeviceBrandType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaDeviceBrandArgs  extends KalturaObjectBaseArgs {
-    name? : string;
+    id? : number;
+	name? : string;
+	deviceFamilyId? : number;
 }
 
 
 export class KalturaDeviceBrand extends KalturaObjectBase {
 
-    readonly id : number;
+    id : number;
 	name : string;
-	readonly deviceFamilyid : number;
+	deviceFamilyId : number;
+	readonly type : KalturaDeviceBrandType;
 
     constructor(data? : KalturaDeviceBrandArgs)
     {
@@ -26,9 +30,10 @@ export class KalturaDeviceBrand extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDeviceBrand' },
-				id : { type : 'n', readOnly : true },
+				id : { type : 'n' },
 				name : { type : 's' },
-				deviceFamilyid : { type : 'n', readOnly : true }
+				deviceFamilyId : { type : 'n' },
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaDeviceBrandType, subType : 'KalturaDeviceBrandType' }
             }
         );
         return result;

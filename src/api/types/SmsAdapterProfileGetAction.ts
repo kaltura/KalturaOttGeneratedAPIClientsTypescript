@@ -11,7 +11,7 @@ export interface SmsAdapterProfileGetActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'smsAdapterProfile' action 'get'.
  *
- * Usage: Get an object
+ * Usage: Get SmsAdapterProfile
  *
  * Server response type:         KalturaSmsAdapterProfile
  * Server failure response type: KalturaAPIException
