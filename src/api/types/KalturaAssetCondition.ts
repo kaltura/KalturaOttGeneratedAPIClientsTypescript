@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCondition, KalturaConditionArgs } from './KalturaCondition';
+import { KalturaAssetConditionBase, KalturaAssetConditionBaseArgs } from './KalturaAssetConditionBase';
 
-export interface KalturaAssetConditionArgs  extends KalturaConditionArgs {
+export interface KalturaAssetConditionArgs  extends KalturaAssetConditionBaseArgs {
     ksql? : string;
 }
 
 
-export class KalturaAssetCondition extends KalturaCondition {
+export class KalturaAssetCondition extends KalturaAssetConditionBase {
 
     ksql : string;
 

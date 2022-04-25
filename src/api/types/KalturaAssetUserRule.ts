@@ -1,19 +1,19 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaAssetCondition } from './KalturaAssetCondition';
+import { KalturaAssetConditionBase } from './KalturaAssetConditionBase';
 import { KalturaAssetUserRuleAction } from './KalturaAssetUserRuleAction';
 import { KalturaAssetRuleBase, KalturaAssetRuleBaseArgs } from './KalturaAssetRuleBase';
 
 export interface KalturaAssetUserRuleArgs  extends KalturaAssetRuleBaseArgs {
-    conditions? : KalturaAssetCondition[];
+    conditions? : KalturaAssetConditionBase[];
 	actions? : KalturaAssetUserRuleAction[];
 }
 
 
 export class KalturaAssetUserRule extends KalturaAssetRuleBase {
 
-    conditions : KalturaAssetCondition[];
+    conditions : KalturaAssetConditionBase[];
 	actions : KalturaAssetUserRuleAction[];
 
     constructor(data? : KalturaAssetUserRuleArgs)
@@ -30,7 +30,7 @@ export class KalturaAssetUserRule extends KalturaAssetRuleBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaAssetUserRule' },
-				conditions : { type : 'a', subTypeConstructor : KalturaAssetCondition, subType : 'KalturaAssetCondition' },
+				conditions : { type : 'a', subTypeConstructor : KalturaAssetConditionBase, subType : 'KalturaAssetConditionBase' },
 				actions : { type : 'a', subTypeConstructor : KalturaAssetUserRuleAction, subType : 'KalturaAssetUserRuleAction' }
             }
         );

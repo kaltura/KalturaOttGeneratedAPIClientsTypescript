@@ -6,13 +6,13 @@ import { KalturaSmsAdapterProfileFilter } from './KalturaSmsAdapterProfileFilter
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SmsAdapterProfileListActionArgs  extends KalturaRequestArgs {
-    filter : KalturaSmsAdapterProfileFilter;
+    filter? : KalturaSmsAdapterProfileFilter;
 }
 
 /**
  * Build request payload for service 'smsAdapterProfile' action 'list'.
  *
- * 
+ * Usage: Gets all SmsAdapterProfile items
  *
  * Server response type:         KalturaSmsAdapterProfileListResponse
  * Server failure response type: KalturaAPIException
@@ -23,7 +23,7 @@ export class SmsAdapterProfileListAction extends KalturaRequest<KalturaSmsAdapte
 
     filter : KalturaSmsAdapterProfileFilter;
 
-    constructor(data : SmsAdapterProfileListActionArgs)
+    constructor(data? : SmsAdapterProfileListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaSmsAdapterProfileListResponse', responseConstructor : KalturaSmsAdapterProfileListResponse  });
     }

@@ -15,7 +15,7 @@ export interface EntitlementGrantActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'entitlement' action 'grant'.
  *
- * Usage: Grant household for an entitlement for a PPV or Subscription
+ * Usage: Grant household for an entitlement for a PPV, Subscription or programAssetGroupOffer
  *
  * Server response type:         boolean
  * Server failure response type: KalturaAPIException
