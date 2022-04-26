@@ -2,10 +2,13 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaDeviceBrandListResponse } from './KalturaDeviceBrandListResponse';
 
+import { KalturaDeviceBrandFilter } from './KalturaDeviceBrandFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface DeviceBrandListActionArgs  extends KalturaRequestArgs {
-    
+    filter? : KalturaDeviceBrandFilter;
+	pager? : KalturaFilterPager;
 }
 
 /**
@@ -20,7 +23,8 @@ export interface DeviceBrandListActionArgs  extends KalturaRequestArgs {
  */
 export class DeviceBrandListAction extends KalturaRequest<KalturaDeviceBrandListResponse> {
 
-    
+    filter : KalturaDeviceBrandFilter;
+	pager : KalturaFilterPager;
 
     constructor(data? : DeviceBrandListActionArgs)
     {
@@ -34,7 +38,9 @@ export class DeviceBrandListAction extends KalturaRequest<KalturaDeviceBrandList
             result.properties,
             {
                 service : { type : 'c', default : 'devicebrand' },
-				action : { type : 'c', default : 'list' }
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaDeviceBrandFilter, subType : 'KalturaDeviceBrandFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

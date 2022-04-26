@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCrudFilter, KalturaCrudFilterArgs } from './KalturaCrudFilter';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaDynamicListFilterArgs  extends KalturaCrudFilterArgs {
+export interface KalturaDynamicListFilterArgs  extends KalturaFilterArgs {
     
 }
 
 
-export class KalturaDynamicListFilter extends KalturaCrudFilter {
+export class KalturaDynamicListFilter extends KalturaFilter {
 
     
 

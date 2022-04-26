@@ -11,7 +11,7 @@ export interface PasswordPolicyAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'passwordPolicy' action 'add'.
  *
- * Usage: Add an object
+ * Usage: Add new KalturaPasswordPolicy
  *
  * Server response type:         KalturaPasswordPolicy
  * Server failure response type: KalturaAPIException

@@ -1,15 +1,15 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaDeviceReferenceDataArgs  extends KalturaCrudObjectArgs {
+export interface KalturaDeviceReferenceDataArgs  extends KalturaOTTObjectSupportNullableArgs {
     name? : string;
 	status? : boolean;
 }
 
 
-export class KalturaDeviceReferenceData extends KalturaCrudObject {
+export class KalturaDeviceReferenceData extends KalturaOTTObjectSupportNullable {
 
     readonly id : number;
 	name : string;

@@ -12,7 +12,7 @@ export interface TransactionPurchaseActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'transaction' action 'purchase'.
  *
- * Usage: Purchase specific product or subscription for a household. Upon successful charge entitlements to use the requested product or subscription are granted
+ * Usage: Purchase specific product, subscription or Program asset group offer (PAGO) for a household. Upon successful charge entitlements to use the requested product or subscription are granted
  *
  * Server response type:         KalturaTransaction
  * Server failure response type: KalturaAPIException

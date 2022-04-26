@@ -4,9 +4,9 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTranslationToken } from './KalturaTranslationToken';
 import { KalturaUnifiedChannel } from './KalturaUnifiedChannel';
 import { KalturaStringValue } from './KalturaStringValue';
-import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
+import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
-export interface KalturaCategoryItemArgs  extends KalturaCrudObjectArgs {
+export interface KalturaCategoryItemArgs  extends KalturaOTTObjectSupportNullableArgs {
     multilingualName? : KalturaTranslationToken[];
 	childrenIds? : string;
 	unifiedChannels? : KalturaUnifiedChannel[];
@@ -19,7 +19,7 @@ export interface KalturaCategoryItemArgs  extends KalturaCrudObjectArgs {
 }
 
 
-export class KalturaCategoryItem extends KalturaCrudObject {
+export class KalturaCategoryItem extends KalturaOTTObjectSupportNullable {
 
     readonly id : number;
 	readonly name : string;
