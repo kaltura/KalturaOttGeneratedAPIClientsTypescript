@@ -10,8 +10,6 @@ export interface KalturaLiveAssetArgs  extends KalturaMediaAssetArgs {
 	enableCatchUpState? : KalturaTimeShiftedTvState;
 	enableStartOverState? : KalturaTimeShiftedTvState;
 	bufferCatchUpSetting? : number;
-	paddingBeforeProgramStartsSetting? : number;
-	paddingAfterProgramEndsSetting? : number;
 	bufferTrickPlaySetting? : number;
 	enableRecordingPlaybackNonEntitledChannelState? : KalturaTimeShiftedTvState;
 	enableTrickPlayState? : KalturaTimeShiftedTvState;
@@ -27,8 +25,6 @@ export class KalturaLiveAsset extends KalturaMediaAsset {
 	enableCatchUpState : KalturaTimeShiftedTvState;
 	enableStartOverState : KalturaTimeShiftedTvState;
 	bufferCatchUpSetting : number;
-	paddingBeforeProgramStartsSetting : number;
-	paddingAfterProgramEndsSetting : number;
 	bufferTrickPlaySetting : number;
 	enableRecordingPlaybackNonEntitledChannelState : KalturaTimeShiftedTvState;
 	enableTrickPlayState : KalturaTimeShiftedTvState;
@@ -38,8 +34,6 @@ export class KalturaLiveAsset extends KalturaMediaAsset {
 	readonly enableCatchUp : boolean;
 	readonly enableStartOver : boolean;
 	readonly catchUpBuffer : number;
-	readonly paddingBeforeProgramStarts : number;
-	readonly paddingAfterProgramEnds : number;
 	readonly trickPlayBuffer : number;
 	readonly enableRecordingPlaybackNonEntitledChannel : boolean;
 	readonly enableTrickPlay : boolean;
@@ -61,8 +55,6 @@ export class KalturaLiveAsset extends KalturaMediaAsset {
 				enableCatchUpState : { type : 'es', subTypeConstructor : KalturaTimeShiftedTvState, subType : 'KalturaTimeShiftedTvState' },
 				enableStartOverState : { type : 'es', subTypeConstructor : KalturaTimeShiftedTvState, subType : 'KalturaTimeShiftedTvState' },
 				bufferCatchUpSetting : { type : 'n' },
-				paddingBeforeProgramStartsSetting : { type : 'n' },
-				paddingAfterProgramEndsSetting : { type : 'n' },
 				bufferTrickPlaySetting : { type : 'n' },
 				enableRecordingPlaybackNonEntitledChannelState : { type : 'es', subTypeConstructor : KalturaTimeShiftedTvState, subType : 'KalturaTimeShiftedTvState' },
 				enableTrickPlayState : { type : 'es', subTypeConstructor : KalturaTimeShiftedTvState, subType : 'KalturaTimeShiftedTvState' },
@@ -72,8 +64,6 @@ export class KalturaLiveAsset extends KalturaMediaAsset {
 				enableCatchUp : { type : 'b', readOnly : true },
 				enableStartOver : { type : 'b', readOnly : true },
 				catchUpBuffer : { type : 'n', readOnly : true },
-				paddingBeforeProgramStarts : { type : 'n', readOnly : true },
-				paddingAfterProgramEnds : { type : 'n', readOnly : true },
 				trickPlayBuffer : { type : 'n', readOnly : true },
 				enableRecordingPlaybackNonEntitledChannel : { type : 'b', readOnly : true },
 				enableTrickPlay : { type : 'b', readOnly : true },

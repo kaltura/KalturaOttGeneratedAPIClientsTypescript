@@ -17,6 +17,7 @@ export enum KalturaRuleConditionType {
 	dynamicKeys = 'DYNAMIC_KEYS',
 	header = 'HEADER',
 	ipRange = 'IP_RANGE',
+	ipV6Range = 'IP_V6_RANGE',
 	or = 'OR',
 	segments = 'SEGMENTS',
 	userRole = 'USER_ROLE',
