@@ -11,7 +11,7 @@ export interface IotProfileGetActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'iotProfile' action 'get'.
  *
- * Usage: Get existing KalturaIotProfile
+ * Usage: Get an object
  *
  * Server response type:         KalturaIotProfile
  * Server failure response type: KalturaAPIException

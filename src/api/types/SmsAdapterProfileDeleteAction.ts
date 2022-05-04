@@ -11,7 +11,7 @@ export interface SmsAdapterProfileDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'smsAdapterProfile' action 'delete'.
  *
- * Usage: Remove SmsAdapterProfile
+ * Usage: Delete an object
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException

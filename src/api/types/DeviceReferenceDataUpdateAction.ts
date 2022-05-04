@@ -12,7 +12,7 @@ export interface DeviceReferenceDataUpdateActionArgs  extends KalturaRequestArgs
 /**
  * Build request payload for service 'deviceReferenceData' action 'update'.
  *
- * Usage: Update existing DeviceReferenceData
+ * Usage: Update an object
  *
  * Server response type:         KalturaDeviceReferenceData
  * Server failure response type: KalturaAPIException

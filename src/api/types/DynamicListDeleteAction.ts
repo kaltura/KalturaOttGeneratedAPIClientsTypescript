@@ -11,7 +11,7 @@ export interface DynamicListDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'dynamicList' action 'delete'.
  *
- * Usage: Delete existing DynamicList
+ * Usage: Delete an object
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException

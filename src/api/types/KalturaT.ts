@@ -1,18 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCrudFilter, KalturaCrudFilterArgs } from './KalturaCrudFilter';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaIotFilterArgs  extends KalturaCrudFilterArgs {
+export interface KalturaTArgs  extends KalturaObjectBaseArgs {
     
 }
 
 
-export class KalturaIotFilter extends KalturaCrudFilter {
+export class KalturaT extends KalturaObjectBase {
 
     
 
-    constructor(data? : KalturaIotFilterArgs)
+    constructor(data? : KalturaTArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaIotFilter extends KalturaCrudFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaIotFilter' }
+                objectType : { type : 'c', default : 'KalturaT' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaIotFilter',KalturaIotFilter);
+KalturaTypesFactory.registerType('KalturaT',KalturaT);
