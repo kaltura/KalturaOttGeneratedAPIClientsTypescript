@@ -2,6 +2,7 @@
 
 export enum KalturaRuleConditionType {
     asset = 'ASSET',
+	assetShop = 'ASSET_SHOP',
 	assetSubscription = 'ASSET_SUBSCRIPTION',
 	businessModule = 'BUSINESS_MODULE',
 	concurrency = 'CONCURRENCY',
@@ -16,6 +17,7 @@ export enum KalturaRuleConditionType {
 	dynamicKeys = 'DYNAMIC_KEYS',
 	header = 'HEADER',
 	ipRange = 'IP_RANGE',
+	ipV6Range = 'IP_V6_RANGE',
 	or = 'OR',
 	segments = 'SEGMENTS',
 	userRole = 'USER_ROLE',
