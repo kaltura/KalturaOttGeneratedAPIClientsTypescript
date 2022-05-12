@@ -4,12 +4,12 @@ import { KalturaIotProfile } from './KalturaIotProfile';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface IotProfileGetActionArgs  extends KalturaRequestArgs {
+export interface IotProfileDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
 /**
- * Build request payload for service 'iotProfile' action 'get'.
+ * Build request payload for service 'iotProfile' action 'delete'.
  *
  * Usage: Get existing KalturaIotProfile
  *
@@ -18,11 +18,11 @@ export interface IotProfileGetActionArgs  extends KalturaRequestArgs {
  * @class
  * @extends KalturaRequest
  */
-export class IotProfileGetAction extends KalturaRequest<KalturaIotProfile> {
+export class IotProfileDeleteAction extends KalturaRequest<KalturaIotProfile> {
 
     id : number;
 
-    constructor(data : IotProfileGetActionArgs)
+    constructor(data : IotProfileDeleteActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaIotProfile', responseConstructor : KalturaIotProfile  });
     }
@@ -34,7 +34,7 @@ export class IotProfileGetAction extends KalturaRequest<KalturaIotProfile> {
             result.properties,
             {
                 service : { type : 'c', default : 'iotprofile' },
-				action : { type : 'c', default : 'get' },
+				action : { type : 'c', default : 'delete' },
 				id : { type : 'n' }
             }
         );
