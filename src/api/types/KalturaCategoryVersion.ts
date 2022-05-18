@@ -2,16 +2,16 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaCategoryVersionState } from './KalturaCategoryVersionState';
-import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
+import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
-export interface KalturaCategoryVersionArgs  extends KalturaOTTObjectSupportNullableArgs {
+export interface KalturaCategoryVersionArgs  extends KalturaCrudObjectArgs {
     name? : string;
 	baseVersionId? : number;
 	comment? : string;
 }
 
 
-export class KalturaCategoryVersion extends KalturaOTTObjectSupportNullable {
+export class KalturaCategoryVersion extends KalturaCrudObject {
 
     readonly id : number;
 	name : string;

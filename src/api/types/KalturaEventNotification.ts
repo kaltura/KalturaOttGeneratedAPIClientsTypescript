@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEventNotificationStatus } from './KalturaEventNotificationStatus';
-import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
+import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
-export interface KalturaEventNotificationArgs  extends KalturaOTTObjectSupportNullableArgs {
+export interface KalturaEventNotificationArgs  extends KalturaCrudObjectArgs {
     id? : string;
 	objectId? : number;
 	eventObjectType? : string;
@@ -14,7 +14,7 @@ export interface KalturaEventNotificationArgs  extends KalturaOTTObjectSupportNu
 }
 
 
-export class KalturaEventNotification extends KalturaOTTObjectSupportNullable {
+export class KalturaEventNotification extends KalturaCrudObject {
 
     id : string;
 	objectId : number;

@@ -11,7 +11,7 @@ export interface IotProfileAddActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'iotProfile' action 'add'.
  *
- * Usage: Add new KalturaIotProfile
+ * Usage: Add an object
  *
  * Server response type:         KalturaIotProfile
  * Server failure response type: KalturaAPIException

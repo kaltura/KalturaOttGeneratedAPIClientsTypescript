@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaRegexExpression } from './KalturaRegexExpression';
-import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
+import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
-export interface KalturaPasswordPolicyArgs  extends KalturaOTTObjectSupportNullableArgs {
+export interface KalturaPasswordPolicyArgs  extends KalturaCrudObjectArgs {
     name? : string;
 	userRoleIds? : string;
 	historyCount? : number;
@@ -14,7 +14,7 @@ export interface KalturaPasswordPolicyArgs  extends KalturaOTTObjectSupportNulla
 }
 
 
-export class KalturaPasswordPolicy extends KalturaOTTObjectSupportNullable {
+export class KalturaPasswordPolicy extends KalturaCrudObject {
 
     readonly id : number;
 	name : string;

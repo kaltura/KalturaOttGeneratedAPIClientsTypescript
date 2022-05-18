@@ -11,7 +11,7 @@ export interface CampaignDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'campaign' action 'delete'.
  *
- * Usage: Delete existing Campaign
+ * Usage: Delete an object
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException

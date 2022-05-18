@@ -14,7 +14,7 @@ export interface CampaignListActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'campaign' action 'list'.
  *
- * Usage: Returns the list of available Campaigns
+ * 
  *
  * Server response type:         KalturaCampaignListResponse
  * Server failure response type: KalturaAPIException

@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTransactionType } from './KalturaTransactionType';
 import { KalturaCouponStatus } from './KalturaCouponStatus';
-import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
+import { KalturaCrudFilter, KalturaCrudFilterArgs } from './KalturaCrudFilter';
 
-export interface KalturaHouseholdCouponFilterArgs  extends KalturaFilterArgs {
+export interface KalturaHouseholdCouponFilterArgs  extends KalturaCrudFilterArgs {
     businessModuleTypeEqual? : KalturaTransactionType;
 	businessModuleIdEqual? : number;
 	couponCode? : string;
@@ -13,7 +13,7 @@ export interface KalturaHouseholdCouponFilterArgs  extends KalturaFilterArgs {
 }
 
 
-export class KalturaHouseholdCouponFilter extends KalturaFilter {
+export class KalturaHouseholdCouponFilter extends KalturaCrudFilter {
 
     businessModuleTypeEqual : KalturaTransactionType;
 	businessModuleIdEqual : number;
