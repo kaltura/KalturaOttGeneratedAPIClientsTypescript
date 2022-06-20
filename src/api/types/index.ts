@@ -570,6 +570,7 @@ export { KalturaRelatedEntity, KalturaRelatedEntityArgs } from './KalturaRelated
 export { KalturaRelatedEntityArray, KalturaRelatedEntityArrayArgs } from './KalturaRelatedEntityArray'
 export { KalturaAsset, KalturaAssetArgs } from './KalturaAsset'
 export { KalturaAssetListResponse, KalturaAssetListResponseArgs } from './KalturaAssetListResponse'
+export { KalturaLiveToVodInfoAsset, KalturaLiveToVodInfoAssetArgs } from './KalturaLiveToVodInfoAsset'
 export { KalturaMediaAsset, KalturaMediaAssetArgs } from './KalturaMediaAsset'
 export { KalturaLiveAsset, KalturaLiveAssetArgs } from './KalturaLiveAsset'
 export { KalturaLineupChannelAsset, KalturaLineupChannelAssetArgs } from './KalturaLineupChannelAsset'
