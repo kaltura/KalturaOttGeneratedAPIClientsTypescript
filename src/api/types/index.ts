@@ -1508,7 +1508,6 @@ export { SsoAdapterProfileGenerateSharedSecretAction, SsoAdapterProfileGenerateS
 export { SsoAdapterProfileInvokeAction, SsoAdapterProfileInvokeActionArgs } from './SsoAdapterProfileInvokeAction'
 export { SsoAdapterProfileListAction, SsoAdapterProfileListActionArgs } from './SsoAdapterProfileListAction'
 export { SsoAdapterProfileUpdateAction, SsoAdapterProfileUpdateActionArgs } from './SsoAdapterProfileUpdateAction'
-export { StreamingDeviceBookPlaybackSessionAction, StreamingDeviceBookPlaybackSessionActionArgs } from './StreamingDeviceBookPlaybackSessionAction'
 export { StreamingDeviceListAction, StreamingDeviceListActionArgs } from './StreamingDeviceListAction'
 export { SubscriptionAddAction, SubscriptionAddActionArgs } from './SubscriptionAddAction'
 export { SubscriptionDeleteAction, SubscriptionDeleteActionArgs } from './SubscriptionDeleteAction'
