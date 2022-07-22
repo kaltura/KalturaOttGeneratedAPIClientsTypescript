@@ -8,6 +8,7 @@ import { KalturaUsageModule } from './KalturaUsageModule';
 import { KalturaCouponsGroup } from './KalturaCouponsGroup';
 import { KalturaCollectionCouponGroup } from './KalturaCollectionCouponGroup';
 import { KalturaProductCode } from './KalturaProductCode';
+import { KalturaIntegerValue } from './KalturaIntegerValue';
 import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
 
 export interface KalturaCollectionArgs  extends KalturaOTTObjectSupportNullableArgs {
@@ -24,6 +25,7 @@ export interface KalturaCollectionArgs  extends KalturaOTTObjectSupportNullableA
 	productCodes? : KalturaProductCode[];
 	priceDetailsId? : number;
 	isActive? : boolean;
+	fileTypesIds? : string;
 }
 
 
@@ -51,6 +53,8 @@ export class KalturaCollection extends KalturaOTTObjectSupportNullable {
 	readonly createDate : number;
 	readonly updateDate : number;
 	readonly virtualAssetId : number;
+	readonly fileTypes : KalturaIntegerValue[];
+	fileTypesIds : string;
 
     constructor(data? : KalturaCollectionArgs)
     {
@@ -61,6 +65,7 @@ export class KalturaCollection extends KalturaOTTObjectSupportNullable {
 		if (typeof this.couponsGroups === 'undefined') this.couponsGroups = [];
 		if (typeof this.collectionCouponGroup === 'undefined') this.collectionCouponGroup = [];
 		if (typeof this.productCodes === 'undefined') this.productCodes = [];
+		if (typeof this.fileTypes === 'undefined') this.fileTypes = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -91,7 +96,9 @@ export class KalturaCollection extends KalturaOTTObjectSupportNullable {
 				isActive : { type : 'b' },
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
-				virtualAssetId : { type : 'n', readOnly : true }
+				virtualAssetId : { type : 'n', readOnly : true },
+				fileTypes : { type : 'a', readOnly : true, subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
+				fileTypesIds : { type : 's' }
             }
         );
         return result;
