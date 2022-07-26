@@ -6,7 +6,7 @@ import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface StreamingDeviceBookPlaybackSessionActionArgs  extends KalturaRequestArgs {
-    mediaFileId : string;
+    fileId : string;
 	assetId : string;
 	assetType : KalturaAssetType;
 }
@@ -23,7 +23,7 @@ export interface StreamingDeviceBookPlaybackSessionActionArgs  extends KalturaRe
  */
 export class StreamingDeviceBookPlaybackSessionAction extends KalturaRequest<boolean> {
 
-    mediaFileId : string;
+    fileId : string;
 	assetId : string;
 	assetType : KalturaAssetType;
 
@@ -40,7 +40,7 @@ export class StreamingDeviceBookPlaybackSessionAction extends KalturaRequest<boo
             {
                 service : { type : 'c', default : 'streamingdevice' },
 				action : { type : 'c', default : 'bookPlaybackSession' },
-				mediaFileId : { type : 's' },
+				fileId : { type : 's' },
 				assetId : { type : 's' },
 				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' }
             }
