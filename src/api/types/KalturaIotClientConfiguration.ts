@@ -1,30 +1,46 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCredentialsProvider } from './KalturaCredentialsProvider';
-import { KalturaCognitoUserPool } from './KalturaCognitoUserPool';
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaIotClientConfigurationArgs  extends KalturaObjectBaseArgs {
-    announcementTopic? : string;
-	credentialsProvider? : KalturaCredentialsProvider;
-	cognitoUserPool? : KalturaCognitoUserPool;
-	json? : string;
-	topics? : string;
+    identityPoolId? : string;
+	userPoolId? : string;
+	awsRegion? : string;
+	appClientId? : string;
+	endPoint? : string;
+	thingName? : string;
+	thingArn? : string;
+	thingId? : string;
+	username? : string;
+	password? : string;
+	topics? : KalturaStringValue[];
+	status? : string;
+	message? : string;
 }
 
 
 export class KalturaIotClientConfiguration extends KalturaObjectBase {
 
-    announcementTopic : string;
-	credentialsProvider : KalturaCredentialsProvider;
-	cognitoUserPool : KalturaCognitoUserPool;
-	json : string;
-	topics : string;
+    identityPoolId : string;
+	userPoolId : string;
+	awsRegion : string;
+	appClientId : string;
+	endPoint : string;
+	thingName : string;
+	thingArn : string;
+	thingId : string;
+	username : string;
+	password : string;
+	topics : KalturaStringValue[];
+	status : string;
+	message : string;
 
     constructor(data? : KalturaIotClientConfigurationArgs)
     {
         super(data);
+        if (typeof this.topics === 'undefined') this.topics = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,11 +50,19 @@ export class KalturaIotClientConfiguration extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaIotClientConfiguration' },
-				announcementTopic : { type : 's' },
-				credentialsProvider : { type : 'o', subTypeConstructor : KalturaCredentialsProvider, subType : 'KalturaCredentialsProvider' },
-				cognitoUserPool : { type : 'o', subTypeConstructor : KalturaCognitoUserPool, subType : 'KalturaCognitoUserPool' },
-				json : { type : 's' },
-				topics : { type : 's' }
+				identityPoolId : { type : 's' },
+				userPoolId : { type : 's' },
+				awsRegion : { type : 's' },
+				appClientId : { type : 's' },
+				endPoint : { type : 's' },
+				thingName : { type : 's' },
+				thingArn : { type : 's' },
+				thingId : { type : 's' },
+				username : { type : 's' },
+				password : { type : 's' },
+				topics : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				status : { type : 's' },
+				message : { type : 's' }
             }
         );
         return result;
