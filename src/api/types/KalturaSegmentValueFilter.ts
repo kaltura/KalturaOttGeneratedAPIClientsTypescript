@@ -5,12 +5,14 @@ import { KalturaBaseSegmentationTypeFilter, KalturaBaseSegmentationTypeFilterArg
 
 export interface KalturaSegmentValueFilterArgs  extends KalturaBaseSegmentationTypeFilterArgs {
     idIn? : string;
+	nameContain? : string;
 }
 
 
 export class KalturaSegmentValueFilter extends KalturaBaseSegmentationTypeFilter {
 
     idIn : string;
+	nameContain : string;
 
     constructor(data? : KalturaSegmentValueFilterArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaSegmentValueFilter extends KalturaBaseSegmentationTypeFilter
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSegmentValueFilter' },
-				idIn : { type : 's' }
+				idIn : { type : 's' },
+				nameContain : { type : 's' }
             }
         );
         return result;
