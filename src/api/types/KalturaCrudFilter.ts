@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaIngestEpgProgramResultFilterArgs  extends KalturaFilterArgs {
+export interface KalturaCrudFilterArgs  extends KalturaFilterArgs {
     
 }
 
 
-export class KalturaIngestEpgProgramResultFilter extends KalturaFilter {
+export class KalturaCrudFilter extends KalturaFilter {
 
     
 
-    constructor(data? : KalturaIngestEpgProgramResultFilterArgs)
+    constructor(data? : KalturaCrudFilterArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaIngestEpgProgramResultFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaIngestEpgProgramResultFilter' }
+                objectType : { type : 'c', default : 'KalturaCrudFilter' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaIngestEpgProgramResultFilter',KalturaIngestEpgProgramResultFilter);
+KalturaTypesFactory.registerType('KalturaCrudFilter',KalturaCrudFilter);

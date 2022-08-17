@@ -11,7 +11,7 @@ export interface PasswordPolicyDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'passwordPolicy' action 'delete'.
  *
- * Usage: Delete existing PasswordPolicy
+ * Usage: Delete an object
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException

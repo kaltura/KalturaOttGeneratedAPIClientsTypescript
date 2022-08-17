@@ -1,9 +1,9 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
+import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
-export interface KalturaIotProfileAwsArgs  extends KalturaOTTObjectSupportNullableArgs {
+export interface KalturaIotProfileAwsArgs  extends KalturaCrudObjectArgs {
     iotEndPoint? : string;
 	accessKeyId? : string;
 	secretAccessKey? : string;
@@ -15,7 +15,7 @@ export interface KalturaIotProfileAwsArgs  extends KalturaOTTObjectSupportNullab
 }
 
 
-export class KalturaIotProfileAws extends KalturaOTTObjectSupportNullable {
+export class KalturaIotProfileAws extends KalturaCrudObject {
 
     iotEndPoint : string;
 	accessKeyId : string;

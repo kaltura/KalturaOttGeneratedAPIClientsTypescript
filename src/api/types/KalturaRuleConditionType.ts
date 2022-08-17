@@ -2,7 +2,6 @@
 
 export enum KalturaRuleConditionType {
     asset = 'ASSET',
-	assetShop = 'ASSET_SHOP',
 	assetSubscription = 'ASSET_SUBSCRIPTION',
 	businessModule = 'BUSINESS_MODULE',
 	concurrency = 'CONCURRENCY',

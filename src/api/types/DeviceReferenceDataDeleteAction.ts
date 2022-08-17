@@ -11,7 +11,7 @@ export interface DeviceReferenceDataDeleteActionArgs  extends KalturaRequestArgs
 /**
  * Build request payload for service 'deviceReferenceData' action 'delete'.
  *
- * Usage: Delete existing DeviceReferenceData
+ * Usage: Delete an object
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException

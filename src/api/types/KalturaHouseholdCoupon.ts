@@ -1,15 +1,15 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaOTTObjectSupportNullable, KalturaOTTObjectSupportNullableArgs } from './KalturaOTTObjectSupportNullable';
+import { KalturaCrudObject, KalturaCrudObjectArgs } from './KalturaCrudObject';
 
-export interface KalturaHouseholdCouponArgs  extends KalturaOTTObjectSupportNullableArgs {
+export interface KalturaHouseholdCouponArgs  extends KalturaCrudObjectArgs {
     code? : string;
 	lastUsageDate? : number;
 }
 
 
-export class KalturaHouseholdCoupon extends KalturaOTTObjectSupportNullable {
+export class KalturaHouseholdCoupon extends KalturaCrudObject {
 
     code : string;
 	lastUsageDate : number;
