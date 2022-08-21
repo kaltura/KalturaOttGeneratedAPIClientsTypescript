@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaIot } from './KalturaIot';
+
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -13,18 +13,18 @@ export interface IotRegisterActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Register IOT device
  *
- * Server response type:         KalturaIot
+ * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class IotRegisterAction extends KalturaRequest<KalturaIot> {
+export class IotRegisterAction extends KalturaRequest<boolean> {
 
     
 
     constructor(data? : IotRegisterActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaIot', responseConstructor : KalturaIot  });
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
