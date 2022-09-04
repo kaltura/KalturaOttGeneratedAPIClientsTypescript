@@ -1,16 +1,17 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaBulkUploadJobAction } from './KalturaBulkUploadJobAction';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBulkUploadObjectDataArgs  extends KalturaObjectBaseArgs {
-    
+    action? : KalturaBulkUploadJobAction;
 }
 
 
 export class KalturaBulkUploadObjectData extends KalturaObjectBase {
 
-    
+    action : KalturaBulkUploadJobAction;
 
     constructor(data? : KalturaBulkUploadObjectDataArgs)
     {
@@ -23,7 +24,8 @@ export class KalturaBulkUploadObjectData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaBulkUploadObjectData' }
+                objectType : { type : 'c', default : 'KalturaBulkUploadObjectData' },
+				action : { type : 'es', subTypeConstructor : KalturaBulkUploadJobAction, subType : 'KalturaBulkUploadJobAction' }
             }
         );
         return result;
