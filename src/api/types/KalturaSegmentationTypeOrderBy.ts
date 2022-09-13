@@ -1,7 +1,9 @@
 
 
 export enum KalturaSegmentationTypeOrderBy {
-    affectedUsersAsc = 'AFFECTED_USERS_ASC',
+    affectedHouseholdsAsc = 'AFFECTED_HOUSEHOLDS_ASC',
+	affectedHouseholdsDesc = 'AFFECTED_HOUSEHOLDS_DESC',
+	affectedUsersAsc = 'AFFECTED_USERS_ASC',
 	affectedUsersDesc = 'AFFECTED_USERS_DESC',
 	createDateAsc = 'CREATE_DATE_ASC',
 	createDateDesc = 'CREATE_DATE_DESC',
