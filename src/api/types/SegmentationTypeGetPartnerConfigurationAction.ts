@@ -11,7 +11,7 @@ export interface SegmentationTypeGetPartnerConfigurationActionArgs  extends Kalt
 /**
  * Build request payload for service 'segmentationType' action 'getPartnerConfiguration'.
  *
- * Usage: Get existing segmentation partner configuration
+ * Usage: Gets existing partner segmentation configuration
  *
  * Server response type:         KalturaSegmentationPartnerConfiguration
  * Server failure response type: KalturaAPIException

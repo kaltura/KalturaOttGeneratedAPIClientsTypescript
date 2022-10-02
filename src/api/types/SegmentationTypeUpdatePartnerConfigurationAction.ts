@@ -11,7 +11,7 @@ export interface SegmentationTypeUpdatePartnerConfigurationActionArgs  extends K
 /**
  * Build request payload for service 'segmentationType' action 'updatePartnerConfiguration'.
  *
- * Usage: Set segmentation configuration on partner level
+ * Usage: Sets partner configuration for segments configuration
  *
  * Server response type:         KalturaSegmentationPartnerConfiguration
  * Server failure response type: KalturaAPIException
