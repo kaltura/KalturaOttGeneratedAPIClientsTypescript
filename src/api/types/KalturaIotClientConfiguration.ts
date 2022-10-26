@@ -1,7 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaStringValue } from './KalturaStringValue';
+import { KalturaKeyValue } from './KalturaKeyValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaIotClientConfigurationArgs  extends KalturaObjectBaseArgs {
@@ -16,7 +16,7 @@ export interface KalturaIotClientConfigurationArgs  extends KalturaObjectBaseArg
 	thingId? : string;
 	username? : string;
 	password? : string;
-	topics? : KalturaStringValue[];
+	topics? : KalturaKeyValue[];
 	status? : string;
 	message? : string;
 }
@@ -35,7 +35,7 @@ export class KalturaIotClientConfiguration extends KalturaObjectBase {
 	thingId : string;
 	username : string;
 	password : string;
-	topics : KalturaStringValue[];
+	topics : KalturaKeyValue[];
 	status : string;
 	message : string;
 
@@ -63,7 +63,7 @@ export class KalturaIotClientConfiguration extends KalturaObjectBase {
 				thingId : { type : 's' },
 				username : { type : 's' },
 				password : { type : 's' },
-				topics : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				topics : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
 				status : { type : 's' },
 				message : { type : 's' }
             }
