@@ -6,6 +6,7 @@ import { KalturaBaseSegmentationTypeFilter, KalturaBaseSegmentationTypeFilterArg
 export interface KalturaSegmentationTypeFilterArgs  extends KalturaBaseSegmentationTypeFilterArgs {
     idIn? : string;
 	kSql? : string;
+	nameContain? : string;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaSegmentationTypeFilter extends KalturaBaseSegmentationTypeFi
 
     idIn : string;
 	kSql : string;
+	nameContain : string;
 
     constructor(data? : KalturaSegmentationTypeFilterArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaSegmentationTypeFilter extends KalturaBaseSegmentationTypeFi
             {
                 objectType : { type : 'c', default : 'KalturaSegmentationTypeFilter' },
 				idIn : { type : 's' },
-				kSql : { type : 's' }
+				kSql : { type : 's' },
+				nameContain : { type : 's' }
             }
         );
         return result;
