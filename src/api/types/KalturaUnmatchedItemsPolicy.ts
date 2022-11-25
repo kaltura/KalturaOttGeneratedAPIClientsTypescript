@@ -1,7 +1,7 @@
 
 
 export enum KalturaUnmatchedItemsPolicy {
-    group = 'Group',
-	includeandmerge = 'IncludeAndMerge',
-	omit = 'Omit'
+    group = 'GROUP',
+	includeAndMerge = 'INCLUDE_AND_MERGE',
+	omit = 'OMIT'
 }
