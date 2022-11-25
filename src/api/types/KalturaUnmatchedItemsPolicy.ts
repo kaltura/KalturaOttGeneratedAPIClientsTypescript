@@ -2,6 +2,6 @@
 
 export enum KalturaUnmatchedItemsPolicy {
     group = 'Group',
-	include = 'Include',
+	includeandmerge = 'IncludeAndMerge',
 	omit = 'Omit'
 }
