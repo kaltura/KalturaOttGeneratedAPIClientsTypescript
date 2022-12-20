@@ -1454,6 +1454,7 @@ export { RecordingBulkdeleteAction, RecordingBulkdeleteActionArgs } from './Reco
 export { RecordingCancelAction, RecordingCancelActionArgs } from './RecordingCancelAction'
 export { RecordingDeleteAction, RecordingDeleteActionArgs } from './RecordingDeleteAction'
 export { RecordingGetAction, RecordingGetActionArgs } from './RecordingGetAction'
+export { RecordingImmediateRecordAction, RecordingImmediateRecordActionArgs } from './RecordingImmediateRecordAction'
 export { RecordingListAction, RecordingListActionArgs } from './RecordingListAction'
 export { RecordingProtectAction, RecordingProtectActionArgs } from './RecordingProtectAction'
 export { RecordingStopAction, RecordingStopActionArgs } from './RecordingStopAction'
