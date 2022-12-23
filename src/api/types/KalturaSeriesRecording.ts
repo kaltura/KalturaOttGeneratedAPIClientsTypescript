@@ -13,8 +13,6 @@ export interface KalturaSeriesRecordingArgs  extends KalturaObjectBaseArgs {
 	seasonNumber? : number;
 	type? : KalturaRecordingType;
 	seriesRecordingOption? : KalturaSeriesRecordingOption;
-	householdSpecificSeriesStartTimeOffset? : number;
-	householdSpecificSeriesEndTimeOffset? : number;
 }
 
 
@@ -30,8 +28,6 @@ export class KalturaSeriesRecording extends KalturaObjectBase {
 	readonly updateDate : number;
 	readonly excludedSeasons : KalturaIntegerValue[];
 	seriesRecordingOption : KalturaSeriesRecordingOption;
-	householdSpecificSeriesStartTimeOffset : number;
-	householdSpecificSeriesEndTimeOffset : number;
 
     constructor(data? : KalturaSeriesRecordingArgs)
     {
@@ -55,9 +51,7 @@ export class KalturaSeriesRecording extends KalturaObjectBase {
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
 				excludedSeasons : { type : 'a', readOnly : true, subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
-				seriesRecordingOption : { type : 'o', subTypeConstructor : KalturaSeriesRecordingOption, subType : 'KalturaSeriesRecordingOption' },
-				householdSpecificSeriesStartTimeOffset : { type : 'n' },
-				householdSpecificSeriesEndTimeOffset : { type : 'n' }
+				seriesRecordingOption : { type : 'o', subTypeConstructor : KalturaSeriesRecordingOption, subType : 'KalturaSeriesRecordingOption' }
             }
         );
         return result;
