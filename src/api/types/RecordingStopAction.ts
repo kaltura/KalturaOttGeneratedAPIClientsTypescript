@@ -13,7 +13,7 @@ export interface RecordingStopActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'recording' action 'stop'.
  *
- * Usage: Stop current recording
+ * Usage: Stop ongoing household recording
  *
  * Server response type:         KalturaRecording
  * Server failure response type: KalturaAPIException

@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaRecording, KalturaRecordingArgs } from './KalturaRecording';
 
 export interface KalturaImmediateRecordingArgs  extends KalturaRecordingArgs {
-    
+    endPadding? : number;
 }
 
 
 export class KalturaImmediateRecording extends KalturaRecording {
 
-    readonly endPadding : number;
+    endPadding : number;
 	readonly absoluteStart : number;
 	readonly absoluteEnd : number;
 
@@ -26,7 +26,7 @@ export class KalturaImmediateRecording extends KalturaRecording {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaImmediateRecording' },
-				endPadding : { type : 'n', readOnly : true },
+				endPadding : { type : 'n' },
 				absoluteStart : { type : 'n', readOnly : true },
 				absoluteEnd : { type : 'n', readOnly : true }
             }

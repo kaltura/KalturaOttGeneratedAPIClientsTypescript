@@ -7,6 +7,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface RecordingImmediateRecordActionArgs  extends KalturaRequestArgs {
     assetId : number;
 	epgChannelId : number;
+	crid : string;
 	endPadding : number;
 }
 
@@ -24,6 +25,7 @@ export class RecordingImmediateRecordAction extends KalturaRequest<KalturaImmedi
 
     assetId : number;
 	epgChannelId : number;
+	crid : string;
 	endPadding : number;
 
     constructor(data : RecordingImmediateRecordActionArgs)
@@ -41,6 +43,7 @@ export class RecordingImmediateRecordAction extends KalturaRequest<KalturaImmedi
 				action : { type : 'c', default : 'immediateRecord' },
 				assetId : { type : 'n' },
 				epgChannelId : { type : 'n' },
+				crid : { type : 's' },
 				endPadding : { type : 'n' }
             }
         );
