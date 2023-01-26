@@ -32,6 +32,7 @@ export { KalturaHouseholdSegmentFilter, KalturaHouseholdSegmentFilterArgs } from
 export { KalturaUserSegmentFilter, KalturaUserSegmentFilterArgs } from './KalturaUserSegmentFilter'
 export { KalturaAssetFilePpvFilter, KalturaAssetFilePpvFilterArgs } from './KalturaAssetFilePpvFilter'
 export { KalturaCollectionFilter, KalturaCollectionFilterArgs } from './KalturaCollectionFilter'
+export { KalturaCouponFilter, KalturaCouponFilterArgs } from './KalturaCouponFilter'
 export { KalturaDiscountDetailsFilter, KalturaDiscountDetailsFilterArgs } from './KalturaDiscountDetailsFilter'
 export { KalturaPpvFilter, KalturaPpvFilterArgs } from './KalturaPpvFilter'
 export { KalturaPreviewModuleFilter, KalturaPreviewModuleFilterArgs } from './KalturaPreviewModuleFilter'
