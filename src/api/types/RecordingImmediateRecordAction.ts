@@ -7,7 +7,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface RecordingImmediateRecordActionArgs  extends KalturaRequestArgs {
     assetId : number;
 	epgChannelId : number;
-	endPadding : number;
+	endPadding? : number;
 }
 
 /**
