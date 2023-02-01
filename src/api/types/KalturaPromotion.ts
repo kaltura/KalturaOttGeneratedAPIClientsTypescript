@@ -6,6 +6,7 @@ import { KalturaBasePromotion, KalturaBasePromotionArgs } from './KalturaBasePro
 export interface KalturaPromotionArgs  extends KalturaBasePromotionArgs {
     discountModuleId? : number;
 	numberOfRecurring? : number;
+	maxDiscountUsages? : number;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaPromotion extends KalturaBasePromotion {
 
     discountModuleId : number;
 	numberOfRecurring : number;
+	maxDiscountUsages : number;
 
     constructor(data? : KalturaPromotionArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaPromotion extends KalturaBasePromotion {
             {
                 objectType : { type : 'c', default : 'KalturaPromotion' },
 				discountModuleId : { type : 'n' },
-				numberOfRecurring : { type : 'n' }
+				numberOfRecurring : { type : 'n' },
+				maxDiscountUsages : { type : 'n' }
             }
         );
         return result;
