@@ -7,7 +7,7 @@ import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface MediaFileDynamicDataListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaMediaFileDynamicDataFilter;
+    filter : KalturaMediaFileDynamicDataFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -26,7 +26,7 @@ export class MediaFileDynamicDataListAction extends KalturaRequest<KalturaMediaF
     filter : KalturaMediaFileDynamicDataFilter;
 	pager : KalturaFilterPager;
 
-    constructor(data? : MediaFileDynamicDataListActionArgs)
+    constructor(data : MediaFileDynamicDataListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaMediaFileDynamicDataListResponse', responseConstructor : KalturaMediaFileDynamicDataListResponse  });
     }
