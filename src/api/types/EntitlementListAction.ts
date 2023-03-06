@@ -2,12 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaEntitlementListResponse } from './KalturaEntitlementListResponse';
 
-import { KalturaBaseEntitlementFilter } from './KalturaBaseEntitlementFilter';
+import { KalturaEntitlementFilter } from './KalturaEntitlementFilter';
 import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface EntitlementListActionArgs  extends KalturaRequestArgs {
-    filter : KalturaBaseEntitlementFilter;
+    filter : KalturaEntitlementFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -23,7 +23,7 @@ export interface EntitlementListActionArgs  extends KalturaRequestArgs {
  */
 export class EntitlementListAction extends KalturaRequest<KalturaEntitlementListResponse> {
 
-    filter : KalturaBaseEntitlementFilter;
+    filter : KalturaEntitlementFilter;
 	pager : KalturaFilterPager;
 
     constructor(data : EntitlementListActionArgs)
@@ -39,7 +39,7 @@ export class EntitlementListAction extends KalturaRequest<KalturaEntitlementList
             {
                 service : { type : 'c', default : 'entitlement' },
 				action : { type : 'c', default : 'list' },
-				filter : { type : 'o', subTypeConstructor : KalturaBaseEntitlementFilter, subType : 'KalturaBaseEntitlementFilter' },
+				filter : { type : 'o', subTypeConstructor : KalturaEntitlementFilter, subType : 'KalturaEntitlementFilter' },
 				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );

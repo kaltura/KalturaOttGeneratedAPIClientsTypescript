@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaBaseEntitlementFilter, KalturaBaseEntitlementFilterArgs } from './KalturaBaseEntitlementFilter';
+import { KalturaEntitlementFilter, KalturaEntitlementFilterArgs } from './KalturaEntitlementFilter';
 
-export interface KalturaProgramAssetGroupOfferEntitlementFilterArgs  extends KalturaBaseEntitlementFilterArgs {
+export interface KalturaProgramAssetGroupOfferEntitlementFilterArgs  extends KalturaEntitlementFilterArgs {
     
 }
 
 
-export class KalturaProgramAssetGroupOfferEntitlementFilter extends KalturaBaseEntitlementFilter {
+export class KalturaProgramAssetGroupOfferEntitlementFilter extends KalturaEntitlementFilter {
 
     
 
