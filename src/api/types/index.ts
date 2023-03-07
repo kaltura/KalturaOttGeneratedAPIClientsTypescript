@@ -27,7 +27,6 @@ export { KalturaSocialCommentFilter, KalturaSocialCommentFilterArgs } from './Ka
 export { KalturaSocialFriendActivityFilter, KalturaSocialFriendActivityFilterArgs } from './KalturaSocialFriendActivityFilter'
 export { KalturaBaseSegmentationTypeFilter, KalturaBaseSegmentationTypeFilterArgs } from './KalturaBaseSegmentationTypeFilter'
 export { KalturaSegmentationTypeFilter, KalturaSegmentationTypeFilterArgs } from './KalturaSegmentationTypeFilter'
-export { KalturaSegmentationTypeShopFilter, KalturaSegmentationTypeShopFilterArgs } from './KalturaSegmentationTypeShopFilter'
 export { KalturaSegmentValueFilter, KalturaSegmentValueFilterArgs } from './KalturaSegmentValueFilter'
 export { KalturaHouseholdSegmentFilter, KalturaHouseholdSegmentFilterArgs } from './KalturaHouseholdSegmentFilter'
 export { KalturaUserSegmentFilter, KalturaUserSegmentFilterArgs } from './KalturaUserSegmentFilter'
