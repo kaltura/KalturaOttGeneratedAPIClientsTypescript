@@ -6,8 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface RecordingStopActionArgs  extends KalturaRequestArgs {
     assetId : number;
-	epgChannelId : number;
-	householdRecordingId : number;
+	id : number;
 }
 
 /**
@@ -23,8 +22,7 @@ export interface RecordingStopActionArgs  extends KalturaRequestArgs {
 export class RecordingStopAction extends KalturaRequest<KalturaRecording> {
 
     assetId : number;
-	epgChannelId : number;
-	householdRecordingId : number;
+	id : number;
 
     constructor(data : RecordingStopActionArgs)
     {
@@ -40,8 +38,7 @@ export class RecordingStopAction extends KalturaRequest<KalturaRecording> {
                 service : { type : 'c', default : 'recording' },
 				action : { type : 'c', default : 'stop' },
 				assetId : { type : 'n' },
-				epgChannelId : { type : 'n' },
-				householdRecordingId : { type : 'n' }
+				id : { type : 'n' }
             }
         );
         return result;

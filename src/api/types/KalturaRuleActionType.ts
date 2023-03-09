@@ -13,6 +13,8 @@ export enum KalturaRuleActionType {
 	filterassetbyksql = 'FilterAssetByKsql',
 	filterfilebyaudiocodecindiscovery = 'FilterFileByAudioCodecInDiscovery',
 	filterfilebyaudiocodecinplayback = 'FilterFileByAudioCodecInPlayback',
+	filterfilebydynamicdataindiscovery = 'FilterFileByDynamicDataInDiscovery',
+	filterfilebydynamicdatainplayback = 'FilterFileByDynamicDataInPlayback',
 	filterfilebyfiletypeidforassettypeindiscovery = 'FilterFileByFileTypeIdForAssetTypeInDiscovery',
 	filterfilebyfiletypeidforassettypeinplayback = 'FilterFileByFileTypeIdForAssetTypeInPlayback',
 	filterfilebyfiletypeidindiscovery = 'FilterFileByFileTypeIdInDiscovery',
