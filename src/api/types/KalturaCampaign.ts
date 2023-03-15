@@ -14,6 +14,7 @@ export interface KalturaCampaignArgs  extends KalturaOTTObjectSupportNullableArg
 	promotion? : KalturaBasePromotion;
 	message? : string;
 	collectionIdIn? : string;
+	assetUserRuleId? : number;
 }
 
 
@@ -31,6 +32,7 @@ export class KalturaCampaign extends KalturaOTTObjectSupportNullable {
 	promotion : KalturaBasePromotion;
 	message : string;
 	collectionIdIn : string;
+	assetUserRuleId : number;
 
     constructor(data? : KalturaCampaignArgs)
     {
@@ -55,7 +57,8 @@ export class KalturaCampaign extends KalturaOTTObjectSupportNullable {
 				state : { type : 'es', readOnly : true, subTypeConstructor : KalturaObjectState, subType : 'KalturaObjectState' },
 				promotion : { type : 'o', subTypeConstructor : KalturaBasePromotion, subType : 'KalturaBasePromotion' },
 				message : { type : 's' },
-				collectionIdIn : { type : 's' }
+				collectionIdIn : { type : 's' },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;
