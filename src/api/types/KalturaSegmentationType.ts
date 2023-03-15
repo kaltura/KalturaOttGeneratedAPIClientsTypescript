@@ -14,6 +14,7 @@ export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
 	conditionsOperator? : KalturaBooleanOperator;
 	actions? : KalturaBaseSegmentAction[];
 	value? : KalturaBaseSegmentValue;
+	assetUserRuleId? : number;
 }
 
 
@@ -30,6 +31,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 	readonly updateDate : number;
 	readonly executeDate : number;
 	readonly version : number;
+	assetUserRuleId : number;
 
     constructor(data? : KalturaSegmentationTypeArgs)
     {
@@ -55,7 +57,8 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 				createDate : { type : 'n', readOnly : true },
 				updateDate : { type : 'n', readOnly : true },
 				executeDate : { type : 'n', readOnly : true },
-				version : { type : 'n', readOnly : true }
+				version : { type : 'n', readOnly : true },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;
