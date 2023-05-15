@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTransactionType } from './KalturaTransactionType';
 import { KalturaEntityReferenceBy } from './KalturaEntityReferenceBy';
-import { KalturaBaseEntitlementFilter, KalturaBaseEntitlementFilterArgs } from './KalturaBaseEntitlementFilter';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaEntitlementFilterArgs  extends KalturaBaseEntitlementFilterArgs {
+export interface KalturaEntitlementFilterArgs  extends KalturaFilterArgs {
     productTypeEqual? : KalturaTransactionType;
 	entityReferenceEqual? : KalturaEntityReferenceBy;
 	isExpiredEqual? : boolean;
 }
 
 
-export class KalturaEntitlementFilter extends KalturaBaseEntitlementFilter {
+export class KalturaEntitlementFilter extends KalturaFilter {
 
     productTypeEqual : KalturaTransactionType;
 	entityReferenceEqual : KalturaEntityReferenceBy;
