@@ -1,5 +1,7 @@
 
 
 export enum KalturaAssetRuleOrderBy {
-    none = 'NONE'
+    nameAsc = 'NAME_ASC',
+	nameDesc = 'NAME_DESC',
+	none = 'NONE'
 }
