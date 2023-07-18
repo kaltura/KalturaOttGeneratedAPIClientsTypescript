@@ -1,7 +1,7 @@
 {
   "name": "kaltura-ott-typescript-client",
   "private": true,
-  "version": "8.6.12-30274",
+  "version": "9.0.0-30428",
   "description": "Kaltura OTT Typescript client",
   "keywords": [
     "Kaltura"
