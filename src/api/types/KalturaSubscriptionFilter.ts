@@ -13,7 +13,6 @@ export interface KalturaSubscriptionFilterArgs  extends KalturaFilterArgs {
 	channelIdEqual? : number;
 	kSql? : string;
 	alsoInactive? : boolean;
-	dependencyTypeIn? : string;
 }
 
 
@@ -28,7 +27,6 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 	channelIdEqual : number;
 	kSql : string;
 	alsoInactive : boolean;
-	dependencyTypeIn : string;
 
     constructor(data? : KalturaSubscriptionFilterArgs)
     {
@@ -50,8 +48,7 @@ export class KalturaSubscriptionFilter extends KalturaFilter {
 				pricePlanIdEqual : { type : 'n' },
 				channelIdEqual : { type : 'n' },
 				kSql : { type : 's' },
-				alsoInactive : { type : 'b' },
-				dependencyTypeIn : { type : 's' }
+				alsoInactive : { type : 'b' }
             }
         );
         return result;

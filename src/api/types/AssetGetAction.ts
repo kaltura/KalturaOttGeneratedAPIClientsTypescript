@@ -13,8 +13,7 @@ export interface AssetGetActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'asset' action 'get'.
  *
- * Usage: Returns media or EPG asset by media / EPG internal or external identifier.
- * Note: OPC accounts asset.get for internal identifier doesn&#39;t take under consideration personalized aspects neither shop limitations
+ * Usage: Returns media or EPG asset by media / EPG internal or external identifier
  *
  * Server response type:         KalturaAsset
  * Server failure response type: KalturaAPIException
