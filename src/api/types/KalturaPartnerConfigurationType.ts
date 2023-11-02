@@ -15,5 +15,6 @@ export enum KalturaPartnerConfigurationType {
 	ossadapter = 'OSSAdapter',
 	payment = 'Payment',
 	playback = 'Playback',
-	security = 'Security'
+	security = 'Security',
+	uploadsettings = 'UploadSettings'
 }
