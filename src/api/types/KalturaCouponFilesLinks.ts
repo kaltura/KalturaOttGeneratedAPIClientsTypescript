@@ -2,16 +2,18 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaStringValue } from './KalturaStringValue';
-import { KalturaListResponse, KalturaListResponseArgs } from './KalturaListResponse';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaCouponFilesLinksArgs  extends KalturaListResponseArgs {
-    objects? : KalturaStringValue[];
+export interface KalturaCouponFilesLinksArgs  extends KalturaObjectBaseArgs {
+    totalCount? : number;
+	objects? : KalturaStringValue[];
 }
 
 
-export class KalturaCouponFilesLinks extends KalturaListResponse {
+export class KalturaCouponFilesLinks extends KalturaObjectBase {
 
-    objects : KalturaStringValue[];
+    totalCount : number;
+	objects : KalturaStringValue[];
 
     constructor(data? : KalturaCouponFilesLinksArgs)
     {
@@ -26,6 +28,7 @@ export class KalturaCouponFilesLinks extends KalturaListResponse {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCouponFilesLinks' },
+				totalCount : { type : 'n' },
 				objects : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
