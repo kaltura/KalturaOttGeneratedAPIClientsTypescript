@@ -29,9 +29,6 @@ export interface KalturaTimeShiftedTvPartnerSettingsArgs  extends KalturaObjectB
 	recoveryGracePeriod? : number;
 	privateCopyEnabled? : boolean;
 	defaultQuota? : number;
-	personalizedRecording? : boolean;
-	maxRecordingConcurrency? : number;
-	maxConcurrencyMargin? : number;
 }
 
 
@@ -60,9 +57,6 @@ export class KalturaTimeShiftedTvPartnerSettings extends KalturaObjectBase {
 	recoveryGracePeriod : number;
 	privateCopyEnabled : boolean;
 	defaultQuota : number;
-	personalizedRecording : boolean;
-	maxRecordingConcurrency : number;
-	maxConcurrencyMargin : number;
 
     constructor(data? : KalturaTimeShiftedTvPartnerSettingsArgs)
     {
@@ -98,10 +92,7 @@ export class KalturaTimeShiftedTvPartnerSettings extends KalturaObjectBase {
 				protectionPolicy : { type : 'es', subTypeConstructor : KalturaProtectionPolicy, subType : 'KalturaProtectionPolicy' },
 				recoveryGracePeriod : { type : 'n' },
 				privateCopyEnabled : { type : 'b' },
-				defaultQuota : { type : 'n' },
-				personalizedRecording : { type : 'b' },
-				maxRecordingConcurrency : { type : 'n' },
-				maxConcurrencyMargin : { type : 'n' }
+				defaultQuota : { type : 'n' }
             }
         );
         return result;

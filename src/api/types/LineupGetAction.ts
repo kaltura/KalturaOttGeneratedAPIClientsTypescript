@@ -12,9 +12,7 @@ export interface LineupGetActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'lineup' action 'get'.
  *
- * Usage: Returns regional lineup (list of lineup channel asset objects) based on the requester session characteristics and his region.
- * NOTE: Calling lineup.get action using HTTP POST is supported only for tests (non production environment) and is rate limited or blocked.
- * For production, HTTP GET shall be used: GET https://{Host_IP}/{build version}/api_v3/service/lineup/action/get
+ * Usage: Return regional lineup (list of lineup channel asset objects) based on the requester session characteristics and his region
  *
  * Server response type:         KalturaLineupChannelAssetListResponse
  * Server failure response type: KalturaAPIException
