@@ -11,6 +11,7 @@ export interface KalturaSSOAdapterProfileArgs  extends KalturaObjectBaseArgs {
 	settings? : { [key : string] : KalturaStringValue};
 	externalIdentifier? : string;
 	sharedSecret? : string;
+	adapterGrpcAddress? : string;
 }
 
 
@@ -23,6 +24,7 @@ export class KalturaSSOAdapterProfile extends KalturaObjectBase {
 	settings : { [key : string] : KalturaStringValue};
 	externalIdentifier : string;
 	sharedSecret : string;
+	adapterGrpcAddress : string;
 
     constructor(data? : KalturaSSOAdapterProfileArgs)
     {
@@ -42,7 +44,8 @@ export class KalturaSSOAdapterProfile extends KalturaObjectBase {
 				adapterUrl : { type : 's' },
 				settings : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				externalIdentifier : { type : 's' },
-				sharedSecret : { type : 's' }
+				sharedSecret : { type : 's' },
+				adapterGrpcAddress : { type : 's' }
             }
         );
         return result;
