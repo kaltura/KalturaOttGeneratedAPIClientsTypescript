@@ -2,16 +2,10 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaAssetHistory } from './KalturaAssetHistory';
 
-import { KalturaSeriesIdArguments } from './KalturaSeriesIdArguments';
-import { KalturaNotWatchedReturnStrategy } from './KalturaNotWatchedReturnStrategy';
-import { KalturaWatchedAllReturnStrategy } from './KalturaWatchedAllReturnStrategy';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AssetHistoryGetNextEpisodeActionArgs  extends KalturaRequestArgs {
-    assetId? : number;
-	seriesIdArguments? : KalturaSeriesIdArguments;
-	notWatchedReturnStrategy? : KalturaNotWatchedReturnStrategy;
-	watchedAllReturnStrategy? : KalturaWatchedAllReturnStrategy;
+    assetId : number;
 }
 
 /**
@@ -27,11 +21,8 @@ export interface AssetHistoryGetNextEpisodeActionArgs  extends KalturaRequestArg
 export class AssetHistoryGetNextEpisodeAction extends KalturaRequest<KalturaAssetHistory> {
 
     assetId : number;
-	seriesIdArguments : KalturaSeriesIdArguments;
-	notWatchedReturnStrategy : KalturaNotWatchedReturnStrategy;
-	watchedAllReturnStrategy : KalturaWatchedAllReturnStrategy;
 
-    constructor(data? : AssetHistoryGetNextEpisodeActionArgs)
+    constructor(data : AssetHistoryGetNextEpisodeActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaAssetHistory', responseConstructor : KalturaAssetHistory  });
     }
@@ -44,10 +35,7 @@ export class AssetHistoryGetNextEpisodeAction extends KalturaRequest<KalturaAsse
             {
                 service : { type : 'c', default : 'assethistory' },
 				action : { type : 'c', default : 'getNextEpisode' },
-				assetId : { type : 'n' },
-				seriesIdArguments : { type : 'o', subTypeConstructor : KalturaSeriesIdArguments, subType : 'KalturaSeriesIdArguments' },
-				notWatchedReturnStrategy : { type : 'es', subTypeConstructor : KalturaNotWatchedReturnStrategy, subType : 'KalturaNotWatchedReturnStrategy' },
-				watchedAllReturnStrategy : { type : 'es', subTypeConstructor : KalturaWatchedAllReturnStrategy, subType : 'KalturaWatchedAllReturnStrategy' }
+				assetId : { type : 'n' }
             }
         );
         return result;

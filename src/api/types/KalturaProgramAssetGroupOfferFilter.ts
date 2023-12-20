@@ -5,14 +5,12 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaProgramAssetGroupOfferFilterArgs  extends KalturaFilterArgs {
     alsoInactive? : boolean;
-	nameContains? : string;
 }
 
 
 export class KalturaProgramAssetGroupOfferFilter extends KalturaFilter {
 
     alsoInactive : boolean;
-	nameContains : string;
 
     constructor(data? : KalturaProgramAssetGroupOfferFilterArgs)
     {
@@ -26,8 +24,7 @@ export class KalturaProgramAssetGroupOfferFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaProgramAssetGroupOfferFilter' },
-				alsoInactive : { type : 'b' },
-				nameContains : { type : 's' }
+				alsoInactive : { type : 'b' }
             }
         );
         return result;
