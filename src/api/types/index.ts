@@ -42,6 +42,7 @@ export { KalturaProgramAssetGroupOfferIdInFilter, KalturaProgramAssetGroupOfferI
 export { KalturaSubscriptionSetFilter, KalturaSubscriptionSetFilterArgs } from './KalturaSubscriptionSetFilter'
 export { KalturaSubscriptionDependencySetFilter, KalturaSubscriptionDependencySetFilterArgs } from './KalturaSubscriptionDependencySetFilter'
 export { KalturaSubscriptionFilter, KalturaSubscriptionFilterArgs } from './KalturaSubscriptionFilter'
+export { KalturaAssociatedShopEntities, KalturaAssociatedShopEntitiesArgs } from './KalturaAssociatedShopEntities'
 export { KalturaUsageModuleFilter, KalturaUsageModuleFilterArgs } from './KalturaUsageModuleFilter'
 export { KalturaPartnerConfigurationFilter, KalturaPartnerConfigurationFilterArgs } from './KalturaPartnerConfigurationFilter'
 export { KalturaPersonalListFilter, KalturaPersonalListFilterArgs } from './KalturaPersonalListFilter'
