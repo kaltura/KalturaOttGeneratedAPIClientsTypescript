@@ -3,7 +3,6 @@
 export enum KalturaPartnerConfigurationType {
     base = 'Base',
 	catalog = 'Catalog',
-	clouduploadsettings = 'CloudUploadSettings',
 	commerce = 'Commerce',
 	concurrency = 'Concurrency',
 	customfields = 'CustomFields',
