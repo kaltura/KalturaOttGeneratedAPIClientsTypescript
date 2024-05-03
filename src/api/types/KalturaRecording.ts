@@ -23,7 +23,6 @@ export class KalturaRecording extends KalturaObjectBase {
 	isProtected : boolean;
 	readonly createDate : number;
 	readonly updateDate : number;
-	readonly duration : number;
 
     constructor(data? : KalturaRecordingArgs)
     {
@@ -44,8 +43,7 @@ export class KalturaRecording extends KalturaObjectBase {
 				viewableUntilDate : { type : 'n' },
 				isProtected : { type : 'b' },
 				createDate : { type : 'n', readOnly : true },
-				updateDate : { type : 'n', readOnly : true },
-				duration : { type : 'n', readOnly : true }
+				updateDate : { type : 'n', readOnly : true }
             }
         );
         return result;
