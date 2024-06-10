@@ -12,6 +12,7 @@ export interface KalturaUsageModuleArgs  extends KalturaObjectBaseArgs {
 	waiverPeriod? : number;
 	isWaiverEnabled? : boolean;
 	isOfflinePlayback? : boolean;
+	assetUserRuleId? : number;
 }
 
 
@@ -26,6 +27,7 @@ export class KalturaUsageModule extends KalturaObjectBase {
 	waiverPeriod : number;
 	isWaiverEnabled : boolean;
 	isOfflinePlayback : boolean;
+	assetUserRuleId : number;
 
     constructor(data? : KalturaUsageModuleArgs)
     {
@@ -47,7 +49,8 @@ export class KalturaUsageModule extends KalturaObjectBase {
 				couponId : { type : 'n', readOnly : true },
 				waiverPeriod : { type : 'n' },
 				isWaiverEnabled : { type : 'b' },
-				isOfflinePlayback : { type : 'b' }
+				isOfflinePlayback : { type : 'b' },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;
