@@ -12,7 +12,11 @@ export interface KalturaSubscriptionEntitlementArgs  extends KalturaEntitlementA
 
 export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
 
-    paymentGatewayId : number;
+    readonly nextRenewalDate : number;
+	readonly isRenewableForPurchase : boolean;
+	readonly isRenewable : boolean;
+	readonly isInGracePeriod : boolean;
+	paymentGatewayId : number;
 	paymentMethodId : number;
 	readonly scheduledSubscriptionId : number;
 	readonly unifiedPaymentId : number;
@@ -32,6 +36,10 @@ export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaSubscriptionEntitlement' },
+				nextRenewalDate : { type : 'n', readOnly : true },
+				isRenewableForPurchase : { type : 'b', readOnly : true },
+				isRenewable : { type : 'b', readOnly : true },
+				isInGracePeriod : { type : 'b', readOnly : true },
 				paymentGatewayId : { type : 'n' },
 				paymentMethodId : { type : 'n' },
 				scheduledSubscriptionId : { type : 'n', readOnly : true },
