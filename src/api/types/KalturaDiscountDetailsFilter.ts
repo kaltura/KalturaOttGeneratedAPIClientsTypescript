@@ -1,16 +1,19 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaAssociatedShopEntities } from './KalturaAssociatedShopEntities';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaDiscountDetailsFilterArgs  extends KalturaFilterArgs {
     idIn? : string;
+	associatedShopEntities? : KalturaAssociatedShopEntities;
 }
 
 
 export class KalturaDiscountDetailsFilter extends KalturaFilter {
 
     idIn : string;
+	associatedShopEntities : KalturaAssociatedShopEntities;
 
     constructor(data? : KalturaDiscountDetailsFilterArgs)
     {
@@ -24,7 +27,8 @@ export class KalturaDiscountDetailsFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDiscountDetailsFilter' },
-				idIn : { type : 's' }
+				idIn : { type : 's' },
+				associatedShopEntities : { type : 'o', subTypeConstructor : KalturaAssociatedShopEntities, subType : 'KalturaAssociatedShopEntities' }
             }
         );
         return result;
