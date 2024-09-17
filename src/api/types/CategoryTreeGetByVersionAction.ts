@@ -7,6 +7,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface CategoryTreeGetByVersionActionArgs  extends KalturaRequestArgs {
     versionId? : number;
 	deviceFamilyId? : number;
+	filter? : boolean;
 }
 
 /**
@@ -23,10 +24,12 @@ export class CategoryTreeGetByVersionAction extends KalturaRequest<KalturaCatego
 
     versionId : number;
 	deviceFamilyId : number;
+	filter : boolean;
 
     constructor(data? : CategoryTreeGetByVersionActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaCategoryTree', responseConstructor : KalturaCategoryTree  });
+        if (typeof this.filter === 'undefined') this.filter = false;
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -38,7 +41,8 @@ export class CategoryTreeGetByVersionAction extends KalturaRequest<KalturaCatego
                 service : { type : 'c', default : 'categorytree' },
 				action : { type : 'c', default : 'getByVersion' },
 				versionId : { type : 'n' },
-				deviceFamilyId : { type : 'n' }
+				deviceFamilyId : { type : 'n' },
+				filter : { type : 'b' }
             }
         );
         return result;
