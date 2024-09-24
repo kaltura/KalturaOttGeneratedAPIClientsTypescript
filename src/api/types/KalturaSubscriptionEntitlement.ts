@@ -22,6 +22,7 @@ export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
 	readonly unifiedPaymentId : number;
 	readonly isSuspended : boolean;
 	readonly priceDetails : KalturaEntitlementPriceDetails;
+	readonly isFlexiblePricePlan : boolean;
 
     constructor(data? : KalturaSubscriptionEntitlementArgs)
     {
@@ -44,7 +45,8 @@ export class KalturaSubscriptionEntitlement extends KalturaEntitlement {
 				scheduledSubscriptionId : { type : 'n', readOnly : true },
 				unifiedPaymentId : { type : 'n', readOnly : true },
 				isSuspended : { type : 'b', readOnly : true },
-				priceDetails : { type : 'o', readOnly : true, subTypeConstructor : KalturaEntitlementPriceDetails, subType : 'KalturaEntitlementPriceDetails' }
+				priceDetails : { type : 'o', readOnly : true, subTypeConstructor : KalturaEntitlementPriceDetails, subType : 'KalturaEntitlementPriceDetails' },
+				isFlexiblePricePlan : { type : 'b', readOnly : true }
             }
         );
         return result;

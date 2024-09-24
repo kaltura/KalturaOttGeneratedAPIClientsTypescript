@@ -11,6 +11,7 @@ export interface KalturaDiscountDetailsArgs  extends KalturaObjectBaseArgs {
 	endDate? : number;
 	whenAlgoTimes? : number;
 	whenAlgoType? : number;
+	assetUserRuleId? : number;
 }
 
 
@@ -23,6 +24,7 @@ export class KalturaDiscountDetails extends KalturaObjectBase {
 	endDate : number;
 	whenAlgoTimes : number;
 	whenAlgoType : number;
+	assetUserRuleId : number;
 
     constructor(data? : KalturaDiscountDetailsArgs)
     {
@@ -43,7 +45,8 @@ export class KalturaDiscountDetails extends KalturaObjectBase {
 				startDate : { type : 'n' },
 				endDate : { type : 'n' },
 				whenAlgoTimes : { type : 'n' },
-				whenAlgoType : { type : 'n' }
+				whenAlgoType : { type : 'n' },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;
