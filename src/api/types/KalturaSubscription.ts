@@ -27,6 +27,7 @@ export interface KalturaSubscriptionArgs  extends KalturaOTTObjectSupportNullabl
 	multilingualDescription? : KalturaTranslationToken[];
 	prorityInOrder? : number;
 	pricePlanIds? : string;
+	flexiblePricePlanId? : number;
 	previewModuleId? : number;
 	householdLimitationsId? : number;
 	gracePeriodMinutes? : number;
@@ -65,6 +66,7 @@ export class KalturaSubscription extends KalturaOTTObjectSupportNullable {
 	readonly mediaId : number;
 	prorityInOrder : number;
 	pricePlanIds : string;
+	flexiblePricePlanId : number;
 	readonly previewModule : KalturaPreviewModule;
 	previewModuleId : number;
 	householdLimitationsId : number;
@@ -129,6 +131,7 @@ export class KalturaSubscription extends KalturaOTTObjectSupportNullable {
 				mediaId : { type : 'n', readOnly : true },
 				prorityInOrder : { type : 'n' },
 				pricePlanIds : { type : 's' },
+				flexiblePricePlanId : { type : 'n' },
 				previewModule : { type : 'o', readOnly : true, subTypeConstructor : KalturaPreviewModule, subType : 'KalturaPreviewModule' },
 				previewModuleId : { type : 'n' },
 				householdLimitationsId : { type : 'n' },
