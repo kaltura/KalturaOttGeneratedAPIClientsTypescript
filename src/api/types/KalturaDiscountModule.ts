@@ -8,6 +8,7 @@ export interface KalturaDiscountModuleArgs  extends KalturaObjectBaseArgs {
 	percent? : number;
 	startDate? : number;
 	endDate? : number;
+	assetUserRuleId? : number;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaDiscountModule extends KalturaObjectBase {
 	percent : number;
 	startDate : number;
 	endDate : number;
+	assetUserRuleId : number;
 
     constructor(data? : KalturaDiscountModuleArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaDiscountModule extends KalturaObjectBase {
 				id : { type : 'n' },
 				percent : { type : 'n' },
 				startDate : { type : 'n' },
-				endDate : { type : 'n' }
+				endDate : { type : 'n' },
+				assetUserRuleId : { type : 'n' }
             }
         );
         return result;
