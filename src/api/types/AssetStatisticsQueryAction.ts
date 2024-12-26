@@ -12,7 +12,8 @@ export interface AssetStatisticsQueryActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'assetStatistics' action 'query'.
  *
- * Usage: Returns statistics for given list of assets by type and / or time period
+ * Usage: Returns statistics for given list of assets by type and / or time period.
+ * Supported values for KalturaAssetStatisticsQuery.assetTypeEqual : KalturaAssetType.media, KalturaAssetType.epg
  *
  * Server response type:         KalturaAssetStatisticsListResponse
  * Server failure response type: KalturaAPIException
