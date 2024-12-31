@@ -15,7 +15,7 @@ export interface AssetAddFromBulkUploadActionArgs  extends KalturaUploadRequestA
 /**
  * Build request payload for service 'asset' action 'addFromBulkUpload'.
  *
- * Usage: Add new bulk upload batch job Conversion profile id can be specified in the API
+ * Usage: Add new bulk upload batch job Conversion profile id can be specified in the API (note that the total request body size is limited to 10MB)
  *
  * Server response type:         KalturaBulkUpload
  * Server failure response type: KalturaAPIException
