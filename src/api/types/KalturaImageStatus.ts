@@ -1,7 +1,6 @@
 
 
 export enum KalturaImageStatus {
-    failed = 'FAILED',
-	pending = 'PENDING',
+    pending = 'PENDING',
 	ready = 'READY'
 }
