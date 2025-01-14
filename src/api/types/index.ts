@@ -206,6 +206,7 @@ export { KalturaAggregatedPropertySkipCondition, KalturaAggregatedPropertySkipCo
 export { KalturaSkipOnErrorCondition, KalturaSkipOnErrorConditionArgs } from './KalturaSkipOnErrorCondition'
 export { KalturaGenerateMetadataBySubtitlesJob, KalturaGenerateMetadataBySubtitlesJobArgs } from './KalturaGenerateMetadataBySubtitlesJob'
 export { KalturaGenerateMetadataResult, KalturaGenerateMetadataResultArgs } from './KalturaGenerateMetadataResult'
+export { KalturaMetaFieldNameMap, KalturaMetaFieldNameMapArgs } from './KalturaMetaFieldNameMap'
 export { KalturaAiMetadataGeneratorConfiguration, KalturaAiMetadataGeneratorConfigurationArgs } from './KalturaAiMetadataGeneratorConfiguration'
 export { KalturaAnnouncement, KalturaAnnouncementArgs } from './KalturaAnnouncement'
 export { KalturaFilterPager, KalturaFilterPagerArgs } from './KalturaFilterPager'

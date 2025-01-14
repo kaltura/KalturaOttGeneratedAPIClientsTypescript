@@ -1,12 +1,12 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaStringValue } from './KalturaStringValue';
+import { KalturaMetaFieldNameMap } from './KalturaMetaFieldNameMap';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAiMetadataGeneratorConfigurationArgs  extends KalturaObjectBaseArgs {
     isEnabled? : boolean;
-	metaFieldNameMap? : { [key : string] : KalturaStringValue};
+	assetStructMetaNameMap? : { [key : string] : KalturaMetaFieldNameMap};
 	vectorizedMetaIds? : string;
 }
 
@@ -14,7 +14,7 @@ export interface KalturaAiMetadataGeneratorConfigurationArgs  extends KalturaObj
 export class KalturaAiMetadataGeneratorConfiguration extends KalturaObjectBase {
 
     isEnabled : boolean;
-	metaFieldNameMap : { [key : string] : KalturaStringValue};
+	assetStructMetaNameMap : { [key : string] : KalturaMetaFieldNameMap};
 	vectorizedMetaIds : string;
 
     constructor(data? : KalturaAiMetadataGeneratorConfigurationArgs)
@@ -30,7 +30,7 @@ export class KalturaAiMetadataGeneratorConfiguration extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaAiMetadataGeneratorConfiguration' },
 				isEnabled : { type : 'b' },
-				metaFieldNameMap : { type : 'm', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				assetStructMetaNameMap : { type : 'm', subTypeConstructor : KalturaMetaFieldNameMap, subType : 'KalturaMetaFieldNameMap' },
 				vectorizedMetaIds : { type : 's' }
             }
         );
