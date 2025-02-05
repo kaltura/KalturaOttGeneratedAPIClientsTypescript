@@ -4,12 +4,12 @@ import { KalturaAiMetadataGeneratorConfiguration } from './KalturaAiMetadataGene
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface AiMetadataGeneratorSetPartnerConfigurationActionArgs  extends KalturaRequestArgs {
+export interface AiMetadataGeneratorUpdatePartnerConfigurationActionArgs  extends KalturaRequestArgs {
     configuration : KalturaAiMetadataGeneratorConfiguration;
 }
 
 /**
- * Build request payload for service 'aiMetadataGenerator' action 'setPartnerConfiguration'.
+ * Build request payload for service 'aiMetadataGenerator' action 'updatePartnerConfiguration'.
  *
  * Usage: update feature configuration
  *
@@ -18,11 +18,11 @@ export interface AiMetadataGeneratorSetPartnerConfigurationActionArgs  extends K
  * @class
  * @extends KalturaRequest
  */
-export class AiMetadataGeneratorSetPartnerConfigurationAction extends KalturaRequest<KalturaAiMetadataGeneratorConfiguration> {
+export class AiMetadataGeneratorUpdatePartnerConfigurationAction extends KalturaRequest<KalturaAiMetadataGeneratorConfiguration> {
 
     configuration : KalturaAiMetadataGeneratorConfiguration;
 
-    constructor(data : AiMetadataGeneratorSetPartnerConfigurationActionArgs)
+    constructor(data : AiMetadataGeneratorUpdatePartnerConfigurationActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaAiMetadataGeneratorConfiguration', responseConstructor : KalturaAiMetadataGeneratorConfiguration  });
     }
@@ -34,7 +34,7 @@ export class AiMetadataGeneratorSetPartnerConfigurationAction extends KalturaReq
             result.properties,
             {
                 service : { type : 'c', default : 'aimetadatagenerator' },
-				action : { type : 'c', default : 'setPartnerConfiguration' },
+				action : { type : 'c', default : 'updatePartnerConfiguration' },
 				configuration : { type : 'o', subTypeConstructor : KalturaAiMetadataGeneratorConfiguration, subType : 'KalturaAiMetadataGeneratorConfiguration' }
             }
         );
