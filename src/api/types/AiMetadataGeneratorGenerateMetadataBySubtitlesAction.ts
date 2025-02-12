@@ -8,7 +8,6 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface AiMetadataGeneratorGenerateMetadataBySubtitlesActionArgs  extends KalturaRequestArgs {
     subtitlesFileId : number;
 	externalAssetIds : KalturaStringValue[];
-	targetDisplayLanguage : string;
 }
 
 /**
@@ -25,7 +24,6 @@ export class AiMetadataGeneratorGenerateMetadataBySubtitlesAction extends Kaltur
 
     subtitlesFileId : number;
 	externalAssetIds : KalturaStringValue[];
-	targetDisplayLanguage : string;
 
     constructor(data : AiMetadataGeneratorGenerateMetadataBySubtitlesActionArgs)
     {
@@ -42,8 +40,7 @@ export class AiMetadataGeneratorGenerateMetadataBySubtitlesAction extends Kaltur
                 service : { type : 'c', default : 'aimetadatagenerator' },
 				action : { type : 'c', default : 'generateMetadataBySubtitles' },
 				subtitlesFileId : { type : 'n' },
-				externalAssetIds : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
-				targetDisplayLanguage : { type : 's' }
+				externalAssetIds : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
