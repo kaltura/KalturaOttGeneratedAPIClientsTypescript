@@ -5,22 +5,26 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaMetaFieldNameMapArgs  extends KalturaObjectBaseArgs {
     genre? : string;
+	subGenre? : string;
 	sentiment? : string;
-	shortDescription? : string;
-	longDescription? : string;
+	suggestedTitle? : string;
+	description? : string;
 	oneLiner? : string;
 	keywords? : string;
+	sensitiveContent? : string;
 }
 
 
 export class KalturaMetaFieldNameMap extends KalturaObjectBase {
 
     genre : string;
+	subGenre : string;
 	sentiment : string;
-	shortDescription : string;
-	longDescription : string;
+	suggestedTitle : string;
+	description : string;
 	oneLiner : string;
 	keywords : string;
+	sensitiveContent : string;
 
     constructor(data? : KalturaMetaFieldNameMapArgs)
     {
@@ -35,11 +39,13 @@ export class KalturaMetaFieldNameMap extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaMetaFieldNameMap' },
 				genre : { type : 's' },
+				subGenre : { type : 's' },
 				sentiment : { type : 's' },
-				shortDescription : { type : 's' },
-				longDescription : { type : 's' },
+				suggestedTitle : { type : 's' },
+				description : { type : 's' },
 				oneLiner : { type : 's' },
-				keywords : { type : 's' }
+				keywords : { type : 's' },
+				sensitiveContent : { type : 's' }
             }
         );
         return result;
