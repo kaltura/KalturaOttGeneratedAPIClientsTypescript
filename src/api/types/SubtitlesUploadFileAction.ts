@@ -6,7 +6,7 @@ import { KalturaUploadRequest, KalturaUploadRequestArgs } from '../kaltura-uploa
 
 export interface SubtitlesUploadFileActionArgs  extends KalturaUploadRequestArgs {
     subtitles : KalturaSubtitles;
-	file : File;
+	fileData : File;
 }
 
 /**
@@ -22,7 +22,7 @@ export interface SubtitlesUploadFileActionArgs  extends KalturaUploadRequestArgs
 export class SubtitlesUploadFileAction extends KalturaUploadRequest<KalturaSubtitles> {
 
     subtitles : KalturaSubtitles;
-	file : File;
+	fileData : File;
 
     constructor(data : SubtitlesUploadFileActionArgs)
     {
@@ -38,7 +38,7 @@ export class SubtitlesUploadFileAction extends KalturaUploadRequest<KalturaSubti
                 service : { type : 'c', default : 'subtitles' },
 				action : { type : 'c', default : 'uploadFile' },
 				subtitles : { type : 'o', subTypeConstructor : KalturaSubtitles, subType : 'KalturaSubtitles' },
-				file : { type : 'f' }
+				fileData : { type : 'f' }
             }
         );
         return result;
