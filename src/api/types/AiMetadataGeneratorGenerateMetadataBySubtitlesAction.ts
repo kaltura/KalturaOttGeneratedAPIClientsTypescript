@@ -7,13 +7,13 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AiMetadataGeneratorGenerateMetadataBySubtitlesActionArgs  extends KalturaRequestArgs {
     subtitlesFileId : number;
-	externalAssetIds : KalturaStringValue[];
+	externalAssetIds? : KalturaStringValue[];
 }
 
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'generateMetadataBySubtitles'.
  *
- * Usage: initiate the the process of metadata generation based on the subtitles file
+ * Usage: Initiate the the process of metadata generation based on the subtitles file
  *
  * Server response type:         KalturaGenerateMetadataBySubtitlesJob
  * Server failure response type: KalturaAPIException
