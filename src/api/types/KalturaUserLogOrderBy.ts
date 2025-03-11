@@ -1,5 +1,5 @@
 
 
 export enum KalturaUserLogOrderBy {
-    none = 'NONE'
+    createDateDesc = 'CREATE_DATE_DESC'
 }
