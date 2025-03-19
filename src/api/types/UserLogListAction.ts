@@ -7,7 +7,7 @@ import { KalturaFilterPager } from './KalturaFilterPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserLogListActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaUserLogFilter;
+    filter : KalturaUserLogFilter;
 	pager? : KalturaFilterPager;
 }
 
@@ -26,7 +26,7 @@ export class UserLogListAction extends KalturaRequest<KalturaUserLogListResponse
     filter : KalturaUserLogFilter;
 	pager : KalturaFilterPager;
 
-    constructor(data? : UserLogListActionArgs)
+    constructor(data : UserLogListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaUserLogListResponse', responseConstructor : KalturaUserLogListResponse  });
     }
