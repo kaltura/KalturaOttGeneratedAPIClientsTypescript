@@ -5,13 +5,15 @@ import { KalturaManualCollectionAsset } from './KalturaManualCollectionAsset';
 import { KalturaChannel, KalturaChannelArgs } from './KalturaChannel';
 
 export interface KalturaManualChannelArgs  extends KalturaChannelArgs {
-    assets? : KalturaManualCollectionAsset[];
+    mediaIds? : string;
+	assets? : KalturaManualCollectionAsset[];
 }
 
 
 export class KalturaManualChannel extends KalturaChannel {
 
-    assets : KalturaManualCollectionAsset[];
+    mediaIds : string;
+	assets : KalturaManualCollectionAsset[];
 
     constructor(data? : KalturaManualChannelArgs)
     {
@@ -26,6 +28,7 @@ export class KalturaManualChannel extends KalturaChannel {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaManualChannel' },
+				mediaIds : { type : 's' },
 				assets : { type : 'a', subTypeConstructor : KalturaManualCollectionAsset, subType : 'KalturaManualCollectionAsset' }
             }
         );
