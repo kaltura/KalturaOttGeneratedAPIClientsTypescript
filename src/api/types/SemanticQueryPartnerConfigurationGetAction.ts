@@ -4,12 +4,12 @@ import { KalturaSemanticQueryPartnerConfiguration } from './KalturaSemanticQuery
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
-export interface SemanticQueryGetPartnerConfigurationActionArgs  extends KalturaRequestArgs {
+export interface SemanticQueryPartnerConfigurationGetActionArgs  extends KalturaRequestArgs {
     
 }
 
 /**
- * Build request payload for service 'semanticQuery' action 'getPartnerConfiguration'.
+ * Build request payload for service 'semanticQueryPartnerConfiguration' action 'get'.
  *
  * Usage: Retrieves the current partner configuration for semantic query
  *
@@ -18,11 +18,11 @@ export interface SemanticQueryGetPartnerConfigurationActionArgs  extends Kaltura
  * @class
  * @extends KalturaRequest
  */
-export class SemanticQueryGetPartnerConfigurationAction extends KalturaRequest<KalturaSemanticQueryPartnerConfiguration> {
+export class SemanticQueryPartnerConfigurationGetAction extends KalturaRequest<KalturaSemanticQueryPartnerConfiguration> {
 
     
 
-    constructor(data? : SemanticQueryGetPartnerConfigurationActionArgs)
+    constructor(data? : SemanticQueryPartnerConfigurationGetActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaSemanticQueryPartnerConfiguration', responseConstructor : KalturaSemanticQueryPartnerConfiguration  });
     }
@@ -33,8 +33,8 @@ export class SemanticQueryGetPartnerConfigurationAction extends KalturaRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c', default : 'semanticquery' },
-				action : { type : 'c', default : 'getPartnerConfiguration' }
+                service : { type : 'c', default : 'semanticquerypartnerconfiguration' },
+				action : { type : 'c', default : 'get' }
             }
         );
         return result;
