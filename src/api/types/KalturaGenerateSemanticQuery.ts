@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaGenerateSemanticQueryArgs  extends KalturaObjectBaseArgs {
-    query? : string;
+    text? : string;
 }
 
 
 export class KalturaGenerateSemanticQuery extends KalturaObjectBase {
 
-    query : string;
+    text : string;
 
     constructor(data? : KalturaGenerateSemanticQueryArgs)
     {
@@ -24,7 +24,7 @@ export class KalturaGenerateSemanticQuery extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaGenerateSemanticQuery' },
-				query : { type : 's' }
+				text : { type : 's' }
             }
         );
         return result;
