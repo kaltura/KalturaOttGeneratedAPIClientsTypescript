@@ -1,11 +1,11 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaStringValue } from './KalturaStringValue';
+import { KalturaIntegerValue } from './KalturaIntegerValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAiRecommendationTreePartnerConfigurationArgs  extends KalturaObjectBaseArgs {
-    activeMetadataTypes? : KalturaStringValue[];
+    activeMetadataTypes? : { [key : string] : KalturaIntegerValue};
 	topLevelQuestions? : number;
 	answersPerQuestion? : number;
 	levels? : number;
@@ -20,7 +20,7 @@ export interface KalturaAiRecommendationTreePartnerConfigurationArgs  extends Ka
 
 export class KalturaAiRecommendationTreePartnerConfiguration extends KalturaObjectBase {
 
-    activeMetadataTypes : KalturaStringValue[];
+    activeMetadataTypes : { [key : string] : KalturaIntegerValue};
 	topLevelQuestions : number;
 	answersPerQuestion : number;
 	levels : number;
@@ -34,7 +34,6 @@ export class KalturaAiRecommendationTreePartnerConfiguration extends KalturaObje
     constructor(data? : KalturaAiRecommendationTreePartnerConfigurationArgs)
     {
         super(data);
-        if (typeof this.activeMetadataTypes === 'undefined') this.activeMetadataTypes = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -44,7 +43,7 @@ export class KalturaAiRecommendationTreePartnerConfiguration extends KalturaObje
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaAiRecommendationTreePartnerConfiguration' },
-				activeMetadataTypes : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				activeMetadataTypes : { type : 'm', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' },
 				topLevelQuestions : { type : 'n' },
 				answersPerQuestion : { type : 'n' },
 				levels : { type : 'n' },
