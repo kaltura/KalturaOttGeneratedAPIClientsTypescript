@@ -13,7 +13,7 @@ export interface AiMetadataGeneratorGenerateMetadataBySubtitlesActionArgs  exten
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'generateMetadataBySubtitles'.
  *
- * Usage: Start metadata generation process based on subtitles
+ * Usage: Initiate the the process of metadata generation based on the subtitles file
  *
  * Server response type:         KalturaGenerateMetadataBySubtitlesJob
  * Server failure response type: KalturaAPIException

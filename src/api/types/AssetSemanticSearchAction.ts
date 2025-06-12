@@ -13,7 +13,7 @@ export interface AssetSemanticSearchActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'asset' action 'semanticSearch'.
  *
- * Usage: Search for assets using semantic similarity to a natural language query, with optional query refinement using LLM
+ * Usage: This API provides search capabilities for assets using semantic similarity based on the provided query
  *
  * Server response type:         KalturaAssetListResponse
  * Server failure response type: KalturaAPIException

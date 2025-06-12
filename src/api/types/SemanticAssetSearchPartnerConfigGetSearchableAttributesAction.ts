@@ -11,7 +11,7 @@ export interface SemanticAssetSearchPartnerConfigGetSearchableAttributesActionAr
 /**
  * Build request payload for service 'semanticAssetSearchPartnerConfig' action 'getSearchableAttributes'.
  *
- * Usage: Retrieve the current field configurations for semantic search
+ * Usage: Retrieves the searchable attributes associated with a specific asset structure
  *
  * Server response type:         KalturaSearchableAttributes
  * Server failure response type: KalturaAPIException

@@ -11,7 +11,7 @@ export interface AiMetadataGeneratorGetGenerateMetadataJobActionArgs  extends Ka
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'getGenerateMetadataJob'.
  *
- * Usage: Get a metadata generation job
+ * Usage: retrieve the status of the metadata generation job, identified by the subtitles file ID
  *
  * Server response type:         KalturaGenerateMetadataBySubtitlesJob
  * Server failure response type: KalturaAPIException

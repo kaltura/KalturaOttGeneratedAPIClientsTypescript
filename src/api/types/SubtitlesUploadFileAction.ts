@@ -13,7 +13,7 @@ export interface SubtitlesUploadFileActionArgs  extends KalturaUploadRequestArgs
 /**
  * Build request payload for service 'subtitles' action 'uploadFile'.
  *
- * Usage: Add a subtitles file to be used for generating metadata and enriching the assets using a multi-part form-data body including the JSON configuration object and the uploaded file
+ * Usage: Upload a subtitles file for a later analysis
  *
  * Server response type:         KalturaSubtitles
  * Server failure response type: KalturaAPIException

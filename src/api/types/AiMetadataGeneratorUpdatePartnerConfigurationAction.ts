@@ -11,7 +11,7 @@ export interface AiMetadataGeneratorUpdatePartnerConfigurationActionArgs  extend
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'updatePartnerConfiguration'.
  *
- * Usage: Update/set the metadata generation configuration
+ * Usage: update feature configuration
  *
  * Server response type:         KalturaAiMetadataGeneratorConfiguration
  * Server failure response type: KalturaAPIException

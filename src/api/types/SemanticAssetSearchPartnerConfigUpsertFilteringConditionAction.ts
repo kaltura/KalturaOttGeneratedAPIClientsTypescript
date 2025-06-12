@@ -11,7 +11,7 @@ export interface SemanticAssetSearchPartnerConfigUpsertFilteringConditionActionA
 /**
  * Build request payload for service 'semanticAssetSearchPartnerConfig' action 'upsertFilteringCondition'.
  *
- * Usage: Update rule that controls embedding generation and search behavior
+ * Usage: Adds or updates a filtering condition for asset searches
  *
  * Server response type:         KalturaFilteringCondition
  * Server failure response type: KalturaAPIException

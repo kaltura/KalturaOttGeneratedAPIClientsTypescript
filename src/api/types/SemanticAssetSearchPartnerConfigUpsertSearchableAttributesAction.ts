@@ -11,7 +11,7 @@ export interface SemanticAssetSearchPartnerConfigUpsertSearchableAttributesActio
 /**
  * Build request payload for service 'semanticAssetSearchPartnerConfig' action 'upsertSearchableAttributes'.
  *
- * Usage: Update which fields should be included in semantic search for specific asset types
+ * Usage: Adds or updates searchable attributes for a given asset structure
  *
  * Server response type:         KalturaSearchableAttributes
  * Server failure response type: KalturaAPIException

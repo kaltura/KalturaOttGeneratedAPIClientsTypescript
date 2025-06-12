@@ -11,7 +11,7 @@ export interface AiMetadataGeneratorGetPartnerConfigurationActionArgs  extends K
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'getPartnerConfiguration'.
  *
- * Usage: Get the metadata generation configuration
+ * Usage: retrieve feature configuration
  *
  * Server response type:         KalturaAiMetadataGeneratorConfiguration
  * Server failure response type: KalturaAPIException

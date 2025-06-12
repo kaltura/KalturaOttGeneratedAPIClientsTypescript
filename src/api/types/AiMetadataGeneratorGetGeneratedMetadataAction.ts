@@ -11,7 +11,7 @@ export interface AiMetadataGeneratorGetGeneratedMetadataActionArgs  extends Kalt
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'getGeneratedMetadata'.
  *
- * Usage: Retrieve the generated metadata
+ * Usage: retrieve the generated metadata
  *
  * Server response type:         KalturaGenerateMetadataResult
  * Server failure response type: KalturaAPIException

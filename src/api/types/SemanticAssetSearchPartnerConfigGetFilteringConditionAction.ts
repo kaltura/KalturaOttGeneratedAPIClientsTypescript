@@ -11,7 +11,7 @@ export interface SemanticAssetSearchPartnerConfigGetFilteringConditionActionArgs
 /**
  * Build request payload for service 'semanticAssetSearchPartnerConfig' action 'getFilteringCondition'.
  *
- * Usage: Retrieve the filtering condition configuration for the partner
+ * Usage: Retrieves the filtering condition applied to asset searches
  *
  * Server response type:         KalturaFilteringCondition
  * Server failure response type: KalturaAPIException
