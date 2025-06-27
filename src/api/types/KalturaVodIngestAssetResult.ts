@@ -14,6 +14,9 @@ export interface KalturaVodIngestAssetResultArgs  extends KalturaObjectBaseArgs 
 	vodTypeSystemName? : string;
 	errors? : KalturaVodIngestAssetResultErrorMessage[];
 	warnings? : KalturaVodIngestAssetResultErrorMessage[];
+	fileUploadDate? : number;
+	processingStartDate? : number;
+	processingCompletionDate? : number;
 }
 
 
@@ -27,6 +30,9 @@ export class KalturaVodIngestAssetResult extends KalturaObjectBase {
 	vodTypeSystemName : string;
 	errors : KalturaVodIngestAssetResultErrorMessage[];
 	warnings : KalturaVodIngestAssetResultErrorMessage[];
+	fileUploadDate : number;
+	processingStartDate : number;
+	processingCompletionDate : number;
 
     constructor(data? : KalturaVodIngestAssetResultArgs)
     {
@@ -49,7 +55,10 @@ export class KalturaVodIngestAssetResult extends KalturaObjectBase {
 				status : { type : 'es', subTypeConstructor : KalturaVodIngestAssetResultStatus, subType : 'KalturaVodIngestAssetResultStatus' },
 				vodTypeSystemName : { type : 's' },
 				errors : { type : 'a', subTypeConstructor : KalturaVodIngestAssetResultErrorMessage, subType : 'KalturaVodIngestAssetResultErrorMessage' },
-				warnings : { type : 'a', subTypeConstructor : KalturaVodIngestAssetResultErrorMessage, subType : 'KalturaVodIngestAssetResultErrorMessage' }
+				warnings : { type : 'a', subTypeConstructor : KalturaVodIngestAssetResultErrorMessage, subType : 'KalturaVodIngestAssetResultErrorMessage' },
+				fileUploadDate : { type : 'n' },
+				processingStartDate : { type : 'n' },
+				processingCompletionDate : { type : 'n' }
             }
         );
         return result;
