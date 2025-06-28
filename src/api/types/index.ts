@@ -567,7 +567,7 @@ export { KalturaConfigurations, KalturaConfigurationsArgs } from './KalturaConfi
 export { KalturaConfigurationsListResponse, KalturaConfigurationsListResponseArgs } from './KalturaConfigurationsListResponse'
 export { KalturaBillingTransaction, KalturaBillingTransactionArgs } from './KalturaBillingTransaction'
 export { KalturaBillingTransactionListResponse, KalturaBillingTransactionListResponseArgs } from './KalturaBillingTransactionListResponse'
-export { KalturaBulkResponseObject, KalturaBulkResponseObjectArgs } from './KalturaBulkResponseObject'
+export { KalturaBulkResponseItem, KalturaBulkResponseItemArgs } from './KalturaBulkResponseItem'
 export { KalturaBulkPlaybackContextResponse, KalturaBulkPlaybackContextResponseArgs } from './KalturaBulkPlaybackContextResponse'
 export { KalturaBulkPlaybackContextError, KalturaBulkPlaybackContextErrorArgs } from './KalturaBulkPlaybackContextError'
 export { KalturaAccessControlMessage, KalturaAccessControlMessageArgs } from './KalturaAccessControlMessage'

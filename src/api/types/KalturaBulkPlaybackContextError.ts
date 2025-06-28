@@ -2,16 +2,16 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaApiExceptionArg } from './KalturaApiExceptionArg';
-import { KalturaBulkResponseObject, KalturaBulkResponseObjectArgs } from './KalturaBulkResponseObject';
+import { KalturaBulkResponseItem, KalturaBulkResponseItemArgs } from './KalturaBulkResponseItem';
 
-export interface KalturaBulkPlaybackContextErrorArgs  extends KalturaBulkResponseObjectArgs {
+export interface KalturaBulkPlaybackContextErrorArgs  extends KalturaBulkResponseItemArgs {
     code? : string;
 	message? : string;
 	args? : KalturaApiExceptionArg[];
 }
 
 
-export class KalturaBulkPlaybackContextError extends KalturaBulkResponseObject {
+export class KalturaBulkPlaybackContextError extends KalturaBulkResponseItem {
 
     code : string;
 	message : string;

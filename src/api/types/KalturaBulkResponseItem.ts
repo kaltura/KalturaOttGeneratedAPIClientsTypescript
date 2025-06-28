@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaBulkResponseObjectArgs  extends KalturaObjectBaseArgs {
+export interface KalturaBulkResponseItemArgs  extends KalturaObjectBaseArgs {
     isSuccess? : boolean;
 }
 
 
-export class KalturaBulkResponseObject extends KalturaObjectBase {
+export class KalturaBulkResponseItem extends KalturaObjectBase {
 
     isSuccess : boolean;
 
-    constructor(data? : KalturaBulkResponseObjectArgs)
+    constructor(data? : KalturaBulkResponseItemArgs)
     {
         super(data);
     }
@@ -23,7 +23,7 @@ export class KalturaBulkResponseObject extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaBulkResponseObject' },
+                objectType : { type : 'c', default : 'KalturaBulkResponseItem' },
 				isSuccess : { type : 'b' }
             }
         );
@@ -31,4 +31,4 @@ export class KalturaBulkResponseObject extends KalturaObjectBase {
     }
 }
 
-KalturaTypesFactory.registerType('KalturaBulkResponseObject',KalturaBulkResponseObject);
+KalturaTypesFactory.registerType('KalturaBulkResponseItem',KalturaBulkResponseItem);

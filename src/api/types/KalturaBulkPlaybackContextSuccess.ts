@@ -2,14 +2,14 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaPlaybackContext } from './KalturaPlaybackContext';
-import { KalturaBulkResponseObject, KalturaBulkResponseObjectArgs } from './KalturaBulkResponseObject';
+import { KalturaBulkResponseItem, KalturaBulkResponseItemArgs } from './KalturaBulkResponseItem';
 
-export interface KalturaBulkPlaybackContextSuccessArgs  extends KalturaBulkResponseObjectArgs {
+export interface KalturaBulkPlaybackContextSuccessArgs  extends KalturaBulkResponseItemArgs {
     playbackContext? : KalturaPlaybackContext;
 }
 
 
-export class KalturaBulkPlaybackContextSuccess extends KalturaBulkResponseObject {
+export class KalturaBulkPlaybackContextSuccess extends KalturaBulkResponseItem {
 
     playbackContext : KalturaPlaybackContext;
 
