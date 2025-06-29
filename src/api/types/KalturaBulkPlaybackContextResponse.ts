@@ -5,20 +5,20 @@ import { KalturaBulkResponseItem } from './KalturaBulkResponseItem';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBulkPlaybackContextResponseArgs  extends KalturaObjectBaseArgs {
-    objects? : KalturaBulkResponseItem[];
+    items? : KalturaBulkResponseItem[];
 	totalCount? : number;
 }
 
 
 export class KalturaBulkPlaybackContextResponse extends KalturaObjectBase {
 
-    objects : KalturaBulkResponseItem[];
+    items : KalturaBulkResponseItem[];
 	totalCount : number;
 
     constructor(data? : KalturaBulkPlaybackContextResponseArgs)
     {
         super(data);
-        if (typeof this.objects === 'undefined') this.objects = [];
+        if (typeof this.items === 'undefined') this.items = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,7 +28,7 @@ export class KalturaBulkPlaybackContextResponse extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBulkPlaybackContextResponse' },
-				objects : { type : 'a', subTypeConstructor : KalturaBulkResponseItem, subType : 'KalturaBulkResponseItem' },
+				items : { type : 'a', subTypeConstructor : KalturaBulkResponseItem, subType : 'KalturaBulkResponseItem' },
 				totalCount : { type : 'n' }
             }
         );
