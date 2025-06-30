@@ -6,7 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AiRecommendationTreeGetRecommendationWithNaturalTextActionArgs  extends KalturaRequestArgs {
     naturalTextQuery : string;
-	previousQuestionId? : string;
+	questionId? : string;
 	treeId? : string;
 }
 
@@ -23,7 +23,7 @@ export interface AiRecommendationTreeGetRecommendationWithNaturalTextActionArgs 
 export class AiRecommendationTreeGetRecommendationWithNaturalTextAction extends KalturaRequest<KalturaTreeNaturalTextResponse> {
 
     naturalTextQuery : string;
-	previousQuestionId : string;
+	questionId : string;
 	treeId : string;
 
     constructor(data : AiRecommendationTreeGetRecommendationWithNaturalTextActionArgs)
@@ -40,7 +40,7 @@ export class AiRecommendationTreeGetRecommendationWithNaturalTextAction extends 
                 service : { type : 'c', default : 'airecommendationtree' },
 				action : { type : 'c', default : 'getRecommendationWithNaturalText' },
 				naturalTextQuery : { type : 's' },
-				previousQuestionId : { type : 's' },
+				questionId : { type : 's' },
 				treeId : { type : 's' }
             }
         );

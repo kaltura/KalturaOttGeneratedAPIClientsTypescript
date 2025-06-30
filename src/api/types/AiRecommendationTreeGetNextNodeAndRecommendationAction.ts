@@ -6,7 +6,6 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AiRecommendationTreeGetNextNodeAndRecommendationActionArgs  extends KalturaRequestArgs {
     treeId? : string;
-	previousQuestionId? : string;
 	answerId? : string;
 	topQuestionId? : string;
 }
@@ -24,7 +23,6 @@ export interface AiRecommendationTreeGetNextNodeAndRecommendationActionArgs  ext
 export class AiRecommendationTreeGetNextNodeAndRecommendationAction extends KalturaRequest<KalturaTreeNextNodeResponse> {
 
     treeId : string;
-	previousQuestionId : string;
 	answerId : string;
 	topQuestionId : string;
 
@@ -42,7 +40,6 @@ export class AiRecommendationTreeGetNextNodeAndRecommendationAction extends Kalt
                 service : { type : 'c', default : 'airecommendationtree' },
 				action : { type : 'c', default : 'getNextNodeAndRecommendation' },
 				treeId : { type : 's' },
-				previousQuestionId : { type : 's' },
 				answerId : { type : 's' },
 				topQuestionId : { type : 's' }
             }

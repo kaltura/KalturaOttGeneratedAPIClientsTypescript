@@ -8,6 +8,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaTreeNextNodeResponseArgs  extends KalturaObjectBaseArgs {
     question? : KalturaTreeQuestion;
+	totalLevelQuestions? : number;
 	answers? : KalturaTreeAnswer[];
 	recommendations? : KalturaTreeRecommendations;
 }
@@ -16,6 +17,7 @@ export interface KalturaTreeNextNodeResponseArgs  extends KalturaObjectBaseArgs 
 export class KalturaTreeNextNodeResponse extends KalturaObjectBase {
 
     question : KalturaTreeQuestion;
+	totalLevelQuestions : number;
 	answers : KalturaTreeAnswer[];
 	recommendations : KalturaTreeRecommendations;
 
@@ -33,6 +35,7 @@ export class KalturaTreeNextNodeResponse extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaTreeNextNodeResponse' },
 				question : { type : 'o', subTypeConstructor : KalturaTreeQuestion, subType : 'KalturaTreeQuestion' },
+				totalLevelQuestions : { type : 'n' },
 				answers : { type : 'a', subTypeConstructor : KalturaTreeAnswer, subType : 'KalturaTreeAnswer' },
 				recommendations : { type : 'o', subTypeConstructor : KalturaTreeRecommendations, subType : 'KalturaTreeRecommendations' }
             }

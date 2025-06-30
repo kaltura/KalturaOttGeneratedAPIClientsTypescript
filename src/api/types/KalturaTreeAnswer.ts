@@ -6,9 +6,6 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaTreeAnswerArgs  extends KalturaObjectBaseArgs {
     answerId? : string;
 	text? : string;
-	hasNextQuestion? : boolean;
-	isSpecial? : boolean;
-	specialType? : string;
 }
 
 
@@ -16,9 +13,6 @@ export class KalturaTreeAnswer extends KalturaObjectBase {
 
     answerId : string;
 	text : string;
-	hasNextQuestion : boolean;
-	isSpecial : boolean;
-	specialType : string;
 
     constructor(data? : KalturaTreeAnswerArgs)
     {
@@ -33,10 +27,7 @@ export class KalturaTreeAnswer extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaTreeAnswer' },
 				answerId : { type : 's' },
-				text : { type : 's' },
-				hasNextQuestion : { type : 'b' },
-				isSpecial : { type : 'b' },
-				specialType : { type : 's' }
+				text : { type : 's' }
             }
         );
         return result;
