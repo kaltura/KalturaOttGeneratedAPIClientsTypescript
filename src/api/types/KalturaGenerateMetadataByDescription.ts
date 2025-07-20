@@ -1,17 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaGenerateMetadataByDescriptionArgs  extends KalturaObjectBaseArgs {
-    externalAssetId? : KalturaStringValue;
+    externalAssetId? : string;
 }
 
 
 export class KalturaGenerateMetadataByDescription extends KalturaObjectBase {
 
-    externalAssetId : KalturaStringValue;
+    externalAssetId : string;
 
     constructor(data? : KalturaGenerateMetadataByDescriptionArgs)
     {
@@ -25,7 +24,7 @@ export class KalturaGenerateMetadataByDescription extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaGenerateMetadataByDescription' },
-				externalAssetId : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
+				externalAssetId : { type : 's' }
             }
         );
         return result;
