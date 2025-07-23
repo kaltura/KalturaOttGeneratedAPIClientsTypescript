@@ -5,14 +5,14 @@ import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaGenerateMetadataBySubtitlesArgs  extends KalturaObjectBaseArgs {
-    id? : number;
+    subtitlesFileId? : number;
 	externalAssetIds? : KalturaStringValue[];
 }
 
 
 export class KalturaGenerateMetadataBySubtitles extends KalturaObjectBase {
 
-    id : number;
+    subtitlesFileId : number;
 	externalAssetIds : KalturaStringValue[];
 
     constructor(data? : KalturaGenerateMetadataBySubtitlesArgs)
@@ -28,7 +28,7 @@ export class KalturaGenerateMetadataBySubtitles extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaGenerateMetadataBySubtitles' },
-				id : { type : 'n' },
+				subtitlesFileId : { type : 'n' },
 				externalAssetIds : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
