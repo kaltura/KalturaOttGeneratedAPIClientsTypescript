@@ -13,7 +13,7 @@ export interface AssetFilePpvUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'assetFilePpv' action 'update'.
  *
- * Usage: Update assetFilePpv
+ * Usage: Update assetFilePpv dates
  *
  * Server response type:         KalturaAssetFilePpv
  * Server failure response type: KalturaAPIException
