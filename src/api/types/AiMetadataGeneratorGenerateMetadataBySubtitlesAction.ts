@@ -1,34 +1,34 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaGenerateMetadataJob } from './KalturaGenerateMetadataJob';
+import { KalturaGenerateMetadataBySubtitlesJob } from './KalturaGenerateMetadataBySubtitlesJob';
 
-import { KalturaGenerateMetadataBySubtitles } from './KalturaGenerateMetadataBySubtitles';
+import { KalturaStringValue } from './KalturaStringValue';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AiMetadataGeneratorGenerateMetadataBySubtitlesActionArgs  extends KalturaRequestArgs {
-    generateMetadataBySubtitles : KalturaGenerateMetadataBySubtitles;
+    subtitlesFileId : number;
+	externalAssetIds? : KalturaStringValue[];
 }
 
 /**
  * Build request payload for service 'aiMetadataGenerator' action 'generateMetadataBySubtitles'.
  *
- * Usage: Initiate the process of metadata generation based on the subtitles file.
- * The subtitles file must be previously uploaded using the subtitles.uploadFile service.
- * The service will analyze the subtitle content using AI/LLM to generate enriched metadata including
- * genre, description, keywords, sentiment analysis, and other metadata fields
+ * Usage: Start metadata generation process based on subtitles
  *
- * Server response type:         KalturaGenerateMetadataJob
+ * Server response type:         KalturaGenerateMetadataBySubtitlesJob
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class AiMetadataGeneratorGenerateMetadataBySubtitlesAction extends KalturaRequest<KalturaGenerateMetadataJob> {
+export class AiMetadataGeneratorGenerateMetadataBySubtitlesAction extends KalturaRequest<KalturaGenerateMetadataBySubtitlesJob> {
 
-    generateMetadataBySubtitles : KalturaGenerateMetadataBySubtitles;
+    subtitlesFileId : number;
+	externalAssetIds : KalturaStringValue[];
 
     constructor(data : AiMetadataGeneratorGenerateMetadataBySubtitlesActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaGenerateMetadataJob', responseConstructor : KalturaGenerateMetadataJob  });
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenerateMetadataBySubtitlesJob', responseConstructor : KalturaGenerateMetadataBySubtitlesJob  });
+        if (typeof this.externalAssetIds === 'undefined') this.externalAssetIds = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -39,7 +39,8 @@ export class AiMetadataGeneratorGenerateMetadataBySubtitlesAction extends Kaltur
             {
                 service : { type : 'c', default : 'aimetadatagenerator' },
 				action : { type : 'c', default : 'generateMetadataBySubtitles' },
-				generateMetadataBySubtitles : { type : 'o', subTypeConstructor : KalturaGenerateMetadataBySubtitles, subType : 'KalturaGenerateMetadataBySubtitles' }
+				subtitlesFileId : { type : 'n' },
+				externalAssetIds : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;
