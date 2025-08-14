@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaGenerateMetadataJob } from './KalturaGenerateMetadataJob';
+import { KalturaGenerateMetadataBySubtitlesJob } from './KalturaGenerateMetadataBySubtitlesJob';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -13,18 +13,18 @@ export interface AiMetadataGeneratorGetGenerateMetadataJobActionArgs  extends Ka
  *
  * Usage: Get a metadata generation job
  *
- * Server response type:         KalturaGenerateMetadataJob
+ * Server response type:         KalturaGenerateMetadataBySubtitlesJob
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class AiMetadataGeneratorGetGenerateMetadataJobAction extends KalturaRequest<KalturaGenerateMetadataJob> {
+export class AiMetadataGeneratorGetGenerateMetadataJobAction extends KalturaRequest<KalturaGenerateMetadataBySubtitlesJob> {
 
     id : number;
 
     constructor(data : AiMetadataGeneratorGetGenerateMetadataJobActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaGenerateMetadataJob', responseConstructor : KalturaGenerateMetadataJob  });
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenerateMetadataBySubtitlesJob', responseConstructor : KalturaGenerateMetadataBySubtitlesJob  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
