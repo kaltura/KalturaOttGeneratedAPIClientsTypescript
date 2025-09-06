@@ -1,6 +1,6 @@
 # Kaltura OTT Typescript Client
 
-Compatible with Kaltura OTT server version 11.5.0.0 and above.
+Compatible with Kaltura OTT server version 11.6.0.1 and above.
 
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![Gitter chat](https://badges.gitter.im/kaltura-ng/kaltura-ng.png)](https://gitter.im/kaltura-ng/kaltura-ng) [![Build Status](https://travis-ci.org/kaltura/KalturaOttGeneratedAPIClientsTypescript.svg?branch=master)](https://travis-ci.org/kaltura/KalturaOttGeneratedAPIClientsTypescript)
@@ -16,7 +16,7 @@ To keep being update review the [changelog](CHANGELOG.md) frequently.
 
 You can install this client library using npm with:
 ```
-npm install kaltura-ott-typescript-client@11.5.0-0
+npm install kaltura-ott-typescript-client@11.6.0-1
 ```
 
  **Found a bug?** create [kaltura/clients-generator issue](https://github.com/kaltura/clients-generator/issues)
@@ -53,7 +53,7 @@ An example of a vaild command will be: `npm install file:libs/kaltura-ngx-client
 - Modify the file content to include valid information.
 - Run `npm run test` to test the library
 
-> If you want to test the library against the production server use the following as the endpoint in the config file: http://www.kaltura.com/api_v3/index.php/
+> If you want to test the library against the production server use the following as the endpoint in the config file: https://www.kaltura.com/api_v3/index.php/
 
 
 ## License and Copyright Information
