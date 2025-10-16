@@ -866,6 +866,7 @@ export { KalturaWatchBasedRecommendationsAdminConfiguration, KalturaWatchBasedRe
 export { KalturaAdsPolicy } from './KalturaAdsPolicy'
 export { KalturaAggregationCountOrderBy } from './KalturaAggregationCountOrderBy'
 export { KalturaAggregationType } from './KalturaAggregationType'
+export { KalturaAiRecommendationTreeFeatureLevel } from './KalturaAiRecommendationTreeFeatureLevel'
 export { KalturaAnnouncementOrderBy } from './KalturaAnnouncementOrderBy'
 export { KalturaAnnouncementRecipientsType } from './KalturaAnnouncementRecipientsType'
 export { KalturaAnnouncementStatus } from './KalturaAnnouncementStatus'
