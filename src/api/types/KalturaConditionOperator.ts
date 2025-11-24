@@ -2,5 +2,10 @@
 
 export enum KalturaConditionOperator {
     equal = 'Equal',
-	notequal = 'NotEqual'
+	greaterthan = 'GreaterThan',
+	greaterthanorequal = 'GreaterThanOrEqual',
+	lessthan = 'LessThan',
+	lessthanorequal = 'LessThanOrEqual',
+	notequal = 'NotEqual',
+	unknown = 'Unknown'
 }
