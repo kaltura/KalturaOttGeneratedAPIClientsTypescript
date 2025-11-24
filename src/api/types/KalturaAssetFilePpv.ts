@@ -8,6 +8,8 @@ export interface KalturaAssetFilePpvArgs  extends KalturaOTTObjectSupportNullabl
 	ppvModuleId? : number;
 	startDate? : number;
 	endDate? : number;
+	purchaseStartDate? : number;
+	purchaseEndDate? : number;
 }
 
 
@@ -17,6 +19,8 @@ export class KalturaAssetFilePpv extends KalturaOTTObjectSupportNullable {
 	ppvModuleId : number;
 	startDate : number;
 	endDate : number;
+	purchaseStartDate : number;
+	purchaseEndDate : number;
 
     constructor(data? : KalturaAssetFilePpvArgs)
     {
@@ -33,7 +37,9 @@ export class KalturaAssetFilePpv extends KalturaOTTObjectSupportNullable {
 				assetFileId : { type : 'n' },
 				ppvModuleId : { type : 'n' },
 				startDate : { type : 'n' },
-				endDate : { type : 'n' }
+				endDate : { type : 'n' },
+				purchaseStartDate : { type : 'n' },
+				purchaseEndDate : { type : 'n' }
             }
         );
         return result;
