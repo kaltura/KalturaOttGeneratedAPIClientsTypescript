@@ -839,6 +839,7 @@ export { KalturaSegmentationPartnerConfiguration, KalturaSegmentationPartnerConf
 export { KalturaSearchableAttribute, KalturaSearchableAttributeArgs } from './KalturaSearchableAttribute'
 export { KalturaSearchableAttributes, KalturaSearchableAttributesArgs } from './KalturaSearchableAttributes'
 export { KalturaFilteringCondition, KalturaFilteringConditionArgs } from './KalturaFilteringCondition'
+export { KalturaProgramSearchableAttributes, KalturaProgramSearchableAttributesArgs } from './KalturaProgramSearchableAttributes'
 export { KalturaGenerateSemanticQuery, KalturaGenerateSemanticQueryArgs } from './KalturaGenerateSemanticQuery'
 export { KalturaSemanticSubQuery, KalturaSemanticSubQueryArgs } from './KalturaSemanticSubQuery'
 export { KalturaSemanticQuery, KalturaSemanticQueryArgs } from './KalturaSemanticQuery'

@@ -1,11 +1,11 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaProgramSearchableAttributes } from './KalturaProgramSearchableAttributes';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface SemanticAssetSearchPartnerConfigUpsertProgramSearchableAttributesActionArgs  extends KalturaRequestArgs {
-    programAttributes : string;
+    programAttributes : KalturaProgramSearchableAttributes;
 }
 
 /**
@@ -13,18 +13,18 @@ export interface SemanticAssetSearchPartnerConfigUpsertProgramSearchableAttribut
  *
  * Usage: Update which fields should be included in semantic search for program assets
  *
- * Server response type:         string
+ * Server response type:         KalturaProgramSearchableAttributes
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class SemanticAssetSearchPartnerConfigUpsertProgramSearchableAttributesAction extends KalturaRequest<string> {
+export class SemanticAssetSearchPartnerConfigUpsertProgramSearchableAttributesAction extends KalturaRequest<KalturaProgramSearchableAttributes> {
 
-    programAttributes : string;
+    programAttributes : KalturaProgramSearchableAttributes;
 
     constructor(data : SemanticAssetSearchPartnerConfigUpsertProgramSearchableAttributesActionArgs)
     {
-        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaProgramSearchableAttributes', responseConstructor : KalturaProgramSearchableAttributes  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,7 +35,7 @@ export class SemanticAssetSearchPartnerConfigUpsertProgramSearchableAttributesAc
             {
                 service : { type : 'c', default : 'semanticassetsearchpartnerconfig' },
 				action : { type : 'c', default : 'upsertProgramSearchableAttributes' },
-				programAttributes : { type : 's' }
+				programAttributes : { type : 'o', subTypeConstructor : KalturaProgramSearchableAttributes, subType : 'KalturaProgramSearchableAttributes' }
             }
         );
         return result;

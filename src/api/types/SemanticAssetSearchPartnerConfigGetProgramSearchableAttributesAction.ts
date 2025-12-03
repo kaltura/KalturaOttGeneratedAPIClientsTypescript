@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaProgramSearchableAttributes } from './KalturaProgramSearchableAttributes';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -13,18 +13,18 @@ export interface SemanticAssetSearchPartnerConfigGetProgramSearchableAttributesA
  *
  * Usage: Retrieve the current program field configurations for semantic search
  *
- * Server response type:         string
+ * Server response type:         KalturaProgramSearchableAttributes
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class SemanticAssetSearchPartnerConfigGetProgramSearchableAttributesAction extends KalturaRequest<string> {
+export class SemanticAssetSearchPartnerConfigGetProgramSearchableAttributesAction extends KalturaRequest<KalturaProgramSearchableAttributes> {
 
     
 
     constructor(data? : SemanticAssetSearchPartnerConfigGetProgramSearchableAttributesActionArgs)
     {
-        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaProgramSearchableAttributes', responseConstructor : KalturaProgramSearchableAttributes  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
