@@ -4,14 +4,14 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaProgramSemanticSearchParamsArgs  extends KalturaObjectBaseArgs {
-    endsAfter? : number;
+    endsBefore? : number;
 	expiresAfter? : number;
 }
 
 
 export class KalturaProgramSemanticSearchParams extends KalturaObjectBase {
 
-    endsAfter : number;
+    endsBefore : number;
 	expiresAfter : number;
 
     constructor(data? : KalturaProgramSemanticSearchParamsArgs)
@@ -26,7 +26,7 @@ export class KalturaProgramSemanticSearchParams extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaProgramSemanticSearchParams' },
-				endsAfter : { type : 'n' },
+				endsBefore : { type : 'n' },
 				expiresAfter : { type : 'n' }
             }
         );
