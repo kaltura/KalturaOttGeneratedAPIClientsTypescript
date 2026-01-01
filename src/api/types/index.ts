@@ -338,6 +338,7 @@ export { KalturaBlockPlaybackAction, KalturaBlockPlaybackActionArgs } from './Ka
 export { KalturaTimeOffsetRuleAction, KalturaTimeOffsetRuleActionArgs } from './KalturaTimeOffsetRuleAction'
 export { KalturaEndDateOffsetRuleAction, KalturaEndDateOffsetRuleActionArgs } from './KalturaEndDateOffsetRuleAction'
 export { KalturaStartDateOffsetRuleAction, KalturaStartDateOffsetRuleActionArgs } from './KalturaStartDateOffsetRuleAction'
+export { KalturaSetPlaybackContextUrlTypeAction, KalturaSetPlaybackContextUrlTypeActionArgs } from './KalturaSetPlaybackContextUrlTypeAction'
 export { KalturaBasePreActionCondition, KalturaBasePreActionConditionArgs } from './KalturaBasePreActionCondition'
 export { KalturaFilterAction, KalturaFilterActionArgs } from './KalturaFilterAction'
 export { KalturaFilterFileByAudioCodecAction, KalturaFilterFileByAudioCodecActionArgs } from './KalturaFilterFileByAudioCodecAction'
