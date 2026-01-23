@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaIntegerValue } from './KalturaIntegerValue';
+import { KalturaAiRecommendationTreeFeatureLevel } from './KalturaAiRecommendationTreeFeatureLevel';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAiRecommendationTreePartnerConfigurationArgs  extends KalturaObjectBaseArgs {
@@ -25,6 +26,7 @@ export class KalturaAiRecommendationTreePartnerConfiguration extends KalturaObje
 	numOfRecommendedAssets : number;
 	treeGenerationFrequency : string;
 	readonly activeTreeId : string;
+	readonly featureType : KalturaAiRecommendationTreeFeatureLevel;
 
     constructor(data? : KalturaAiRecommendationTreePartnerConfigurationArgs)
     {
@@ -45,7 +47,8 @@ export class KalturaAiRecommendationTreePartnerConfiguration extends KalturaObje
 				specialAnswers : { type : 'b' },
 				numOfRecommendedAssets : { type : 'n' },
 				treeGenerationFrequency : { type : 's' },
-				activeTreeId : { type : 's', readOnly : true }
+				activeTreeId : { type : 's', readOnly : true },
+				featureType : { type : 'es', readOnly : true, subTypeConstructor : KalturaAiRecommendationTreeFeatureLevel, subType : 'KalturaAiRecommendationTreeFeatureLevel' }
             }
         );
         return result;
