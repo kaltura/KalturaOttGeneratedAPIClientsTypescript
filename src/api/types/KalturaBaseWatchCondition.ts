@@ -4,7 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaConditionLevel } from './KalturaConditionLevel';
 import { KalturaContentTypeSelector } from './KalturaContentTypeSelector';
 import { KalturaViewTimeConstraint } from './KalturaViewTimeConstraint';
-import { KalturaLogicalOperator } from './KalturaLogicalOperator';
+import { KalturaBooleanOperator } from './KalturaBooleanOperator';
 import { KalturaBaseAttributeConstraint } from './KalturaBaseAttributeConstraint';
 import { KalturaBaseSegmentCondition, KalturaBaseSegmentConditionArgs } from './KalturaBaseSegmentCondition';
 
@@ -14,7 +14,7 @@ export interface KalturaBaseWatchConditionArgs  extends KalturaBaseSegmentCondit
 	evaluationDays? : number;
 	deviceFamilyIn? : string;
 	viewTimeConstraint? : KalturaViewTimeConstraint;
-	constraintsOperator? : KalturaLogicalOperator;
+	constraintsOperator? : KalturaBooleanOperator;
 	constraintAttributes? : KalturaBaseAttributeConstraint[];
 }
 
@@ -26,7 +26,7 @@ export class KalturaBaseWatchCondition extends KalturaBaseSegmentCondition {
 	evaluationDays : number;
 	deviceFamilyIn : string;
 	viewTimeConstraint : KalturaViewTimeConstraint;
-	constraintsOperator : KalturaLogicalOperator;
+	constraintsOperator : KalturaBooleanOperator;
 	constraintAttributes : KalturaBaseAttributeConstraint[];
 
     constructor(data? : KalturaBaseWatchConditionArgs)
@@ -47,7 +47,7 @@ export class KalturaBaseWatchCondition extends KalturaBaseSegmentCondition {
 				evaluationDays : { type : 'n' },
 				deviceFamilyIn : { type : 's' },
 				viewTimeConstraint : { type : 'o', subTypeConstructor : KalturaViewTimeConstraint, subType : 'KalturaViewTimeConstraint' },
-				constraintsOperator : { type : 'es', subTypeConstructor : KalturaLogicalOperator, subType : 'KalturaLogicalOperator' },
+				constraintsOperator : { type : 'es', subTypeConstructor : KalturaBooleanOperator, subType : 'KalturaBooleanOperator' },
 				constraintAttributes : { type : 'a', subTypeConstructor : KalturaBaseAttributeConstraint, subType : 'KalturaBaseAttributeConstraint' }
             }
         );

@@ -4,15 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBaseAttributeConstraintArgs  extends KalturaObjectBaseArgs {
-    attributeType? : string;
-	key? : string;
+    key? : string;
 }
 
 
 export class KalturaBaseAttributeConstraint extends KalturaObjectBase {
 
-    attributeType : string;
-	key : string;
+    key : string;
 
     constructor(data? : KalturaBaseAttributeConstraintArgs)
     {
@@ -26,7 +24,6 @@ export class KalturaBaseAttributeConstraint extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBaseAttributeConstraint' },
-				attributeType : { type : 's' },
 				key : { type : 's' }
             }
         );

@@ -4,17 +4,17 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaBaseAttributeConstraint, KalturaBaseAttributeConstraintArgs } from './KalturaBaseAttributeConstraint';
 
 export interface KalturaNumberMetaConstraintArgs  extends KalturaBaseAttributeConstraintArgs {
-    equals? : string;
-	greaterThan? : string;
-	smallerThan? : string;
+    equals? : number;
+	greaterThan? : number;
+	smallerThan? : number;
 }
 
 
 export class KalturaNumberMetaConstraint extends KalturaBaseAttributeConstraint {
 
-    equals : string;
-	greaterThan : string;
-	smallerThan : string;
+    equals : number;
+	greaterThan : number;
+	smallerThan : number;
 
     constructor(data? : KalturaNumberMetaConstraintArgs)
     {
@@ -28,9 +28,9 @@ export class KalturaNumberMetaConstraint extends KalturaBaseAttributeConstraint 
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaNumberMetaConstraint' },
-				equals : { type : 's' },
-				greaterThan : { type : 's' },
-				smallerThan : { type : 's' }
+				equals : { type : 'n' },
+				greaterThan : { type : 'n' },
+				smallerThan : { type : 'n' }
             }
         );
         return result;
