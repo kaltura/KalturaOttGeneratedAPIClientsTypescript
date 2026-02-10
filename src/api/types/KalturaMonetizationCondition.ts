@@ -1,14 +1,12 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaConditionLevel } from './KalturaConditionLevel';
 import { KalturaMathemticalOperatorType } from './KalturaMathemticalOperatorType';
 import { KalturaMonetizationType } from './KalturaMonetizationType';
 import { KalturaBaseSegmentCondition, KalturaBaseSegmentConditionArgs } from './KalturaBaseSegmentCondition';
 
 export interface KalturaMonetizationConditionArgs  extends KalturaBaseSegmentConditionArgs {
-    level? : KalturaConditionLevel;
-	businessModuleIdIn? : string;
+    businessModuleIdIn? : string;
 	currencyCode? : string;
 	days? : number;
 	maxValue? : number;
@@ -20,8 +18,7 @@ export interface KalturaMonetizationConditionArgs  extends KalturaBaseSegmentCon
 
 export class KalturaMonetizationCondition extends KalturaBaseSegmentCondition {
 
-    level : KalturaConditionLevel;
-	businessModuleIdIn : string;
+    businessModuleIdIn : string;
 	currencyCode : string;
 	days : number;
 	maxValue : number;
@@ -41,7 +38,6 @@ export class KalturaMonetizationCondition extends KalturaBaseSegmentCondition {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMonetizationCondition' },
-				level : { type : 'es', subTypeConstructor : KalturaConditionLevel, subType : 'KalturaConditionLevel' },
 				businessModuleIdIn : { type : 's' },
 				currencyCode : { type : 's' },
 				days : { type : 'n' },

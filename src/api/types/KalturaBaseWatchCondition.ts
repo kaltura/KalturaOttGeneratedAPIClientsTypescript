@@ -1,7 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaConditionLevel } from './KalturaConditionLevel';
 import { KalturaContentTypeSelector } from './KalturaContentTypeSelector';
 import { KalturaViewTimeConstraint } from './KalturaViewTimeConstraint';
 import { KalturaBooleanOperator } from './KalturaBooleanOperator';
@@ -9,8 +8,7 @@ import { KalturaBaseAttributeConstraint } from './KalturaBaseAttributeConstraint
 import { KalturaBaseSegmentCondition, KalturaBaseSegmentConditionArgs } from './KalturaBaseSegmentCondition';
 
 export interface KalturaBaseWatchConditionArgs  extends KalturaBaseSegmentConditionArgs {
-    level? : KalturaConditionLevel;
-	contentFilter? : KalturaContentTypeSelector;
+    contentFilter? : KalturaContentTypeSelector;
 	evaluationDays? : number;
 	deviceFamilyIn? : string;
 	viewTimeConstraint? : KalturaViewTimeConstraint;
@@ -21,8 +19,7 @@ export interface KalturaBaseWatchConditionArgs  extends KalturaBaseSegmentCondit
 
 export class KalturaBaseWatchCondition extends KalturaBaseSegmentCondition {
 
-    level : KalturaConditionLevel;
-	contentFilter : KalturaContentTypeSelector;
+    contentFilter : KalturaContentTypeSelector;
 	evaluationDays : number;
 	deviceFamilyIn : string;
 	viewTimeConstraint : KalturaViewTimeConstraint;
@@ -42,7 +39,6 @@ export class KalturaBaseWatchCondition extends KalturaBaseSegmentCondition {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBaseWatchCondition' },
-				level : { type : 'es', subTypeConstructor : KalturaConditionLevel, subType : 'KalturaConditionLevel' },
 				contentFilter : { type : 'o', subTypeConstructor : KalturaContentTypeSelector, subType : 'KalturaContentTypeSelector' },
 				evaluationDays : { type : 'n' },
 				deviceFamilyIn : { type : 's' },

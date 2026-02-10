@@ -5,7 +5,7 @@ import { KalturaBaseSegmentCondition } from './KalturaBaseSegmentCondition';
 import { KalturaBooleanOperator } from './KalturaBooleanOperator';
 import { KalturaBaseSegmentAction } from './KalturaBaseSegmentAction';
 import { KalturaBaseSegmentValue } from './KalturaBaseSegmentValue';
-import { KalturaConditionLevel } from './KalturaConditionLevel';
+import { KalturaConditionScope } from './KalturaConditionScope';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
@@ -16,7 +16,7 @@ export interface KalturaSegmentationTypeArgs  extends KalturaObjectBaseArgs {
 	actions? : KalturaBaseSegmentAction[];
 	value? : KalturaBaseSegmentValue;
 	assetUserRuleId? : number;
-	scope? : KalturaConditionLevel;
+	scope? : KalturaConditionScope;
 }
 
 
@@ -34,7 +34,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 	readonly executeDate : number;
 	readonly version : number;
 	assetUserRuleId : number;
-	scope : KalturaConditionLevel;
+	scope : KalturaConditionScope;
 
     constructor(data? : KalturaSegmentationTypeArgs)
     {
@@ -62,7 +62,7 @@ export class KalturaSegmentationType extends KalturaObjectBase {
 				executeDate : { type : 'n', readOnly : true },
 				version : { type : 'n', readOnly : true },
 				assetUserRuleId : { type : 'n' },
-				scope : { type : 'es', subTypeConstructor : KalturaConditionLevel, subType : 'KalturaConditionLevel' }
+				scope : { type : 'es', subTypeConstructor : KalturaConditionScope, subType : 'KalturaConditionScope' }
             }
         );
         return result;
