@@ -27,6 +27,7 @@ export enum KalturaRuleActionType {
 	filterfilebystreamertypeinplayback = 'FilterFileByStreamerTypeInPlayback',
 	filterfilebyvideocodecindiscovery = 'FilterFileByVideoCodecInDiscovery',
 	filterfilebyvideocodecinplayback = 'FilterFileByVideoCodecInPlayback',
+	setPlaybackContextUrlType = 'SET_PLAYBACK_CONTEXT_URL_TYPE',
 	startDateOffset = 'START_DATE_OFFSET',
 	userBlock = 'USER_BLOCK'
 }
