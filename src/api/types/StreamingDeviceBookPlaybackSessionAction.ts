@@ -9,6 +9,7 @@ export interface StreamingDeviceBookPlaybackSessionActionArgs  extends KalturaRe
     fileId : string;
 	assetId : string;
 	assetType : KalturaAssetType;
+	externalRecordingProgramId? : number;
 }
 
 /**
@@ -26,6 +27,7 @@ export class StreamingDeviceBookPlaybackSessionAction extends KalturaRequest<boo
     fileId : string;
 	assetId : string;
 	assetType : KalturaAssetType;
+	externalRecordingProgramId : number;
 
     constructor(data : StreamingDeviceBookPlaybackSessionActionArgs)
     {
@@ -42,7 +44,8 @@ export class StreamingDeviceBookPlaybackSessionAction extends KalturaRequest<boo
 				action : { type : 'c', default : 'bookPlaybackSession' },
 				fileId : { type : 's' },
 				assetId : { type : 's' },
-				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' }
+				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
+				externalRecordingProgramId : { type : 'n' }
             }
         );
         return result;
