@@ -8,6 +8,7 @@ export interface KalturaBulkUploadFilterArgs  extends KalturaFilterArgs {
 	createDateGreaterThanOrEqual? : number;
 	uploadedByUserIdEqualCurrent? : boolean;
 	statusIn? : string;
+	includeResultsEqual? : boolean;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaBulkUploadFilter extends KalturaFilter {
 	createDateGreaterThanOrEqual : number;
 	uploadedByUserIdEqualCurrent : boolean;
 	statusIn : string;
+	includeResultsEqual : boolean;
 
     constructor(data? : KalturaBulkUploadFilterArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaBulkUploadFilter extends KalturaFilter {
 				bulkObjectTypeEqual : { type : 's' },
 				createDateGreaterThanOrEqual : { type : 'n' },
 				uploadedByUserIdEqualCurrent : { type : 'b' },
-				statusIn : { type : 's' }
+				statusIn : { type : 's' },
+				includeResultsEqual : { type : 'b' }
             }
         );
         return result;
