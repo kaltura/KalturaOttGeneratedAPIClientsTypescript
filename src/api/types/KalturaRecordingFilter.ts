@@ -8,6 +8,7 @@ export interface KalturaRecordingFilterArgs  extends KalturaFilterArgs {
 	assetIdIn? : string;
 	externalRecordingIdIn? : string;
 	kSql? : string;
+	contentFilteringEnforced? : boolean;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaRecordingFilter extends KalturaFilter {
 	assetIdIn : string;
 	externalRecordingIdIn : string;
 	kSql : string;
+	contentFilteringEnforced : boolean;
 
     constructor(data? : KalturaRecordingFilterArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaRecordingFilter extends KalturaFilter {
 				statusIn : { type : 's' },
 				assetIdIn : { type : 's' },
 				externalRecordingIdIn : { type : 's' },
-				kSql : { type : 's' }
+				kSql : { type : 's' },
+				contentFilteringEnforced : { type : 'b' }
             }
         );
         return result;
