@@ -33,6 +33,7 @@ export interface KalturaTimeShiftedTvPartnerSettingsArgs  extends KalturaObjectB
 	maxRecordingConcurrency? : number;
 	maxConcurrencyMargin? : number;
 	shouldRoundStopRecordingsBySeconds? : boolean;
+	isRecordingsV2Enabled? : boolean;
 }
 
 
@@ -65,6 +66,7 @@ export class KalturaTimeShiftedTvPartnerSettings extends KalturaObjectBase {
 	maxRecordingConcurrency : number;
 	maxConcurrencyMargin : number;
 	shouldRoundStopRecordingsBySeconds : boolean;
+	isRecordingsV2Enabled : boolean;
 
     constructor(data? : KalturaTimeShiftedTvPartnerSettingsArgs)
     {
@@ -104,7 +106,8 @@ export class KalturaTimeShiftedTvPartnerSettings extends KalturaObjectBase {
 				personalizedRecording : { type : 'b' },
 				maxRecordingConcurrency : { type : 'n' },
 				maxConcurrencyMargin : { type : 'n' },
-				shouldRoundStopRecordingsBySeconds : { type : 'b' }
+				shouldRoundStopRecordingsBySeconds : { type : 'b' },
+				isRecordingsV2Enabled : { type : 'b' }
             }
         );
         return result;
